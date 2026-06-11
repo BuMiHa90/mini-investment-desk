@@ -1,88 +1,396 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Daily Desk Report — 2026-06-11</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Báo cáo chiến lược 11.06.2026 — Mini Investment Desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
 <style>
-  :root { color-scheme: light; }
-  * { box-sizing: border-box; }
-  body { font-family: 'Segoe UI', system-ui, sans-serif; margin: 0; background: #f6f8fa; color: #1f2328; line-height: 1.55; }
-  header { background: #0d1117; color: #fff; padding: 20px 24px; }
-  header h1 { margin: 0 0 6px; font-size: 1.35rem; }
-  header .meta { color: #9aa4b2; font-size: .9rem; }
-  .badges { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
-  .badge { display: inline-block; padding: 4px 12px; border-radius: 999px; font-weight: 600; font-size: .85rem; color: #fff; }
-  main { max-width: 980px; margin: 0 auto; padding: 16px; }
-  details { background: #fff; border: 1px solid #d0d7de; border-radius: 8px; margin: 14px 0; overflow: hidden; }
-  details > summary { cursor: pointer; padding: 14px 18px; font-weight: 700; font-size: 1.02rem; background: #f0f3f6; list-style: none; }
-  details > summary::before { content: "▸ "; }
-  details[open] > summary::before { content: "▾ "; }
-  .report { padding: 6px 22px 18px; }
-  .report table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: .9rem; }
-  .report th, .report td { border: 1px solid #d0d7de; padding: 6px 9px; text-align: left; vertical-align: top; }
-  .report th { background: #f0f3f6; }
-  .report h1 { font-size: 1.2rem; } .report h2 { font-size: 1.05rem; margin-top: 22px; }
-  .report code { background: #eff1f3; padding: 1px 5px; border-radius: 4px; }
-  .disclaimer { background: #fff8c5; border: 1px solid #d4a72c66; border-radius: 8px; padding: 12px 16px; font-size: .85rem; margin: 18px 0; }
-  .archive-list { font-size: .9rem; }
-  footer { text-align: center; color: #6e7781; font-size: .8rem; padding: 24px; }
-  @media (max-width: 600px) { .report { padding: 4px 10px 12px; } }
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Be Vietnam Pro',system-ui,sans-serif;background:#EDF0F5;color:#122B4D;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:#1E6FD9;text-decoration:none}a:hover{text-decoration:underline}
+.khung{max-width:1100px;margin:0 auto;padding:0 20px}
+.topbar{background:#fff;border-bottom:3px solid #122B4D}
+.topbar .khung{display:flex;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px}
+.brand .logo{width:30px;height:30px;border-radius:50%;background:#122B4D;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px}
+.brand .ten{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.brand .phu{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#1E6FD9;font-weight:600}
+.tieude-bar{font-size:18px;font-weight:800;color:#122B4D}
+.meta-bar{text-align:right;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#5B6B80;font-weight:600;line-height:1.8}
+.meta-bar b{color:#122B4D}
+.hero{background:#fff;border-bottom:1px solid #DDE3EC}
+.hero .khung{display:grid;grid-template-columns:minmax(220px,1fr) 2fr;gap:32px;padding-top:34px;padding-bottom:34px}
+.badge-ngay{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1E6FD9;border:1.5px solid #1E6FD9;padding:5px 12px;border-radius:4px;margin-bottom:14px}
+.hero h1{font-size:44px;line-height:1.1;font-weight:800;color:#122B4D;letter-spacing:-.01em}
+.hero .diem-nhan{font-size:21px;font-weight:700;line-height:1.4;margin-bottom:10px}
+.hero .diem-nhan .xanh{color:#1E6FD9}
+.hero .dande{font-size:14.5px;color:#44546A;font-style:italic}
+.metrics{background:#fff;padding:6px 0 26px}
+.metrics .khung{display:grid;grid-template-columns:repeat(auto-fit,minmax(152px,1fr));gap:14px}
+.mcard{border:1px solid #DDE3EC;border-radius:8px;padding:14px 16px;background:#fff}
+.mcard .nhan{font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#5B6B80;margin-bottom:6px}
+.mcard .so{font-size:23px;font-weight:800;color:#122B4D;letter-spacing:-.01em;line-height:1.15}
+.mcard .phu{font-size:13px;font-weight:700;margin-top:3px}
+.mcard .chu{margin-top:9px;font-size:11px;color:#5B6B80;border-left:3px solid #DDE3EC;padding:2px 0 2px 9px;font-style:italic;line-height:1.45}
+.canhbao{padding:18px 0 0}
+.canhbao .hop{background:#FDF6E3;border:1px solid #E8D9A8;border-radius:8px;padding:12px 18px;font-size:12.5px;color:#7A4E05;font-style:italic}
+.noidung{padding:26px 0 8px}
+.sec{background:#fff;border:1px solid #DDE3EC;border-radius:10px;padding:22px 26px;margin-bottom:18px}
+.sec .dau{display:flex;align-items:baseline;gap:10px;margin-bottom:4px}
+.sec .so-sec{font-size:13px;font-weight:800;color:#1E6FD9;letter-spacing:.06em}
+.sec h2{font-size:19px;font-weight:800;color:#122B4D}
+.sec .ghichu-sec{font-size:11px;color:#8593A6;font-style:italic;margin-bottom:12px}
+.report-md{font-size:13.5px;color:#2C3E55}
+.report-md h1{display:none}
+.report-md h2{font-size:14px;font-weight:800;color:#122B4D;letter-spacing:.02em;text-transform:uppercase;margin:20px 0 8px;padding-bottom:5px;border-bottom:2px solid #E4E9F0}
+.report-md h3{font-size:13px;font-weight:800;color:#1E6FD9;margin:14px 0 6px}
+.report-md p{margin:7px 0}
+.report-md ul{list-style:none;margin:4px 0}
+.report-md li{padding:7px 0 7px 18px;border-bottom:1px dashed #E4E9F0;position:relative}
+.report-md li:last-child{border-bottom:none}
+.report-md li::before{content:"";position:absolute;left:2px;top:14px;width:7px;height:7px;border-radius:50%;background:#1E6FD9}
+.report-md table{border-collapse:collapse;width:100%;margin:10px 0;font-size:13px}
+.report-md th{background:#F2F5FA;color:#122B4D;font-weight:800;text-align:left;padding:8px 10px;border-bottom:2px solid #122B4D;font-size:12px;letter-spacing:.03em}
+.report-md td{padding:8px 10px;border-bottom:1px dashed #E4E9F0;vertical-align:top;color:#2C3E55}
+.report-md tr:last-child td{border-bottom:none}
+.report-md strong{color:#122B4D}
+.report-md code{background:#F2F5FA;padding:1px 6px;border-radius:4px;font-size:12px}
+.quote{padding:10px 0 26px}
+.quote .hop{background:#E7F0FC;border-radius:10px;padding:26px 32px;display:flex;gap:18px;align-items:flex-start}
+.quote .dau-nhay{font-size:52px;font-weight:800;color:#1E6FD9;line-height:.8;font-family:Georgia,serif}
+.dg-tieude{font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#1E6FD9;margin-bottom:7px}
+.quote p{font-size:16.5px;font-style:italic;font-weight:500;color:#0F4187;line-height:1.65}
+.quote .ai{margin-top:8px;font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#1E6FD9;font-style:normal}
+.luutru{padding:0 0 26px}
+.luutru .hop{background:#fff;border:1px solid #DDE3EC;border-radius:10px;padding:18px 26px}
+.luutru .tieu{font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#5B6B80;margin-bottom:8px}
+.luutru .links{font-size:13px;line-height:2}
+.chantrang{background:#122B4D;color:#fff;margin-top:14px}
+.chantrang .khung{padding-top:22px;padding-bottom:22px}
+.chantrang .hang{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.chantrang .brand-ft{font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:13px}
+.chantrang .mota-ft{font-size:11px;color:#9FB2CC;font-style:italic}
+.chantrang .nguon{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.15);font-size:11px;color:#9FB2CC;line-height:2}
+@media(max-width:760px){.hero .khung{grid-template-columns:1fr;gap:18px}.hero h1{font-size:32px}.tieude-bar{display:none}}
 </style>
 </head>
 <body>
-<header>
-  <h1>📊 Mini Investment Desk — Báo cáo đầu ngày</h1>
-  <div class="meta">Dữ liệu phiên 2026-06-11 · tạo tự động lúc ~6h30 sáng hôm sau · LPBS internal</div>
-  <div class="badges"><span class="badge" style="background:#9a6700">Regime: SIDEWAY</span><span class="badge" style="background:#0969da">Chiến thuật: SIDEWAY_SWING</span><span class="badge" style="background:#9a6700">Margin: restricted</span></div>
-</header>
-<main>
-  <div class="disclaimer"><strong>Lưu ý:</strong> Báo cáo do hệ thống AI tạo tự động để hỗ trợ broker nội bộ,
-  chỉ có giá trị trong ngày, không phải khuyến nghị đầu tư cho khách hàng cuối và không cam kết lợi nhuận.
-  Mọi tư vấn cho khách phải qua đánh giá của broker. Dữ liệu nguồn miễn phí, có thể có độ trễ/sai số.</div>
-  <details open><summary>1 · MARKET REGIME — Thị trường đang chơi theo luật nào?</summary><div class="report"><h1>MARKET REGIME REPORT — 2026-06-11</h1>
-<h2>Kết luận (MOCK)</h2>
+
+<header class="topbar"><div class="khung">
+  <div class="brand"><div class="logo">MD</div><div><div class="ten">Mini Investment Desk</div><div class="phu">Daily strategy desk · LPBS</div></div></div>
+  <div class="tieude-bar">— Báo cáo chiến lược đầu ngày —</div>
+  <div class="meta-bar"><b>THỨ NĂM · 11.06.2026</b><br>Pipeline 01→03 tự động trước giờ giao dịch</div>
+</div></header>
+
+<div class="hero"><div class="khung">
+  <div><span class="badge-ngay">Dữ liệu phiên · 11.06.2026</span><h1>Đứng ngoài — chờ xác nhận</h1></div>
+  <div>
+    <div class="diem-nhan">VN-Index 1.798,61 (-0,28%) — <span class="xanh">Hồi kỹ thuật trong downtrend · cảnh báo rủi ro bull trap</span></div>
+    <p class="dande">Sub-state BULL_TRAP_RISK ghi đè regime chính → tra ma trận theo dòng thận trọng hơn: cấm toàn bộ chiến thuật mua mới · Phiên hồi không có thanh khoản (56,5% trung bình) — không có bằng chứng dòng tiền quay lại · Confidence Trung bình → loại mọi chiến thuật Tier 3 khỏi vị trí chính</p>
+  </div>
+</div></div>
+
+<div class="metrics"><div class="khung"><div class="mcard"><div class="nhan">VN-Index</div><div class="so">1.798,61</div><div class="phu" style="color:#D6453D">▼ -0,28%</div><div class="chu">5 phiên -1,8% · 20 phiên -6,59%</div></div><div class="mcard"><div class="nhan">Thanh khoản</div><div class="so">56,5%</div><div class="phu" style="color:#D6453D">so trung bình 20 phiên</div><div class="chu">khối lượng tổng (proxy)</div></div><div class="mcard"><div class="nhan">Regime</div><div class="so">TECH BOUNCE</div><div class="phu" style="color:#B97A0F">Hồi kỹ thuật trong downtrend</div><div class="chu">trạng thái phụ: BULL_TRAP_RISK</div></div><div class="mcard"><div class="nhan">Chiến thuật</div><div class="so">WAIT</div><div class="phu" style="color:#1E6FD9">Đứng ngoài — chờ xác nhận</div><div class="chu">phụ: DERISK</div></div><div class="mcard"><div class="nhan">Margin</div><div class="so">Cấm</div><div class="phu" style="color:#D6453D">forbidden</div></div><div class="mcard"><div class="nhan">Tỷ trọng tham khảo</div><div class="so">10–30%</div><div class="phu" style="color:#5B6B80">confidence: Trung bình</div></div></div></div>
+
+<div class="canhbao"><div class="khung"><div class="hop"><strong>Lưu ý:</strong> Báo cáo do hệ thống AI tạo tự động để hỗ trợ broker nội bộ, chỉ có giá trị trong ngày, không phải khuyến nghị đầu tư cho khách hàng cuối và không cam kết lợi nhuận. Mọi tư vấn cho khách phải qua đánh giá của broker.</div></div></div>
+
+<main class="noidung"><div class="khung"><section class="sec"><div class="dau"><span class="so-sec">§ 01</span><h2>Market Regime — Thị trường đang chơi theo luật nào?</h2></div><div class="ghichu-sec">Scorecard 6 trụ cột · quy tắc hạ nhanh nâng chậm · output của Market Regime Agent</div><div class="report-md"><h1>MARKET REGIME REPORT — 11/06/2026</h1>
+<h2>Scorecard</h2>
+<table>
+<thead>
+<tr>
+<th>Trụ cột</th>
+<th>Trọng số</th>
+<th>Điểm (-2..+2)</th>
+<th>Căn cứ chính (1 dòng)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trend</td>
+<td>25%</td>
+<td>-1</td>
+<td>Dưới MA20 (1.858) và MA50 (1.831), còn trên MA200 (1.749); đỉnh–đáy thấp dần từ 1.933</td>
+</tr>
+<tr>
+<td>Breadth</td>
+<td>20%</td>
+<td>0</td>
+<td>168 tăng / 145 giảm — cân bằng, chưa lan tỏa (nguồn: tổng kết phiên CafeF)</td>
+</tr>
+<tr>
+<td>Liquidity</td>
+<td>20%</td>
+<td>-1</td>
+<td>Khối lượng 56,5% trung bình 20 phiên — cạn kiệt rõ rệt</td>
+</tr>
+<tr>
+<td>Flows</td>
+<td>15%</td>
+<td>-1</td>
+<td>Khối ngoại bán ròng ~-540 tỷ, lũy kế 5 phiên ~-7.000 tỷ tập trung trụ</td>
+</tr>
+<tr>
+<td>Volatility/Phái sinh</td>
+<td>10%</td>
+<td>-1</td>
+<td>Basis F1M chiết khấu ~-8 điểm</td>
+</tr>
+<tr>
+<td>Macro/Sentiment</td>
+<td>10%</td>
+<td>0</td>
+<td>Fed giữ lãi suất; tỷ giá còn căng; tâm lý thận trọng đứng ngoài</td>
+</tr>
+<tr>
+<td><strong>Composite</strong></td>
+<td></td>
+<td><strong>-0,70</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Kết luận</h2>
 <ul>
-<li>Đây là báo cáo giả để test render.</li>
+<li><strong>Trạng thái thị trường chính:</strong> Risk-off / Downtrend ngắn hạn — đang trong nhịp hồi kỹ thuật</li>
+<li><strong>Trạng thái phụ:</strong> Bull trap risk — phiên hồi 10/6 nhờ trụ kéo, thanh khoản dưới 70% trung bình</li>
+<li><strong>Mức độ tự tin:</strong> Trung bình — đủ trường bắt buộc nhưng tín hiệu trái chiều giữa Trend và Breadth</li>
+<li><strong>So với phiên trước:</strong> Giữ nguyên — 1 phiên xanh đơn lẻ không đủ điều kiện nâng regime</li>
+</ul>
+<h2>Dữ liệu ủng hộ</h2>
+<ul>
+<li>VN-Index 1.798,61 (-0,28%), mất lại mốc 1.800 trong phiên</li>
+<li>Giảm 6,59% trong 20 phiên từ đỉnh lịch sử 1.933 (19/5)</li>
+<li>Khối lượng khớp chỉ 410 triệu đơn vị = 56,5% trung bình 20 phiên</li>
+<li>Khối ngoại bán ròng phiên thứ 6 liên tiếp</li>
+</ul>
+<h2>Dữ liệu chưa xác nhận / còn thiếu</h2>
+<ul>
+<li>GTGD khớp lệnh tách thỏa thuận — dùng khối lượng tổng làm proxy, có thể lệch</li>
+<li>Số mã trần/sàn chính xác — chưa tìm được nguồn cập nhật sau 15h30</li>
+</ul>
+<h2>Rủi ro chính trong ngày</h2>
+<ul>
+<li>Nhịp hồi tắt thanh khoản → quay lại kiểm định đáy 1.780; thủng kèm khối lượng là tín hiệu xấu</li>
+<li>Đáo hạn phái sinh 18/6 có thể gây biến động trụ VN30</li>
+</ul>
+<h2>Khuyến nghị khung (không phím mã)</h2>
+<ul>
+<li><strong>Tỷ trọng cổ phiếu tham khảo:</strong> 10–30%, không margin</li>
+<li><strong>Chiến thuật phù hợp:</strong> Chờ xác nhận; tận dụng nhịp hồi để hạ tỷ trọng/margin</li>
+<li><strong>Chiến thuật nên tránh:</strong> Mua đuổi phiên hồi; bắt đáy bằng margin; breakout</li>
+</ul>
+<h2>Điều kiện chuyển trạng thái</h2>
+<ul>
+<li><strong>Nâng regime khi:</strong> Lấy lại 1.830 (MA50) với khớp lệnh &gt;100% trung bình 20 phiên VÀ breadth &gt;250 mã tăng, giữ được 2 phiên</li>
+<li><strong>Hạ regime khi:</strong> Thủng 1.780 kèm khối lượng &gt;120% trung bình, hoặc &gt;30 mã sàn</li>
+</ul>
+<h2>Cảnh báo cho broker</h2>
+<ul>
+<li>Khách dễ hiểu nhầm phiên hồi lấy lại 1.800 là "tạo đáy xong". Chưa có bằng chứng dòng tiền — hồi trong downtrend với thanh khoản cạn là setup bull trap kinh điển. Không để khách FOMO.</li>
 </ul>
 <h2>Handoff cho Strategy Selector</h2>
 <ul>
-<li><strong>Regime code:</strong> SIDEWAY</li>
-<li><strong>Exposure band:</strong> 30–50%</li>
-<li><strong>Margin:</strong> restricted</li>
-</ul></div></details>
-<details open><summary>2 · STRATEGY — Hôm nay đánh kiểu gì hay đứng ngoài?</summary><div class="report"><h1>STRATEGY SELECTION REPORT — 2026-06-11</h1>
-<h2>Chiến thuật chính hôm nay (MOCK)</h2>
+<li><strong>Regime code:</strong> TECH_BOUNCE</li>
+<li><strong>Trạng thái phụ:</strong> BULL_TRAP_RISK</li>
+<li><strong>Exposure band:</strong> 10–30%</li>
+<li><strong>Margin:</strong> forbidden</li>
+<li><strong>Ràng buộc chiến lược:</strong> chỉ chiến lược phòng thủ, cấm mua đuổi, cấm breakout</li>
+</ul></div></section>
+<section class="sec"><div class="dau"><span class="so-sec">§ 02</span><h2>Chiến thuật — Hôm nay đánh kiểu gì hay đứng ngoài?</h2></div><div class="ghichu-sec">Ma trận regime → playbook · điều kiện kích hoạt và vô hiệu đo được · Strategy Selector Agent</div><div class="report-md"><h1>STRATEGY SELECTION REPORT — 11/06/2026</h1>
+<h2>Market regime đầu vào</h2>
 <ul>
-<li>SIDEWAY_SWING</li>
+<li><strong>Regime code:</strong> TECH_BOUNCE</li>
+<li><strong>Trạng thái phụ:</strong> BULL_TRAP_RISK</li>
+<li><strong>Confidence:</strong> Trung bình</li>
+<li><strong>Exposure band / Margin:</strong> 10–30% / forbidden</li>
+</ul>
+<h2>Chiến thuật chính hôm nay</h2>
+<ul>
+<li><strong>WAIT — Không giao dịch / chờ xác nhận</strong> (Risk Tier 0)</li>
+</ul>
+<h2>Vì sao chọn chiến thuật này</h2>
+<ul>
+<li>Sub-state BULL_TRAP_RISK ghi đè regime chính → tra ma trận theo dòng thận trọng hơn: cấm toàn bộ chiến thuật mua mới</li>
+<li>Phiên hồi không có thanh khoản (56,5% trung bình) — không có bằng chứng dòng tiền quay lại</li>
+<li>Confidence Trung bình → loại mọi chiến thuật Tier 3 khỏi vị trí chính</li>
+</ul>
+<h2>Chiến thuật phụ (nếu có)</h2>
+<ul>
+<li><strong>DERISK — Giảm tỷ trọng / hạ margin:</strong> dành cho khách đang kẹt hàng hoặc còn margin — tận dụng nhịp hồi về vùng 1.800–1.830 để đưa tỷ trọng về ≤30% và margin về 0</li>
+</ul>
+<h2>Chiến thuật KHÔNG nên dùng (bị cấm hôm nay)</h2>
+<ul>
+<li><strong>BREAKOUT:</strong> không có nền tích lũy, mọi nhịp vượt kháng cự trong downtrend thanh khoản cạn đều rủi ro bull trap</li>
+<li><strong>PULLBACK_BUY:</strong> không có uptrend để pullback — đây là hồi trong downtrend</li>
+<li><strong>MEAN_REVERSION:</strong> chưa có tín hiệu cạn cung đo được; "đã giảm nhiều" không phải điều kiện kích hoạt</li>
+<li><strong>TREND_FOLLOW chiều mua:</strong> ngược xu hướng chính</li>
+</ul>
+<h2>Điều kiện được hành động (kích hoạt)</h2>
+<ul>
+<li>Index lấy lại 1.830 (MA50) với khớp lệnh &gt;100% trung bình 20 phiên, giữ 2 phiên liên tiếp</li>
+<li>Breadth &gt;250 mã tăng/phiên và điểm tăng không dồn vào &lt;5 mã trụ</li>
+</ul>
+<h2>Điều kiện phải đứng ngoài / vô hiệu</h2>
+<ul>
+<li>Thủng 1.780 kèm khối lượng tăng → chuyển hẳn sang DERISK/CASH, chờ tín hiệu panic/cạn cung</li>
+<li>Hồi tiếp nhưng thanh khoản vẫn &lt;80% trung bình → tiếp tục WAIT, không nâng tỷ trọng</li>
+</ul>
+<h2>Thời gian nắm giữ phù hợp</h2>
+<ul>
+<li>Không mở vị thế mới. Việc hạ tỷ trọng (DERISK) thực hiện trong 1–3 phiên tới khi index trong vùng 1.800–1.830</li>
+</ul>
+<h2>Tỷ trọng tham khảo</h2>
+<ul>
+<li>Danh mục hiện có: đưa về ≤30%, ưu tiên giảm hàng yếu/beta cao trước. Vị thế mới: 0%</li>
+</ul>
+<h2>Có nên dùng margin không</h2>
+<ul>
+<li><strong>Không.</strong> Margin forbidden từ regime — đặc biệt cấm bình quân giá bằng margin</li>
+</ul>
+<h2>Loại khách phù hợp</h2>
+<ul>
+<li>Tất cả các tệp khách đều phù hợp với WAIT; khách kẹt hàng/margin cao phù hợp với DERISK</li>
+</ul>
+<h2>Loại khách KHÔNG phù hợp</h2>
+<ul>
+<li>Không có — nhưng khách T+ chuyên nghiệp đòi "đánh hồi" phải được cảnh báo đây là setup rủi ro cao, lệnh nhỏ, tự chịu kỷ luật cắt 1–2%</li>
+</ul>
+<h2>Cảnh báo cho broker</h2>
+<ul>
+<li>Hôm nay câu hỏi nguy hiểm nhất từ khách là "thị trường xanh rồi, vào được chưa?". Câu trả lời: chưa — hồi không có tiền. Điều kiện vào lại rất cụ thể: 1.830 + khớp lệnh &gt;100% trung bình + 2 phiên giữ được. Trước đó, mọi nhịp tăng là cơ hội GIẢM chứ không phải mua.</li>
 </ul>
 <h2>Handoff</h2>
 <ul>
-<li><strong>Strategy code:</strong> SIDEWAY_SWING</li>
-<li><strong>Margin:</strong> restricted</li>
-</ul></div></details>
-<details><summary>3 · SECTOR — Tiền đang ở nhóm ngành nào?</summary><div class="report"><h1>SECTOR ROTATION REPORT — 2026-06-11</h1>
-<h2>Sector Map (MOCK)</h2>
+<li><strong>Strategy code:</strong> WAIT</li>
+<li><strong>Secondary code:</strong> DERISK</li>
+<li><strong>Cho Sector Rotation Agent:</strong> chỉ chạy map quan sát — đánh dấu nhóm giữ giá tốt nhất để theo dõi; xếp hạng nhóm nên giảm trước cho khách kẹt hàng</li>
+<li><strong>Cho Stock Watchlist Agent:</strong> KHÔNG chạy watchlist mua hôm nay; chỉ xuất danh sách "Nên tránh"</li>
+<li><strong>Exposure ceiling:</strong> 30%</li>
+<li><strong>Margin:</strong> forbidden</li>
+</ul></div></section>
+<section class="sec"><div class="dau"><span class="so-sec">§ 03</span><h2>Dòng tiền ngành — Tiền đang ở đâu, cấm đuổi nhóm nào?</h2></div><div class="ghichu-sec">Ma trận RS × Flow · Strong / Improving / Weak / Avoid Chasing · Sector Rotation Agent</div><div class="report-md"><h1>SECTOR ROTATION REPORT — 11/06/2026</h1>
+<h2>Strategy Context</h2>
+<ul>
+<li><strong>Strategy code đầu vào:</strong> WAIT (phụ: DERISK)</li>
+<li><strong>Chế độ map:</strong> Quan sát + xếp hạng nhóm nên giảm trước (không khuyến nghị mua)</li>
+</ul>
+<h2>Sector Map</h2>
+<h3>Strong Sectors</h3>
+<table>
+<thead>
+<tr>
+<th>Ngành</th>
+<th>RS (5p / 20p vs Index)</th>
+<th>Flow</th>
+<th>Ghi chú 1 dòng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Chế độ WAIT: không xếp nhóm Strong khuyến nghị mua</td>
+</tr>
+</tbody>
+</table>
+<h3>Improving Sectors</h3>
 <table>
 <thead>
 <tr>
 <th>Ngành</th>
 <th>RS</th>
 <th>Flow</th>
-<th>Ghi chú</th>
+<th>Điều kiện xác nhận để lên Strong (đo được)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Bán lẻ</td>
-<td>RS+</td>
-<td>Flow+</td>
-<td>mock</td>
+<td>Điện</td>
+<td>+1,2% / +2,8% vs Index</td>
+<td>GTGD 95% TB20</td>
+<td>Giữ giá tốt nhất thị trường — theo dõi, chỉ xét khi regime nâng</td>
+</tr>
+<tr>
+<td>Dược</td>
+<td>+0,8% / +1,9% vs Index</td>
+<td>GTGD 88% TB20</td>
+<td>Phòng thủ điển hình, thanh khoản mỏng — không phù hợp danh mục lớn</td>
 </tr>
 </tbody>
-</table></div></details>
-  <details><summary>📁 Báo cáo các ngày trước</summary><div class="report archive-list">Chưa có</div></details>
-</main>
-<footer>Mini Investment Desk Agent System v1 · pipeline 01→03 tự động · 04→05 chạy theo yêu cầu</footer>
+</table>
+<h3>Weak Sectors</h3>
+<table>
+<thead>
+<tr>
+<th>Ngành</th>
+<th>RS</th>
+<th>Flow</th>
+<th>Dấu hiệu rút tiền</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chứng khoán</td>
+<td>-2,1% / -9,4%</td>
+<td>GTGD 60% TB20</td>
+<td>Beta cao, giảm sâu hơn index, tiền rút rõ</td>
+</tr>
+<tr>
+<td>Thép</td>
+<td>-1,8% / -8,1%</td>
+<td>GTGD 55% TB20</td>
+<td>Khối ngoại bán ròng HPG 4/5 phiên (bằng chứng dòng tiền, không phải khuyến nghị)</td>
+</tr>
+</tbody>
+</table>
+<h3>Avoid Chasing</h3>
+<table>
+<thead>
+<tr>
+<th>Ngành</th>
+<th>Lý do định lượng</th>
+<th>Rủi ro nếu mua đuổi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BĐS (nhóm trụ V)</td>
+<td>Hồi +3% trong 2 phiên nhưng 80% mức tăng từ 1 trụ; GTGD ngành 70% TB20</td>
+<td>Trụ ngừng kéo là mất hết mức tăng — đúng cấu trúc bull trap của regime</td>
+</tr>
+</tbody>
+</table>
+<h2>Evidence</h2>
+<ul>
+<li>Toàn bộ 10 nhóm theo dõi đều có GTGD dưới trung bình 20 phiên — không nhóm nào đạt Flow+</li>
+<li>Điện/dược giữ giá tốt nhất nhưng là phòng thủ co cụm, không phải dòng tiền mới vào</li>
+<li>Thứ tự ưu tiên GIẢM cho khách kẹt hàng: chứng khoán → thép → BĐS đầu cơ (beta cao, thanh khoản kém trước)</li>
+</ul>
+<h2>Risks</h2>
+<ul>
+<li>Map dựa trên dữ liệu hồi phục mới 2 phiên — phân hóa có thể đảo nhanh quanh đáo hạn phái sinh 18/6</li>
+<li>Thiếu dữ liệu tự doanh theo ngành → trục Flow chỉ dựa khối ngoại + GTGD</li>
+</ul>
+<h2>Handoff To Stock Watchlist</h2>
+<ul>
+<li><strong>Preferred sector filters:</strong> KHÔNG có — chế độ WAIT, không chạy watchlist mua</li>
+<li><strong>Excluded sector filters:</strong> Toàn bộ; đặc biệt BĐS trụ kéo (avoid chasing), chứng khoán/thép (weak)</li>
+<li><strong>Liquidity note:</strong> Toàn thị trường thanh khoản cạn — mọi lệnh lớn đều khó khớp giá tốt</li>
+<li><strong>Missing data:</strong> Tự doanh theo ngành; độ rộng nội ngành chỉ ước tính từ tổng kết phiên</li>
+</ul></div></section></div></main>
+
+<div class="quote"><div class="khung"><div class="hop"><div class="dau-nhay">"</div><div><div class="dg-tieude">Cảnh báo cho broker hôm nay</div><p>Hôm nay câu hỏi nguy hiểm nhất từ khách là "thị trường xanh rồi, vào được chưa?". Câu trả lời: chưa — hồi không có tiền. Điều kiện vào lại rất cụ thể: 1.830 + khớp lệnh >100% trung bình + 2 phiên giữ được. Trước đó, mọi nhịp tăng là cơ hội GIẢM chứ không phải mua</p><div class="ai">— Strategy Selector Agent · 11.06.2026 · điều khách dễ hiểu sai nhất hôm nay</div></div></div></div></div>
+
+<div class="luutru"><div class="khung"><div class="hop"><div class="tieu">📁 Báo cáo các ngày trước</div><div class="links"><a href="2026-06-11.html">2026-06-11</a></div></div></div></div>
+
+<footer class="chantrang"><div class="khung">
+  <div class="hang"><span class="brand-ft">Mini Investment Desk Agent System</span><span class="mota-ft">Pipeline 5 agent: Regime → Strategy → Sector → Watchlist → Risk · 01–03 chạy tự động mỗi sáng, 04–05 chạy theo yêu cầu trưởng phòng</span></div>
+  <div class="nguon">Dữ liệu giá: vnstock (VCI) · Breadth, khối ngoại, vĩ mô, tin tức: agent tự thu thập qua web search có ghi nguồn trong từng báo cáo · Model: Claude (Anthropic) · Báo cáo không nêu khuyến nghị mã cụ thể — watchlist (agent 04) và risk review (agent 05) chỉ chạy nội bộ khi có người duyệt.</div>
+</div></footer>
 </body>
 </html>

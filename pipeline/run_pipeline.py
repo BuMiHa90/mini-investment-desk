@@ -37,6 +37,7 @@ def main() -> int:
     mock = "--mock" in sys.argv
 
     print("[1/4] Lay du lieu thi truong (vnstock)...")
+    snapshot = None
     try:
         snapshot, market_md = fetch_data.fetch()
         report_date = snapshot["data_date"]
@@ -69,7 +70,7 @@ def main() -> int:
         (day_dir / f"{key}.md").write_text(text, encoding="utf-8")
 
     print("[4/4] Render HTML...")
-    out = render_html.render(reports, report_date)
+    out = render_html.render(reports, report_date, snapshot=snapshot)
     print(f"      Xong: {out}")
     return 0
 
