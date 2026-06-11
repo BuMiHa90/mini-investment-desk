@@ -1,0 +1,44 @@
+name: daily-desk-report
+
+on:
+  schedule:
+    # 23:30 UTC Chu nhat - Thu nam = 6:30 sang VN Thu hai - Thu sau
+    - cron: "30 23 * * 0-4"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-report
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline (fetch -> agents 01-03 -> HTML)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL || 'claude-sonnet-4-6' }}
+        run: python -m pipeline.run_pipeline
+
+      - name: Commit and push report
+        run: |
+          git config user.name "desk-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs data
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "Daily desk report $(date -u +%F)"
+          git push
