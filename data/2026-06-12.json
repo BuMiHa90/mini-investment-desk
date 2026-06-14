@@ -1,0 +1,47 @@
+{
+  "data_date": "2026-06-12",
+  "vnindex": {
+    "open": 1813.07,
+    "high": 1813.57,
+    "low": 1788.56,
+    "close": 1791.65,
+    "change_pct": -0.39,
+    "perf_5d_pct": -2.57,
+    "perf_20d_pct": -6.76
+  },
+  "vn30": {
+    "close": 1944.36,
+    "change_pct": -0.15
+  },
+  "moving_averages": {
+    "ma20": 1851.9,
+    "ma50": 1833.11,
+    "ma200": 1749.73,
+    "above_ma20": false,
+    "above_ma50": false,
+    "above_ma200": true
+  },
+  "liquidity": {
+    "volume_today": 640199320.0,
+    "volume_avg20": 713883678,
+    "volume_vs_avg20_pct": 89.7,
+    "note": "Khoi luong TONG (chua tach thoa thuan) - chi la proxy, can doi chieu GTGD khop lenh tu nguon khac"
+  },
+  "swing_structure": {
+    "high_20d": 1933.11,
+    "high_20d_date": "2026-05-19",
+    "low_20d": 1780.71,
+    "low_20d_date": "2026-06-09",
+    "high_60d": 1933.11,
+    "low_60d": 1586.44
+  },
+  "missing_fields": [
+    "advancers_decliners (so ma tang/giam HOSE)",
+    "ceiling_floor_count (so ma tran/san)",
+    "index_contribution (tru keo diem)",
+    "matched_value_hose (GTGD khop lenh tach thoa thuan)",
+    "foreign_net_today / foreign_net_5d (khoi ngoai rong)",
+    "f1_basis (basis VN30F1M)",
+    "global_overnight / fx_rates / domestic_policy / sentiment_note"
+  ]
+}
