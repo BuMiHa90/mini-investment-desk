@@ -2,6 +2,15 @@
 thay vi API key). Cung interface voi run_agents.py.
 
 Yeu cau: da dang nhap `claude` mot lan tren may (credentials luu o ~/.claude).
+
+Agent 01: KHONG can web search nua cho breadth / khoi ngoai / index
+contribution / basis phai sinh — 4 truong nay duoc fetch_data.py tu fetch
+truc tiep tu 4 API cong khai (xem agent_desk_missing_fields.md), co cache
+theo report_date (data/cache/<date>_extra.json) de lan chay buoi toi tai su
+dung ket qua da fetch buoi chieu, khong fetch lai. Chi con 3 truong thuc su
+chua co nguon API on dinh (ceiling_floor_count, matched_value_hose,
+global/fx/policy/sentiment) + truong nao fetch loi lan nay van nam trong
+missing_fields va agent ap fallback nhu cu.
 """
 
 from __future__ import annotations
@@ -52,15 +61,18 @@ def run_pipeline_agents(market_data_md: str, report_date: str) -> dict[str, str]
     reports: dict[str, str] = {}
 
     msg01 = (
-        f"Ngay bao cao: {report_date} (du lieu phien gan nhat ben duoi).\n\n"
+        f"Ngay bao cao: {report_date} (du lieu phien gan nhat ben duoi, da gom san "
+        "breadth / khoi ngoai / index contribution / basis phai sinh tu API tu dong).\n\n"
         f"{market_data_md}\n\n"
-        "Cac truong con thieu o tren: hay tu thu thap qua web search tu nguon "
-        "cong khai (bai tong ket phien CafeF/Vietstock, du lieu khoi ngoai...), "
-        "ghi ro nguon va do tre. Truong nao khong tim duoc thi ap quy tac fallback. "
-        "Chi tra ve noi dung bao cao markdown, khong them loi dan."
+        "Cac truong con lai trong missing_fields o tren: KHONG can web search de bo "
+        "sung (chua co nguon API thay the on dinh hoac vua fetch loi lan nay). Ghi ro "
+        "trong bao cao la 'Chua co du lieu - cho nguon thay the, se duoc bo sung sau' "
+        "va ap dung quy tac fallback nhu khi khong tim duoc. KHONG xoa missing_fields "
+        "khoi du lieu dau vao — con nguoi se tim nguon va bo sung lai sau. Chi tra ve "
+        "noi dung bao cao markdown, khong them loi dan."
     )
-    print("      agent 01 (regime, co web search)...")
-    reports["01"] = call_agent(load_system_prompt("01"), msg01, web_search=True)
+    print("      agent 01 (regime, breadth/khoi ngoai/phai sinh da co san tu API)...")
+    reports["01"] = call_agent(load_system_prompt("01"), msg01, web_search=False)
 
     msg02 = (
         f"Day la MARKET REGIME REPORT ngay {report_date} tu Market Regime Agent. "

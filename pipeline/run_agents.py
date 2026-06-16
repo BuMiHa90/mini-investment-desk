@@ -2,8 +2,15 @@
 
 - System prompt cua moi agent lay tu PROMPT.md trong thu muc agent tuong ung
   (phan sau dau '---' dau tien).
-- Agent 01 va 03 duoc bat server-side web search de tu bo sung du lieu thieu
-  (breadth, khoi ngoai, vi mo, du lieu nganh).
+- Agent 03 duoc bat server-side web search de tu bo sung du lieu nganh.
+- Agent 01: KHONG can web search nua cho breadth / khoi ngoai / index
+  contribution / basis phai sinh — 4 truong nay duoc fetch_data.py tu fetch
+  truc tiep tu 4 API cong khai (xem agent_desk_missing_fields.md) va dua san
+  vao market_data_md. Chi con 3 truong thuc su chua co nguon API on dinh
+  (ceiling_floor_count, matched_value_hose, global/fx/policy/sentiment) +
+  truong nao fetch loi trong lan chay nay van nam trong missing_fields va
+  agent ap fallback nhu cu — KHONG bat web_search cho agent 01 vi se lam
+  cham pipeline ma khong giai quyet duoc 3 truong con thieu nay.
 - Output cua agent truoc duoc dua nguyen van lam message cho agent sau
   (cac agent duoc thiet ke de doc khoi Handoff trong bao cao).
 """
@@ -68,13 +75,16 @@ def run_pipeline_agents(market_data_md: str, report_date: str) -> dict[str, str]
     reports: dict[str, str] = {}
 
     msg01 = (
-        f"Ngay bao cao: {report_date} (du lieu phien gan nhat ben duoi).\n\n"
+        f"Ngay bao cao: {report_date} (du lieu phien gan nhat ben duoi, da gom san "
+        "breadth / khoi ngoai / index contribution / basis phai sinh tu API tu dong).\n\n"
         f"{market_data_md}\n\n"
-        "Cac truong con thieu o tren: hay tu thu thap qua web search tu nguon "
-        "cong khai (bai tong ket phien CafeF/Vietstock, du lieu khoi ngoai...), "
-        "ghi ro nguon va do tre. Truong nao khong tim duoc thi ap quy tac fallback."
+        "Cac truong con lai trong missing_fields o tren: KHONG can web search de bo "
+        "sung (chua co nguon API thay the on dinh hoac vua fetch loi lan nay). Ghi ro "
+        "trong bao cao la 'Chua co du lieu - cho nguon thay the, se duoc bo sung sau' "
+        "va ap dung quy tac fallback nhu khi khong tim duoc. KHONG xoa missing_fields "
+        "khoi du lieu dau vao — con nguoi se tim nguon va bo sung lai sau."
     )
-    reports["01"] = call_agent(load_system_prompt("01"), msg01, web_search=True)
+    reports["01"] = call_agent(load_system_prompt("01"), msg01, web_search=False)
 
     msg02 = (
         f"Day la MARKET REGIME REPORT ngay {report_date} tu Market Regime Agent. "
