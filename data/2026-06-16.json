@@ -36,12 +36,133 @@
     "low_60d": 1586.44
   },
   "missing_fields": [
-    "advancers_decliners (so ma tang/giam HOSE)",
     "ceiling_floor_count (so ma tran/san)",
-    "index_contribution (tru keo diem)",
     "matched_value_hose (GTGD khop lenh tach thoa thuan)",
-    "foreign_net_today / foreign_net_5d (khoi ngoai rong)",
-    "f1_basis (basis VN30F1M)",
     "global_overnight / fx_rates / domestic_policy / sentiment_note"
-  ]
+  ],
+  "breadth": {
+    "up": 187,
+    "down": 113,
+    "nochange": 74,
+    "pct_up": 50,
+    "pct_down": 30,
+    "as_of_time": "14:45",
+    "source": "cafef.vn ajaxdorongthitruong (HOSE)"
+  },
+  "foreign_flows": {
+    "net_today_vnd": -384783609000.0,
+    "net_5d_vnd": 2195156021000,
+    "unit": "VND",
+    "source": "msh-appdata.cafef.vn OverviewOrgnizaztion (VNINDEX)"
+  },
+  "index_contribution": [
+    {
+      "code": "ACB",
+      "change_pct": -1.98,
+      "influence_index": 3.1437
+    },
+    {
+      "code": "VCB",
+      "change_pct": 0.32,
+      "influence_index": 2.3139
+    },
+    {
+      "code": "HVN",
+      "change_pct": 6.86,
+      "influence_index": 2.0109
+    },
+    {
+      "code": "VJC",
+      "change_pct": -2.34,
+      "influence_index": 1.3309
+    },
+    {
+      "code": "MSB",
+      "change_pct": -1.95,
+      "influence_index": 0.9007
+    },
+    {
+      "code": "SSB",
+      "change_pct": 0.0,
+      "influence_index": 0.8909
+    },
+    {
+      "code": "VND",
+      "change_pct": 3.11,
+      "influence_index": 0.8386
+    },
+    {
+      "code": "OCB",
+      "change_pct": -0.79,
+      "influence_index": 0.7658
+    },
+    {
+      "code": "VCK",
+      "change_pct": 0.87,
+      "influence_index": 0.6637
+    },
+    {
+      "code": "FPT",
+      "change_pct": -0.54,
+      "influence_index": 0.6606
+    },
+    {
+      "code": "VIC",
+      "change_pct": 0.73,
+      "influence_index": -53.4465
+    },
+    {
+      "code": "VHM",
+      "change_pct": 0.29,
+      "influence_index": -16.827
+    },
+    {
+      "code": "BSR",
+      "change_pct": 1.13,
+      "influence_index": -4.5922
+    },
+    {
+      "code": "CTG",
+      "change_pct": 0.0,
+      "influence_index": -3.4221
+    },
+    {
+      "code": "GAS",
+      "change_pct": -0.97,
+      "influence_index": -3.0517
+    },
+    {
+      "code": "LPB",
+      "change_pct": 0.54,
+      "influence_index": -2.9711
+    },
+    {
+      "code": "GEE",
+      "change_pct": -1.26,
+      "influence_index": -2.9346
+    },
+    {
+      "code": "VRE",
+      "change_pct": 0.35,
+      "influence_index": -2.4171
+    },
+    {
+      "code": "HDB",
+      "change_pct": 0.2,
+      "influence_index": -2.3414
+    },
+    {
+      "code": "TCB",
+      "change_pct": 0.16,
+      "influence_index": -2.292
+    }
+  ],
+  "f1_basis": {
+    "vn30_close": 1960.19,
+    "f1_close": 1964.0,
+    "basis": 3.81,
+    "basis_pct": 0.19,
+    "source": "api.vietstock.vn/tvnew/history (VN30, VN30F1M)"
+  },
+  "extra_fetched_at": "2026-06-16T19:01:06"
 }
