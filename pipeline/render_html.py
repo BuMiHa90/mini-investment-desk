@@ -195,6 +195,28 @@ def _extract_section(heading_regex: str, text: str) -> str | None:
     return " ".join(joined.split())
 
 
+def _field(label: str, text: str, value_re: str = r"[^\n|\]]+") -> str | None:
+    """Bat 1 truong Handoff du o dang 'Key: value', '| Key | value |',
+    '**Key:** value' hay 'Key | value'. label la regex cho ten truong."""
+    # tach bo ** va [ ] o value
+    pat = (
+        rf"{label}\s*\**\s*[:|]\s*\**\s*\[?\s*({value_re})"
+    )
+    m = re.search(pat, text, re.I)
+    if not m:
+        return None
+    return m.group(1).strip().strip("*[]").strip()
+
+
+def _code(label: str, text: str) -> str | None:
+    v = _field(label, text, r"[A-Za-z][A-Za-z0-9_ /]+")
+    if not v:
+        return None
+    # chuan hoa: vd "RISK OFF" -> "RISK_OFF", lay token dau neu co ' — '
+    v = v.split("—")[0].split("(")[0].strip()
+    return v.upper().replace(" ", "_").replace("-", "_").rstrip("_")
+
+
 def _md(text: str) -> str:
     return markdown.markdown(text, extensions=["tables", "fenced_code"])
 
@@ -220,17 +242,35 @@ def render(reports: dict[str, str], report_date: str, snapshot: dict | None = No
 
     r01, r02 = reports.get("01", ""), reports.get("02", "")
 
-    regime = _extract(r"Regime code:\*{0,2}\s*\[?([A-Z_]+)", r01) or "?"
-    sub_state = _extract(r"Trạng thái phụ:\*{0,2}\s*\[?([A-Z][A-Z_]{2,})", r01)
-    confidence = _extract(r"Mức độ tự tin:\*{0,2}\s*\[?(Thấp|Trung bình|Cao)", r01) or _extract(
-        r"Confidence:\*{0,2}\s*\[?(Thấp|Trung bình|Cao)", r02
+    regime = _code(r"Regime code", r01) or _code(r"Regime code", r02) or "?"
+    sub_state = _code(r"Trạng thái phụ", r01)
+    confidence = (
+        _field(r"Mức độ tự tin", r01, r"Thấp|Trung bình|Cao")
+        or _field(r"Confidence", r01, r"Thấp|Trung bình|Cao|THẤP|TRUNG BÌNH|CAO")
+        or _field(r"Confidence", r02, r"Thấp|Trung bình|Cao|THẤP|TRUNG BÌNH|CAO")
     )
-    exposure = _extract(r"Exposure band:\*{0,2}\s*\[?([^\n\]]+)", r01) or _extract(r"Exposure ceiling:\*{0,2}\s*\[?([^\n\]]+)", r02)
-    margin = _extract(r"Margin:\*{0,2}\s*\[?(allowed|restricted|forbidden)", r02) or _extract(
-        r"Margin:\*{0,2}\s*\[?(allowed|restricted|forbidden)", r01
+    if confidence:
+        confidence = confidence.capitalize() if confidence.isupper() else confidence
+    exposure = (
+        _field(r"Exposure (?:band|ceiling)", r02)
+        or _field(r"Exposure (?:band|ceiling)", r01)
+        or _field(r"Tỷ trọng tham khảo", r02)
     )
-    strategy = _extract(r"Strategy code:\*{0,2}\s*\[?([A-Z_]+)", r02) or "?"
-    secondary = _extract(r"Secondary code:\*{0,2}\s*\[?([A-Z_]+)", r02)
+    margin = _field(r"Margin", r02, r"allowed|restricted|forbidden") or _field(
+        r"Margin", r01, r"allowed|restricted|forbidden"
+    )
+    margin = margin.lower() if margin else None
+    # strategy: uu tien dong "Strategy code", roi "Chiến thuật chính được chọn",
+    # cuoi cung heading "### XXX —" dau tien trong muc chien thuat chinh
+    strategy = (
+        _code(r"Strategy code", r02)
+        or _code(r"Chiến thuật chính được chọn", r02)
+        or _extract(r"###\s+([A-Z_]{3,})\b", r02)
+        or "?"
+    )
+    secondary = _code(r"Secondary code", r02)
+    if secondary in ("NONE", "KHÔNG", "KHONG"):
+        secondary = None
 
     regime_label, regime_color = REGIME_LABELS.get(regime, (regime, "#5B6B80"))
     headline = STRATEGY_HEADLINES.get(strategy, "Báo cáo chiến lược đầu ngày")
