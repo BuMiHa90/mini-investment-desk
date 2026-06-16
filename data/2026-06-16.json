@@ -4,27 +4,27 @@
     "open": 1808.56,
     "high": 1811.59,
     "low": 1799.86,
-    "close": 1805.88,
-    "change_pct": 0.37,
-    "perf_5d_pct": 0.72,
-    "perf_20d_pct": -5.6
+    "close": 1807.94,
+    "change_pct": 0.48,
+    "perf_5d_pct": 0.83,
+    "perf_20d_pct": -5.49
   },
   "vn30": {
-    "close": 1967.16,
-    "change_pct": 0.24
+    "close": 1960.19,
+    "change_pct": -0.12
   },
   "moving_averages": {
-    "ma20": 1840.11,
-    "ma50": 1837.26,
-    "ma200": 1751.09,
+    "ma20": 1840.22,
+    "ma50": 1837.31,
+    "ma200": 1751.1,
     "above_ma20": false,
     "above_ma50": false,
     "above_ma200": true
   },
   "liquidity": {
-    "volume_today": 108425542.0,
+    "volume_today": 672837809.0,
     "volume_avg20": 707231517,
-    "volume_vs_avg20_pct": 15.3,
+    "volume_vs_avg20_pct": 95.1,
     "note": "Khoi luong TONG (chua tach thoa thuan) - chi la proxy, can doi chieu GTGD khop lenh tu nguon khac"
   },
   "swing_structure": {
