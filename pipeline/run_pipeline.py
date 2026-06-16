@@ -1,7 +1,9 @@
-"""Entry point: python -m pipeline.run_pipeline [--mock]
+"""Entry point: python -m pipeline.run_pipeline [--mock|--cli]
 
 Quy trinh: fetch du lieu -> agent 01 -> 02 -> 03 -> render HTML.
---mock: bo qua API (khong can ANTHROPIC_API_KEY), dung bao cao gia de test render.
+--mock : bo qua model, dung bao cao gia de test render.
+--cli  : goi qua Claude Code CLI (goi thue bao, khong can ANTHROPIC_API_KEY).
+(mac dinh: goi Anthropic API truc tiep, can ANTHROPIC_API_KEY)
 """
 
 from __future__ import annotations
@@ -58,6 +60,10 @@ def main() -> int:
     if mock:
         reports = {k: v.format(d=report_date) for k, v in MOCK_REPORTS.items()}
         print("      (mock mode — khong goi API)")
+    elif "--cli" in sys.argv:
+        from . import run_agents_cli
+
+        reports = run_agents_cli.run_pipeline_agents(market_md, report_date)
     else:
         from . import run_agents
 

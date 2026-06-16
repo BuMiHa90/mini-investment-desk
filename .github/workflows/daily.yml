@@ -1,9 +1,9 @@
 name: daily-desk-report
 
 on:
-  schedule:
-    # 23:30 UTC Chu nhat - Thu nam = 6:30 sang VN Thu hai - Thu sau
-    - cron: "30 23 * * 0-4"
+  # Lich tu dong da chuyen sang chay LOCAL bang Task Scheduler (run_daily.bat)
+  # vi dung goi thue bao Claude thay vi API key. Giu workflow_dispatch de
+  # chay tay tren cloud neu sau nay co ANTHROPIC_API_KEY.
   workflow_dispatch: {}
 
 permissions:
