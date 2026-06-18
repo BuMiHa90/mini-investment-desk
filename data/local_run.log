@@ -83,3 +83,54 @@ Release: https://pypi.org/project/vnai/#history
 [3/4] Luu bao cao markdown...
 [4/4] Render HTML...
       Xong: F:\Hai BUi\Mini_Investment_Desk_Agent_System_v1\docs\index.html
+warning: in the working copy of 'data/local_run.log', LF will be replaced by CRLF the next time Git touches it
+[graphify hook] launching background rebuild (log: /c/Users/ADMIN/.cache/graphify-rebuild.log)
+[feature/missing-fields-pipeline 38a506e] Daily desk report (local run)
+ 7 files changed, 2963 insertions(+), 219 deletions(-)
+ create mode 100644 data/2026-06-17.json
+ create mode 100644 data/reports/2026-06-17/01.md
+ create mode 100644 data/reports/2026-06-17/02.md
+ create mode 100644 data/reports/2026-06-17/03.md
+ create mode 100644 docs/archive/2026-06-17.html
+To https://github.com/BuMiHa90/mini-investment-desk.git
+   acee88b..38a506e  feature/missing-fields-pipeline -> feature/missing-fields-pipeline
+DONE Wed 06/17/2026 20:48:41.38 
+==================== Thu 06/18/2026 20:30:01.95 ==================== 
+📦 Vnai 2.4.9 is available
+Current: 2.4.8 (Python 3.11)
+Update: pip install vnai --upgrade
+Release: https://pypi.org/project/vnai/#history
+[1/4] Lay du lieu thi truong (vnstock)...
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                                 ┃
+┃  ⚠️ THÔNG BÁO QUAN TRỌNG                                                        ┃
+┃                                                                                 ┃
+┃  Phát hành vnstock 4.0.1 cung cấp sửa lỗi quan trọng và bổ sung giao diện API   ┃
+┃  thống nhất (Unified UI), tăng tính ổn định của code.                           ┃
+┃  Cập nhật: pip install vnstock -U                                               ┃
+┃  AI Agent Guide: https://github.com/vnstock-hq/vnstock-agent-guide/             ┃
+┃                                                                                 ┃
+┃  ────────────────────────────────────────────────────────────────────────────── ┃
+┃                                                                                 ┃
+┃  🚀 VNSTOCK INSIDERS PROGRAM - NÂNG TẦM TRẢI NGHIỆM CỦA BẠN! 🚀                 ┃
+┃                                                                                 ┃
+┃  Nếu bạn cảm thấy khó chịu với các thông báo và quảng cáo:                      ┃
+┃                                                                                 ┃
+┃  ✨ Ẩn toàn bộ thông báo và quảng cáo phiền hà                                  ┃
+┃  🔓 Mở rộng khả năng sử dụng API tối đa                                         ┃
+┃  ⚡ Tăng tốc tải dữ liệu từ 5-8 lần                                              ┃
+┃  📈 Tăng giới hạn truy cập API lên đến 5 lần                                    ┃
+┃  🤖 Dùng AI Agent viết code hiệu quả với tài liệu Agent Guide                    ┃
+┃                                                                                 ┃
+┃  🔗 Tham gia ngay: https://vnstocks.com/insiders-program#tiers                  ┃
+┃                                                                                 ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+      [extra] dung lai cache 2026-06-18_extra.json (khong fetch lai)
+      OK — phien 2026-06-18, VN-Index 1830.47
+[2/4] Chay agent 01 -> 02 -> 03...
+      agent 01 (regime, breadth/khoi ngoai/phai sinh da co san tu API)...
+      agent 02 (strategy)...
+      agent 03 (sector, co web search)...
+[3/4] Luu bao cao markdown...
+[4/4] Render HTML...
+      Xong: F:\Hai BUi\Mini_Investment_Desk_Agent_System_v1\docs\index.html
