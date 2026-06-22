@@ -1,16 +1,16 @@
 # Graph Report - Mini_Investment_Desk_Agent_System_v1  (2026-06-22)
 
 ## Corpus Check
-- 91 files · ~122,032 words
+- 92 files · ~123,984 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 745 nodes · 700 edges · 72 communities (70 shown, 2 thin omitted)
+- 755 nodes · 712 edges · 73 communities (71 shown, 2 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e6885e5d`
+- Built from commit: `e22fefa2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -86,18 +86,19 @@
 - [[_COMMUNITY_Community 69|Community 69]]
 - [[_COMMUNITY_Community 70|Community 70]]
 - [[_COMMUNITY_Community 71|Community 71]]
+- [[_COMMUNITY_Community 72|Community 72]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `STRATEGY SELECTION REPORT — 16/06/2026` - 15 edges
 2. `STRATEGY SELECTION REPORT — [dd/mm/yyyy]` - 15 edges
 3. `SECTOR ROTATION MAP — 2026-06-19` - 12 edges
-4. `BÁO CÁO TRẠNG THÁI THỊ TRƯỜNG — RISK REGIME DESK` - 10 edges
-5. `BÁO CÁO MARKET REGIME — 2026-06-19` - 10 edges
-6. `BÁO CÁO TRẠNG THÁI THỊ TRƯỜNG` - 10 edges
-7. `BÁO CÁO TRẠNG THÁI THỊ TRƯỜNG — LPBS Risk Regime Desk` - 10 edges
-8. `MARKET REGIME REPORT — 16/06/2026` - 10 edges
-9. `Input Schema — Market Regime Agent v0.2` - 10 edges
-10. `MARKET REGIME REPORT — [dd/mm/yyyy]` - 10 edges
+4. `fetch_extra_fields()` - 10 edges
+5. `BÁO CÁO TRẠNG THÁI THỊ TRƯỜNG — RISK REGIME DESK` - 10 edges
+6. `BÁO CÁO MARKET REGIME — 2026-06-19` - 10 edges
+7. `BÁO CÁO TRẠNG THÁI THỊ TRƯỜNG` - 10 edges
+8. `BÁO CÁO TRẠNG THÁI THỊ TRƯỜNG — LPBS Risk Regime Desk` - 10 edges
+9. `MARKET REGIME REPORT — 16/06/2026` - 10 edges
+10. `Input Schema — Market Regime Agent v0.2` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `run_pipeline_agents()` --calls--> `load_system_prompt()`  [EXTRACTED]
@@ -106,7 +107,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (72 total, 2 thin omitted)
+## Communities (73 total, 2 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.17
@@ -125,8 +126,8 @@ Cohesion: 0.18
 Nodes (10): Cảnh báo cho broker, Dữ liệu chưa xác nhận / còn thiếu, Dữ liệu ủng hộ, Handoff cho Strategy Selector, Khuyến nghị khung (không phím mã), Kết luận, MARKET REGIME REPORT — 16/06/2026, Rủi ro chính trong ngày (+2 more)
 
 ### Community 4 - "Community 4"
-Cohesion: 0.17
-Nodes (18): build_market_snapshot(), fetch(), fetch_breadth(), fetch_extra_fields(), fetch_f1_basis(), fetch_foreign_net(), fetch_index_contribution(), _history() (+10 more)
+Cohesion: 0.13
+Nodes (24): build_market_snapshot(), fetch(), fetch_agreements_trading(), fetch_breadth(), fetch_ceiling_floor(), fetch_extra_fields(), fetch_f1_basis(), fetch_foreign_net() (+16 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.12
@@ -384,25 +385,29 @@ Nodes (15): 1. Kiểm kê dữ liệu, 2. Scorecard, 3. Xác định Regime, 4. 
 Cohesion: 0.14
 Nodes (13): 0. HANDOFF ĐÃ ĐỌC — Strategy Selector, 1. THU THẬP DỮ LIỆU — Nguồn & Phương pháp, 2. CHẤM ĐIỂM TỪNG NGÀNH — RS & Flow, 3. SECTOR MAP 4 NHÓM, 4. EVIDENCE CÓ SỐ LIỆU, 4A. Bất động sản — AVOID CHASING (Ưu tiên DERISK #1), 4B. CNTT — WEAK, 4C. Ngân hàng / Chứng khoán / Thép / Bán lẻ — IMPROVING (tín hiệu chưa xác nhận) (+5 more)
 
+### Community 72 - "Community 72"
+Cohesion: 0.50
+Nodes (3): global_overnight, fx_rates, domestic_policy, sentiment_note, Số mã tăng trần, giảm sàn của sàn HOSE, Tổng khối lượng và giá trị giao dịch thỏa thuận VNINDEX
+
 ## Knowledge Gaps
-- **510 isolated node(s):** `1. Kiểm kê dữ liệu`, `2. Scorecard`, `3. Xác định Regime`, `⚠️ BULL TRAP RISK — CẢNH BÁO BẮT BUỘC`, `📊 Phân hóa mạnh` (+505 more)
+- **513 isolated node(s):** `analyze — Build or refresh the index`, `status — Check index freshness`, `clean — Delete the index`, `wiki — Generate documentation from the graph`, `list — Show all indexed repos` (+508 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **What connects `1. Kiểm kê dữ liệu`, `2. Scorecard`, `3. Xác định Regime` to the rest of the system?**
-  _524 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `analyze — Build or refresh the index`, `status — Check index freshness`, `clean — Delete the index` to the rest of the system?**
+  _530 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.125 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected._
+- **Should `Community 4` be split into smaller, more focused modules?**
+  _Cohesion score 0.12666666666666668 - nodes in this community are weakly interconnected._
 - **Should `Community 5` be split into smaller, more focused modules?**
   _Cohesion score 0.125 - nodes in this community are weakly interconnected._
 - **Should `Community 8` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
 - **Should `Community 9` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
-- **Should `Community 10` be split into smaller, more focused modules?**
-  _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._

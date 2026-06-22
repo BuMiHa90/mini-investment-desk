@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "pipeline/fetch_data.py": {
-    "mtime": 1781613867.7380416,
-    "ast_hash": "f37a05889f5510bc5b1820b4180ef75c",
+    "mtime": 1782132908.8130834,
+    "ast_hash": "0791f4c9ed9fcded3ab104d3a80aa589",
     "semantic_hash": ""
   },
   "pipeline/render_html.py": {
@@ -395,8 +395,8 @@
     "semantic_hash": ""
   },
   ".claude/settings.local.json": {
-    "mtime": 1781707485.6350942,
-    "ast_hash": "f99fb3f05f8fda56dfe74fccd5a0745a",
+    "mtime": 1782132726.1213398,
+    "ast_hash": "07268d3d3639aeb9c7bfee8c67cffdc8",
     "semantic_hash": ""
   },
   "agent_desk_missing_fields.md": {
@@ -480,8 +480,8 @@
     "semantic_hash": ""
   },
   "data/2026-06-22.json": {
-    "mtime": 1782117949.0897098,
-    "ast_hash": "ac6d040ef9570a3cd49b7ce1701f631b",
+    "mtime": 1782135034.4810703,
+    "ast_hash": "c6276da7a4520a28c9c724fdfbc7da06",
     "semantic_hash": ""
   },
   "data/reports/2026-06-22/01.md": {
@@ -502,6 +502,11 @@
   "docs/archive/2026-06-22.html": {
     "mtime": 1782118570.0800946,
     "ast_hash": "f7e4e5d2d4514de54b9e5745a852bbcb",
+    "semantic_hash": ""
+  },
+  "bosungmissingdata.md": {
+    "mtime": 1782131933.008708,
+    "ast_hash": "ecb7d0dc161e096e5f00fd7f8d22fe38",
     "semantic_hash": ""
   }
 }

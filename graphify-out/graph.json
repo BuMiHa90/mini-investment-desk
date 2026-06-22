@@ -4,14 +4,1144 @@
   "graph": {},
   "nodes": [
     {
+      "label": "SKILL.md",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "gitnexus_cli_skill",
+      "community": 20,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "GitNexus CLI Commands",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "gitnexus_cli_skill_gitnexus_cli_commands",
+      "community": 20,
+      "norm_label": "gitnexus cli commands"
+    },
+    {
+      "label": "Commands",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "gitnexus_cli_skill_commands",
+      "community": 20,
+      "norm_label": "commands"
+    },
+    {
+      "label": "analyze \u2014 Build or refresh the index",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "gitnexus_cli_skill_analyze_build_or_refresh_the_index",
+      "community": 20,
+      "norm_label": "analyze \u2014 build or refresh the index"
+    },
+    {
+      "label": "status \u2014 Check index freshness",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "gitnexus_cli_skill_status_check_index_freshness",
+      "community": 20,
+      "norm_label": "status \u2014 check index freshness"
+    },
+    {
+      "label": "clean \u2014 Delete the index",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "gitnexus_cli_skill_clean_delete_the_index",
+      "community": 20,
+      "norm_label": "clean \u2014 delete the index"
+    },
+    {
+      "label": "wiki \u2014 Generate documentation from the graph",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "gitnexus_cli_skill_wiki_generate_documentation_from_the_graph",
+      "community": 20,
+      "norm_label": "wiki \u2014 generate documentation from the graph"
+    },
+    {
+      "label": "list \u2014 Show all indexed repos",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "gitnexus_cli_skill_list_show_all_indexed_repos",
+      "community": 20,
+      "norm_label": "list \u2014 show all indexed repos"
+    },
+    {
+      "label": "After Indexing",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "gitnexus_cli_skill_after_indexing",
+      "community": 20,
+      "norm_label": "after indexing"
+    },
+    {
+      "label": "Troubleshooting",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
+      "source_location": "L81",
+      "_origin": "ast",
+      "id": "gitnexus_cli_skill_troubleshooting",
+      "community": 20,
+      "norm_label": "troubleshooting"
+    },
+    {
+      "label": "SKILL.md",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "gitnexus_debugging_skill",
+      "community": 36,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "Debugging with GitNexus",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "gitnexus_debugging_skill_debugging_with_gitnexus",
+      "community": 36,
+      "norm_label": "debugging with gitnexus"
+    },
+    {
+      "label": "When to Use",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "gitnexus_debugging_skill_when_to_use",
+      "community": 36,
+      "norm_label": "when to use"
+    },
+    {
+      "label": "Workflow",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "gitnexus_debugging_skill_workflow",
+      "community": 36,
+      "norm_label": "workflow"
+    },
+    {
+      "label": "Checklist",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "gitnexus_debugging_skill_checklist",
+      "community": 36,
+      "norm_label": "checklist"
+    },
+    {
+      "label": "Debugging Patterns",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "gitnexus_debugging_skill_debugging_patterns",
+      "community": 36,
+      "norm_label": "debugging patterns"
+    },
+    {
+      "label": "Tools",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "gitnexus_debugging_skill_tools",
+      "community": 36,
+      "norm_label": "tools"
+    },
+    {
+      "label": "Example: \"Payment endpoint returns 500 intermittently\"",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
+      "source_location": "L75",
+      "_origin": "ast",
+      "id": "gitnexus_debugging_skill_example_payment_endpoint_returns_500_intermittently",
+      "community": 36,
+      "norm_label": "example: \"payment endpoint returns 500 intermittently\""
+    },
+    {
+      "label": "SKILL.md",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "gitnexus_exploring_skill",
+      "community": 37,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "Exploring Codebases with GitNexus",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "gitnexus_exploring_skill_exploring_codebases_with_gitnexus",
+      "community": 37,
+      "norm_label": "exploring codebases with gitnexus"
+    },
+    {
+      "label": "When to Use",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "gitnexus_exploring_skill_when_to_use",
+      "community": 37,
+      "norm_label": "when to use"
+    },
+    {
+      "label": "Workflow",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "gitnexus_exploring_skill_workflow",
+      "community": 37,
+      "norm_label": "workflow"
+    },
+    {
+      "label": "Checklist",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "gitnexus_exploring_skill_checklist",
+      "community": 37,
+      "norm_label": "checklist"
+    },
+    {
+      "label": "Resources",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "gitnexus_exploring_skill_resources",
+      "community": 37,
+      "norm_label": "resources"
+    },
+    {
+      "label": "Tools",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "gitnexus_exploring_skill_tools",
+      "community": 37,
+      "norm_label": "tools"
+    },
+    {
+      "label": "Example: \"How does payment processing work?\"",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "gitnexus_exploring_skill_example_how_does_payment_processing_work",
+      "community": 37,
+      "norm_label": "example: \"how does payment processing work?\""
+    },
+    {
+      "label": "SKILL.md",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "gitnexus_guide_skill",
+      "community": 38,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "GitNexus Guide",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "gitnexus_guide_skill_gitnexus_guide",
+      "community": 38,
+      "norm_label": "gitnexus guide"
+    },
+    {
+      "label": "Always Start Here",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "gitnexus_guide_skill_always_start_here",
+      "community": 38,
+      "norm_label": "always start here"
+    },
+    {
+      "label": "Skills",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "gitnexus_guide_skill_skills",
+      "community": 38,
+      "norm_label": "skills"
+    },
+    {
+      "label": "Tools Reference",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "gitnexus_guide_skill_tools_reference",
+      "community": 38,
+      "norm_label": "tools reference"
+    },
+    {
+      "label": "Paginating `list_repos`",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "gitnexus_guide_skill_paginating_list_repos",
+      "community": 38,
+      "norm_label": "paginating `list_repos`"
+    },
+    {
+      "label": "Resources Reference",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "gitnexus_guide_skill_resources_reference",
+      "community": 38,
+      "norm_label": "resources reference"
+    },
+    {
+      "label": "Graph Schema",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "gitnexus_guide_skill_graph_schema",
+      "community": 38,
+      "norm_label": "graph schema"
+    },
+    {
+      "label": "SKILL.md",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "gitnexus_impact_analysis_skill",
+      "community": 29,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "Impact Analysis with GitNexus",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "gitnexus_impact_analysis_skill_impact_analysis_with_gitnexus",
+      "community": 29,
+      "norm_label": "impact analysis with gitnexus"
+    },
+    {
+      "label": "When to Use",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "gitnexus_impact_analysis_skill_when_to_use",
+      "community": 29,
+      "norm_label": "when to use"
+    },
+    {
+      "label": "Workflow",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "gitnexus_impact_analysis_skill_workflow",
+      "community": 29,
+      "norm_label": "workflow"
+    },
+    {
+      "label": "Checklist",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "gitnexus_impact_analysis_skill_checklist",
+      "community": 29,
+      "norm_label": "checklist"
+    },
+    {
+      "label": "Understanding Output",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "gitnexus_impact_analysis_skill_understanding_output",
+      "community": 29,
+      "norm_label": "understanding output"
+    },
+    {
+      "label": "Risk Assessment",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "gitnexus_impact_analysis_skill_risk_assessment",
+      "community": 29,
+      "norm_label": "risk assessment"
+    },
+    {
+      "label": "Tools",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "gitnexus_impact_analysis_skill_tools",
+      "community": 29,
+      "norm_label": "tools"
+    },
+    {
+      "label": "Example: \"What breaks if I change validateUser?\"",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
+      "source_location": "L86",
+      "_origin": "ast",
+      "id": "gitnexus_impact_analysis_skill_example_what_breaks_if_i_change_validateuser",
+      "community": 29,
+      "norm_label": "example: \"what breaks if i change validateuser?\""
+    },
+    {
+      "label": "SKILL.md",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "gitnexus_refactoring_skill",
+      "community": 16,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "Refactoring with GitNexus",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "gitnexus_refactoring_skill_refactoring_with_gitnexus",
+      "community": 16,
+      "norm_label": "refactoring with gitnexus"
+    },
+    {
+      "label": "When to Use",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "gitnexus_refactoring_skill_when_to_use",
+      "community": 16,
+      "norm_label": "when to use"
+    },
+    {
+      "label": "Workflow",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "gitnexus_refactoring_skill_workflow",
+      "community": 16,
+      "norm_label": "workflow"
+    },
+    {
+      "label": "Checklists",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "gitnexus_refactoring_skill_checklists",
+      "community": 16,
+      "norm_label": "checklists"
+    },
+    {
+      "label": "Rename Symbol",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "gitnexus_refactoring_skill_rename_symbol",
+      "community": 16,
+      "norm_label": "rename symbol"
+    },
+    {
+      "label": "Extract Module",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "gitnexus_refactoring_skill_extract_module",
+      "community": 16,
+      "norm_label": "extract module"
+    },
+    {
+      "label": "Split Function/Service",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "gitnexus_refactoring_skill_split_function_service",
+      "community": 16,
+      "norm_label": "split function/service"
+    },
+    {
+      "label": "Tools",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "gitnexus_refactoring_skill_tools",
+      "community": 16,
+      "norm_label": "tools"
+    },
+    {
+      "label": "Risk Rules",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L97",
+      "_origin": "ast",
+      "id": "gitnexus_refactoring_skill_risk_rules",
+      "community": 16,
+      "norm_label": "risk rules"
+    },
+    {
+      "label": "Example: Rename `validateUser` to `authenticateUser`",
+      "file_type": "document",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L106",
+      "_origin": "ast",
+      "id": "gitnexus_refactoring_skill_example_rename_validateuser_to_authenticateuser",
+      "community": 16,
+      "norm_label": "example: rename `validateuser` to `authenticateuser`"
+    },
+    {
+      "label": "AGENTS.md",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "agents",
+      "community": 18,
+      "norm_label": "agents.md"
+    },
+    {
+      "label": "Daily Operations \u2014 Mini Investment Desk",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "agents_daily_operations_mini_investment_desk",
+      "community": 18,
+      "norm_label": "daily operations \u2014 mini investment desk"
+    },
+    {
+      "label": "Non-Negotiable Runtime Paths",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "agents_non_negotiable_runtime_paths",
+      "community": 18,
+      "norm_label": "non-negotiable runtime paths"
+    },
+    {
+      "label": "Daily Workflow",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "agents_daily_workflow",
+      "community": 18,
+      "norm_label": "daily workflow"
+    },
+    {
+      "label": "Failure Handling",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "agents_failure_handling",
+      "community": 18,
+      "norm_label": "failure handling"
+    },
+    {
+      "label": "GitNexus \u2014 Code Intelligence",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "agents_gitnexus_code_intelligence",
+      "community": 18,
+      "norm_label": "gitnexus \u2014 code intelligence"
+    },
+    {
+      "label": "Always Do",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L88",
+      "_origin": "ast",
+      "id": "agents_always_do",
+      "community": 18,
+      "norm_label": "always do"
+    },
+    {
+      "label": "Never Do",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L96",
+      "_origin": "ast",
+      "id": "agents_never_do",
+      "community": 18,
+      "norm_label": "never do"
+    },
+    {
+      "label": "Resources",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L103",
+      "_origin": "ast",
+      "id": "agents_resources",
+      "community": 18,
+      "norm_label": "resources"
+    },
+    {
+      "label": "CLI",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L112",
+      "_origin": "ast",
+      "id": "agents_cli",
+      "community": 18,
+      "norm_label": "cli"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "claude",
+      "community": 19,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "Daily Operations \u2014 Mini Investment Desk",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "claude_daily_operations_mini_investment_desk",
+      "community": 19,
+      "norm_label": "daily operations \u2014 mini investment desk"
+    },
+    {
+      "label": "Non-Negotiable Runtime Paths",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "claude_non_negotiable_runtime_paths",
+      "community": 19,
+      "norm_label": "non-negotiable runtime paths"
+    },
+    {
+      "label": "Daily Workflow",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "claude_daily_workflow",
+      "community": 19,
+      "norm_label": "daily workflow"
+    },
+    {
+      "label": "Failure Handling",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "claude_failure_handling",
+      "community": 19,
+      "norm_label": "failure handling"
+    },
+    {
+      "label": "GitNexus \u2014 Code Intelligence",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L84",
+      "_origin": "ast",
+      "id": "claude_gitnexus_code_intelligence",
+      "community": 19,
+      "norm_label": "gitnexus \u2014 code intelligence"
+    },
+    {
+      "label": "Always Do",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "claude_always_do",
+      "community": 19,
+      "norm_label": "always do"
+    },
+    {
+      "label": "Never Do",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "claude_never_do",
+      "community": 19,
+      "norm_label": "never do"
+    },
+    {
+      "label": "Resources",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L105",
+      "_origin": "ast",
+      "id": "claude_resources",
+      "community": 19,
+      "norm_label": "resources"
+    },
+    {
+      "label": "CLI",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L114",
+      "_origin": "ast",
+      "id": "claude_cli",
+      "community": 19,
+      "norm_label": "cli"
+    },
+    {
+      "label": "DESIGN.md",
+      "file_type": "document",
+      "source_file": "DESIGN.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "design",
+      "community": 35,
+      "norm_label": "design.md"
+    },
+    {
+      "label": "Design chu\u1ea9n cho M\u1eccI b\u00e1o c\u00e1o \u2014 nh\u00e2n b\u1ea3n template \"B\u1ea3n tin TTCK\"",
+      "file_type": "document",
+      "source_file": "DESIGN.md",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "design_design_chu\u1ea9n_cho_m\u1ecdi_b\u00e1o_c\u00e1o_nh\u00e2n_b\u1ea3n_template_b\u1ea3n_tin_ttck",
+      "community": 35,
+      "norm_label": "design chuan cho moi bao cao \u2014 nhan ban template \"ban tin ttck\""
+    },
+    {
+      "label": "Brand & Style",
+      "file_type": "document",
+      "source_file": "DESIGN.md",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "design_brand_style",
+      "community": 35,
+      "norm_label": "brand & style"
+    },
+    {
+      "label": "Ng\u1eef ngh\u0129a m\u00e0u (b\u1eaft bu\u1ed9c th\u1ed1ng nh\u1ea5t)",
+      "file_type": "document",
+      "source_file": "DESIGN.md",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "design_ng\u1eef_ngh\u0129a_m\u00e0u_b\u1eaft_bu\u1ed9c_th\u1ed1ng_nh\u1ea5t",
+      "community": 35,
+      "norm_label": "ngu nghia mau (bat buoc thong nhat)"
+    },
+    {
+      "label": "C\u1ea5u tr\u00fac trang (theo th\u1ee9 t\u1ef1, d\u00f9ng \u0111\u00fang t\u00ean class)",
+      "file_type": "document",
+      "source_file": "DESIGN.md",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "design_c\u1ea5u_tr\u00fac_trang_theo_th\u1ee9_t\u1ef1_d\u00f9ng_\u0111\u00fang_t\u00ean_class",
+      "community": 35,
+      "norm_label": "cau truc trang (theo thu tu, dung \u0111ung ten class)"
+    },
+    {
+      "label": "Elevation & Shape",
+      "file_type": "document",
+      "source_file": "DESIGN.md",
+      "source_location": "L120",
+      "_origin": "ast",
+      "id": "design_elevation_shape",
+      "community": 35,
+      "norm_label": "elevation & shape"
+    },
+    {
+      "label": "Quy t\u1eafc b\u1eaft bu\u1ed9c khi sinh b\u00e1o c\u00e1o m\u1edbi",
+      "file_type": "document",
+      "source_file": "DESIGN.md",
+      "source_location": "L126",
+      "_origin": "ast",
+      "id": "design_quy_t\u1eafc_b\u1eaft_bu\u1ed9c_khi_sinh_b\u00e1o_c\u00e1o_m\u1edbi",
+      "community": 35,
+      "norm_label": "quy tac bat buoc khi sinh bao cao moi"
+    },
+    {
+      "label": "Appendix \u2014 CSS core (copy nguy\u00ean kh\u1ed1i l\u00e0m khung)",
+      "file_type": "document",
+      "source_file": "DESIGN.md",
+      "source_location": "L136",
+      "_origin": "ast",
+      "id": "design_appendix_css_core_copy_nguy\u00ean_kh\u1ed1i_l\u00e0m_khung",
+      "community": 35,
+      "norm_label": "appendix \u2014 css core (copy nguyen khoi lam khung)"
+    },
+    {
+      "label": "bosungmissingdata.md",
+      "file_type": "document",
+      "source_file": "bosungmissingdata.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "bosungmissingdata",
+      "community": 72,
+      "norm_label": "bosungmissingdata.md"
+    },
+    {
+      "label": "S\u1ed1 m\u00e3 t\u0103ng tr\u1ea7n, gi\u1ea3m s\u00e0n c\u1ee7a s\u00e0n HOSE",
+      "file_type": "document",
+      "source_file": "bosungmissingdata.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "bosungmissingdata_s\u1ed1_m\u00e3_t\u0103ng_tr\u1ea7n_gi\u1ea3m_s\u00e0n_c\u1ee7a_s\u00e0n_hose",
+      "community": 72,
+      "norm_label": "so ma tang tran, giam san cua san hose"
+    },
+    {
+      "label": "T\u1ed5ng kh\u1ed1i l\u01b0\u1ee3ng v\u00e0 gi\u00e1 tr\u1ecb giao d\u1ecbch th\u1ecfa thu\u1eadn VNINDEX",
+      "file_type": "document",
+      "source_file": "bosungmissingdata.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "bosungmissingdata_t\u1ed5ng_kh\u1ed1i_l\u01b0\u1ee3ng_v\u00e0_gi\u00e1_tr\u1ecb_giao_d\u1ecbch_th\u1ecfa_thu\u1eadn_vnindex",
+      "community": 72,
+      "norm_label": "tong khoi luong va gia tri giao dich thoa thuan vnindex"
+    },
+    {
+      "label": "global_overnight, fx_rates, domestic_policy, sentiment_note",
+      "file_type": "document",
+      "source_file": "bosungmissingdata.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "bosungmissingdata_global_overnight_fx_rates_domestic_policy_sentiment_note",
+      "community": 72,
+      "norm_label": "global_overnight, fx_rates, domestic_policy, sentiment_note"
+    },
+    {
+      "label": "fetch_data.py",
+      "file_type": "code",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data",
+      "community": 4,
+      "norm_label": "fetch_data.py"
+    },
+    {
+      "label": "_history()",
+      "file_type": "code",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_history",
+      "community": 4,
+      "norm_label": "_history()"
+    },
+    {
+      "label": "_ma()",
+      "file_type": "code",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_ma",
+      "community": 4,
+      "norm_label": "_ma()"
+    },
+    {
+      "label": "_pct()",
+      "file_type": "code",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L60",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_pct",
+      "community": 4,
+      "norm_label": "_pct()"
+    },
+    {
+      "label": "fetch_breadth()",
+      "file_type": "code",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_fetch_breadth",
+      "community": 4,
+      "norm_label": "fetch_breadth()"
+    },
+    {
+      "label": "fetch_foreign_net()",
+      "file_type": "code",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_fetch_foreign_net",
+      "community": 4,
+      "norm_label": "fetch_foreign_net()"
+    },
+    {
+      "label": "fetch_index_contribution()",
+      "file_type": "code",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L125",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_fetch_index_contribution",
+      "community": 4,
+      "norm_label": "fetch_index_contribution()"
+    },
+    {
+      "label": "_vietstock_ohlc()",
+      "file_type": "code",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L184",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_vietstock_ohlc",
+      "community": 4,
+      "norm_label": "_vietstock_ohlc()"
+    },
+    {
+      "label": "fetch_f1_basis()",
+      "file_type": "code",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L206",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_fetch_f1_basis",
+      "community": 4,
+      "norm_label": "fetch_f1_basis()"
+    },
+    {
+      "label": "fetch_ceiling_floor()",
+      "file_type": "code",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L226",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_fetch_ceiling_floor",
+      "community": 4,
+      "norm_label": "fetch_ceiling_floor()"
+    },
+    {
+      "label": "fetch_agreements_trading()",
+      "file_type": "code",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L259",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_fetch_agreements_trading",
+      "community": 4,
+      "norm_label": "fetch_agreements_trading()"
+    },
+    {
+      "label": "fetch_from_news_project()",
+      "file_type": "code",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L302",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_fetch_from_news_project",
+      "community": 4,
+      "norm_label": "fetch_from_news_project()"
+    },
+    {
+      "label": "fetch_extra_fields()",
+      "file_type": "code",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L377",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_fetch_extra_fields",
+      "community": 4,
+      "norm_label": "fetch_extra_fields()"
+    },
+    {
+      "label": "build_market_snapshot()",
+      "file_type": "code",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L409",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_build_market_snapshot",
+      "community": 4,
+      "norm_label": "build_market_snapshot()"
+    },
+    {
+      "label": "snapshot_to_markdown()",
+      "file_type": "code",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L557",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_snapshot_to_markdown",
+      "community": 4,
+      "norm_label": "snapshot_to_markdown()"
+    },
+    {
+      "label": "fetch()",
+      "file_type": "code",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L701",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_fetch",
+      "community": 4,
+      "norm_label": "fetch()"
+    },
+    {
+      "label": "Lay du lieu thi truong qua vnstock va tinh san cac chi so ky thuat ma Market Re",
+      "file_type": "rationale",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_rationale_1",
+      "community": 4,
+      "norm_label": "lay du lieu thi truong qua vnstock va tinh san cac chi so ky thuat ma market re"
+    },
+    {
+      "label": "So ma tang/giam/dung gia HOSE (advancers_decliners). Nguon: CafeF.",
+      "file_type": "rationale",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_rationale_71",
+      "community": 4,
+      "norm_label": "so ma tang/giam/dung gia hose (advancers_decliners). nguon: cafef."
+    },
+    {
+      "label": "Khoi ngoai rong phien va luy ke 5 phien (VND). Nguon: CafeF msh-appdata.",
+      "file_type": "rationale",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L99",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_rationale_99",
+      "community": 4,
+      "norm_label": "khoi ngoai rong phien va luy ke 5 phien (vnd). nguon: cafef msh-appdata."
+    },
+    {
+      "label": "Top ma tru/keo diem VNIndex. Nguon: Vietstock (token CSRF + POST).      Vietst",
+      "file_type": "rationale",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L126",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_rationale_126",
+      "community": 4,
+      "norm_label": "top ma tru/keo diem vnindex. nguon: vietstock (token csrf + post).      vietst"
+    },
+    {
+      "label": "Basis giua VN30F1M va VN30. Nguon: api.vietstock.vn/tvnew/history.",
+      "file_type": "rationale",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L207",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_rationale_207",
+      "community": 4,
+      "norm_label": "basis giua vn30f1m va vn30. nguon: api.vietstock.vn/tvnew/history."
+    },
+    {
+      "label": "So ma tang tran / giam san HOSE, kem tong KLGD va GTGD. Nguon: CafeF PriceHistor",
+      "file_type": "rationale",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L227",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_rationale_227",
+      "community": 4,
+      "norm_label": "so ma tang tran / giam san hose, kem tong klgd va gtgd. nguon: cafef pricehistor"
+    },
+    {
+      "label": "Tong KLGD va GTGD thoa thuan VNINDEX. Nguon: 24hmoney agreements-trading-history",
+      "file_type": "rationale",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L260",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_rationale_260",
+      "community": 4,
+      "norm_label": "tong klgd va gtgd thoa thuan vnindex. nguon: 24hmoney agreements-trading-history"
+    },
+    {
+      "label": "Doc du lieu tu project 'Agent tong hop tin tuc' (chay luc 7h, truoc project nay)",
+      "file_type": "rationale",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L303",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_rationale_303",
+      "community": 4,
+      "norm_label": "doc du lieu tu project 'agent tong hop tin tuc' (chay luc 7h, truoc project nay)"
+    },
+    {
+      "label": "Goi 4 nguon tren, co cache theo report_date.      Cache file: data/cache/<repo",
+      "file_type": "rationale",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L378",
+      "_origin": "ast",
+      "id": "pipeline_fetch_data_rationale_378",
+      "community": 4,
+      "norm_label": "goi 4 nguon tren, co cache theo report_date.      cache file: data/cache/<repo"
+    },
+    {
+      "label": "run_claude_daily.ps1",
+      "file_type": "code",
+      "source_file": "run_claude_daily.ps1",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "run_claude_daily",
+      "community": 59,
+      "norm_label": "run_claude_daily.ps1"
+    },
+    {
+      "label": "Write-TaskLog()",
+      "file_type": "code",
+      "source_file": "run_claude_daily.ps1",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "run_claude_daily_write_tasklog",
+      "community": 59,
+      "norm_label": "write-tasklog()"
+    },
+    {
       "label": "01.md",
       "file_type": "document",
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "2026_06_22_01",
       "community": 70,
-      "norm_label": "01.md"
+      "norm_label": "01.md",
+      "id": "2026_06_22_01"
     },
     {
       "label": "B\u00c1O C\u00c1O TR\u1ea0NG TH\u00c1I TH\u1eca TR\u01af\u1edcNG \u2014 RISK REGIME DESK",
@@ -19,9 +1149,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "2026_06_22_01_b\u00e1o_c\u00e1o_tr\u1ea1ng_th\u00e1i_th\u1ecb_tr\u01b0\u1eddng_risk_regime_desk",
       "community": 70,
-      "norm_label": "bao cao trang thai thi truong \u2014 risk regime desk"
+      "norm_label": "bao cao trang thai thi truong \u2014 risk regime desk",
+      "id": "2026_06_22_01_b\u00e1o_c\u00e1o_tr\u1ea1ng_th\u00e1i_th\u1ecb_tr\u01b0\u1eddng_risk_regime_desk"
     },
     {
       "label": "1. Ki\u1ec3m k\u00ea d\u1eef li\u1ec7u",
@@ -29,9 +1159,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "2026_06_22_01_1_ki\u1ec3m_k\u00ea_d\u1eef_li\u1ec7u",
       "community": 70,
-      "norm_label": "1. kiem ke du lieu"
+      "norm_label": "1. kiem ke du lieu",
+      "id": "2026_06_22_01_1_ki\u1ec3m_k\u00ea_d\u1eef_li\u1ec7u"
     },
     {
       "label": "2. Scorecard",
@@ -39,9 +1169,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L25",
       "_origin": "ast",
-      "id": "2026_06_22_01_2_scorecard",
       "community": 70,
-      "norm_label": "2. scorecard"
+      "norm_label": "2. scorecard",
+      "id": "2026_06_22_01_2_scorecard"
     },
     {
       "label": "3. X\u00e1c \u0111\u1ecbnh Regime",
@@ -49,9 +1179,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L39",
       "_origin": "ast",
-      "id": "2026_06_22_01_3_x\u00e1c_\u0111\u1ecbnh_regime",
       "community": 70,
-      "norm_label": "3. xac \u0111inh regime"
+      "norm_label": "3. xac \u0111inh regime",
+      "id": "2026_06_22_01_3_x\u00e1c_\u0111\u1ecbnh_regime"
     },
     {
       "label": "4. Tr\u1ea1ng th\u00e1i ph\u1ee5",
@@ -59,9 +1189,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L51",
       "_origin": "ast",
-      "id": "2026_06_22_01_4_tr\u1ea1ng_th\u00e1i_ph\u1ee5",
       "community": 70,
-      "norm_label": "4. trang thai phu"
+      "norm_label": "4. trang thai phu",
+      "id": "2026_06_22_01_4_tr\u1ea1ng_th\u00e1i_ph\u1ee5"
     },
     {
       "label": "\u26a0\ufe0f BULL TRAP RISK \u2014 C\u1ea2NH B\u00c1O B\u1eaeT BU\u1ed8C",
@@ -69,9 +1199,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L53",
       "_origin": "ast",
-      "id": "2026_06_22_01_bull_trap_risk_c\u1ea3nh_b\u00e1o_b\u1eaft_bu\u1ed9c",
       "community": 70,
-      "norm_label": "\u26a0\ufe0f bull trap risk \u2014 canh bao bat buoc"
+      "norm_label": "\u26a0\ufe0f bull trap risk \u2014 canh bao bat buoc",
+      "id": "2026_06_22_01_bull_trap_risk_c\u1ea3nh_b\u00e1o_b\u1eaft_bu\u1ed9c"
     },
     {
       "label": "\ud83d\udcca Ph\u00e2n h\u00f3a m\u1ea1nh",
@@ -79,9 +1209,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L61",
       "_origin": "ast",
-      "id": "2026_06_22_01_ph\u00e2n_h\u00f3a_m\u1ea1nh",
       "community": 70,
-      "norm_label": "\ud83d\udcca phan hoa manh"
+      "norm_label": "\ud83d\udcca phan hoa manh",
+      "id": "2026_06_22_01_ph\u00e2n_h\u00f3a_m\u1ea1nh"
     },
     {
       "label": "\ud83d\udd04 H\u1ed3i k\u1ef9 thu\u1eadt",
@@ -89,9 +1219,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L67",
       "_origin": "ast",
-      "id": "2026_06_22_01_h\u1ed3i_k\u1ef9_thu\u1eadt",
       "community": 70,
-      "norm_label": "\ud83d\udd04 hoi ky thuat"
+      "norm_label": "\ud83d\udd04 hoi ky thuat",
+      "id": "2026_06_22_01_h\u1ed3i_k\u1ef9_thu\u1eadt"
     },
     {
       "label": "5. Quy t\u1eafc \"H\u1ea1 nhanh, N\u00e2ng ch\u1eadm\"",
@@ -99,9 +1229,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L73",
       "_origin": "ast",
-      "id": "2026_06_22_01_5_quy_t\u1eafc_h\u1ea1_nhanh_n\u00e2ng_ch\u1eadm",
       "community": 70,
-      "norm_label": "5. quy tac \"ha nhanh, nang cham\""
+      "norm_label": "5. quy tac \"ha nhanh, nang cham\"",
+      "id": "2026_06_22_01_5_quy_t\u1eafc_h\u1ea1_nhanh_n\u00e2ng_ch\u1eadm"
     },
     {
       "label": "6. Confidence",
@@ -109,9 +1239,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L82",
       "_origin": "ast",
-      "id": "2026_06_22_01_6_confidence",
       "community": 70,
-      "norm_label": "6. confidence"
+      "norm_label": "6. confidence",
+      "id": "2026_06_22_01_6_confidence"
     },
     {
       "label": "7. Chi\u1ec1u ph\u1ea3n bi\u1ec7n \u2014 R\u1ee7i ro c\u1ee7a ch\u00ednh k\u1ebft lu\u1eadn n\u00e0y",
@@ -119,9 +1249,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L97",
       "_origin": "ast",
-      "id": "2026_06_22_01_7_chi\u1ec1u_ph\u1ea3n_bi\u1ec7n_r\u1ee7i_ro_c\u1ee7a_ch\u00ednh_k\u1ebft_lu\u1eadn_n\u00e0y",
       "community": 70,
-      "norm_label": "7. chieu phan bien \u2014 rui ro cua chinh ket luan nay"
+      "norm_label": "7. chieu phan bien \u2014 rui ro cua chinh ket luan nay",
+      "id": "2026_06_22_01_7_chi\u1ec1u_ph\u1ea3n_bi\u1ec7n_r\u1ee7i_ro_c\u1ee7a_ch\u00ednh_k\u1ebft_lu\u1eadn_n\u00e0y"
     },
     {
       "label": "8. \u0110i\u1ec1u ki\u1ec7n chuy\u1ec3n tr\u1ea1ng th\u00e1i (ng\u01b0\u1ee1ng \u0111o \u0111\u01b0\u1ee3c)",
@@ -129,9 +1259,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L107",
       "_origin": "ast",
-      "id": "2026_06_22_01_8_\u0111i\u1ec1u_ki\u1ec7n_chuy\u1ec3n_tr\u1ea1ng_th\u00e1i_ng\u01b0\u1ee1ng_\u0111o_\u0111\u01b0\u1ee3c",
       "community": 70,
-      "norm_label": "8. \u0111ieu kien chuyen trang thai (nguong \u0111o \u0111uoc)"
+      "norm_label": "8. \u0111ieu kien chuyen trang thai (nguong \u0111o \u0111uoc)",
+      "id": "2026_06_22_01_8_\u0111i\u1ec1u_ki\u1ec7n_chuy\u1ec3n_tr\u1ea1ng_th\u00e1i_ng\u01b0\u1ee1ng_\u0111o_\u0111\u01b0\u1ee3c"
     },
     {
       "label": "N\u00e2ng l\u00ean \"Uptrend th\u1eadn tr\u1ecdng\" \u2014 c\u1ea7n \u22652 phi\u00ean x\u00e1c nh\u1eadn HO\u1eb6C 1 phi\u00ean \u0111\u1ee7 c\u1ea3 4:",
@@ -139,9 +1269,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L109",
       "_origin": "ast",
-      "id": "2026_06_22_01_n\u00e2ng_l\u00ean_uptrend_th\u1eadn_tr\u1ecdng_c\u1ea7n_2_phi\u00ean_x\u00e1c_nh\u1eadn_ho\u1eb7c_1_phi\u00ean_\u0111\u1ee7_c\u1ea3_4",
       "community": 70,
-      "norm_label": "nang len \"uptrend than trong\" \u2014 can \u22652 phien xac nhan hoac 1 phien \u0111u ca 4:"
+      "norm_label": "nang len \"uptrend than trong\" \u2014 can \u22652 phien xac nhan hoac 1 phien \u0111u ca 4:",
+      "id": "2026_06_22_01_n\u00e2ng_l\u00ean_uptrend_th\u1eadn_tr\u1ecdng_c\u1ea7n_2_phi\u00ean_x\u00e1c_nh\u1eadn_ho\u1eb7c_1_phi\u00ean_\u0111\u1ee7_c\u1ea3_4"
     },
     {
       "label": "H\u1ea1 xu\u1ed1ng \"Risk-off ng\u1eafn h\u1ea1n\" \u2014 \u0111\u01b0\u1ee3c ph\u00e9p ngay trong ng\u00e0y khi xu\u1ea5t hi\u1ec7n \u22652/3:",
@@ -149,9 +1279,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L118",
       "_origin": "ast",
-      "id": "2026_06_22_01_h\u1ea1_xu\u1ed1ng_risk_off_ng\u1eafn_h\u1ea1n_\u0111\u01b0\u1ee3c_ph\u00e9p_ngay_trong_ng\u00e0y_khi_xu\u1ea5t_hi\u1ec7n_2_3",
       "community": 70,
-      "norm_label": "ha xuong \"risk-off ngan han\" \u2014 \u0111uoc phep ngay trong ngay khi xuat hien \u22652/3:"
+      "norm_label": "ha xuong \"risk-off ngan han\" \u2014 \u0111uoc phep ngay trong ngay khi xuat hien \u22652/3:",
+      "id": "2026_06_22_01_h\u1ea1_xu\u1ed1ng_risk_off_ng\u1eafn_h\u1ea1n_\u0111\u01b0\u1ee3c_ph\u00e9p_ngay_trong_ng\u00e0y_khi_xu\u1ea5t_hi\u1ec7n_2_3"
     },
     {
       "label": "9. HANDOFF \u2014 Strategy Selector",
@@ -159,9 +1289,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L129",
       "_origin": "ast",
-      "id": "2026_06_22_01_9_handoff_strategy_selector",
       "community": 70,
-      "norm_label": "9. handoff \u2014 strategy selector"
+      "norm_label": "9. handoff \u2014 strategy selector",
+      "id": "2026_06_22_01_9_handoff_strategy_selector"
     },
     {
       "label": "02.md",
@@ -169,9 +1299,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "2026_06_22_02",
       "community": 69,
-      "norm_label": "02.md"
+      "norm_label": "02.md",
+      "id": "2026_06_22_02"
     },
     {
       "label": "STRATEGY SELECTION REPORT",
@@ -179,9 +1309,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "2026_06_22_02_strategy_selection_report",
       "community": 69,
-      "norm_label": "strategy selection report"
+      "norm_label": "strategy selection report",
+      "id": "2026_06_22_02_strategy_selection_report"
     },
     {
       "label": "1. Handoff nh\u1eadn \u0111\u01b0\u1ee3c t\u1eeb Market Regime Agent",
@@ -189,9 +1319,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "2026_06_22_02_1_handoff_nh\u1eadn_\u0111\u01b0\u1ee3c_t\u1eeb_market_regime_agent",
       "community": 69,
-      "norm_label": "1. handoff nhan \u0111uoc tu market regime agent"
+      "norm_label": "1. handoff nhan \u0111uoc tu market regime agent",
+      "id": "2026_06_22_02_1_handoff_nh\u1eadn_\u0111\u01b0\u1ee3c_t\u1eeb_market_regime_agent"
     },
     {
       "label": "2. Quy tr\u00ecnh ch\u1ecdn chi\u1ebfn thu\u1eadt (v\u1ebft l\u00e0m vi\u1ec7c)",
@@ -199,9 +1329,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "2026_06_22_02_2_quy_tr\u00ecnh_ch\u1ecdn_chi\u1ebfn_thu\u1eadt_v\u1ebft_l\u00e0m_vi\u1ec7c",
       "community": 69,
-      "norm_label": "2. quy trinh chon chien thuat (vet lam viec)"
+      "norm_label": "2. quy trinh chon chien thuat (vet lam viec)",
+      "id": "2026_06_22_02_2_quy_tr\u00ecnh_ch\u1ecdn_chi\u1ebfn_thu\u1eadt_v\u1ebft_l\u00e0m_vi\u1ec7c"
     },
     {
       "label": "B\u01b0\u1edbc 2 \u2014 Tra ma tr\u1eadn ban \u0111\u1ea7u theo Regime Code",
@@ -209,9 +1339,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L24",
       "_origin": "ast",
-      "id": "2026_06_22_02_b\u01b0\u1edbc_2_tra_ma_tr\u1eadn_ban_\u0111\u1ea7u_theo_regime_code",
       "community": 69,
-      "norm_label": "buoc 2 \u2014 tra ma tran ban \u0111au theo regime code"
+      "norm_label": "buoc 2 \u2014 tra ma tran ban \u0111au theo regime code",
+      "id": "2026_06_22_02_b\u01b0\u1edbc_2_tra_ma_tr\u1eadn_ban_\u0111\u1ea7u_theo_regime_code"
     },
     {
       "label": "B\u01b0\u1edbc 3.1 \u2014 Ghi \u0111\u00e8 Sub-state: `BULL_TRAP_RISK`",
@@ -219,9 +1349,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L33",
       "_origin": "ast",
-      "id": "2026_06_22_02_b\u01b0\u1edbc_3_1_ghi_\u0111\u00e8_sub_state_bull_trap_risk",
       "community": 69,
-      "norm_label": "buoc 3.1 \u2014 ghi \u0111e sub-state: `bull_trap_risk`"
+      "norm_label": "buoc 3.1 \u2014 ghi \u0111e sub-state: `bull_trap_risk`",
+      "id": "2026_06_22_02_b\u01b0\u1edbc_3_1_ghi_\u0111\u00e8_sub_state_bull_trap_risk"
     },
     {
       "label": "B\u01b0\u1edbc 3.2 \u2014 \u0110i\u1ec1u ch\u1ec9nh Confidence: Trung b\u00ecnh",
@@ -229,9 +1359,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L48",
       "_origin": "ast",
-      "id": "2026_06_22_02_b\u01b0\u1edbc_3_2_\u0111i\u1ec1u_ch\u1ec9nh_confidence_trung_b\u00ecnh",
       "community": 69,
-      "norm_label": "buoc 3.2 \u2014 \u0111ieu chinh confidence: trung binh"
+      "norm_label": "buoc 3.2 \u2014 \u0111ieu chinh confidence: trung binh",
+      "id": "2026_06_22_02_b\u01b0\u1edbc_3_2_\u0111i\u1ec1u_ch\u1ec9nh_confidence_trung_b\u00ecnh"
     },
     {
       "label": "B\u01b0\u1edbc 3.3 \u2014 S\u1ef1 ki\u1ec7n",
@@ -239,9 +1369,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L52",
       "_origin": "ast",
-      "id": "2026_06_22_02_b\u01b0\u1edbc_3_3_s\u1ef1_ki\u1ec7n",
       "community": 69,
-      "norm_label": "buoc 3.3 \u2014 su kien"
+      "norm_label": "buoc 3.3 \u2014 su kien",
+      "id": "2026_06_22_02_b\u01b0\u1edbc_3_3_s\u1ef1_ki\u1ec7n"
     },
     {
       "label": "B\u01b0\u1edbc 3.4 \u2014 Sentiment",
@@ -249,9 +1379,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L56",
       "_origin": "ast",
-      "id": "2026_06_22_02_b\u01b0\u1edbc_3_4_sentiment",
       "community": 69,
-      "norm_label": "buoc 3.4 \u2014 sentiment"
+      "norm_label": "buoc 3.4 \u2014 sentiment",
+      "id": "2026_06_22_02_b\u01b0\u1edbc_3_4_sentiment"
     },
     {
       "label": "B\u01b0\u1edbc 3.5 \u2014 Tin t\u1ee9c",
@@ -259,9 +1389,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L60",
       "_origin": "ast",
-      "id": "2026_06_22_02_b\u01b0\u1edbc_3_5_tin_t\u1ee9c",
       "community": 69,
-      "norm_label": "buoc 3.5 \u2014 tin tuc"
+      "norm_label": "buoc 3.5 \u2014 tin tuc",
+      "id": "2026_06_22_02_b\u01b0\u1edbc_3_5_tin_t\u1ee9c"
     },
     {
       "label": "B\u01b0\u1edbc 4 \u2014 Ki\u1ec3m tra quy t\u1eafc c\u1ee9ng",
@@ -269,9 +1399,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L64",
       "_origin": "ast",
-      "id": "2026_06_22_02_b\u01b0\u1edbc_4_ki\u1ec3m_tra_quy_t\u1eafc_c\u1ee9ng",
       "community": 69,
-      "norm_label": "buoc 4 \u2014 kiem tra quy tac cung"
+      "norm_label": "buoc 4 \u2014 kiem tra quy tac cung",
+      "id": "2026_06_22_02_b\u01b0\u1edbc_4_ki\u1ec3m_tra_quy_t\u1eafc_c\u1ee9ng"
     },
     {
       "label": "3. Chi\u1ebfn thu\u1eadt \u0111\u01b0\u1ee3c ch\u1ecdn",
@@ -279,9 +1409,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L77",
       "_origin": "ast",
-      "id": "2026_06_22_02_3_chi\u1ebfn_thu\u1eadt_\u0111\u01b0\u1ee3c_ch\u1ecdn",
       "community": 69,
-      "norm_label": "3. chien thuat \u0111uoc chon"
+      "norm_label": "3. chien thuat \u0111uoc chon",
+      "id": "2026_06_22_02_3_chi\u1ebfn_thu\u1eadt_\u0111\u01b0\u1ee3c_ch\u1ecdn"
     },
     {
       "label": "\u25b6 CHI\u1ebeN THU\u1eacT CH\u00cdNH: `WAIT` \u2014 Kh\u00f4ng giao d\u1ecbch / Ch\u1edd x\u00e1c nh\u1eadn",
@@ -289,9 +1419,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L79",
       "_origin": "ast",
-      "id": "2026_06_22_02_chi\u1ebfn_thu\u1eadt_ch\u00ednh_wait_kh\u00f4ng_giao_d\u1ecbch_ch\u1edd_x\u00e1c_nh\u1eadn",
       "community": 69,
-      "norm_label": "\u25b6 chien thuat chinh: `wait` \u2014 khong giao dich / cho xac nhan"
+      "norm_label": "\u25b6 chien thuat chinh: `wait` \u2014 khong giao dich / cho xac nhan",
+      "id": "2026_06_22_02_chi\u1ebfn_thu\u1eadt_ch\u00ednh_wait_kh\u00f4ng_giao_d\u1ecbch_ch\u1edd_x\u00e1c_nh\u1eadn"
     },
     {
       "label": "\u25b6 CHI\u1ebeN THU\u1eacT PH\u1ee4: `DERISK` \u2014 Gi\u1ea3m t\u1ef7 tr\u1ecdng / X\u1eed l\u00fd v\u1ecb th\u1ebf hi\u1ec7n t\u1ea1i",
@@ -299,9 +1429,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L99",
       "_origin": "ast",
-      "id": "2026_06_22_02_chi\u1ebfn_thu\u1eadt_ph\u1ee5_derisk_gi\u1ea3m_t\u1ef7_tr\u1ecdng_x\u1eed_l\u00fd_v\u1ecb_th\u1ebf_hi\u1ec7n_t\u1ea1i",
       "community": 69,
-      "norm_label": "\u25b6 chien thuat phu: `derisk` \u2014 giam ty trong / xu ly vi the hien tai"
+      "norm_label": "\u25b6 chien thuat phu: `derisk` \u2014 giam ty trong / xu ly vi the hien tai",
+      "id": "2026_06_22_02_chi\u1ebfn_thu\u1eadt_ph\u1ee5_derisk_gi\u1ea3m_t\u1ef7_tr\u1ecdng_x\u1eed_l\u00fd_v\u1ecb_th\u1ebf_hi\u1ec7n_t\u1ea1i"
     },
     {
       "label": "4. Chi\u1ebfn thu\u1eadt b\u1ecb c\u1ea5m trong b\u1ed1i c\u1ea3nh h\u00f4m nay",
@@ -309,9 +1439,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L120",
       "_origin": "ast",
-      "id": "2026_06_22_02_4_chi\u1ebfn_thu\u1eadt_b\u1ecb_c\u1ea5m_trong_b\u1ed1i_c\u1ea3nh_h\u00f4m_nay",
       "community": 69,
-      "norm_label": "4. chien thuat bi cam trong boi canh hom nay"
+      "norm_label": "4. chien thuat bi cam trong boi canh hom nay",
+      "id": "2026_06_22_02_4_chi\u1ebfn_thu\u1eadt_b\u1ecb_c\u1ea5m_trong_b\u1ed1i_c\u1ea3nh_h\u00f4m_nay"
     },
     {
       "label": "5. T\u00f3m t\u1eaft h\u00e0nh \u0111\u1ed9ng theo tr\u1ea1ng th\u00e1i t\u00e0i kho\u1ea3n",
@@ -319,9 +1449,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L137",
       "_origin": "ast",
-      "id": "2026_06_22_02_5_t\u00f3m_t\u1eaft_h\u00e0nh_\u0111\u1ed9ng_theo_tr\u1ea1ng_th\u00e1i_t\u00e0i_kho\u1ea3n",
       "community": 69,
-      "norm_label": "5. tom tat hanh \u0111ong theo trang thai tai khoan"
+      "norm_label": "5. tom tat hanh \u0111ong theo trang thai tai khoan",
+      "id": "2026_06_22_02_5_t\u00f3m_t\u1eaft_h\u00e0nh_\u0111\u1ed9ng_theo_tr\u1ea1ng_th\u00e1i_t\u00e0i_kho\u1ea3n"
     },
     {
       "label": "6. K\u1ecbch b\u1ea3n theo d\u00f5i phi\u00ean k\u1ebf ti\u1ebfp",
@@ -329,9 +1459,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L149",
       "_origin": "ast",
-      "id": "2026_06_22_02_6_k\u1ecbch_b\u1ea3n_theo_d\u00f5i_phi\u00ean_k\u1ebf_ti\u1ebfp",
       "community": 69,
-      "norm_label": "6. kich ban theo doi phien ke tiep"
+      "norm_label": "6. kich ban theo doi phien ke tiep",
+      "id": "2026_06_22_02_6_k\u1ecbch_b\u1ea3n_theo_d\u00f5i_phi\u00ean_k\u1ebf_ti\u1ebfp"
     },
     {
       "label": "7. HANDOFF \u2014 Stock Picker & Execution Desk (Agent 03/04)",
@@ -339,9 +1469,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L159",
       "_origin": "ast",
-      "id": "2026_06_22_02_7_handoff_stock_picker_execution_desk_agent_03_04",
       "community": 69,
-      "norm_label": "7. handoff \u2014 stock picker & execution desk (agent 03/04)"
+      "norm_label": "7. handoff \u2014 stock picker & execution desk (agent 03/04)",
+      "id": "2026_06_22_02_7_handoff_stock_picker_execution_desk_agent_03_04"
     },
     {
       "label": "03.md",
@@ -349,9 +1479,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "2026_06_22_03",
       "community": 71,
-      "norm_label": "03.md"
+      "norm_label": "03.md",
+      "id": "2026_06_22_03"
     },
     {
       "label": "\ud83d\udcca SECTOR ROTATION MAP \u2014 LPBS Sector Flow Desk",
@@ -359,9 +1489,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "2026_06_22_03_sector_rotation_map_lpbs_sector_flow_desk",
       "community": 71,
-      "norm_label": "\ud83d\udcca sector rotation map \u2014 lpbs sector flow desk"
+      "norm_label": "\ud83d\udcca sector rotation map \u2014 lpbs sector flow desk",
+      "id": "2026_06_22_03_sector_rotation_map_lpbs_sector_flow_desk"
     },
     {
       "label": "0. HANDOFF \u0110\u00c3 \u0110\u1eccC \u2014 Strategy Selector",
@@ -369,9 +1499,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "2026_06_22_03_0_handoff_\u0111\u00e3_\u0111\u1ecdc_strategy_selector",
       "community": 71,
-      "norm_label": "0. handoff \u0111a \u0111oc \u2014 strategy selector"
+      "norm_label": "0. handoff \u0111a \u0111oc \u2014 strategy selector",
+      "id": "2026_06_22_03_0_handoff_\u0111\u00e3_\u0111\u1ecdc_strategy_selector"
     },
     {
       "label": "1. THU TH\u1eacP D\u1eee LI\u1ec6U \u2014 Ngu\u1ed3n & Ph\u01b0\u01a1ng ph\u00e1p",
@@ -379,9 +1509,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L26",
       "_origin": "ast",
-      "id": "2026_06_22_03_1_thu_th\u1eadp_d\u1eef_li\u1ec7u_ngu\u1ed3n_ph\u01b0\u01a1ng_ph\u00e1p",
       "community": 71,
-      "norm_label": "1. thu thap du lieu \u2014 nguon & phuong phap"
+      "norm_label": "1. thu thap du lieu \u2014 nguon & phuong phap",
+      "id": "2026_06_22_03_1_thu_th\u1eadp_d\u1eef_li\u1ec7u_ngu\u1ed3n_ph\u01b0\u01a1ng_ph\u00e1p"
     },
     {
       "label": "B\u1ed1i c\u1ea3nh th\u00e1ng 6/2026 (20 phi\u00ean)",
@@ -389,9 +1519,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L30",
       "_origin": "ast",
-      "id": "2026_06_22_03_b\u1ed1i_c\u1ea3nh_th\u00e1ng_6_2026_20_phi\u00ean",
       "community": 71,
-      "norm_label": "boi canh thang 6/2026 (20 phien)"
+      "norm_label": "boi canh thang 6/2026 (20 phien)",
+      "id": "2026_06_22_03_b\u1ed1i_c\u1ea3nh_th\u00e1ng_6_2026_20_phi\u00ean"
     },
     {
       "label": "2. CH\u1ea4M \u0110I\u1ec2M T\u1eeaNG NG\u00c0NH \u2014 RS & Flow",
@@ -399,9 +1529,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L41",
       "_origin": "ast",
-      "id": "2026_06_22_03_2_ch\u1ea5m_\u0111i\u1ec3m_t\u1eebng_ng\u00e0nh_rs_flow",
       "community": 71,
-      "norm_label": "2. cham \u0111iem tung nganh \u2014 rs & flow"
+      "norm_label": "2. cham \u0111iem tung nganh \u2014 rs & flow",
+      "id": "2026_06_22_03_2_ch\u1ea5m_\u0111i\u1ec3m_t\u1eebng_ng\u00e0nh_rs_flow"
     },
     {
       "label": "3. SECTOR MAP 4 NH\u00d3M",
@@ -409,9 +1539,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L70",
       "_origin": "ast",
-      "id": "2026_06_22_03_3_sector_map_4_nh\u00f3m",
       "community": 71,
-      "norm_label": "3. sector map 4 nhom"
+      "norm_label": "3. sector map 4 nhom",
+      "id": "2026_06_22_03_3_sector_map_4_nh\u00f3m"
     },
     {
       "label": "4. EVIDENCE C\u00d3 S\u1ed0 LI\u1ec6U",
@@ -419,9 +1549,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L101",
       "_origin": "ast",
-      "id": "2026_06_22_03_4_evidence_c\u00f3_s\u1ed1_li\u1ec7u",
       "community": 71,
-      "norm_label": "4. evidence co so lieu"
+      "norm_label": "4. evidence co so lieu",
+      "id": "2026_06_22_03_4_evidence_c\u00f3_s\u1ed1_li\u1ec7u"
     },
     {
       "label": "4A. B\u1ea5t \u0111\u1ed9ng s\u1ea3n \u2014 AVOID CHASING (\u01afu ti\u00ean DERISK #1)",
@@ -429,9 +1559,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L103",
       "_origin": "ast",
-      "id": "2026_06_22_03_4a_b\u1ea5t_\u0111\u1ed9ng_s\u1ea3n_avoid_chasing_\u01b0u_ti\u00ean_derisk_1",
       "community": 71,
-      "norm_label": "4a. bat \u0111ong san \u2014 avoid chasing (uu tien derisk #1)"
+      "norm_label": "4a. bat \u0111ong san \u2014 avoid chasing (uu tien derisk #1)",
+      "id": "2026_06_22_03_4a_b\u1ea5t_\u0111\u1ed9ng_s\u1ea3n_avoid_chasing_\u01b0u_ti\u00ean_derisk_1"
     },
     {
       "label": "4B. CNTT \u2014 WEAK",
@@ -439,9 +1569,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L120",
       "_origin": "ast",
-      "id": "2026_06_22_03_4b_cntt_weak",
       "community": 71,
-      "norm_label": "4b. cntt \u2014 weak"
+      "norm_label": "4b. cntt \u2014 weak",
+      "id": "2026_06_22_03_4b_cntt_weak"
     },
     {
       "label": "4C. Ng\u00e2n h\u00e0ng / Ch\u1ee9ng kho\u00e1n / Th\u00e9p / B\u00e1n l\u1ebb \u2014 IMPROVING (t\u00edn hi\u1ec7u ch\u01b0a x\u00e1c nh\u1eadn)",
@@ -449,9 +1579,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L130",
       "_origin": "ast",
-      "id": "2026_06_22_03_4c_ng\u00e2n_h\u00e0ng_ch\u1ee9ng_kho\u00e1n_th\u00e9p_b\u00e1n_l\u1ebb_improving_t\u00edn_hi\u1ec7u_ch\u01b0a_x\u00e1c_nh\u1eadn",
       "community": 71,
-      "norm_label": "4c. ngan hang / chung khoan / thep / ban le \u2014 improving (tin hieu chua xac nhan)"
+      "norm_label": "4c. ngan hang / chung khoan / thep / ban le \u2014 improving (tin hieu chua xac nhan)",
+      "id": "2026_06_22_03_4c_ng\u00e2n_h\u00e0ng_ch\u1ee9ng_kho\u00e1n_th\u00e9p_b\u00e1n_l\u1ebb_improving_t\u00edn_hi\u1ec7u_ch\u01b0a_x\u00e1c_nh\u1eadn"
     },
     {
       "label": "5. PH\u00c2N T\u00cdCH R\u1ee6I RO",
@@ -459,9 +1589,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L143",
       "_origin": "ast",
-      "id": "2026_06_22_03_5_ph\u00e2n_t\u00edch_r\u1ee7i_ro",
       "community": 71,
-      "norm_label": "5. phan tich rui ro"
+      "norm_label": "5. phan tich rui ro",
+      "id": "2026_06_22_03_5_ph\u00e2n_t\u00edch_r\u1ee7i_ro"
     },
     {
       "label": "6. HANDOFF TO STOCK WATCHLIST & EXECUTION DESK",
@@ -469,9 +1599,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L156",
       "_origin": "ast",
-      "id": "2026_06_22_03_6_handoff_to_stock_watchlist_execution_desk",
       "community": 71,
-      "norm_label": "6. handoff to stock watchlist & execution desk"
+      "norm_label": "6. handoff to stock watchlist & execution desk",
+      "id": "2026_06_22_03_6_handoff_to_stock_watchlist_execution_desk"
     },
     {
       "label": "7. T\u00d3M T\u1eaeT TH\u1ef0C H\u00c0NH (\u0110\u1ecdc \u2264 60 gi\u00e2y)",
@@ -479,9 +1609,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L214",
       "_origin": "ast",
-      "id": "2026_06_22_03_7_t\u00f3m_t\u1eaft_th\u1ef1c_h\u00e0nh_\u0111\u1ecdc_60_gi\u00e2y",
       "community": 71,
-      "norm_label": "7. tom tat thuc hanh (\u0111oc \u2264 60 giay)"
+      "norm_label": "7. tom tat thuc hanh (\u0111oc \u2264 60 giay)",
+      "id": "2026_06_22_03_7_t\u00f3m_t\u1eaft_th\u1ef1c_h\u00e0nh_\u0111\u1ecdc_60_gi\u00e2y"
     },
     {
       "label": "01.md",
@@ -2554,196 +3684,6 @@
       "id": "pipeline_demo_reports_rationale_1"
     },
     {
-      "label": "fetch_data.py",
-      "file_type": "code",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "fetch_data.py",
-      "id": "pipeline_fetch_data"
-    },
-    {
-      "label": "_history()",
-      "file_type": "code",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L40",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "_history()",
-      "id": "pipeline_fetch_data_history"
-    },
-    {
-      "label": "_ma()",
-      "file_type": "code",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L51",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "_ma()",
-      "id": "pipeline_fetch_data_ma"
-    },
-    {
-      "label": "_pct()",
-      "file_type": "code",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L57",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "_pct()",
-      "id": "pipeline_fetch_data_pct"
-    },
-    {
-      "label": "fetch_breadth()",
-      "file_type": "code",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L67",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "fetch_breadth()",
-      "id": "pipeline_fetch_data_fetch_breadth"
-    },
-    {
-      "label": "fetch_foreign_net()",
-      "file_type": "code",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L95",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "fetch_foreign_net()",
-      "id": "pipeline_fetch_data_fetch_foreign_net"
-    },
-    {
-      "label": "fetch_index_contribution()",
-      "file_type": "code",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L122",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "fetch_index_contribution()",
-      "id": "pipeline_fetch_data_fetch_index_contribution"
-    },
-    {
-      "label": "_vietstock_ohlc()",
-      "file_type": "code",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L181",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "_vietstock_ohlc()",
-      "id": "pipeline_fetch_data_vietstock_ohlc"
-    },
-    {
-      "label": "fetch_f1_basis()",
-      "file_type": "code",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L203",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "fetch_f1_basis()",
-      "id": "pipeline_fetch_data_fetch_f1_basis"
-    },
-    {
-      "label": "fetch_extra_fields()",
-      "file_type": "code",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L223",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "fetch_extra_fields()",
-      "id": "pipeline_fetch_data_fetch_extra_fields"
-    },
-    {
-      "label": "build_market_snapshot()",
-      "file_type": "code",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L252",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "build_market_snapshot()",
-      "id": "pipeline_fetch_data_build_market_snapshot"
-    },
-    {
-      "label": "snapshot_to_markdown()",
-      "file_type": "code",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L351",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "snapshot_to_markdown()",
-      "id": "pipeline_fetch_data_snapshot_to_markdown"
-    },
-    {
-      "label": "fetch()",
-      "file_type": "code",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L422",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "fetch()",
-      "id": "pipeline_fetch_data_fetch"
-    },
-    {
-      "label": "Lay du lieu thi truong qua vnstock va tinh san cac chi so ky thuat ma Market Re",
-      "file_type": "rationale",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "lay du lieu thi truong qua vnstock va tinh san cac chi so ky thuat ma market re",
-      "id": "pipeline_fetch_data_rationale_1"
-    },
-    {
-      "label": "So ma tang/giam/dung gia HOSE (advancers_decliners). Nguon: CafeF.",
-      "file_type": "rationale",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L68",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "so ma tang/giam/dung gia hose (advancers_decliners). nguon: cafef.",
-      "id": "pipeline_fetch_data_rationale_68"
-    },
-    {
-      "label": "Khoi ngoai rong phien va luy ke 5 phien (VND). Nguon: CafeF msh-appdata.",
-      "file_type": "rationale",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L96",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "khoi ngoai rong phien va luy ke 5 phien (vnd). nguon: cafef msh-appdata.",
-      "id": "pipeline_fetch_data_rationale_96"
-    },
-    {
-      "label": "Top ma tru/keo diem VNIndex. Nguon: Vietstock (token CSRF + POST).      Vietst",
-      "file_type": "rationale",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L123",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "top ma tru/keo diem vnindex. nguon: vietstock (token csrf + post).      vietst",
-      "id": "pipeline_fetch_data_rationale_123"
-    },
-    {
-      "label": "Basis giua VN30F1M va VN30. Nguon: api.vietstock.vn/tvnew/history.",
-      "file_type": "rationale",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L204",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "basis giua vn30f1m va vn30. nguon: api.vietstock.vn/tvnew/history.",
-      "id": "pipeline_fetch_data_rationale_204"
-    },
-    {
-      "label": "Goi 4 nguon tren, co cache theo report_date.      Cache file: data/cache/<repo",
-      "file_type": "rationale",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L224",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "goi 4 nguon tren, co cache theo report_date.      cache file: data/cache/<repo",
-      "id": "pipeline_fetch_data_rationale_224"
-    },
-    {
       "label": "render_html.py",
       "file_type": "code",
       "source_file": "pipeline/render_html.py",
@@ -3002,566 +3942,6 @@
       "community": 7,
       "norm_label": "entry point: python -m pipeline.run_pipeline [--mock|--cli]  quy trinh: fetch du",
       "id": "pipeline_run_pipeline_rationale_1"
-    },
-    {
-      "label": "run_claude_daily.ps1",
-      "file_type": "code",
-      "source_file": "run_claude_daily.ps1",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 59,
-      "norm_label": "run_claude_daily.ps1",
-      "id": "run_claude_daily"
-    },
-    {
-      "label": "Write-TaskLog()",
-      "file_type": "code",
-      "source_file": "run_claude_daily.ps1",
-      "source_location": "L19",
-      "_origin": "ast",
-      "community": 59,
-      "norm_label": "write-tasklog()",
-      "id": "run_claude_daily_write_tasklog"
-    },
-    {
-      "label": "SKILL.md",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 20,
-      "norm_label": "skill.md",
-      "id": "gitnexus_cli_skill"
-    },
-    {
-      "label": "GitNexus CLI Commands",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
-      "source_location": "L6",
-      "_origin": "ast",
-      "community": 20,
-      "norm_label": "gitnexus cli commands",
-      "id": "gitnexus_cli_skill_gitnexus_cli_commands"
-    },
-    {
-      "label": "Commands",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
-      "source_location": "L12",
-      "_origin": "ast",
-      "community": 20,
-      "norm_label": "commands",
-      "id": "gitnexus_cli_skill_commands"
-    },
-    {
-      "label": "analyze \u2014 Build or refresh the index",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
-      "source_location": "L14",
-      "_origin": "ast",
-      "community": 20,
-      "norm_label": "analyze \u2014 build or refresh the index",
-      "id": "gitnexus_cli_skill_analyze_build_or_refresh_the_index"
-    },
-    {
-      "label": "status \u2014 Check index freshness",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
-      "source_location": "L30",
-      "_origin": "ast",
-      "community": 20,
-      "norm_label": "status \u2014 check index freshness",
-      "id": "gitnexus_cli_skill_status_check_index_freshness"
-    },
-    {
-      "label": "clean \u2014 Delete the index",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
-      "source_location": "L38",
-      "_origin": "ast",
-      "community": 20,
-      "norm_label": "clean \u2014 delete the index",
-      "id": "gitnexus_cli_skill_clean_delete_the_index"
-    },
-    {
-      "label": "wiki \u2014 Generate documentation from the graph",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
-      "source_location": "L51",
-      "_origin": "ast",
-      "community": 20,
-      "norm_label": "wiki \u2014 generate documentation from the graph",
-      "id": "gitnexus_cli_skill_wiki_generate_documentation_from_the_graph"
-    },
-    {
-      "label": "list \u2014 Show all indexed repos",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
-      "source_location": "L68",
-      "_origin": "ast",
-      "community": 20,
-      "norm_label": "list \u2014 show all indexed repos",
-      "id": "gitnexus_cli_skill_list_show_all_indexed_repos"
-    },
-    {
-      "label": "After Indexing",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
-      "source_location": "L76",
-      "_origin": "ast",
-      "community": 20,
-      "norm_label": "after indexing",
-      "id": "gitnexus_cli_skill_after_indexing"
-    },
-    {
-      "label": "Troubleshooting",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
-      "source_location": "L81",
-      "_origin": "ast",
-      "community": 20,
-      "norm_label": "troubleshooting",
-      "id": "gitnexus_cli_skill_troubleshooting"
-    },
-    {
-      "label": "SKILL.md",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 36,
-      "norm_label": "skill.md",
-      "id": "gitnexus_debugging_skill"
-    },
-    {
-      "label": "Debugging with GitNexus",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
-      "source_location": "L6",
-      "_origin": "ast",
-      "community": 36,
-      "norm_label": "debugging with gitnexus",
-      "id": "gitnexus_debugging_skill_debugging_with_gitnexus"
-    },
-    {
-      "label": "When to Use",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
-      "source_location": "L8",
-      "_origin": "ast",
-      "community": 36,
-      "norm_label": "when to use",
-      "id": "gitnexus_debugging_skill_when_to_use"
-    },
-    {
-      "label": "Workflow",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
-      "source_location": "L16",
-      "_origin": "ast",
-      "community": 36,
-      "norm_label": "workflow",
-      "id": "gitnexus_debugging_skill_workflow"
-    },
-    {
-      "label": "Checklist",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
-      "source_location": "L27",
-      "_origin": "ast",
-      "community": 36,
-      "norm_label": "checklist",
-      "id": "gitnexus_debugging_skill_checklist"
-    },
-    {
-      "label": "Debugging Patterns",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
-      "source_location": "L39",
-      "_origin": "ast",
-      "community": 36,
-      "norm_label": "debugging patterns",
-      "id": "gitnexus_debugging_skill_debugging_patterns"
-    },
-    {
-      "label": "Tools",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
-      "source_location": "L49",
-      "_origin": "ast",
-      "community": 36,
-      "norm_label": "tools",
-      "id": "gitnexus_debugging_skill_tools"
-    },
-    {
-      "label": "Example: \"Payment endpoint returns 500 intermittently\"",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
-      "source_location": "L75",
-      "_origin": "ast",
-      "community": 36,
-      "norm_label": "example: \"payment endpoint returns 500 intermittently\"",
-      "id": "gitnexus_debugging_skill_example_payment_endpoint_returns_500_intermittently"
-    },
-    {
-      "label": "SKILL.md",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 37,
-      "norm_label": "skill.md",
-      "id": "gitnexus_exploring_skill"
-    },
-    {
-      "label": "Exploring Codebases with GitNexus",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
-      "source_location": "L6",
-      "_origin": "ast",
-      "community": 37,
-      "norm_label": "exploring codebases with gitnexus",
-      "id": "gitnexus_exploring_skill_exploring_codebases_with_gitnexus"
-    },
-    {
-      "label": "When to Use",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
-      "source_location": "L8",
-      "_origin": "ast",
-      "community": 37,
-      "norm_label": "when to use",
-      "id": "gitnexus_exploring_skill_when_to_use"
-    },
-    {
-      "label": "Workflow",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
-      "source_location": "L16",
-      "_origin": "ast",
-      "community": 37,
-      "norm_label": "workflow",
-      "id": "gitnexus_exploring_skill_workflow"
-    },
-    {
-      "label": "Checklist",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
-      "source_location": "L28",
-      "_origin": "ast",
-      "community": 37,
-      "norm_label": "checklist",
-      "id": "gitnexus_exploring_skill_checklist"
-    },
-    {
-      "label": "Resources",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
-      "source_location": "L39",
-      "_origin": "ast",
-      "community": 37,
-      "norm_label": "resources",
-      "id": "gitnexus_exploring_skill_resources"
-    },
-    {
-      "label": "Tools",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
-      "source_location": "L48",
-      "_origin": "ast",
-      "community": 37,
-      "norm_label": "tools",
-      "id": "gitnexus_exploring_skill_tools"
-    },
-    {
-      "label": "Example: \"How does payment processing work?\"",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
-      "source_location": "L67",
-      "_origin": "ast",
-      "community": 37,
-      "norm_label": "example: \"how does payment processing work?\"",
-      "id": "gitnexus_exploring_skill_example_how_does_payment_processing_work"
-    },
-    {
-      "label": "SKILL.md",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 38,
-      "norm_label": "skill.md",
-      "id": "gitnexus_guide_skill"
-    },
-    {
-      "label": "GitNexus Guide",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
-      "source_location": "L6",
-      "_origin": "ast",
-      "community": 38,
-      "norm_label": "gitnexus guide",
-      "id": "gitnexus_guide_skill_gitnexus_guide"
-    },
-    {
-      "label": "Always Start Here",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
-      "source_location": "L10",
-      "_origin": "ast",
-      "community": 38,
-      "norm_label": "always start here",
-      "id": "gitnexus_guide_skill_always_start_here"
-    },
-    {
-      "label": "Skills",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
-      "source_location": "L20",
-      "_origin": "ast",
-      "community": 38,
-      "norm_label": "skills",
-      "id": "gitnexus_guide_skill_skills"
-    },
-    {
-      "label": "Tools Reference",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
-      "source_location": "L31",
-      "_origin": "ast",
-      "community": 38,
-      "norm_label": "tools reference",
-      "id": "gitnexus_guide_skill_tools_reference"
-    },
-    {
-      "label": "Paginating `list_repos`",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
-      "source_location": "L43",
-      "_origin": "ast",
-      "community": 38,
-      "norm_label": "paginating `list_repos`",
-      "id": "gitnexus_guide_skill_paginating_list_repos"
-    },
-    {
-      "label": "Resources Reference",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
-      "source_location": "L74",
-      "_origin": "ast",
-      "community": 38,
-      "norm_label": "resources reference",
-      "id": "gitnexus_guide_skill_resources_reference"
-    },
-    {
-      "label": "Graph Schema",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
-      "source_location": "L87",
-      "_origin": "ast",
-      "community": 38,
-      "norm_label": "graph schema",
-      "id": "gitnexus_guide_skill_graph_schema"
-    },
-    {
-      "label": "SKILL.md",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "skill.md",
-      "id": "gitnexus_impact_analysis_skill"
-    },
-    {
-      "label": "Impact Analysis with GitNexus",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
-      "source_location": "L6",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "impact analysis with gitnexus",
-      "id": "gitnexus_impact_analysis_skill_impact_analysis_with_gitnexus"
-    },
-    {
-      "label": "When to Use",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
-      "source_location": "L8",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "when to use",
-      "id": "gitnexus_impact_analysis_skill_when_to_use"
-    },
-    {
-      "label": "Workflow",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
-      "source_location": "L17",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "workflow",
-      "id": "gitnexus_impact_analysis_skill_workflow"
-    },
-    {
-      "label": "Checklist",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
-      "source_location": "L28",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "checklist",
-      "id": "gitnexus_impact_analysis_skill_checklist"
-    },
-    {
-      "label": "Understanding Output",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
-      "source_location": "L39",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "understanding output",
-      "id": "gitnexus_impact_analysis_skill_understanding_output"
-    },
-    {
-      "label": "Risk Assessment",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
-      "source_location": "L47",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "risk assessment",
-      "id": "gitnexus_impact_analysis_skill_risk_assessment"
-    },
-    {
-      "label": "Tools",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
-      "source_location": "L56",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "tools",
-      "id": "gitnexus_impact_analysis_skill_tools"
-    },
-    {
-      "label": "Example: \"What breaks if I change validateUser?\"",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
-      "source_location": "L86",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "example: \"what breaks if i change validateuser?\"",
-      "id": "gitnexus_impact_analysis_skill_example_what_breaks_if_i_change_validateuser"
-    },
-    {
-      "label": "SKILL.md",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 16,
-      "norm_label": "skill.md",
-      "id": "gitnexus_refactoring_skill"
-    },
-    {
-      "label": "Refactoring with GitNexus",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L6",
-      "_origin": "ast",
-      "community": 16,
-      "norm_label": "refactoring with gitnexus",
-      "id": "gitnexus_refactoring_skill_refactoring_with_gitnexus"
-    },
-    {
-      "label": "When to Use",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L8",
-      "_origin": "ast",
-      "community": 16,
-      "norm_label": "when to use",
-      "id": "gitnexus_refactoring_skill_when_to_use"
-    },
-    {
-      "label": "Workflow",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L16",
-      "_origin": "ast",
-      "community": 16,
-      "norm_label": "workflow",
-      "id": "gitnexus_refactoring_skill_workflow"
-    },
-    {
-      "label": "Checklists",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L27",
-      "_origin": "ast",
-      "community": 16,
-      "norm_label": "checklists",
-      "id": "gitnexus_refactoring_skill_checklists"
-    },
-    {
-      "label": "Rename Symbol",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L29",
-      "_origin": "ast",
-      "community": 16,
-      "norm_label": "rename symbol",
-      "id": "gitnexus_refactoring_skill_rename_symbol"
-    },
-    {
-      "label": "Extract Module",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L39",
-      "_origin": "ast",
-      "community": 16,
-      "norm_label": "extract module",
-      "id": "gitnexus_refactoring_skill_extract_module"
-    },
-    {
-      "label": "Split Function/Service",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L50",
-      "_origin": "ast",
-      "community": 16,
-      "norm_label": "split function/service",
-      "id": "gitnexus_refactoring_skill_split_function_service"
-    },
-    {
-      "label": "Tools",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L62",
-      "_origin": "ast",
-      "community": 16,
-      "norm_label": "tools",
-      "id": "gitnexus_refactoring_skill_tools"
-    },
-    {
-      "label": "Risk Rules",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L97",
-      "_origin": "ast",
-      "community": 16,
-      "norm_label": "risk rules",
-      "id": "gitnexus_refactoring_skill_risk_rules"
-    },
-    {
-      "label": "Example: Rename `validateUser` to `authenticateUser`",
-      "file_type": "document",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L106",
-      "_origin": "ast",
-      "community": 16,
-      "norm_label": "example: rename `validateuser` to `authenticateuser`",
-      "id": "gitnexus_refactoring_skill_example_rename_validateuser_to_authenticateuser"
     },
     {
       "label": "AGENT_SPEC.md",
@@ -6344,286 +6724,6 @@
       "id": "05_risk_manager_agent_test_cases_anti_pattern_checklist_m\u1ecdi_case_\u0111\u1ec1u_ph\u1ea3i_pass"
     },
     {
-      "label": "AGENTS.md",
-      "file_type": "document",
-      "source_file": "AGENTS.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "agents.md",
-      "id": "agents"
-    },
-    {
-      "label": "Daily Operations \u2014 Mini Investment Desk",
-      "file_type": "document",
-      "source_file": "AGENTS.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "daily operations \u2014 mini investment desk",
-      "id": "agents_daily_operations_mini_investment_desk"
-    },
-    {
-      "label": "Non-Negotiable Runtime Paths",
-      "file_type": "document",
-      "source_file": "AGENTS.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "non-negotiable runtime paths",
-      "id": "agents_non_negotiable_runtime_paths"
-    },
-    {
-      "label": "Daily Workflow",
-      "file_type": "document",
-      "source_file": "AGENTS.md",
-      "source_location": "L19",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "daily workflow",
-      "id": "agents_daily_workflow"
-    },
-    {
-      "label": "Failure Handling",
-      "file_type": "document",
-      "source_file": "AGENTS.md",
-      "source_location": "L72",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "failure handling",
-      "id": "agents_failure_handling"
-    },
-    {
-      "label": "GitNexus \u2014 Code Intelligence",
-      "file_type": "document",
-      "source_file": "AGENTS.md",
-      "source_location": "L82",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "gitnexus \u2014 code intelligence",
-      "id": "agents_gitnexus_code_intelligence"
-    },
-    {
-      "label": "Always Do",
-      "file_type": "document",
-      "source_file": "AGENTS.md",
-      "source_location": "L88",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "always do",
-      "id": "agents_always_do"
-    },
-    {
-      "label": "Never Do",
-      "file_type": "document",
-      "source_file": "AGENTS.md",
-      "source_location": "L96",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "never do",
-      "id": "agents_never_do"
-    },
-    {
-      "label": "Resources",
-      "file_type": "document",
-      "source_file": "AGENTS.md",
-      "source_location": "L103",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "resources",
-      "id": "agents_resources"
-    },
-    {
-      "label": "CLI",
-      "file_type": "document",
-      "source_file": "AGENTS.md",
-      "source_location": "L112",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "cli",
-      "id": "agents_cli"
-    },
-    {
-      "label": "CLAUDE.md",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "claude.md",
-      "id": "claude"
-    },
-    {
-      "label": "Daily Operations \u2014 Mini Investment Desk",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "daily operations \u2014 mini investment desk",
-      "id": "claude_daily_operations_mini_investment_desk"
-    },
-    {
-      "label": "Non-Negotiable Runtime Paths",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L7",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "non-negotiable runtime paths",
-      "id": "claude_non_negotiable_runtime_paths"
-    },
-    {
-      "label": "Daily Workflow",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L21",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "daily workflow",
-      "id": "claude_daily_workflow"
-    },
-    {
-      "label": "Failure Handling",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L74",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "failure handling",
-      "id": "claude_failure_handling"
-    },
-    {
-      "label": "GitNexus \u2014 Code Intelligence",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L84",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "gitnexus \u2014 code intelligence",
-      "id": "claude_gitnexus_code_intelligence"
-    },
-    {
-      "label": "Always Do",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L90",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "always do",
-      "id": "claude_always_do"
-    },
-    {
-      "label": "Never Do",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L98",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "never do",
-      "id": "claude_never_do"
-    },
-    {
-      "label": "Resources",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L105",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "resources",
-      "id": "claude_resources"
-    },
-    {
-      "label": "CLI",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L114",
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "cli",
-      "id": "claude_cli"
-    },
-    {
-      "label": "DESIGN.md",
-      "file_type": "document",
-      "source_file": "DESIGN.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 35,
-      "norm_label": "design.md",
-      "id": "design"
-    },
-    {
-      "label": "Design chu\u1ea9n cho M\u1eccI b\u00e1o c\u00e1o \u2014 nh\u00e2n b\u1ea3n template \"B\u1ea3n tin TTCK\"",
-      "file_type": "document",
-      "source_file": "DESIGN.md",
-      "source_location": "L53",
-      "_origin": "ast",
-      "community": 35,
-      "norm_label": "design chuan cho moi bao cao \u2014 nhan ban template \"ban tin ttck\"",
-      "id": "design_design_chu\u1ea9n_cho_m\u1ecdi_b\u00e1o_c\u00e1o_nh\u00e2n_b\u1ea3n_template_b\u1ea3n_tin_ttck"
-    },
-    {
-      "label": "Brand & Style",
-      "file_type": "document",
-      "source_file": "DESIGN.md",
-      "source_location": "L61",
-      "_origin": "ast",
-      "community": 35,
-      "norm_label": "brand & style",
-      "id": "design_brand_style"
-    },
-    {
-      "label": "Ng\u1eef ngh\u0129a m\u00e0u (b\u1eaft bu\u1ed9c th\u1ed1ng nh\u1ea5t)",
-      "file_type": "document",
-      "source_file": "DESIGN.md",
-      "source_location": "L69",
-      "_origin": "ast",
-      "community": 35,
-      "norm_label": "ngu nghia mau (bat buoc thong nhat)",
-      "id": "design_ng\u1eef_ngh\u0129a_m\u00e0u_b\u1eaft_bu\u1ed9c_th\u1ed1ng_nh\u1ea5t"
-    },
-    {
-      "label": "C\u1ea5u tr\u00fac trang (theo th\u1ee9 t\u1ef1, d\u00f9ng \u0111\u00fang t\u00ean class)",
-      "file_type": "document",
-      "source_file": "DESIGN.md",
-      "source_location": "L78",
-      "_origin": "ast",
-      "community": 35,
-      "norm_label": "cau truc trang (theo thu tu, dung \u0111ung ten class)",
-      "id": "design_c\u1ea5u_tr\u00fac_trang_theo_th\u1ee9_t\u1ef1_d\u00f9ng_\u0111\u00fang_t\u00ean_class"
-    },
-    {
-      "label": "Elevation & Shape",
-      "file_type": "document",
-      "source_file": "DESIGN.md",
-      "source_location": "L120",
-      "_origin": "ast",
-      "community": 35,
-      "norm_label": "elevation & shape",
-      "id": "design_elevation_shape"
-    },
-    {
-      "label": "Quy t\u1eafc b\u1eaft bu\u1ed9c khi sinh b\u00e1o c\u00e1o m\u1edbi",
-      "file_type": "document",
-      "source_file": "DESIGN.md",
-      "source_location": "L126",
-      "_origin": "ast",
-      "community": 35,
-      "norm_label": "quy tac bat buoc khi sinh bao cao moi",
-      "id": "design_quy_t\u1eafc_b\u1eaft_bu\u1ed9c_khi_sinh_b\u00e1o_c\u00e1o_m\u1edbi"
-    },
-    {
-      "label": "Appendix \u2014 CSS core (copy nguy\u00ean kh\u1ed1i l\u00e0m khung)",
-      "file_type": "document",
-      "source_file": "DESIGN.md",
-      "source_location": "L136",
-      "_origin": "ast",
-      "community": 35,
-      "norm_label": "appendix \u2014 css core (copy nguyen khoi lam khung)",
-      "id": "design_appendix_css_core_copy_nguy\u00ean_kh\u1ed1i_l\u00e0m_khung"
-    },
-    {
       "label": "README.md",
       "file_type": "document",
       "source_file": "README.md",
@@ -7458,12 +7558,1187 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_cli_skill",
+      "target": "gitnexus_cli_skill_gitnexus_cli_commands"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_cli_skill_gitnexus_cli_commands",
+      "target": "gitnexus_cli_skill_after_indexing"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_cli_skill_gitnexus_cli_commands",
+      "target": "gitnexus_cli_skill_commands"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
+      "source_location": "L81",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_cli_skill_gitnexus_cli_commands",
+      "target": "gitnexus_cli_skill_troubleshooting"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_cli_skill_commands",
+      "target": "gitnexus_cli_skill_analyze_build_or_refresh_the_index"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_cli_skill_commands",
+      "target": "gitnexus_cli_skill_clean_delete_the_index"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_cli_skill_commands",
+      "target": "gitnexus_cli_skill_list_show_all_indexed_repos"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_cli_skill_commands",
+      "target": "gitnexus_cli_skill_status_check_index_freshness"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_cli_skill_commands",
+      "target": "gitnexus_cli_skill_wiki_generate_documentation_from_the_graph"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_debugging_skill",
+      "target": "gitnexus_debugging_skill_debugging_with_gitnexus"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_debugging_skill_debugging_with_gitnexus",
+      "target": "gitnexus_debugging_skill_checklist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_debugging_skill_debugging_with_gitnexus",
+      "target": "gitnexus_debugging_skill_debugging_patterns"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
+      "source_location": "L75",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_debugging_skill_debugging_with_gitnexus",
+      "target": "gitnexus_debugging_skill_example_payment_endpoint_returns_500_intermittently"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_debugging_skill_debugging_with_gitnexus",
+      "target": "gitnexus_debugging_skill_tools"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_debugging_skill_debugging_with_gitnexus",
+      "target": "gitnexus_debugging_skill_when_to_use"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_debugging_skill_debugging_with_gitnexus",
+      "target": "gitnexus_debugging_skill_workflow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_exploring_skill",
+      "target": "gitnexus_exploring_skill_exploring_codebases_with_gitnexus"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_exploring_skill_exploring_codebases_with_gitnexus",
+      "target": "gitnexus_exploring_skill_checklist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_exploring_skill_exploring_codebases_with_gitnexus",
+      "target": "gitnexus_exploring_skill_example_how_does_payment_processing_work"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_exploring_skill_exploring_codebases_with_gitnexus",
+      "target": "gitnexus_exploring_skill_resources"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_exploring_skill_exploring_codebases_with_gitnexus",
+      "target": "gitnexus_exploring_skill_tools"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_exploring_skill_exploring_codebases_with_gitnexus",
+      "target": "gitnexus_exploring_skill_when_to_use"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_exploring_skill_exploring_codebases_with_gitnexus",
+      "target": "gitnexus_exploring_skill_workflow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_guide_skill",
+      "target": "gitnexus_guide_skill_gitnexus_guide"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_guide_skill_gitnexus_guide",
+      "target": "gitnexus_guide_skill_always_start_here"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
+      "source_location": "L87",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_guide_skill_gitnexus_guide",
+      "target": "gitnexus_guide_skill_graph_schema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_guide_skill_gitnexus_guide",
+      "target": "gitnexus_guide_skill_resources_reference"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_guide_skill_gitnexus_guide",
+      "target": "gitnexus_guide_skill_skills"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_guide_skill_gitnexus_guide",
+      "target": "gitnexus_guide_skill_tools_reference"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_guide_skill_tools_reference",
+      "target": "gitnexus_guide_skill_paginating_list_repos"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_impact_analysis_skill",
+      "target": "gitnexus_impact_analysis_skill_impact_analysis_with_gitnexus"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_impact_analysis_skill_impact_analysis_with_gitnexus",
+      "target": "gitnexus_impact_analysis_skill_checklist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_impact_analysis_skill_impact_analysis_with_gitnexus",
+      "target": "gitnexus_impact_analysis_skill_example_what_breaks_if_i_change_validateuser"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_impact_analysis_skill_impact_analysis_with_gitnexus",
+      "target": "gitnexus_impact_analysis_skill_risk_assessment"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_impact_analysis_skill_impact_analysis_with_gitnexus",
+      "target": "gitnexus_impact_analysis_skill_tools"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_impact_analysis_skill_impact_analysis_with_gitnexus",
+      "target": "gitnexus_impact_analysis_skill_understanding_output"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_impact_analysis_skill_impact_analysis_with_gitnexus",
+      "target": "gitnexus_impact_analysis_skill_when_to_use"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_impact_analysis_skill_impact_analysis_with_gitnexus",
+      "target": "gitnexus_impact_analysis_skill_workflow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_refactoring_skill",
+      "target": "gitnexus_refactoring_skill_refactoring_with_gitnexus"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_refactoring_skill_refactoring_with_gitnexus",
+      "target": "gitnexus_refactoring_skill_checklists"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L106",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_refactoring_skill_refactoring_with_gitnexus",
+      "target": "gitnexus_refactoring_skill_example_rename_validateuser_to_authenticateuser"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_refactoring_skill_refactoring_with_gitnexus",
+      "target": "gitnexus_refactoring_skill_risk_rules"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_refactoring_skill_refactoring_with_gitnexus",
+      "target": "gitnexus_refactoring_skill_tools"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_refactoring_skill_refactoring_with_gitnexus",
+      "target": "gitnexus_refactoring_skill_when_to_use"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_refactoring_skill_refactoring_with_gitnexus",
+      "target": "gitnexus_refactoring_skill_workflow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_refactoring_skill_checklists",
+      "target": "gitnexus_refactoring_skill_extract_module"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_refactoring_skill_checklists",
+      "target": "gitnexus_refactoring_skill_rename_symbol"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "gitnexus_refactoring_skill_checklists",
+      "target": "gitnexus_refactoring_skill_split_function_service"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents",
+      "target": "agents_daily_operations_mini_investment_desk"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L82",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents",
+      "target": "agents_gitnexus_code_intelligence"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_daily_operations_mini_investment_desk",
+      "target": "agents_daily_workflow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_daily_operations_mini_investment_desk",
+      "target": "agents_failure_handling"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_daily_operations_mini_investment_desk",
+      "target": "agents_non_negotiable_runtime_paths"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L88",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_gitnexus_code_intelligence",
+      "target": "agents_always_do"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L112",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_gitnexus_code_intelligence",
+      "target": "agents_cli"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L96",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_gitnexus_code_intelligence",
+      "target": "agents_never_do"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L103",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_gitnexus_code_intelligence",
+      "target": "agents_resources"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude",
+      "target": "claude_daily_operations_mini_investment_desk"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L84",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude",
+      "target": "claude_gitnexus_code_intelligence"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_daily_operations_mini_investment_desk",
+      "target": "claude_daily_workflow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_daily_operations_mini_investment_desk",
+      "target": "claude_failure_handling"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_daily_operations_mini_investment_desk",
+      "target": "claude_non_negotiable_runtime_paths"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L90",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_gitnexus_code_intelligence",
+      "target": "claude_always_do"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L114",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_gitnexus_code_intelligence",
+      "target": "claude_cli"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_gitnexus_code_intelligence",
+      "target": "claude_never_do"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L105",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_gitnexus_code_intelligence",
+      "target": "claude_resources"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DESIGN.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "design",
+      "target": "design_design_chu\u1ea9n_cho_m\u1ecdi_b\u00e1o_c\u00e1o_nh\u00e2n_b\u1ea3n_template_b\u1ea3n_tin_ttck"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DESIGN.md",
+      "source_location": "L136",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "design_design_chu\u1ea9n_cho_m\u1ecdi_b\u00e1o_c\u00e1o_nh\u00e2n_b\u1ea3n_template_b\u1ea3n_tin_ttck",
+      "target": "design_appendix_css_core_copy_nguy\u00ean_kh\u1ed1i_l\u00e0m_khung"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DESIGN.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "design_design_chu\u1ea9n_cho_m\u1ecdi_b\u00e1o_c\u00e1o_nh\u00e2n_b\u1ea3n_template_b\u1ea3n_tin_ttck",
+      "target": "design_brand_style"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DESIGN.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "design_design_chu\u1ea9n_cho_m\u1ecdi_b\u00e1o_c\u00e1o_nh\u00e2n_b\u1ea3n_template_b\u1ea3n_tin_ttck",
+      "target": "design_c\u1ea5u_tr\u00fac_trang_theo_th\u1ee9_t\u1ef1_d\u00f9ng_\u0111\u00fang_t\u00ean_class"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DESIGN.md",
+      "source_location": "L120",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "design_design_chu\u1ea9n_cho_m\u1ecdi_b\u00e1o_c\u00e1o_nh\u00e2n_b\u1ea3n_template_b\u1ea3n_tin_ttck",
+      "target": "design_elevation_shape"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DESIGN.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "design_design_chu\u1ea9n_cho_m\u1ecdi_b\u00e1o_c\u00e1o_nh\u00e2n_b\u1ea3n_template_b\u1ea3n_tin_ttck",
+      "target": "design_ng\u1eef_ngh\u0129a_m\u00e0u_b\u1eaft_bu\u1ed9c_th\u1ed1ng_nh\u1ea5t"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DESIGN.md",
+      "source_location": "L126",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "design_design_chu\u1ea9n_cho_m\u1ecdi_b\u00e1o_c\u00e1o_nh\u00e2n_b\u1ea3n_template_b\u1ea3n_tin_ttck",
+      "target": "design_quy_t\u1eafc_b\u1eaft_bu\u1ed9c_khi_sinh_b\u00e1o_c\u00e1o_m\u1edbi"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bosungmissingdata.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "bosungmissingdata",
+      "target": "bosungmissingdata_global_overnight_fx_rates_domestic_policy_sentiment_note",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bosungmissingdata.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "bosungmissingdata",
+      "target": "bosungmissingdata_s\u1ed1_m\u00e3_t\u0103ng_tr\u1ea7n_gi\u1ea3m_s\u00e0n_c\u1ee7a_s\u00e0n_hose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bosungmissingdata.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "bosungmissingdata",
+      "target": "bosungmissingdata_t\u1ed5ng_kh\u1ed1i_l\u01b0\u1ee3ng_v\u00e0_gi\u00e1_tr\u1ecb_giao_d\u1ecbch_th\u1ecfa_thu\u1eadn_vnindex",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L252",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data",
+      "target": "pipeline_fetch_data_build_market_snapshot"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L422",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data",
+      "target": "pipeline_fetch_data_fetch"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L259",
+      "weight": 1.0,
+      "source": "pipeline_fetch_data",
+      "target": "pipeline_fetch_data_fetch_agreements_trading",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data",
+      "target": "pipeline_fetch_data_fetch_breadth"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L226",
+      "weight": 1.0,
+      "source": "pipeline_fetch_data",
+      "target": "pipeline_fetch_data_fetch_ceiling_floor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L223",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data",
+      "target": "pipeline_fetch_data_fetch_extra_fields"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L203",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data",
+      "target": "pipeline_fetch_data_fetch_f1_basis"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L95",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data",
+      "target": "pipeline_fetch_data_fetch_foreign_net"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L302",
+      "weight": 1.0,
+      "source": "pipeline_fetch_data",
+      "target": "pipeline_fetch_data_fetch_from_news_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L122",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data",
+      "target": "pipeline_fetch_data_fetch_index_contribution"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data",
+      "target": "pipeline_fetch_data_history"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data",
+      "target": "pipeline_fetch_data_ma"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data",
+      "target": "pipeline_fetch_data_pct"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L351",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data",
+      "target": "pipeline_fetch_data_snapshot_to_markdown"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L181",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data",
+      "target": "pipeline_fetch_data_vietstock_ohlc"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data_rationale_1",
+      "target": "pipeline_fetch_data"
+    },
+    {
+      "relation": "imports_from",
+      "context": "submodule_import",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/run_pipeline.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_run_pipeline",
+      "target": "pipeline_fetch_data"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L253",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data_build_market_snapshot",
+      "target": "pipeline_fetch_data_history"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L260",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data_build_market_snapshot",
+      "target": "pipeline_fetch_data_ma"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L278",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data_build_market_snapshot",
+      "target": "pipeline_fetch_data_pct"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L243",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data_fetch_extra_fields",
+      "target": "pipeline_fetch_data_fetch_breadth"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "pipeline_fetch_data_rationale_71",
+      "target": "pipeline_fetch_data_fetch_breadth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L244",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data_fetch_extra_fields",
+      "target": "pipeline_fetch_data_fetch_foreign_net"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "pipeline_fetch_data_rationale_99",
+      "target": "pipeline_fetch_data_fetch_foreign_net",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L245",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data_fetch_extra_fields",
+      "target": "pipeline_fetch_data_fetch_index_contribution"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "pipeline_fetch_data_rationale_126",
+      "target": "pipeline_fetch_data_fetch_index_contribution",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L206",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data_fetch_f1_basis",
+      "target": "pipeline_fetch_data_vietstock_ohlc"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L246",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data_fetch_extra_fields",
+      "target": "pipeline_fetch_data_fetch_f1_basis"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L207",
+      "weight": 1.0,
+      "source": "pipeline_fetch_data_rationale_207",
+      "target": "pipeline_fetch_data_fetch_f1_basis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L401",
+      "weight": 1.0,
+      "source": "pipeline_fetch_data_fetch_extra_fields",
+      "target": "pipeline_fetch_data_fetch_ceiling_floor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L227",
+      "weight": 1.0,
+      "source": "pipeline_fetch_data_rationale_227",
+      "target": "pipeline_fetch_data_fetch_ceiling_floor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L402",
+      "weight": 1.0,
+      "source": "pipeline_fetch_data_fetch_extra_fields",
+      "target": "pipeline_fetch_data_fetch_agreements_trading",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L260",
+      "weight": 1.0,
+      "source": "pipeline_fetch_data_rationale_260",
+      "target": "pipeline_fetch_data_fetch_agreements_trading",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L403",
+      "weight": 1.0,
+      "source": "pipeline_fetch_data_fetch_extra_fields",
+      "target": "pipeline_fetch_data_fetch_from_news_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L303",
+      "weight": 1.0,
+      "source": "pipeline_fetch_data_rationale_303",
+      "target": "pipeline_fetch_data_fetch_from_news_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L322",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data_build_market_snapshot",
+      "target": "pipeline_fetch_data_fetch_extra_fields"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L378",
+      "weight": 1.0,
+      "source": "pipeline_fetch_data_rationale_378",
+      "target": "pipeline_fetch_data_fetch_extra_fields",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L423",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data_fetch",
+      "target": "pipeline_fetch_data_build_market_snapshot"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pipeline/fetch_data.py",
+      "source_location": "L424",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pipeline_fetch_data_fetch",
+      "target": "pipeline_fetch_data_snapshot_to_markdown"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "run_claude_daily.ps1",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "run_claude_daily",
+      "target": "run_claude_daily_write_tasklog"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_01",
-      "target": "2026_06_22_01_b\u00e1o_c\u00e1o_tr\u1ea1ng_th\u00e1i_th\u1ecb_tr\u01b0\u1eddng_risk_regime_desk",
-      "confidence_score": 1.0
+      "target": "2026_06_22_01_b\u00e1o_c\u00e1o_tr\u1ea1ng_th\u00e1i_th\u1ecb_tr\u01b0\u1eddng_risk_regime_desk"
     },
     {
       "relation": "contains",
@@ -7471,9 +8746,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_01_b\u00e1o_c\u00e1o_tr\u1ea1ng_th\u00e1i_th\u1ecb_tr\u01b0\u1eddng_risk_regime_desk",
-      "target": "2026_06_22_01_1_ki\u1ec3m_k\u00ea_d\u1eef_li\u1ec7u",
-      "confidence_score": 1.0
+      "target": "2026_06_22_01_1_ki\u1ec3m_k\u00ea_d\u1eef_li\u1ec7u"
     },
     {
       "relation": "contains",
@@ -7481,9 +8756,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_01_b\u00e1o_c\u00e1o_tr\u1ea1ng_th\u00e1i_th\u1ecb_tr\u01b0\u1eddng_risk_regime_desk",
-      "target": "2026_06_22_01_2_scorecard",
-      "confidence_score": 1.0
+      "target": "2026_06_22_01_2_scorecard"
     },
     {
       "relation": "contains",
@@ -7491,9 +8766,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_01_b\u00e1o_c\u00e1o_tr\u1ea1ng_th\u00e1i_th\u1ecb_tr\u01b0\u1eddng_risk_regime_desk",
-      "target": "2026_06_22_01_3_x\u00e1c_\u0111\u1ecbnh_regime",
-      "confidence_score": 1.0
+      "target": "2026_06_22_01_3_x\u00e1c_\u0111\u1ecbnh_regime"
     },
     {
       "relation": "contains",
@@ -7501,9 +8776,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_01_b\u00e1o_c\u00e1o_tr\u1ea1ng_th\u00e1i_th\u1ecb_tr\u01b0\u1eddng_risk_regime_desk",
-      "target": "2026_06_22_01_4_tr\u1ea1ng_th\u00e1i_ph\u1ee5",
-      "confidence_score": 1.0
+      "target": "2026_06_22_01_4_tr\u1ea1ng_th\u00e1i_ph\u1ee5"
     },
     {
       "relation": "contains",
@@ -7511,9 +8786,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_01_b\u00e1o_c\u00e1o_tr\u1ea1ng_th\u00e1i_th\u1ecb_tr\u01b0\u1eddng_risk_regime_desk",
-      "target": "2026_06_22_01_5_quy_t\u1eafc_h\u1ea1_nhanh_n\u00e2ng_ch\u1eadm",
-      "confidence_score": 1.0
+      "target": "2026_06_22_01_5_quy_t\u1eafc_h\u1ea1_nhanh_n\u00e2ng_ch\u1eadm"
     },
     {
       "relation": "contains",
@@ -7521,9 +8796,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L82",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_01_b\u00e1o_c\u00e1o_tr\u1ea1ng_th\u00e1i_th\u1ecb_tr\u01b0\u1eddng_risk_regime_desk",
-      "target": "2026_06_22_01_6_confidence",
-      "confidence_score": 1.0
+      "target": "2026_06_22_01_6_confidence"
     },
     {
       "relation": "contains",
@@ -7531,9 +8806,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L97",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_01_b\u00e1o_c\u00e1o_tr\u1ea1ng_th\u00e1i_th\u1ecb_tr\u01b0\u1eddng_risk_regime_desk",
-      "target": "2026_06_22_01_7_chi\u1ec1u_ph\u1ea3n_bi\u1ec7n_r\u1ee7i_ro_c\u1ee7a_ch\u00ednh_k\u1ebft_lu\u1eadn_n\u00e0y",
-      "confidence_score": 1.0
+      "target": "2026_06_22_01_7_chi\u1ec1u_ph\u1ea3n_bi\u1ec7n_r\u1ee7i_ro_c\u1ee7a_ch\u00ednh_k\u1ebft_lu\u1eadn_n\u00e0y"
     },
     {
       "relation": "contains",
@@ -7541,9 +8816,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L107",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_01_b\u00e1o_c\u00e1o_tr\u1ea1ng_th\u00e1i_th\u1ecb_tr\u01b0\u1eddng_risk_regime_desk",
-      "target": "2026_06_22_01_8_\u0111i\u1ec1u_ki\u1ec7n_chuy\u1ec3n_tr\u1ea1ng_th\u00e1i_ng\u01b0\u1ee1ng_\u0111o_\u0111\u01b0\u1ee3c",
-      "confidence_score": 1.0
+      "target": "2026_06_22_01_8_\u0111i\u1ec1u_ki\u1ec7n_chuy\u1ec3n_tr\u1ea1ng_th\u00e1i_ng\u01b0\u1ee1ng_\u0111o_\u0111\u01b0\u1ee3c"
     },
     {
       "relation": "contains",
@@ -7551,9 +8826,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L129",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_01_b\u00e1o_c\u00e1o_tr\u1ea1ng_th\u00e1i_th\u1ecb_tr\u01b0\u1eddng_risk_regime_desk",
-      "target": "2026_06_22_01_9_handoff_strategy_selector",
-      "confidence_score": 1.0
+      "target": "2026_06_22_01_9_handoff_strategy_selector"
     },
     {
       "relation": "contains",
@@ -7561,9 +8836,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_01_4_tr\u1ea1ng_th\u00e1i_ph\u1ee5",
-      "target": "2026_06_22_01_bull_trap_risk_c\u1ea3nh_b\u00e1o_b\u1eaft_bu\u1ed9c",
-      "confidence_score": 1.0
+      "target": "2026_06_22_01_bull_trap_risk_c\u1ea3nh_b\u00e1o_b\u1eaft_bu\u1ed9c"
     },
     {
       "relation": "contains",
@@ -7571,9 +8846,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L67",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_01_4_tr\u1ea1ng_th\u00e1i_ph\u1ee5",
-      "target": "2026_06_22_01_h\u1ed3i_k\u1ef9_thu\u1eadt",
-      "confidence_score": 1.0
+      "target": "2026_06_22_01_h\u1ed3i_k\u1ef9_thu\u1eadt"
     },
     {
       "relation": "contains",
@@ -7581,9 +8856,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L61",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_01_4_tr\u1ea1ng_th\u00e1i_ph\u1ee5",
-      "target": "2026_06_22_01_ph\u00e2n_h\u00f3a_m\u1ea1nh",
-      "confidence_score": 1.0
+      "target": "2026_06_22_01_ph\u00e2n_h\u00f3a_m\u1ea1nh"
     },
     {
       "relation": "contains",
@@ -7591,9 +8866,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L118",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_01_8_\u0111i\u1ec1u_ki\u1ec7n_chuy\u1ec3n_tr\u1ea1ng_th\u00e1i_ng\u01b0\u1ee1ng_\u0111o_\u0111\u01b0\u1ee3c",
-      "target": "2026_06_22_01_h\u1ea1_xu\u1ed1ng_risk_off_ng\u1eafn_h\u1ea1n_\u0111\u01b0\u1ee3c_ph\u00e9p_ngay_trong_ng\u00e0y_khi_xu\u1ea5t_hi\u1ec7n_2_3",
-      "confidence_score": 1.0
+      "target": "2026_06_22_01_h\u1ea1_xu\u1ed1ng_risk_off_ng\u1eafn_h\u1ea1n_\u0111\u01b0\u1ee3c_ph\u00e9p_ngay_trong_ng\u00e0y_khi_xu\u1ea5t_hi\u1ec7n_2_3"
     },
     {
       "relation": "contains",
@@ -7601,9 +8876,9 @@
       "source_file": "data/reports/2026-06-22/01.md",
       "source_location": "L109",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_01_8_\u0111i\u1ec1u_ki\u1ec7n_chuy\u1ec3n_tr\u1ea1ng_th\u00e1i_ng\u01b0\u1ee1ng_\u0111o_\u0111\u01b0\u1ee3c",
-      "target": "2026_06_22_01_n\u00e2ng_l\u00ean_uptrend_th\u1eadn_tr\u1ecdng_c\u1ea7n_2_phi\u00ean_x\u00e1c_nh\u1eadn_ho\u1eb7c_1_phi\u00ean_\u0111\u1ee7_c\u1ea3_4",
-      "confidence_score": 1.0
+      "target": "2026_06_22_01_n\u00e2ng_l\u00ean_uptrend_th\u1eadn_tr\u1ecdng_c\u1ea7n_2_phi\u00ean_x\u00e1c_nh\u1eadn_ho\u1eb7c_1_phi\u00ean_\u0111\u1ee7_c\u1ea3_4"
     },
     {
       "relation": "contains",
@@ -7611,9 +8886,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_02",
-      "target": "2026_06_22_02_strategy_selection_report",
-      "confidence_score": 1.0
+      "target": "2026_06_22_02_strategy_selection_report"
     },
     {
       "relation": "contains",
@@ -7621,9 +8896,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_02_strategy_selection_report",
-      "target": "2026_06_22_02_1_handoff_nh\u1eadn_\u0111\u01b0\u1ee3c_t\u1eeb_market_regime_agent",
-      "confidence_score": 1.0
+      "target": "2026_06_22_02_1_handoff_nh\u1eadn_\u0111\u01b0\u1ee3c_t\u1eeb_market_regime_agent"
     },
     {
       "relation": "contains",
@@ -7631,9 +8906,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_02_strategy_selection_report",
-      "target": "2026_06_22_02_2_quy_tr\u00ecnh_ch\u1ecdn_chi\u1ebfn_thu\u1eadt_v\u1ebft_l\u00e0m_vi\u1ec7c",
-      "confidence_score": 1.0
+      "target": "2026_06_22_02_2_quy_tr\u00ecnh_ch\u1ecdn_chi\u1ebfn_thu\u1eadt_v\u1ebft_l\u00e0m_vi\u1ec7c"
     },
     {
       "relation": "contains",
@@ -7641,9 +8916,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_02_strategy_selection_report",
-      "target": "2026_06_22_02_3_chi\u1ebfn_thu\u1eadt_\u0111\u01b0\u1ee3c_ch\u1ecdn",
-      "confidence_score": 1.0
+      "target": "2026_06_22_02_3_chi\u1ebfn_thu\u1eadt_\u0111\u01b0\u1ee3c_ch\u1ecdn"
     },
     {
       "relation": "contains",
@@ -7651,9 +8926,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L120",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_02_strategy_selection_report",
-      "target": "2026_06_22_02_4_chi\u1ebfn_thu\u1eadt_b\u1ecb_c\u1ea5m_trong_b\u1ed1i_c\u1ea3nh_h\u00f4m_nay",
-      "confidence_score": 1.0
+      "target": "2026_06_22_02_4_chi\u1ebfn_thu\u1eadt_b\u1ecb_c\u1ea5m_trong_b\u1ed1i_c\u1ea3nh_h\u00f4m_nay"
     },
     {
       "relation": "contains",
@@ -7661,9 +8936,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L137",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_02_strategy_selection_report",
-      "target": "2026_06_22_02_5_t\u00f3m_t\u1eaft_h\u00e0nh_\u0111\u1ed9ng_theo_tr\u1ea1ng_th\u00e1i_t\u00e0i_kho\u1ea3n",
-      "confidence_score": 1.0
+      "target": "2026_06_22_02_5_t\u00f3m_t\u1eaft_h\u00e0nh_\u0111\u1ed9ng_theo_tr\u1ea1ng_th\u00e1i_t\u00e0i_kho\u1ea3n"
     },
     {
       "relation": "contains",
@@ -7671,9 +8946,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L149",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_02_strategy_selection_report",
-      "target": "2026_06_22_02_6_k\u1ecbch_b\u1ea3n_theo_d\u00f5i_phi\u00ean_k\u1ebf_ti\u1ebfp",
-      "confidence_score": 1.0
+      "target": "2026_06_22_02_6_k\u1ecbch_b\u1ea3n_theo_d\u00f5i_phi\u00ean_k\u1ebf_ti\u1ebfp"
     },
     {
       "relation": "contains",
@@ -7681,9 +8956,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L159",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_02_strategy_selection_report",
-      "target": "2026_06_22_02_7_handoff_stock_picker_execution_desk_agent_03_04",
-      "confidence_score": 1.0
+      "target": "2026_06_22_02_7_handoff_stock_picker_execution_desk_agent_03_04"
     },
     {
       "relation": "contains",
@@ -7691,9 +8966,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_02_2_quy_tr\u00ecnh_ch\u1ecdn_chi\u1ebfn_thu\u1eadt_v\u1ebft_l\u00e0m_vi\u1ec7c",
-      "target": "2026_06_22_02_b\u01b0\u1edbc_2_tra_ma_tr\u1eadn_ban_\u0111\u1ea7u_theo_regime_code",
-      "confidence_score": 1.0
+      "target": "2026_06_22_02_b\u01b0\u1edbc_2_tra_ma_tr\u1eadn_ban_\u0111\u1ea7u_theo_regime_code"
     },
     {
       "relation": "contains",
@@ -7701,9 +8976,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_02_2_quy_tr\u00ecnh_ch\u1ecdn_chi\u1ebfn_thu\u1eadt_v\u1ebft_l\u00e0m_vi\u1ec7c",
-      "target": "2026_06_22_02_b\u01b0\u1edbc_3_1_ghi_\u0111\u00e8_sub_state_bull_trap_risk",
-      "confidence_score": 1.0
+      "target": "2026_06_22_02_b\u01b0\u1edbc_3_1_ghi_\u0111\u00e8_sub_state_bull_trap_risk"
     },
     {
       "relation": "contains",
@@ -7711,9 +8986,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_02_2_quy_tr\u00ecnh_ch\u1ecdn_chi\u1ebfn_thu\u1eadt_v\u1ebft_l\u00e0m_vi\u1ec7c",
-      "target": "2026_06_22_02_b\u01b0\u1edbc_3_2_\u0111i\u1ec1u_ch\u1ec9nh_confidence_trung_b\u00ecnh",
-      "confidence_score": 1.0
+      "target": "2026_06_22_02_b\u01b0\u1edbc_3_2_\u0111i\u1ec1u_ch\u1ec9nh_confidence_trung_b\u00ecnh"
     },
     {
       "relation": "contains",
@@ -7721,9 +8996,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_02_2_quy_tr\u00ecnh_ch\u1ecdn_chi\u1ebfn_thu\u1eadt_v\u1ebft_l\u00e0m_vi\u1ec7c",
-      "target": "2026_06_22_02_b\u01b0\u1edbc_3_3_s\u1ef1_ki\u1ec7n",
-      "confidence_score": 1.0
+      "target": "2026_06_22_02_b\u01b0\u1edbc_3_3_s\u1ef1_ki\u1ec7n"
     },
     {
       "relation": "contains",
@@ -7731,9 +9006,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_02_2_quy_tr\u00ecnh_ch\u1ecdn_chi\u1ebfn_thu\u1eadt_v\u1ebft_l\u00e0m_vi\u1ec7c",
-      "target": "2026_06_22_02_b\u01b0\u1edbc_3_4_sentiment",
-      "confidence_score": 1.0
+      "target": "2026_06_22_02_b\u01b0\u1edbc_3_4_sentiment"
     },
     {
       "relation": "contains",
@@ -7741,9 +9016,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L60",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_02_2_quy_tr\u00ecnh_ch\u1ecdn_chi\u1ebfn_thu\u1eadt_v\u1ebft_l\u00e0m_vi\u1ec7c",
-      "target": "2026_06_22_02_b\u01b0\u1edbc_3_5_tin_t\u1ee9c",
-      "confidence_score": 1.0
+      "target": "2026_06_22_02_b\u01b0\u1edbc_3_5_tin_t\u1ee9c"
     },
     {
       "relation": "contains",
@@ -7751,9 +9026,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L64",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_02_2_quy_tr\u00ecnh_ch\u1ecdn_chi\u1ebfn_thu\u1eadt_v\u1ebft_l\u00e0m_vi\u1ec7c",
-      "target": "2026_06_22_02_b\u01b0\u1edbc_4_ki\u1ec3m_tra_quy_t\u1eafc_c\u1ee9ng",
-      "confidence_score": 1.0
+      "target": "2026_06_22_02_b\u01b0\u1edbc_4_ki\u1ec3m_tra_quy_t\u1eafc_c\u1ee9ng"
     },
     {
       "relation": "contains",
@@ -7761,9 +9036,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L79",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_02_3_chi\u1ebfn_thu\u1eadt_\u0111\u01b0\u1ee3c_ch\u1ecdn",
-      "target": "2026_06_22_02_chi\u1ebfn_thu\u1eadt_ch\u00ednh_wait_kh\u00f4ng_giao_d\u1ecbch_ch\u1edd_x\u00e1c_nh\u1eadn",
-      "confidence_score": 1.0
+      "target": "2026_06_22_02_chi\u1ebfn_thu\u1eadt_ch\u00ednh_wait_kh\u00f4ng_giao_d\u1ecbch_ch\u1edd_x\u00e1c_nh\u1eadn"
     },
     {
       "relation": "contains",
@@ -7771,9 +9046,9 @@
       "source_file": "data/reports/2026-06-22/02.md",
       "source_location": "L99",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_02_3_chi\u1ebfn_thu\u1eadt_\u0111\u01b0\u1ee3c_ch\u1ecdn",
-      "target": "2026_06_22_02_chi\u1ebfn_thu\u1eadt_ph\u1ee5_derisk_gi\u1ea3m_t\u1ef7_tr\u1ecdng_x\u1eed_l\u00fd_v\u1ecb_th\u1ebf_hi\u1ec7n_t\u1ea1i",
-      "confidence_score": 1.0
+      "target": "2026_06_22_02_chi\u1ebfn_thu\u1eadt_ph\u1ee5_derisk_gi\u1ea3m_t\u1ef7_tr\u1ecdng_x\u1eed_l\u00fd_v\u1ecb_th\u1ebf_hi\u1ec7n_t\u1ea1i"
     },
     {
       "relation": "contains",
@@ -7781,9 +9056,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_03",
-      "target": "2026_06_22_03_sector_rotation_map_lpbs_sector_flow_desk",
-      "confidence_score": 1.0
+      "target": "2026_06_22_03_sector_rotation_map_lpbs_sector_flow_desk"
     },
     {
       "relation": "contains",
@@ -7791,9 +9066,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_03_sector_rotation_map_lpbs_sector_flow_desk",
-      "target": "2026_06_22_03_0_handoff_\u0111\u00e3_\u0111\u1ecdc_strategy_selector",
-      "confidence_score": 1.0
+      "target": "2026_06_22_03_0_handoff_\u0111\u00e3_\u0111\u1ecdc_strategy_selector"
     },
     {
       "relation": "contains",
@@ -7801,9 +9076,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_03_sector_rotation_map_lpbs_sector_flow_desk",
-      "target": "2026_06_22_03_1_thu_th\u1eadp_d\u1eef_li\u1ec7u_ngu\u1ed3n_ph\u01b0\u01a1ng_ph\u00e1p",
-      "confidence_score": 1.0
+      "target": "2026_06_22_03_1_thu_th\u1eadp_d\u1eef_li\u1ec7u_ngu\u1ed3n_ph\u01b0\u01a1ng_ph\u00e1p"
     },
     {
       "relation": "contains",
@@ -7811,9 +9086,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_03_sector_rotation_map_lpbs_sector_flow_desk",
-      "target": "2026_06_22_03_2_ch\u1ea5m_\u0111i\u1ec3m_t\u1eebng_ng\u00e0nh_rs_flow",
-      "confidence_score": 1.0
+      "target": "2026_06_22_03_2_ch\u1ea5m_\u0111i\u1ec3m_t\u1eebng_ng\u00e0nh_rs_flow"
     },
     {
       "relation": "contains",
@@ -7821,9 +9096,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L70",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_03_sector_rotation_map_lpbs_sector_flow_desk",
-      "target": "2026_06_22_03_3_sector_map_4_nh\u00f3m",
-      "confidence_score": 1.0
+      "target": "2026_06_22_03_3_sector_map_4_nh\u00f3m"
     },
     {
       "relation": "contains",
@@ -7831,9 +9106,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L101",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_03_sector_rotation_map_lpbs_sector_flow_desk",
-      "target": "2026_06_22_03_4_evidence_c\u00f3_s\u1ed1_li\u1ec7u",
-      "confidence_score": 1.0
+      "target": "2026_06_22_03_4_evidence_c\u00f3_s\u1ed1_li\u1ec7u"
     },
     {
       "relation": "contains",
@@ -7841,9 +9116,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L143",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_03_sector_rotation_map_lpbs_sector_flow_desk",
-      "target": "2026_06_22_03_5_ph\u00e2n_t\u00edch_r\u1ee7i_ro",
-      "confidence_score": 1.0
+      "target": "2026_06_22_03_5_ph\u00e2n_t\u00edch_r\u1ee7i_ro"
     },
     {
       "relation": "contains",
@@ -7851,9 +9126,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L156",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_03_sector_rotation_map_lpbs_sector_flow_desk",
-      "target": "2026_06_22_03_6_handoff_to_stock_watchlist_execution_desk",
-      "confidence_score": 1.0
+      "target": "2026_06_22_03_6_handoff_to_stock_watchlist_execution_desk"
     },
     {
       "relation": "contains",
@@ -7861,9 +9136,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L214",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_03_sector_rotation_map_lpbs_sector_flow_desk",
-      "target": "2026_06_22_03_7_t\u00f3m_t\u1eaft_th\u1ef1c_h\u00e0nh_\u0111\u1ecdc_60_gi\u00e2y",
-      "confidence_score": 1.0
+      "target": "2026_06_22_03_7_t\u00f3m_t\u1eaft_th\u1ef1c_h\u00e0nh_\u0111\u1ecdc_60_gi\u00e2y"
     },
     {
       "relation": "contains",
@@ -7871,9 +9146,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_03_1_thu_th\u1eadp_d\u1eef_li\u1ec7u_ngu\u1ed3n_ph\u01b0\u01a1ng_ph\u00e1p",
-      "target": "2026_06_22_03_b\u1ed1i_c\u1ea3nh_th\u00e1ng_6_2026_20_phi\u00ean",
-      "confidence_score": 1.0
+      "target": "2026_06_22_03_b\u1ed1i_c\u1ea3nh_th\u00e1ng_6_2026_20_phi\u00ean"
     },
     {
       "relation": "contains",
@@ -7881,9 +9156,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L103",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_03_4_evidence_c\u00f3_s\u1ed1_li\u1ec7u",
-      "target": "2026_06_22_03_4a_b\u1ea5t_\u0111\u1ed9ng_s\u1ea3n_avoid_chasing_\u01b0u_ti\u00ean_derisk_1",
-      "confidence_score": 1.0
+      "target": "2026_06_22_03_4a_b\u1ea5t_\u0111\u1ed9ng_s\u1ea3n_avoid_chasing_\u01b0u_ti\u00ean_derisk_1"
     },
     {
       "relation": "contains",
@@ -7891,9 +9166,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L120",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_03_4_evidence_c\u00f3_s\u1ed1_li\u1ec7u",
-      "target": "2026_06_22_03_4b_cntt_weak",
-      "confidence_score": 1.0
+      "target": "2026_06_22_03_4b_cntt_weak"
     },
     {
       "relation": "contains",
@@ -7901,9 +9176,9 @@
       "source_file": "data/reports/2026-06-22/03.md",
       "source_location": "L130",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_22_03_4_evidence_c\u00f3_s\u1ed1_li\u1ec7u",
-      "target": "2026_06_22_03_4c_ng\u00e2n_h\u00e0ng_ch\u1ee9ng_kho\u00e1n_th\u00e9p_b\u00e1n_l\u1ebb_improving_t\u00edn_hi\u1ec7u_ch\u01b0a_x\u00e1c_nh\u1eadn",
-      "confidence_score": 1.0
+      "target": "2026_06_22_03_4c_ng\u00e2n_h\u00e0ng_ch\u1ee9ng_kho\u00e1n_th\u00e9p_b\u00e1n_l\u1ebb_improving_t\u00edn_hi\u1ec7u_ch\u01b0a_x\u00e1c_nh\u1eadn"
     },
     {
       "relation": "contains",
@@ -9849,318 +11124,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L252",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data",
-      "target": "pipeline_fetch_data_build_market_snapshot"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L422",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data",
-      "target": "pipeline_fetch_data_fetch"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L67",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data",
-      "target": "pipeline_fetch_data_fetch_breadth"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L223",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data",
-      "target": "pipeline_fetch_data_fetch_extra_fields"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L203",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data",
-      "target": "pipeline_fetch_data_fetch_f1_basis"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L95",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data",
-      "target": "pipeline_fetch_data_fetch_foreign_net"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L122",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data",
-      "target": "pipeline_fetch_data_fetch_index_contribution"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L40",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data",
-      "target": "pipeline_fetch_data_history"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L51",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data",
-      "target": "pipeline_fetch_data_ma"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L57",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data",
-      "target": "pipeline_fetch_data_pct"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L351",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data",
-      "target": "pipeline_fetch_data_snapshot_to_markdown"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L181",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data",
-      "target": "pipeline_fetch_data_vietstock_ohlc"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data_rationale_1",
-      "target": "pipeline_fetch_data"
-    },
-    {
-      "relation": "imports_from",
-      "context": "submodule_import",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/run_pipeline.py",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_run_pipeline",
-      "target": "pipeline_fetch_data"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L253",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data_build_market_snapshot",
-      "target": "pipeline_fetch_data_history"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L260",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data_build_market_snapshot",
-      "target": "pipeline_fetch_data_ma"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L278",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data_build_market_snapshot",
-      "target": "pipeline_fetch_data_pct"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L243",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data_fetch_extra_fields",
-      "target": "pipeline_fetch_data_fetch_breadth"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L68",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data_rationale_68",
-      "target": "pipeline_fetch_data_fetch_breadth"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L244",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data_fetch_extra_fields",
-      "target": "pipeline_fetch_data_fetch_foreign_net"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L96",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data_rationale_96",
-      "target": "pipeline_fetch_data_fetch_foreign_net"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L245",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data_fetch_extra_fields",
-      "target": "pipeline_fetch_data_fetch_index_contribution"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L123",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data_rationale_123",
-      "target": "pipeline_fetch_data_fetch_index_contribution"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L206",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data_fetch_f1_basis",
-      "target": "pipeline_fetch_data_vietstock_ohlc"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L246",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data_fetch_extra_fields",
-      "target": "pipeline_fetch_data_fetch_f1_basis"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L204",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data_rationale_204",
-      "target": "pipeline_fetch_data_fetch_f1_basis"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L322",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data_build_market_snapshot",
-      "target": "pipeline_fetch_data_fetch_extra_fields"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L224",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data_rationale_224",
-      "target": "pipeline_fetch_data_fetch_extra_fields"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L423",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data_fetch",
-      "target": "pipeline_fetch_data_build_market_snapshot"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "pipeline/fetch_data.py",
-      "source_location": "L424",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pipeline_fetch_data_fetch",
-      "target": "pipeline_fetch_data_snapshot_to_markdown"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "pipeline/render_html.py",
       "source_location": "L211",
       "weight": 1.0,
@@ -10565,496 +11528,6 @@
       "confidence_score": 1.0,
       "source": "pipeline_run_pipeline_rationale_1",
       "target": "pipeline_run_pipeline"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "run_claude_daily.ps1",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "run_claude_daily",
-      "target": "run_claude_daily_write_tasklog"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_cli_skill",
-      "target": "gitnexus_cli_skill_gitnexus_cli_commands"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
-      "source_location": "L76",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_cli_skill_gitnexus_cli_commands",
-      "target": "gitnexus_cli_skill_after_indexing"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_cli_skill_gitnexus_cli_commands",
-      "target": "gitnexus_cli_skill_commands"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
-      "source_location": "L81",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_cli_skill_gitnexus_cli_commands",
-      "target": "gitnexus_cli_skill_troubleshooting"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_cli_skill_commands",
-      "target": "gitnexus_cli_skill_analyze_build_or_refresh_the_index"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
-      "source_location": "L38",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_cli_skill_commands",
-      "target": "gitnexus_cli_skill_clean_delete_the_index"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
-      "source_location": "L68",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_cli_skill_commands",
-      "target": "gitnexus_cli_skill_list_show_all_indexed_repos"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
-      "source_location": "L30",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_cli_skill_commands",
-      "target": "gitnexus_cli_skill_status_check_index_freshness"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-cli/SKILL.md",
-      "source_location": "L51",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_cli_skill_commands",
-      "target": "gitnexus_cli_skill_wiki_generate_documentation_from_the_graph"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_debugging_skill",
-      "target": "gitnexus_debugging_skill_debugging_with_gitnexus"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
-      "source_location": "L27",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_debugging_skill_debugging_with_gitnexus",
-      "target": "gitnexus_debugging_skill_checklist"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_debugging_skill_debugging_with_gitnexus",
-      "target": "gitnexus_debugging_skill_debugging_patterns"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
-      "source_location": "L75",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_debugging_skill_debugging_with_gitnexus",
-      "target": "gitnexus_debugging_skill_example_payment_endpoint_returns_500_intermittently"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
-      "source_location": "L49",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_debugging_skill_debugging_with_gitnexus",
-      "target": "gitnexus_debugging_skill_tools"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_debugging_skill_debugging_with_gitnexus",
-      "target": "gitnexus_debugging_skill_when_to_use"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-debugging/SKILL.md",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_debugging_skill_debugging_with_gitnexus",
-      "target": "gitnexus_debugging_skill_workflow"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_exploring_skill",
-      "target": "gitnexus_exploring_skill_exploring_codebases_with_gitnexus"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
-      "source_location": "L28",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_exploring_skill_exploring_codebases_with_gitnexus",
-      "target": "gitnexus_exploring_skill_checklist"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
-      "source_location": "L67",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_exploring_skill_exploring_codebases_with_gitnexus",
-      "target": "gitnexus_exploring_skill_example_how_does_payment_processing_work"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_exploring_skill_exploring_codebases_with_gitnexus",
-      "target": "gitnexus_exploring_skill_resources"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
-      "source_location": "L48",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_exploring_skill_exploring_codebases_with_gitnexus",
-      "target": "gitnexus_exploring_skill_tools"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_exploring_skill_exploring_codebases_with_gitnexus",
-      "target": "gitnexus_exploring_skill_when_to_use"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-exploring/SKILL.md",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_exploring_skill_exploring_codebases_with_gitnexus",
-      "target": "gitnexus_exploring_skill_workflow"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_guide_skill",
-      "target": "gitnexus_guide_skill_gitnexus_guide"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_guide_skill_gitnexus_guide",
-      "target": "gitnexus_guide_skill_always_start_here"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
-      "source_location": "L87",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_guide_skill_gitnexus_guide",
-      "target": "gitnexus_guide_skill_graph_schema"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
-      "source_location": "L74",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_guide_skill_gitnexus_guide",
-      "target": "gitnexus_guide_skill_resources_reference"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_guide_skill_gitnexus_guide",
-      "target": "gitnexus_guide_skill_skills"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
-      "source_location": "L31",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_guide_skill_gitnexus_guide",
-      "target": "gitnexus_guide_skill_tools_reference"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-guide/SKILL.md",
-      "source_location": "L43",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_guide_skill_tools_reference",
-      "target": "gitnexus_guide_skill_paginating_list_repos"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_impact_analysis_skill",
-      "target": "gitnexus_impact_analysis_skill_impact_analysis_with_gitnexus"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
-      "source_location": "L28",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_impact_analysis_skill_impact_analysis_with_gitnexus",
-      "target": "gitnexus_impact_analysis_skill_checklist"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
-      "source_location": "L86",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_impact_analysis_skill_impact_analysis_with_gitnexus",
-      "target": "gitnexus_impact_analysis_skill_example_what_breaks_if_i_change_validateuser"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
-      "source_location": "L47",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_impact_analysis_skill_impact_analysis_with_gitnexus",
-      "target": "gitnexus_impact_analysis_skill_risk_assessment"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
-      "source_location": "L56",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_impact_analysis_skill_impact_analysis_with_gitnexus",
-      "target": "gitnexus_impact_analysis_skill_tools"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_impact_analysis_skill_impact_analysis_with_gitnexus",
-      "target": "gitnexus_impact_analysis_skill_understanding_output"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_impact_analysis_skill_impact_analysis_with_gitnexus",
-      "target": "gitnexus_impact_analysis_skill_when_to_use"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_impact_analysis_skill_impact_analysis_with_gitnexus",
-      "target": "gitnexus_impact_analysis_skill_workflow"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_refactoring_skill",
-      "target": "gitnexus_refactoring_skill_refactoring_with_gitnexus"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L27",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_refactoring_skill_refactoring_with_gitnexus",
-      "target": "gitnexus_refactoring_skill_checklists"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L106",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_refactoring_skill_refactoring_with_gitnexus",
-      "target": "gitnexus_refactoring_skill_example_rename_validateuser_to_authenticateuser"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L97",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_refactoring_skill_refactoring_with_gitnexus",
-      "target": "gitnexus_refactoring_skill_risk_rules"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L62",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_refactoring_skill_refactoring_with_gitnexus",
-      "target": "gitnexus_refactoring_skill_tools"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_refactoring_skill_refactoring_with_gitnexus",
-      "target": "gitnexus_refactoring_skill_when_to_use"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_refactoring_skill_refactoring_with_gitnexus",
-      "target": "gitnexus_refactoring_skill_workflow"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_refactoring_skill_checklists",
-      "target": "gitnexus_refactoring_skill_extract_module"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L29",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_refactoring_skill_checklists",
-      "target": "gitnexus_refactoring_skill_rename_symbol"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/skills/gitnexus/gitnexus-refactoring/SKILL.md",
-      "source_location": "L50",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gitnexus_refactoring_skill_checklists",
-      "target": "gitnexus_refactoring_skill_split_function_service"
     },
     {
       "relation": "contains",
@@ -13489,256 +13962,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "AGENTS.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents",
-      "target": "agents_daily_operations_mini_investment_desk"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "AGENTS.md",
-      "source_location": "L82",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents",
-      "target": "agents_gitnexus_code_intelligence"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "AGENTS.md",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_daily_operations_mini_investment_desk",
-      "target": "agents_daily_workflow"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "AGENTS.md",
-      "source_location": "L72",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_daily_operations_mini_investment_desk",
-      "target": "agents_failure_handling"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "AGENTS.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_daily_operations_mini_investment_desk",
-      "target": "agents_non_negotiable_runtime_paths"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "AGENTS.md",
-      "source_location": "L88",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_gitnexus_code_intelligence",
-      "target": "agents_always_do"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "AGENTS.md",
-      "source_location": "L112",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_gitnexus_code_intelligence",
-      "target": "agents_cli"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "AGENTS.md",
-      "source_location": "L96",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_gitnexus_code_intelligence",
-      "target": "agents_never_do"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "AGENTS.md",
-      "source_location": "L103",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_gitnexus_code_intelligence",
-      "target": "agents_resources"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude",
-      "target": "claude_daily_operations_mini_investment_desk"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L84",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude",
-      "target": "claude_gitnexus_code_intelligence"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_daily_operations_mini_investment_desk",
-      "target": "claude_daily_workflow"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L74",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_daily_operations_mini_investment_desk",
-      "target": "claude_failure_handling"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_daily_operations_mini_investment_desk",
-      "target": "claude_non_negotiable_runtime_paths"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L90",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_gitnexus_code_intelligence",
-      "target": "claude_always_do"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L114",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_gitnexus_code_intelligence",
-      "target": "claude_cli"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L98",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_gitnexus_code_intelligence",
-      "target": "claude_never_do"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L105",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_gitnexus_code_intelligence",
-      "target": "claude_resources"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DESIGN.md",
-      "source_location": "L53",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "design",
-      "target": "design_design_chu\u1ea9n_cho_m\u1ecdi_b\u00e1o_c\u00e1o_nh\u00e2n_b\u1ea3n_template_b\u1ea3n_tin_ttck"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DESIGN.md",
-      "source_location": "L136",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "design_design_chu\u1ea9n_cho_m\u1ecdi_b\u00e1o_c\u00e1o_nh\u00e2n_b\u1ea3n_template_b\u1ea3n_tin_ttck",
-      "target": "design_appendix_css_core_copy_nguy\u00ean_kh\u1ed1i_l\u00e0m_khung"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DESIGN.md",
-      "source_location": "L61",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "design_design_chu\u1ea9n_cho_m\u1ecdi_b\u00e1o_c\u00e1o_nh\u00e2n_b\u1ea3n_template_b\u1ea3n_tin_ttck",
-      "target": "design_brand_style"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DESIGN.md",
-      "source_location": "L78",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "design_design_chu\u1ea9n_cho_m\u1ecdi_b\u00e1o_c\u00e1o_nh\u00e2n_b\u1ea3n_template_b\u1ea3n_tin_ttck",
-      "target": "design_c\u1ea5u_tr\u00fac_trang_theo_th\u1ee9_t\u1ef1_d\u00f9ng_\u0111\u00fang_t\u00ean_class"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DESIGN.md",
-      "source_location": "L120",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "design_design_chu\u1ea9n_cho_m\u1ecdi_b\u00e1o_c\u00e1o_nh\u00e2n_b\u1ea3n_template_b\u1ea3n_tin_ttck",
-      "target": "design_elevation_shape"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DESIGN.md",
-      "source_location": "L69",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "design_design_chu\u1ea9n_cho_m\u1ecdi_b\u00e1o_c\u00e1o_nh\u00e2n_b\u1ea3n_template_b\u1ea3n_tin_ttck",
-      "target": "design_ng\u1eef_ngh\u0129a_m\u00e0u_b\u1eaft_bu\u1ed9c_th\u1ed1ng_nh\u1ea5t"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DESIGN.md",
-      "source_location": "L126",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "design_design_chu\u1ea9n_cho_m\u1ecdi_b\u00e1o_c\u00e1o_nh\u00e2n_b\u1ea3n_template_b\u1ea3n_tin_ttck",
-      "target": "design_quy_t\u1eafc_b\u1eaft_bu\u1ed9c_khi_sinh_b\u00e1o_c\u00e1o_m\u1edbi"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -14488,5 +14711,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e6885e5d4ef188bb24dcd55853697c22010f98df"
+  "built_at_commit": "e22fefa22a3205ec2c09788f6db282eaa2173a68"
 }
