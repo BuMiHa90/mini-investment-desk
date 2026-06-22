@@ -1,0 +1,168 @@
+{
+  "data_date": "2026-06-22",
+  "vnindex": {
+    "open": 1827.53,
+    "high": 1859.78,
+    "low": 1822.58,
+    "close": 1857.91,
+    "change_pct": 1.83,
+    "perf_5d_pct": 3.26,
+    "perf_20d_pct": -1.49
+  },
+  "vn30": {
+    "close": 1980.13,
+    "change_pct": 0.84
+  },
+  "moving_averages": {
+    "ma20": 1827.51,
+    "ma50": 1847.82,
+    "ma200": 1754.52,
+    "above_ma20": true,
+    "above_ma50": true,
+    "above_ma200": true
+  },
+  "liquidity": {
+    "volume_today": 517581557.0,
+    "volume_avg20": 657214815,
+    "volume_vs_avg20_pct": 78.8,
+    "note": "Khoi luong TONG (chua tach thoa thuan) - chi la proxy, can doi chieu GTGD khop lenh tu nguon khac"
+  },
+  "swing_structure": {
+    "high_20d": 1889.87,
+    "high_20d_date": "2026-05-27",
+    "low_20d": 1775.72,
+    "low_20d_date": "2026-06-15",
+    "high_60d": 1933.11,
+    "low_60d": 1634.55
+  },
+  "missing_fields": [
+    "ceiling_floor_count (so ma tran/san)",
+    "matched_value_hose (GTGD khop lenh tach thoa thuan)",
+    "global_overnight / fx_rates / domestic_policy / sentiment_note"
+  ],
+  "breadth": {
+    "up": 133,
+    "down": 183,
+    "nochange": 49,
+    "pct_up": 36,
+    "pct_down": 50,
+    "as_of_time": "14:45",
+    "source": "cafef.vn ajaxdorongthitruong (HOSE)"
+  },
+  "foreign_flows": {
+    "net_today_vnd": -1629272590000.0,
+    "net_5d_vnd": -2904534690000,
+    "unit": "VND",
+    "source": "msh-appdata.cafef.vn OverviewOrgnizaztion (VNINDEX)"
+  },
+  "index_contribution": [
+    {
+      "code": "VIC",
+      "change_pct": 6.96,
+      "influence_index": 6.5518
+    },
+    {
+      "code": "ACB",
+      "change_pct": -0.9,
+      "influence_index": 3.3677
+    },
+    {
+      "code": "HVN",
+      "change_pct": -1.51,
+      "influence_index": 1.3516
+    },
+    {
+      "code": "VJC",
+      "change_pct": -0.71,
+      "influence_index": 1.3082
+    },
+    {
+      "code": "TCX",
+      "change_pct": 0.47,
+      "influence_index": 0.9706
+    },
+    {
+      "code": "SSB",
+      "change_pct": 0.34,
+      "influence_index": 0.9337
+    },
+    {
+      "code": "MSB",
+      "change_pct": -1.58,
+      "influence_index": 0.832
+    },
+    {
+      "code": "VND",
+      "change_pct": 1.98,
+      "influence_index": 0.8018
+    },
+    {
+      "code": "OCB",
+      "change_pct": -1.61,
+      "influence_index": 0.7399
+    },
+    {
+      "code": "POW",
+      "change_pct": 4.32,
+      "influence_index": 0.698
+    },
+    {
+      "code": "VCB",
+      "change_pct": -0.65,
+      "influence_index": -6.2362
+    },
+    {
+      "code": "BSR",
+      "change_pct": 1.34,
+      "influence_index": -4.1777
+    },
+    {
+      "code": "GEE",
+      "change_pct": -1.51,
+      "influence_index": -2.6813
+    },
+    {
+      "code": "GAS",
+      "change_pct": 0.62,
+      "influence_index": -2.3794
+    },
+    {
+      "code": "LPB",
+      "change_pct": 2.5,
+      "influence_index": -2.3045
+    },
+    {
+      "code": "BID",
+      "change_pct": 1.56,
+      "influence_index": -1.9103
+    },
+    {
+      "code": "TCB",
+      "change_pct": -0.16,
+      "influence_index": -1.9091
+    },
+    {
+      "code": "CTG",
+      "change_pct": 0.3,
+      "influence_index": -1.7621
+    },
+    {
+      "code": "FPT",
+      "change_pct": -1.26,
+      "influence_index": -1.6466
+    },
+    {
+      "code": "VPB",
+      "change_pct": 0.39,
+      "influence_index": -1.5771
+    }
+  ],
+  "f1_basis": {
+    "vn30_close": 1980.13,
+    "f1_close": 1984.8,
+    "basis": 4.67,
+    "basis_pct": 0.24,
+    "source": "api.vietstock.vn/tvnew/history (VN30, VN30F1M)"
+  },
+  "extra_fetched_at": "2026-06-22T15:45:48"
+}
