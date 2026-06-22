@@ -30,6 +30,9 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 CACHE_DIR = DATA_DIR / "cache"
 
+# Project tin tuc (cung tai khoan Github, chay truoc 7h00, out o du-lieu/*.json)
+NEWS_PROJECT_DIR = Path("F:/Hai BUi/Agent tổng hợp tin tức")
+
 _UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
@@ -220,6 +223,157 @@ def fetch_f1_basis() -> dict | None:
         return None
 
 
+def fetch_ceiling_floor() -> dict | None:
+    """So ma tang tran / giam san HOSE, kem tong KLGD va GTGD. Nguon: CafeF PriceHistory.ashx.
+
+    Cung tra ve TotalStockUp/Down/Nochange nen co the dung lam backup cho breadth
+    neu fetch_breadth() bi loi.
+    """
+    try:
+        r = requests.get(
+            "https://cafef.vn/du-lieu/Ajax/PriceHistory/PriceHistory.ashx",
+            params={"centerid": "1"},
+            headers={"User-Agent": _UA},
+            timeout=_HTTP_TIMEOUT,
+        )
+        r.raise_for_status()
+        j = r.json()
+        if not j.get("Success"):
+            return None
+        d = j["Data"]
+        return {
+            "ceiling": int(d["TotalKichtran"]),
+            "floor": int(d["TotalKichsan"]),
+            "up": int(d["TotalStockUp"]),
+            "down": int(d["TotalStockDown"]),
+            "nochange": int(d["TotalStockNochange"]),
+            "total_volume": int(d["Volume"]),
+            "total_value_bil": float(d["TotalValue"]),  # don vi: ty VND
+            "source": "cafef.vn PriceHistory.ashx (HOSE centerid=1)",
+        }
+    except Exception as exc:  # noqa: BLE001
+        print(f"      [extra] fetch_ceiling_floor loi: {exc}")
+        return None
+
+
+def fetch_agreements_trading() -> dict | None:
+    """Tong KLGD va GTGD thoa thuan VNINDEX. Nguon: 24hmoney agreements-trading-history.
+
+    Lay agreements_vol va agreements_val. Ket hop voi tong tu fetch_ceiling_floor()
+    se tinh duoc khop lenh = tong - thoa thuan.
+    """
+    try:
+        r = requests.get(
+            "https://api-finance-t19.24hmoney.vn/v1/web/indices/agreements-trading-history",
+            params={
+                "device_id": "web1782126832vtsa2om3p04je0swryh0ketx9nqw8568282",
+                "device_name": "INVALID",
+                "device_model": "Windows 10",
+                "network_carrier": "INVALID",
+                "connection_type": "INVALID",
+                "os": "Chrome",
+                "os_version": "149.0.0.0",
+                "access_token": "INVALID",
+                "push_token": "INVALID",
+                "locale": "vi",
+                "browser_id": "web1782126832vtsa2om3p04je0swryh0ketx9nqw8568282",
+                "code": "10",
+            },
+            headers={"User-Agent": _UA},
+            timeout=_HTTP_TIMEOUT,
+        )
+        r.raise_for_status()
+        j = r.json()
+        if j.get("status") != 200 or not j.get("data"):
+            return None
+        d = j["data"][0]
+        return {
+            "agreements_vol": int(d["total_vol"]),
+            "agreements_val": int(d["total_val"]),  # don vi: VND
+            "agreements_transactions": int(d["total_transactions"]),
+            "agreements_symbols": int(d["total_symbol"]),
+            "source": "api-finance-t19.24hmoney.vn agreements-trading-history (code=10 VNINDEX)",
+        }
+    except Exception as exc:  # noqa: BLE001
+        print(f"      [extra] fetch_agreements_trading loi: {exc}")
+        return None
+
+
+def fetch_from_news_project(today: str) -> dict | None:
+    """Doc du lieu tu project 'Agent tong hop tin tuc' (chay luc 7h, truoc project nay).
+
+    Doc file du-lieu/{today}.json; neu khong co thi thu lui 1-2 ngay (nghi le / loi).
+    Tra ve dict chua:
+      - global_overnight: items cua muc §01 (thi truong quoc te)
+      - fx_rates: USD/VND va lai qua dem LNH (tu chi_so hoac §05)
+      - domestic_policy: items cua muc §05 (vi mo & tien te)
+      - sentiment_note: truong danh_gia (nhan dinh tong hop cua desk)
+    """
+    du_lieu_dir = NEWS_PROJECT_DIR / "du-lieu"
+    if not du_lieu_dir.exists():
+        print(f"      [news] Khong tim thay thu muc {du_lieu_dir}")
+        return None
+
+    # Tim file gần nhất: hôm nay → lui tối đa 3 ngày (ngày nghỉ / lỗi)
+    candidate = None
+    today_dt = datetime.strptime(today, "%Y-%m-%d")
+    for delta in range(4):
+        d = (today_dt - timedelta(days=delta)).strftime("%Y-%m-%d")
+        p = du_lieu_dir / f"{d}.json"
+        if p.exists():
+            candidate = p
+            break
+
+    if not candidate:
+        print(f"      [news] Khong co file nao trong vong 3 ngay truoc {today}")
+        return None
+
+    try:
+        data = json.loads(candidate.read_text(encoding="utf-8"))
+    except Exception as exc:
+        print(f"      [news] Loi doc {candidate.name}: {exc}")
+        return None
+
+    global_overnight = None
+    domestic_policy = None
+    for muc in data.get("muc", []):
+        so = muc.get("so")
+        if so == "01":
+            global_overnight = muc.get("items", [])
+        elif so == "05":
+            domestic_policy = muc.get("items", [])
+
+    # Trich xuat fx_rates: uu tien §05, fallback chi_so
+    fx_rates: dict = {}
+
+    def _try_extract_fx(items: list, key_field: str, val_field: str) -> None:
+        for item in items:
+            label = str(item.get(key_field, "")).lower()
+            val = item.get(val_field)
+            note = item.get("y_nghia") or item.get("ghi_chu") or ""
+            if not fx_rates.get("usdvnd") and ("usd" in label or "tỷ giá" in label):
+                fx_rates["usdvnd"] = {"value": val, "note": note}
+            if not fx_rates.get("overnight_rate") and (
+                "liên ngân" in label or "lãi qua đêm" in label or "lnh" in label
+            ):
+                fx_rates["overnight_rate"] = {"value": val, "note": note}
+
+    if domestic_policy:
+        _try_extract_fx(domestic_policy, "chi_tieu", "gia_tri")
+    _try_extract_fx(data.get("chi_so", []), "ten", "gia_tri")
+
+    print(f"      [news] Doc thanh cong {candidate.name} (ngay tin: {data.get('ngay')}, phien: {data.get('phien')})")
+    return {
+        "global_overnight": global_overnight,
+        "fx_rates": fx_rates if fx_rates else None,
+        "domestic_policy": domestic_policy,
+        "sentiment_note": data.get("danh_gia"),
+        "news_date": data.get("ngay"),
+        "news_phien": data.get("phien"),
+        "news_source_file": candidate.name,
+    }
+
+
 def fetch_extra_fields(report_date: str, force_refresh: bool = False) -> dict:
     """Goi 4 nguon tren, co cache theo report_date.
 
@@ -244,6 +398,9 @@ def fetch_extra_fields(report_date: str, force_refresh: bool = False) -> dict:
         "foreign_net": fetch_foreign_net(report_date),
         "index_contribution": fetch_index_contribution(report_date),
         "f1_basis": fetch_f1_basis(),
+        "ceiling_floor": fetch_ceiling_floor(),
+        "agreements": fetch_agreements_trading(),
+        "news": fetch_from_news_project(report_date),
     }
     cache_path.write_text(json.dumps(extra, ensure_ascii=False, indent=2), encoding="utf-8")
     return extra
@@ -310,12 +467,7 @@ def build_market_snapshot() -> dict:
             "high_60d": float(recent60["high"].max()),
             "low_60d": float(recent60["low"].min()),
         },
-        # 3 truong chua co nguon API on dinh — agent tu web search hoac fallback.
-        "missing_fields": [
-            "ceiling_floor_count (so ma tran/san)",
-            "matched_value_hose (GTGD khop lenh tach thoa thuan)",
-            "global_overnight / fx_rates / domestic_policy / sentiment_note",
-        ],
+        "missing_fields": [],
     }
 
     report_date = snapshot["data_date"]
@@ -324,11 +476,48 @@ def build_market_snapshot() -> dict:
     snapshot["foreign_flows"] = extra.get("foreign_net")
     snapshot["index_contribution"] = extra.get("index_contribution")
     snapshot["f1_basis"] = extra.get("f1_basis")
+    snapshot["ceiling_floor"] = extra.get("ceiling_floor")
     snapshot["extra_fetched_at"] = extra.get("fetched_at")
 
-    # Neu 1 trong 4 nguon extra loi luc chay (vd Vietstock chan bot), bao
-    # ro trong missing_fields cua LAN CHAY NAY de agent ha confidence —
-    # khac voi 3 truong tren la "chua co nguon" vinh vien.
+    # Du lieu tu project tin tuc (chay 7h, doc sau khi project do hoan thanh)
+    news = extra.get("news")
+    if news:
+        snapshot["global_overnight"] = news.get("global_overnight")
+        snapshot["fx_rates"] = news.get("fx_rates")
+        snapshot["domestic_policy"] = news.get("domestic_policy")
+        snapshot["sentiment_note"] = news.get("sentiment_note")
+        snapshot["news_meta"] = {
+            "date": news.get("news_date"),
+            "phien": news.get("news_phien"),
+            "source_file": news.get("news_source_file"),
+        }
+    else:
+        snapshot["global_overnight"] = None
+        snapshot["fx_rates"] = None
+        snapshot["domestic_policy"] = None
+        snapshot["sentiment_note"] = None
+        snapshot["news_meta"] = None
+
+    # Tinh khop lenh = tong - thoa thuan (neu co du ca 2 nguon)
+    cf = extra.get("ceiling_floor")
+    ag = extra.get("agreements")
+    snapshot["agreements"] = ag
+    if cf and ag:
+        total_val_vnd = cf["total_value_bil"] * 1e9
+        matched_vol = cf["total_volume"] - ag["agreements_vol"]
+        matched_val_vnd = total_val_vnd - ag["agreements_val"]
+        snapshot["matched_trading"] = {
+            "matched_vol": matched_vol,
+            "matched_val_bil": round(matched_val_vnd / 1e9, 2),
+            "agreements_vol": ag["agreements_vol"],
+            "agreements_val_bil": round(ag["agreements_val"] / 1e9, 2),
+            "total_vol": cf["total_volume"],
+            "total_val_bil": cf["total_value_bil"],
+        }
+    else:
+        snapshot["matched_trading"] = None
+
+    # Bao ro cac truong loi lan nay de agent ha confidence.
     if snapshot["breadth"] is None:
         snapshot["missing_fields"].append(
             "advancers_decliners (so ma tang/giam HOSE) — loi khi fetch lan nay, xem log"
@@ -345,6 +534,23 @@ def build_market_snapshot() -> dict:
         snapshot["missing_fields"].append(
             "f1_basis (basis VN30F1M) — loi khi fetch lan nay, xem log"
         )
+    if cf is None:
+        snapshot["missing_fields"].append(
+            "ceiling_floor_count (so ma tran/san) — loi khi fetch lan nay, xem log"
+        )
+    if ag is None:
+        snapshot["missing_fields"].append(
+            "agreements_trading (thoa thuan HOSE) — loi khi fetch lan nay, xem log"
+        )
+    if snapshot["matched_trading"] is None:
+        snapshot["missing_fields"].append(
+            "matched_value_hose (GTGD khop lenh) — can ca ceiling_floor va agreements de tinh, xem log"
+        )
+    if snapshot["global_overnight"] is None:
+        snapshot["missing_fields"].append(
+            "global_overnight / fx_rates / domestic_policy / sentiment_note"
+            " — project tin tuc chua chay hoac chua co file ngay hom nay (chay sau 7h00)"
+        )
     return snapshot
 
 
@@ -357,6 +563,13 @@ def snapshot_to_markdown(s: dict) -> str:
     flows = s.get("foreign_flows")
     f1 = s.get("f1_basis")
     contrib = s.get("index_contribution")
+    cf = s.get("ceiling_floor")
+    mt = s.get("matched_trading")
+    global_ov = s.get("global_overnight")
+    fx = s.get("fx_rates")
+    dom_policy = s.get("domestic_policy")
+    sentiment = s.get("sentiment_note")
+    news_meta = s.get("news_meta")
 
     def yn(b):
         return "TREN" if b else "DUOI"
@@ -410,12 +623,78 @@ def snapshot_to_markdown(s: dict) -> str:
     else:
         lines.append("- Index contribution (tru/keo diem): KHONG lay duoc lan nay (xem missing_fields).")
 
+    if cf:
+        lines.append(
+            f"- Tran/San HOSE: tang tran {cf['ceiling']} ma | giam san {cf['floor']} ma. "
+            f"Tong KL: {cf['total_volume']:,} cp | Tong GTGD: {cf['total_value_bil']:,.2f} ty VND. "
+            f"Nguon: {cf['source']}."
+        )
+    else:
+        lines.append("- Tran/San HOSE: KHONG lay duoc lan nay (xem missing_fields).")
+
+    if mt:
+        lines.append(
+            f"- GTGD khop lenh HOSE: {mt['matched_vol']:,} cp | {mt['matched_val_bil']:,.2f} ty VND. "
+            f"(Thoa thuan: {mt['agreements_vol']:,} cp | {mt['agreements_val_bil']:,.2f} ty VND. "
+            f"Tong: {mt['total_vol']:,} cp | {mt['total_val_bil']:,.2f} ty VND.)"
+        )
+    else:
+        lines.append("- GTGD khop lenh HOSE: KHONG tinh duoc (can ca ceiling_floor va agreements, xem missing_fields).")
+
+    # Phan du lieu tu project tin tuc
+    news_src = f" (tu {news_meta['source_file']}, ban tin ngay {news_meta['date']})" if news_meta else ""
     lines += [
         "",
-        "## Truong du lieu CON THIEU (can tu thu thap qua web search hoac ap fallback, ghi ro nguon):",
+        f"## Tin tuc & phan tich{news_src}",
         "",
     ]
-    lines += [f"- {f}" for f in s["missing_fields"]]
+
+    if fx:
+        usdvnd = fx.get("usdvnd", {})
+        lnh = fx.get("overnight_rate", {})
+        parts = []
+        if usdvnd.get("value"):
+            parts.append(f"USD/VND: {usdvnd['value']}")
+        if lnh.get("value"):
+            parts.append(f"Lai LNH qua dem: {lnh['value']}")
+        if parts:
+            lines.append(f"- Ty gia & lai suat: {' | '.join(parts)}")
+    else:
+        lines.append("- Ty gia & lai LNH: chua co (project tin tuc chua chay hoac chua cap nhat).")
+
+    if global_ov:
+        lines.append("- Qua dem toan cau (top 5 items):")
+        for item in global_ov[:5]:
+            name = item.get("ten", "")
+            val = item.get("gia_tri") or item.get("text", "")
+            change = item.get("thay_doi", "")
+            ynghia = item.get("y_nghia", "")
+            lines.append(f"  - {name}: {val} {change}. Y nghia: {ynghia}")
+    else:
+        lines.append("- Qua dem toan cau: chua co (project tin tuc chua chay).")
+
+    if dom_policy:
+        lines.append("- Vi mo & tien te (top 4 items):")
+        for item in dom_policy[:4]:
+            chi_tieu = item.get("chi_tieu", "")
+            gia_tri = item.get("gia_tri", "")
+            ynghia = item.get("y_nghia", "")
+            lines.append(f"  - {chi_tieu}: {gia_tri}. Y nghia: {ynghia}")
+    else:
+        lines.append("- Vi mo & tien te: chua co (project tin tuc chua chay).")
+
+    if sentiment:
+        lines.append(f"- Nhan dinh desk: {sentiment}")
+    else:
+        lines.append("- Nhan dinh desk: chua co.")
+
+    if s["missing_fields"]:
+        lines += [
+            "",
+            "## Truong du lieu CON THIEU:",
+            "",
+        ]
+        lines += [f"- {f}" for f in s["missing_fields"]]
     return "\n".join(lines)
 
 
