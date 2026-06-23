@@ -93,284 +93,313 @@ a{color:#1E6FD9;text-decoration:none}a:hover{text-decoration:underline}
   </div>
 </div></div>
 
-<div class="metrics"><div class="khung"><div class="mcard"><div class="nhan">VN-Index</div><div class="so">1.857,91</div><div class="phu" style="color:#178A50">▲ +1,83%</div><div class="chu">5 phiên 3,26% · 20 phiên -1,49%</div></div><div class="mcard"><div class="nhan">Thanh khoản</div><div class="so">78,8%</div><div class="phu" style="color:#D6453D">so trung bình 20 phiên</div><div class="chu">khối lượng tổng (proxy)</div></div><div class="mcard"><div class="nhan">Regime</div><div class="so">?</div><div class="phu" style="color:#5B6B80">?</div></div><div class="mcard"><div class="nhan">Chiến thuật</div><div class="so">?</div><div class="phu" style="color:#1E6FD9">Báo cáo chiến lược đầu ngày</div></div><div class="mcard"><div class="nhan">Tỷ trọng tham khảo</div><div class="so">30–50%</div><div class="phu" style="color:#5B6B80">confidence: Trung bình</div></div></div></div>
+<div class="metrics"><div class="khung"><div class="mcard"><div class="nhan">VN-Index</div><div class="so">1.857,91</div><div class="phu" style="color:#178A50">▲ +1,83%</div><div class="chu">5 phiên 3,26% · 20 phiên -1,49%</div></div><div class="mcard"><div class="nhan">Thanh khoản</div><div class="so">78,8%</div><div class="phu" style="color:#D6453D">so trung bình 20 phiên</div><div class="chu">khối lượng tổng (proxy)</div></div><div class="mcard"><div class="nhan">Regime</div><div class="so">?</div><div class="phu" style="color:#5B6B80">?</div></div><div class="mcard"><div class="nhan">Chiến thuật</div><div class="so">?</div><div class="phu" style="color:#1E6FD9">Báo cáo chiến lược đầu ngày</div></div><div class="mcard"><div class="nhan">Tỷ trọng tham khảo</div><div class="so">30–50%</div></div></div></div>
 
 <div class="canhbao"><div class="khung"><div class="hop"><strong>Lưu ý:</strong> Báo cáo do hệ thống AI tạo tự động để hỗ trợ broker nội bộ, chỉ có giá trị trong ngày, không phải khuyến nghị đầu tư cho khách hàng cuối và không cam kết lợi nhuận. Mọi tư vấn cho khách phải qua đánh giá của broker.</div></div></div>
 
-<main class="noidung"><div class="khung"><section class="sec"><div class="dau"><span class="so-sec">§ 01</span><h2>Market Regime — Thị trường đang chơi theo luật nào?</h2></div><div class="ghichu-sec">Scorecard 6 trụ cột · quy tắc hạ nhanh nâng chậm · output của Market Regime Agent</div><div class="report-md"><h1>BÁO CÁO TRẠNG THÁI THỊ TRƯỜNG — RISK REGIME DESK</h1>
-<p><strong>Ngày báo cáo:</strong> 2026-06-22 | <strong>Phiên tham chiếu:</strong> VN-Index C 1,857.91 (+1.83%) | <strong>Nguồn:</strong> vnstock/VCI, cafef.vn, msh-appdata.cafef.vn, api.vietstock.vn</p>
+<main class="noidung"><div class="khung"><section class="sec"><div class="dau"><span class="so-sec">§ 01</span><h2>Market Regime — Thị trường đang chơi theo luật nào?</h2></div><div class="ghichu-sec">Scorecard 6 trụ cột · quy tắc hạ nhanh nâng chậm · output của Market Regime Agent</div><div class="report-md"><h1>BÁO CÁO REGIME THỊ TRƯỜNG</h1>
+<p><strong>Ngày báo cáo:</strong> 2026-06-22 | <strong>Phiên tham chiếu:</strong> HOSE phiên thường lệ 22/06/2026
+<strong>Nguồn:</strong> vnstock/VCI · cafef.vn · msh-appdata.cafef.vn · api.vietstock.vn (Vietstock TopStockInfluence)</p>
 <hr />
 <h2>1. Kiểm kê dữ liệu</h2>
+<h3>Trường có dữ liệu</h3>
 <table>
 <thead>
 <tr>
-<th>Trụ cột</th>
-<th>Trường</th>
-<th>Trạng thái</th>
+<th>Nhóm</th>
+<th>Trường đã có</th>
+<th>Nguồn</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Trend</td>
 <td>OHLC, MA20/50/200, đỉnh-đáy 20 &amp; 60 phiên, hiệu suất 5/20 phiên</td>
-<td>✅ Đủ</td>
+<td>vnstock/VCI</td>
 </tr>
 <tr>
 <td>Breadth</td>
-<td>Tăng/Giảm/Đứng HOSE (cafef ajaxdorongthitruong)</td>
-<td>✅ Đủ — thiếu <code>ceiling_floor_count</code> (số mã trần/sàn)</td>
+<td>Tăng/giảm/đứng giá HOSE, trần/sàn, top-5 ảnh hưởng điểm index</td>
+<td>cafef.vn, Vietstock</td>
 </tr>
 <tr>
 <td>Liquidity</td>
-<td>Khối lượng tổng (proxy, chưa tách thỏa thuận) — 78.8% TB20</td>
-<td>⚠️ Proxy — thiếu <code>matched_value_hose</code> (GTGD khớp lệnh thực)</td>
+<td>GTGD khớp lệnh (12,258 tỷ), GTGD thỏa thuận, tổng KL proxy</td>
+<td>cafef.vn PriceHistory</td>
 </tr>
 <tr>
 <td>Flows</td>
-<td>Khối ngoại ròng phiên &amp; lũy kế 5 phiên (msh-appdata cafef)</td>
-<td>✅ Đủ</td>
+<td>Khối ngoại ròng phiên + lũy kế 5 phiên</td>
+<td>msh-appdata.cafef.vn</td>
 </tr>
 <tr>
-<td>Volatility / Phái sinh</td>
-<td>Basis VN30F1M (api.vietstock.vn)</td>
-<td>✅ Đủ — thiếu đóng cửa T-1 để tính gap mở cửa</td>
+<td>Volatility/Phái sinh</td>
+<td>VN30F1M, basis, gap mở cửa, biên độ phiên</td>
+<td>api.vietstock.vn</td>
 </tr>
 <tr>
-<td>Macro / Sentiment</td>
-<td>—</td>
-<td>❌ Thiếu toàn bộ: <code>global_overnight</code>, <code>fx_rates</code>, <code>domestic_policy</code>, <code>sentiment_note</code></td>
+<td>Macro/Sentiment</td>
+<td>USD/VND, S&amp;P 500, Nikkei, Brent, MSCI news, AI funding</td>
+<td>Ban tin tự động</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Ảnh hưởng của các trường thiếu đến kết luận:</strong>
-- <strong><code>matched_value_hose</code> thiếu:</strong> Điểm Liquidity dựa trên proxy khối lượng tổng. Nếu giao dịch thỏa thuận chiếm tỷ trọng lớn, GTGD khớp lệnh thực có thể thấp hơn proxy → sai số có thể đẩy Liquidity xuống -2 thay vì -1. Sai lệch 1 bậc, ảnh hưởng ±0.20 composite. <em>Chưa có nguồn thay thế ổn định — sẽ bổ sung sau.</em>
-- <strong><code>ceiling_floor_count</code> thiếu:</strong> Không kiểm tra được điều kiện hạ điểm Breadth xuống -2 (&gt;30 mã sàn HOSE). Áp fallback thận trọng — nếu thực tế có ≥30 mã sàn, composite thực sẽ âm hơn 0.04 điểm. <em>Chưa có nguồn thay thế ổn định — sẽ bổ sung sau.</em>
-- <strong><code>Macro/Sentiment</code> thiếu toàn bộ:</strong> Trụ 10% buộc về 0 (trung tính). Nếu thực tế Fed hawkish, tỷ giá căng hoặc tâm lý hưng phấn cực đoan, composite có thể âm thêm 0.10–0.20 điểm. <em>Chưa có nguồn thay thế ổn định — sẽ bổ sung sau.</em></p>
+<h3>Trường thiếu / chưa cập nhật</h3>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Lý do</th>
+<th>Ảnh hưởng kết luận</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lãi suất LNH qua đêm</td>
+<td>"Chưa cập nhật" — Chờ nguồn thay thế, sẽ bổ sung sau</td>
+<td>Nhỏ: không thể đánh giá áp lực thanh khoản liên ngân hàng; score Macro/Sentiment có thể lệch ±0.1</td>
+</tr>
+<tr>
+<td>GTGD khớp lệnh TB20 phiên (tỷ VND)</td>
+<td>Chỉ có proxy tổng KL % TB20 = 78.8%</td>
+<td>Trung bình: Liquidity score dùng proxy KL thay GTGD — có thể ước thấp hoặc cao hơn thực tế 3–5%</td>
+</tr>
+<tr>
+<td>Dữ liệu VIX / Fear &amp; Greed khu vực</td>
+<td>Không có nguồn API ổn định — Chờ nguồn thay thế</td>
+<td>Nhỏ: dùng biên độ phiên làm proxy volatility</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Lưu ý chất lượng dữ liệu Breadth — Ảnh hưởng top-5:</strong> API Vietstock trả về cột "ảnh hưởng" là <strong>giá trị tuyệt đối</strong> (magnitude). Ba mã ACB (-0.9%), HVN (-1.51%), VJC (-0.71%) hiển thị ảnh hưởng dương nhưng thực chất là <strong>contribution âm</strong> với tổng index. Chỉ VIC (+6.96%) và TCX (+0.47%) là contribution thực dương trong top-5. Scorecard bên dưới đã xử lý theo hướng này.</p>
+</blockquote>
 <hr />
 <h2>2. Scorecard</h2>
 <table>
 <thead>
 <tr>
 <th>Trụ cột</th>
-<th>Trọng số</th>
-<th>Điểm</th>
-<th>Điểm × TrS</th>
-<th>Lý do</th>
+<th style="text-align: center;">Điểm</th>
+<th style="text-align: center;">Trọng số</th>
+<th style="text-align: center;">Đóng góp</th>
+<th>Luận cứ chính</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Trend</td>
-<td>25%</td>
-<td><strong>+1</strong></td>
-<td><strong>+0.25</strong></td>
-<td>Trên cả MA20 (1,827.51) / MA50 (1,847.82) / MA200 (1,754.52) — tích cực. Nhưng đỉnh 20 phiên (1,889.87 / 2026-05-27) chưa bị vượt; hiệu suất 20 phiên âm -1.49% → chưa xác nhận cấu trúc đỉnh-đáy cao dần rõ ràng. Không đủ điều kiện +2.</td>
+<td><strong>Trend</strong></td>
+<td style="text-align: center;"><strong>+1</strong></td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: center;">+0.25</td>
+<td>VN-Index 1857.91 trên cả MA20 (1827.51) / MA50 (1847.82) / MA200 (1754.52) ✅. Tuy nhiên hiệu suất 20 phiên <strong>-1.49%</strong> (index thấp hơn mức 20 phiên trước ~1.886), chưa tái lập đỉnh 20 phiên 1889.87. Cấu trúc phục hồi từ đáy 15/06 (1775.72) chứ chưa xác nhận đỉnh-đáy cao dần. +1 thay vì +2.</td>
 </tr>
 <tr>
-<td>Breadth</td>
-<td>20%</td>
-<td><strong>-1</strong></td>
-<td><strong>-0.20</strong></td>
-<td>Tăng 133 / Giảm 183 → tỷ lệ <strong>0.73</strong> (&lt; ngưỡng 0.8). Index +1.83% nhưng số mã giảm vượt số mã tăng. VIC đơn lẻ góp ~6.55 / ~33.4 điểm ≈ 19.6% tổng điểm tăng. Thiếu <code>ceiling_floor_count</code> — không loại trừ -2 nhưng tỷ lệ 0.73 chưa vào vùng &lt;0.4.</td>
+<td><strong>Breadth</strong></td>
+<td style="text-align: center;"><strong>-1</strong></td>
+<td style="text-align: center;">20%</td>
+<td style="text-align: center;">-0.20</td>
+<td>Tỷ lệ tăng/giảm 133/183 = <strong>0.727</strong> (&lt;0.8 ngưỡng neutral). Index +1.83% nhưng VIC đóng góp ~+6.5 điểm (contribution thực dương lớn nhất); ACB, HVN, VJC kéo âm. Lực tăng <strong>tập trung</strong>, không lan tỏa. Trần 5 / Sàn 3 — không có hoảng loạn.</td>
 </tr>
 <tr>
-<td>Liquidity</td>
-<td>20%</td>
-<td><strong>-1</strong></td>
-<td><strong>-0.20</strong></td>
-<td>Proxy 78.8% TB20 phiên → vùng 60–80% = -1. Phiên tăng giá nhưng thanh khoản dưới TB20 → không xác nhận đà tăng. Rủi ro sai số ±1 bậc nếu GTGD khớp lệnh thực thấp hơn proxy.</td>
+<td><strong>Liquidity</strong></td>
+<td style="text-align: center;"><strong>-1</strong></td>
+<td style="text-align: center;">20%</td>
+<td style="text-align: center;">-0.20</td>
+<td>Tổng KL proxy = <strong>78.8% TB20</strong> (vùng 60–80% → -1 theo thang). GTGD khớp lệnh 12,258 tỷ VND — volume không xác nhận được áp lực mua trong phiên tăng điểm.</td>
 </tr>
 <tr>
-<td>Flows</td>
-<td>15%</td>
-<td><strong>-2</strong></td>
-<td><strong>-0.30</strong></td>
-<td>Bán ròng <strong>-1,629 tỷ/phiên</strong> &gt;&gt; ngưỡng cảnh báo 1,000 tỷ. Lũy kế 5 phiên <strong>-2,905 tỷ</strong> — bán đều, không có dấu hiệu dừng.</td>
+<td><strong>Flows</strong></td>
+<td style="text-align: center;"><strong>-2</strong></td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">-0.30</td>
+<td>Phiên -177 tỷ (&lt; 1.000 tỷ đơn lẻ), nhưng <strong>lũy kế 5 phiên -7.236 tỷ</strong> (bình quân <strong>-1.447 tỷ/phiên</strong>, vượt ngưỡng -1.000 tỷ). Xu hướng bán ròng liên tục, đều đặn — đủ tiêu chí -2.</td>
 </tr>
 <tr>
-<td>Volatility / Phái sinh</td>
-<td>10%</td>
-<td><strong>+1</strong></td>
-<td><strong>+0.10</strong></td>
-<td>Basis <strong>+4.67 điểm (+0.24%)</strong> — premium nhỏ, không chiết khấu, không có dấu hiệu bất thường. Biên độ H-L phiên ~37 điểm (~2.0%) nhưng theo chiều tăng.</td>
+<td><strong>Volatility/Phái sinh</strong></td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">0.00</td>
+<td>Basis +4.67 điểm (premium nhỏ, không phải chiết khấu, không lo ngại). Gap mở cửa &lt;+0.5%. Biên độ phiên 37.2 điểm (2.04%) — bình thường, không cực đoan.</td>
 </tr>
 <tr>
-<td>Macro / Sentiment</td>
-<td>10%</td>
-<td><strong>0</strong></td>
-<td><strong>0.00</strong></td>
-<td>Thiếu toàn bộ dữ liệu → fallback trung tính. <em>Chưa có dữ liệu — chờ nguồn thay thế, sẽ bổ sung sau.</em></td>
+<td><strong>Macro/Sentiment</strong></td>
+<td style="text-align: center;"><strong>+1</strong></td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">+0.10</td>
+<td>S&amp;P 500 +1.08%, Nikkei +0.28% hỗ trợ tâm lý EM. USD/VND 26.317 (-0.15% trong 24h, VND nhẹ mạnh hơn). Câu chuyện MSCI nâng hạng — hỗ trợ trung hạn, chưa tạo dòng vốn ngay. Cân trừ: AI funding warning (nhạy cảm FPT/tech), rủi ro Hormuz kéo dài.</td>
 </tr>
 <tr>
 <td><strong>COMPOSITE</strong></td>
-<td><strong>100%</strong></td>
-<td></td>
-<td><strong>−0.35</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>100%</strong></td>
+<td style="text-align: center;"><strong>−0.35</strong></td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2>3. Xác định Regime</h2>
-<p><strong>Composite = −0.35 → Vùng Neutral / Sideway / Phân hóa</strong></p>
-<blockquote>
-<p>Composite cách ranh giới Risk-off (−0.50) chỉ <strong>0.15 điểm</strong> — không trong "vùng chuyển tiếp" (±0.10 so mốc) nhưng đủ gần để theo dõi sát phiên kế tiếp.</p>
-</blockquote>
+<h2>3. Regime hiện tại</h2>
 <table>
 <thead>
 <tr>
-<th>Regime</th>
-<th>Composite</th>
-<th>Tỷ trọng tham khảo</th>
-<th>Margin</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Neutral / Sideway / Phân hóa</strong> ← <em>HÔM NAY</em></td>
-<td>−0.5 → +0.5</td>
+<td><strong>Composite</strong></td>
+<td><strong>-0.35</strong></td>
+</tr>
+<tr>
+<td><strong>Vùng</strong></td>
+<td>-0.5 → +0.5</td>
+</tr>
+<tr>
+<td><strong>Regime</strong></td>
+<td>🟡 <strong>NEUTRAL / SIDEWAY / PHÂN HÓA</strong></td>
+</tr>
+<tr>
+<td><strong>Exposure band tham khảo</strong></td>
 <td><strong>30–50%</strong></td>
-<td><strong>KHÔNG MARGIN</strong></td>
+</tr>
+<tr>
+<td><strong>Trạng thái Margin</strong></td>
+<td>⛔ <strong>RESTRICTED</strong> — Không mở margin mới</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2>4. Trạng thái phụ</h2>
 <h3>⚠️ BULL TRAP RISK — CẢNH BÁO BẮT BUỘC</h3>
-<p>Đủ cả hai điều kiện kích hoạt cảnh báo:
-- <strong>Breadth ≤ −1</strong> ✅ → Tỷ lệ tăng/giảm 0.73; số mã giảm (183) vượt số mã tăng (133)
-- <strong>Liquidity ≤ 0</strong> ✅ → 78.8% TB20 (proxy)</p>
-<p>Index tăng mạnh +1.83% trong khi đa số mã HOSE đóng cửa đỏ, thanh khoản dưới trung bình, và khối ngoại bán ròng kỷ lục phiên (−1,629 tỷ). Đà tăng được dẫn dắt chủ yếu bởi <strong>VIC (+6.96%, ~19.6% tổng điểm tăng)</strong> — không phản ánh sức khỏe thị trường diện rộng.</p>
-<h3>📊 Phân hóa mạnh</h3>
-<ul>
-<li><strong>Nhóm kéo:</strong> VIC và một số trụ vốn hóa lớn tăng đơn lẻ</li>
-<li><strong>Phần còn lại:</strong> 183/365 mã HOSE (50%) đóng cửa đỏ; 49 mã đứng giá</li>
-<li><strong>Hàm ý:</strong> Không xác định được nhóm ngành cụ thể (thiếu dữ liệu ngành), nhưng cần thận trọng với các mã đang chạy theo VIC — rủi ro reversion cao khi trụ kéo điều chỉnh.</li>
-</ul>
-<h3>🔄 Hồi kỹ thuật</h3>
-<p>Composite âm + phiên tăng điểm với thanh khoản dưới TB20 + chưa vượt kháng cự đỉnh 20 phiên (1,889.87) → phù hợp mô hình <strong>hồi kỹ thuật trong vùng sideway</strong>, chưa đủ tín hiệu breakout.</p>
+<p>Đủ cả hai điều kiện đồng thời:</p>
+<table>
+<thead>
+<tr>
+<th>Điều kiện</th>
+<th>Giá trị</th>
+<th>Ngưỡng kích hoạt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Breadth ≤ -1</td>
+<td><strong>-1</strong> ✅</td>
+<td>Tỷ lệ tăng/giảm 0.727; VIC kéo chủ đạo</td>
+</tr>
+<tr>
+<td>Liquidity ≤ 0</td>
+<td><strong>-1</strong> ✅</td>
+<td>KL proxy 78.8% TB20; volume không xác nhận lực mua</td>
+</tr>
+</tbody>
+</table>
+<p>→ <strong>Phiên xanh +1.83% chưa phản ánh sức khỏe thực của thị trường. Không đủ điều kiện nâng regime. Cần tối thiểu 1–2 phiên xác nhận thêm (xem Mục 5).</strong></p>
+<hr />
+<h3>Phân hóa nhóm</h3>
+<table>
+<thead>
+<tr>
+<th>Nhóm tương đối tích cực</th>
+<th>Nhóm chịu áp lực</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bất động sản vốn hóa lớn (VIC +6.96%)</td>
+<td>Ngân hàng (ACB -0.9%; nhiều mã MID-CAP ngân hàng theo)</td>
+</tr>
+<tr>
+<td>Dầu khí (Brent +0.93% — hỗ trợ ngắn hạn GAS, PVD, PVS, BSR)</td>
+<td>Hàng không (HVN -1.51%, VJC -0.71%)</td>
+</tr>
+<tr>
+<td>Hạ tầng đô thị (TPHCM 155,500 tỷ hỗ trợ kỳ vọng XD, VLX)</td>
+<td>Công nghệ (AI funding warning → FPT dễ bị chốt lời ngoại)</td>
+</tr>
+</tbody>
+</table>
+<p>Trên 50% số mã HOSE giảm (183/365 mã niêm yết tính breadth) — <strong>tiền đang rút khỏi vùng rộng và tập trung vào VIC</strong>. Đây là tín hiệu phân hóa điển hình, không phải uptrend có độ lan tỏa.</p>
+<hr />
+<h3>Panic Selling — KHÔNG ĐỦ ĐIỀU KIỆN</h3>
+<p>Chỉ 3 mã sàn HOSE — không đạt ngưỡng &gt;50 mã sàn. Volume không bùng nổ chiều giảm. Index không giảm -2.5%/phiên. → <strong>Không áp trạng thái Panic Selling.</strong></p>
 <hr />
 <h2>5. Quy tắc "Hạ nhanh, Nâng chậm"</h2>
-<p>Composite −0.35 trong vùng Neutral. Không có dữ liệu regime phiên trước để so sánh chiều dịch chuyển.</p>
-<ul>
-<li><strong>Không nâng regime</strong> dựa trên 1 phiên xanh đơn lẻ: thanh khoản dưới TB20, breadth âm, khối ngoại bán ròng mạnh — ba điều kiện không cho phép nâng.</li>
-<li><strong>Xem xét nâng</strong> nếu ≥2 phiên xác nhận (xem mục 8) <strong>hoặc</strong> 1 phiên mạnh đủ điều kiện thanh khoản + breadth.</li>
-</ul>
+<p><strong>Composite -0.35:</strong> Nằm trong vùng Neutral, cách ngưỡng Uptrend thận trọng (+0.5) còn 0.85 điểm. Phiên tăng +1.83% đơn lẻ với Bull Trap Risk kích hoạt <strong>không đủ điều kiện nâng regime</strong>.</p>
+<p><strong>Để nâng lên "Uptrend thận trọng"</strong> cần thỏa mãn <strong>một</strong> trong hai:
+- Tín hiệu giữ ≥ 2 phiên liên tiếp (composite &gt;+0.5 mỗi phiên), hoặc
+- 1 phiên xác nhận có GTGD khớp lệnh HOSE <strong>≥ 13.500 tỷ</strong> (ước &gt;100% TB20) kết hợp tỷ lệ tăng/giảm <strong>≥ 1.5</strong> và VN-Index đóng trên <strong>1.870</strong>.</p>
 <hr />
 <h2>6. Confidence</h2>
-<p><strong>→ TRUNG BÌNH (áp dụng xu hướng phòng thủ)</strong></p>
+<blockquote>
+<p><strong>MỨC: TRUNG BÌNH</strong></p>
+</blockquote>
+<ul>
+<li>✅ Đủ ≥80% trường bắt buộc (thiếu LNH và GTGD TB20 chính xác nhưng có proxy)</li>
+<li>⚠️ Tín hiệu <strong>trái chiều rõ rệt</strong>: Trend (+1) và Macro (+1) tích cực, trong khi Breadth (-1) + Liquidity (-1) + Flows (-2) đồng loạt âm</li>
+<li>⚠️ Volume proxy thay GTGD chính xác làm Liquidity score có độ không chắc ±5%</li>
+</ul>
+<p>→ Không đủ điều kiện kết luận Risk-on. <strong>Ưu tiên bảo vệ vốn.</strong></p>
+<hr />
+<h2>7. Chiều phản biện — Rủi ro của kết luận Neutral</h2>
+<p>Kết luận Neutral có thể <strong>sai theo hướng quá thận trọng</strong> nếu:</p>
+<ol>
+<li><strong>VIC dẫn đầu chu kỳ quay vốn vào bất động sản</strong> — nếu ACB, VHM, VRE theo đà trong phiên tới, breadth mở rộng và composite sẽ tăng vọt; kết luận hôm nay sẽ bỏ lỡ điểm vào giai đoạn đầu xu hướng.</li>
+<li><strong>S&amp;P 500 +1.08% chuyển hóa thành tâm lý mua sáng sớm</strong> — nếu phiên tới mở cửa gap lên với khối lượng lớn, Bull Trap Risk sẽ được giải tỏa và tín hiệu xác nhận đến nhanh hơn dự kiến.</li>
+<li><strong>Khối ngoại giảm bán ròng</strong> — phiên hôm nay chỉ -177 tỷ (nhỏ hơn nhiều so với bình quân -1.447 tỷ/phiên của 5 phiên trước); nếu đây là điểm chuyển, Flows score sẽ cải thiện mạnh.</li>
+</ol>
+<hr />
+<h2>8. Điều kiện chuyển trạng thái (đo được)</h2>
 <table>
 <thead>
 <tr>
-<th>Tiêu chí</th>
-<th>Đánh giá</th>
+<th>Hướng</th>
+<th>Điều kiện cụ thể &amp; đo được</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Dữ liệu cốt lõi (Trend, Breadth, Flows)</td>
-<td>Đủ và rõ ràng</td>
+<td><strong>Nâng → Uptrend thận trọng</strong></td>
+<td>VN-Index đóng cửa ≥ <strong>1.870</strong> (vượt trả được một phần vùng 1.870–1.890) + GTGD khớp lệnh HOSE ≥ <strong>13.500 tỷ</strong> + tỷ lệ tăng/giảm ≥ <strong>1.5</strong> + khối ngoại ròng phiên tốt hơn <strong>-200 tỷ</strong> — duy trì <strong>≥ 1 phiên xác nhận</strong></td>
 </tr>
 <tr>
-<td>Liquidity</td>
-<td>Proxy — thiếu GTGD khớp lệnh thực</td>
+<td><strong>Hạ → Risk-off ngắn hạn</strong></td>
+<td>VN-Index đóng cửa dưới <strong>MA20 = 1.827</strong> + tỷ lệ tăng/giảm &lt; <strong>0.5</strong> + GTGD khớp lệnh bùng nổ theo chiều giảm ≥ <strong>15.000 tỷ</strong></td>
 </tr>
 <tr>
-<td>Macro / Sentiment</td>
-<td>Thiếu hoàn toàn (10% trọng số về 0)</td>
-</tr>
-<tr>
-<td>Xung đột tín hiệu</td>
-<td>Rõ rệt: index +1.83% ≠ breadth −1 + flows −2</td>
-</tr>
-</tbody>
-</table>
-<p>Do Confidence Trung bình và tín hiệu xung đột mạnh → <strong>không được kết luận Risk-on</strong>. Ưu tiên bảo vệ vốn theo quy tắc cứng.</p>
-<hr />
-<h2>7. Chiều phản biện — Rủi ro của chính kết luận này</h2>
-<p><strong>Nếu Neutral sai về phía quá thận trọng:</strong>
-VIC đang bước vào chu kỳ tăng mới dẫn dắt nhóm BĐS/vốn hóa lớn. Nếu 2–3 phiên tới breadth cải thiện và index vượt 1,889.87 thì nhà đầu tư đã giảm tỷ trọng sẽ bỏ lỡ phần đầu của sóng.</p>
-<p><strong>Nếu Neutral sai về phía nguy hiểm:</strong>
-Bull trap thực sự: VIC điều chỉnh sau cú kéo, các mã đang giảm tiếp tục giảm, khối ngoại duy trì bán ròng ≥1,000 tỷ/phiên thêm 2–3 phiên → VN-Index có thể quay test MA50 (1,847.82) hoặc thấp hơn, composite rơi nhanh xuống Risk-off.</p>
-<hr />
-<h2>8. Điều kiện chuyển trạng thái (ngưỡng đo được)</h2>
-<h3>Nâng lên "Uptrend thận trọng" — cần ≥2 phiên xác nhận HOẶC 1 phiên đủ cả 4:</h3>
-<table>
-<thead>
-<tr>
-<th>Điều kiện</th>
-<th>Ngưỡng đo được</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Kháng cự</td>
-<td>VN-Index đóng cửa ≥ <strong>1,890</strong> (vượt đỉnh 20 phiên 1,889.87)</td>
-</tr>
-<tr>
-<td>Thanh khoản</td>
-<td>GTGD khớp lệnh ≥ <strong>100% TB20 phiên</strong> (không tính thỏa thuận)</td>
-</tr>
-<tr>
-<td>Breadth</td>
-<td>Tỷ lệ tăng/giảm ≥ <strong>1.2</strong> với lan tỏa ≥3 ngành</td>
-</tr>
-<tr>
-<td>Flows</td>
-<td>Khối ngoại bán ròng ≤ <strong>−500 tỷ/phiên</strong> (cải thiện rõ so hiện tại)</td>
-</tr>
-</tbody>
-</table>
-<h3>Hạ xuống "Risk-off ngắn hạn" — được phép ngay trong ngày khi xuất hiện ≥2/3:</h3>
-<table>
-<thead>
-<tr>
-<th>Điều kiện</th>
-<th>Ngưỡng đo được</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Hỗ trợ gãy</td>
-<td>VN-Index đóng cửa ≤ <strong>1,847</strong> (phá MA50)</td>
-</tr>
-<tr>
-<td>Breadth xấu</td>
-<td>Tỷ lệ tăng/giảm ≤ <strong>0.5</strong> trong ≥2 phiên liên tiếp</td>
-</tr>
-<tr>
-<td>Flows duy trì</td>
-<td>Khối ngoại bán ròng ≥ <strong>1,000 tỷ/phiên</strong> thêm ≥1 phiên nữa</td>
-</tr>
-<tr>
-<td>Breadth nguy hiểm</td>
-<td>Số mã sàn HOSE ≥ <strong>30</strong> (cần <code>ceiling_floor_count</code> — hiện thiếu)</td>
+<td><strong>Hạ → Risk-off mạnh</strong></td>
+<td>VN-Index phá và đóng dưới <strong>MA50 = 1.848</strong> + khối ngoại bán ròng ≥ <strong>800 tỷ/phiên</strong> + tỷ lệ tăng/giảm &lt; <strong>0.4</strong> hoặc ≥ 30 mã sàn HOSE</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2>9. HANDOFF — Strategy Selector</h2>
-<pre><code>REGIME_CODE       : NEUTRAL_SIDEWAY
-COMPOSITE         : -0.35
-EXPOSURE_BAND     : 30–50%
-MARGIN_STATUS     : KHÔNG MARGIN
-CONFIDENCE        : TRUNG_BINH (xu hướng phòng thủ — không kết luận Risk-on)
-SPECIAL_FLAGS     : BULL_TRAP_RISK | HOI_KY_THUAT | PHAN_HOA_MANH
-PROXIMITY_WATCH   : Cách Risk-off 0.15 điểm — theo dõi sát
-NEXT_WATCH        : Hỗ trợ MA50 = 1,847 | Kháng cự đỉnh 20 phiên = 1,890
-DATA_GAPS         : matched_value_hose | ceiling_floor_count | macro_sentiment (toàn bộ)
-REPORT_DATE       : 2026-06-22
+<h2>9. Handoff — Strategy Selector</h2>
+<pre><code>REGIME_CODE      : NEUTRAL_SIDEWAY
+COMPOSITE        : -0.35
+EXPOSURE_BAND    : 30–50%
+MARGIN_STATUS    : RESTRICTED  (không mở margin mới)
+CONFIDENCE       : MEDIUM
+ALERT            : BULL_TRAP_RISK_ACTIVE
+DATE             : 2026-06-22
+NEXT_REVIEW      : 2026-06-23 (sau phiên)
 </code></pre>
-<hr />
-<p><em>Báo cáo phục vụ duy nhất mục đích xác định trạng thái thị trường. Không phím mã, không khuyến nghị mua/bán cổ phiếu cụ thể, không cam kết hướng thị trường.</em></p></div></section>
+<p><strong>Bối cảnh bàn giao cho Strategy Selector:</strong>
+- Index +1.83% được <strong>VIC đơn lẻ kéo</strong> (~+6.5 điểm); breadth và thanh khoản không xác nhận sức mạnh rộng.
+- Khối ngoại bán ròng <strong>liên tục 5 phiên, lũy kế -7.236 tỷ</strong> — áp lực cung từ ngoại còn hiện hữu dù phiên này nhẹ hơn (-177 tỷ).
+- Câu chuyện MSCI nâng hạng là hỗ trợ <strong>trung hạn</strong>, chưa chuyển hóa thành dòng tiền vào trong phiên gần đây.
+- Nhóm dầu khí và hạ tầng đô thị có câu chuyện hỗ trợ ngắn-trung hạn độc lập khỏi xu hướng chung — phù hợp với chiến lược phân hóa trong regime Neutral.
+- Trong môi trường breadth yếu + margin restricted: <strong>ưu tiên bảo vệ vốn, tránh overweight nhóm đang bị ngoại xả.</strong></p></div></section>
 <section class="sec"><div class="dau"><span class="so-sec">§ 02</span><h2>Chiến thuật — Hôm nay đánh kiểu gì hay đứng ngoài?</h2></div><div class="ghichu-sec">Ma trận regime → playbook · điều kiện kích hoạt và vô hiệu đo được · Strategy Selector Agent</div><div class="report-md"><h1>STRATEGY SELECTION REPORT</h1>
-<p><strong>Desk:</strong> Playbook Desk — LPBS | <strong>Ngày:</strong> 2026-06-22 | <strong>Phiên tham chiếu:</strong> VN-Index C 1,857.91 (+1.83%)</p>
+<p><strong>Ngày:</strong> 2026-06-22 | <strong>Phiên tham chiếu:</strong> HOSE 22/06/2026
+<strong>Desk:</strong> Strategy Selector — LPBS Playbook
+<strong>Nguồn đầu vào:</strong> Market Regime Agent Handoff 22/06/2026</p>
 <hr />
-<h2>1. Handoff nhận được từ Market Regime Agent</h2>
+<h2>I. Handoff nhận được</h2>
 <table>
 <thead>
 <tr>
-<th>Trường</th>
+<th>Tham số</th>
 <th>Giá trị</th>
 </tr>
 </thead>
@@ -380,7 +409,7 @@ REPORT_DATE       : 2026-06-22
 <td><code>NEUTRAL_SIDEWAY</code></td>
 </tr>
 <tr>
-<td>Composite</td>
+<td>Composite Score</td>
 <td>−0.35</td>
 </tr>
 <tr>
@@ -389,80 +418,64 @@ REPORT_DATE       : 2026-06-22
 </tr>
 <tr>
 <td>Margin Status</td>
-<td><strong>KHÔNG MARGIN</strong></td>
+<td>⛔ RESTRICTED — không mở margin mới</td>
 </tr>
 <tr>
 <td>Confidence</td>
-<td><strong>TRUNG BÌNH</strong> — xu hướng phòng thủ, không kết luận Risk-on</td>
+<td>MEDIUM</td>
 </tr>
 <tr>
-<td>Special Flags</td>
-<td><code>BULL_TRAP_RISK</code> | <code>HOI_KY_THUAT</code> | <code>PHAN_HOA_MANH</code></td>
+<td>Alert</td>
+<td>⚠️ <strong>BULL_TRAP_RISK_ACTIVE</strong></td>
 </tr>
 <tr>
-<td>Proximity Watch</td>
-<td>Cách Risk-off <strong>0.15 điểm</strong></td>
-</tr>
-<tr>
-<td>Mốc theo dõi</td>
-<td>Hỗ trợ MA50 = 1,847 | Kháng cự đỉnh 20 phiên = 1,890</td>
-</tr>
-<tr>
-<td>Data Gaps</td>
-<td><code>matched_value_hose</code>, <code>ceiling_floor_count</code>, <code>macro_sentiment</code> (toàn bộ)</td>
+<td>Ngày review tiếp</td>
+<td>2026-06-23 sau phiên</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2>2. Quy trình chọn chiến thuật (vết làm việc)</h2>
-<h3>Bước 2 — Tra ma trận ban đầu theo Regime Code</h3>
-<p><code>NEUTRAL_SIDEWAY</code> → Ma trận gốc:</p>
-<ul>
-<li>Risk Budget: 1–2</li>
-<li>Chiến thuật chính: WAIT hoặc SIDEWAY_SWING nhỏ</li>
-<li>Được kèm: T_PLUS chọn lọc</li>
-<li>Bị cấm: TREND_FOLLOW, BREAKOUT</li>
-</ul>
-<h3>Bước 3.1 — Ghi đè Sub-state: <code>BULL_TRAP_RISK</code></h3>
+<h2>II. Quy trình chọn chiến thuật</h2>
+<h3>Bước 2 — Tra ma trận gốc</h3>
+<p>Regime <code>NEUTRAL_SIDEWAY</code> → ma trận NEUTRAL:
+- Chiến thuật chính: <strong>WAIT</strong> hoặc SIDEWAY_SWING nhỏ
+- Được kèm: T_PLUS chọn lọc
+- <strong>Bị cấm:</strong> TREND_FOLLOW, BREAKOUT</p>
+<h3>Bước 3.1 — Ghi đè sub-state: BULL_TRAP_RISK_ACTIVE</h3>
 <blockquote>
-<p><strong>Quy tắc bắt buộc:</strong> Khi có <code>BULL_TRAP_RISK</code> trong Special Flags → tra ma trận theo dòng thận trọng hơn.</p>
+<p><strong>Quy tắc:</strong> Sub-state BULL_TRAP_RISK → tra ma trận theo dòng <code>BULL_TRAP_RISK</code>, chọn phương án thận trọng hơn. BULL_TRAP_RISK ghi đè NEUTRAL_SIDEWAY.</p>
 </blockquote>
-<p>So sánh <code>NEUTRAL</code> (Risk Budget 1–2) vs <code>BULL_TRAP_RISK</code> (Risk Budget 0–1) → <strong>BULL_TRAP_RISK thận trọng hơn → ghi đè toàn bộ.</strong></p>
-<p>Ma trận sau ghi đè <code>BULL_TRAP_RISK</code>:</p>
+<p>Ma trận <code>BULL_TRAP_RISK</code>:</p>
 <table>
 <thead>
 <tr>
-<th></th>
-<th></th>
+<th>Risk Budget</th>
+<th>Chiến thuật chính</th>
+<th>Được kèm</th>
+<th>Bị cấm</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Risk Budget</td>
-<td><strong>0–1</strong></td>
-</tr>
-<tr>
-<td>Chiến thuật chính</td>
-<td>WAIT, DERISK vào nhịp tăng</td>
-</tr>
-<tr>
-<td>Được kèm</td>
-<td>— <em>(không có)</em></td>
-</tr>
-<tr>
-<td>BỊ CẤM</td>
+<td>0–1</td>
+<td>WAIT · DERISK vào nhịp tăng</td>
+<td>—</td>
 <td><strong>TẤT CẢ chiến thuật mua mới</strong></td>
 </tr>
 </tbody>
 </table>
-<h3>Bước 3.2 — Điều chỉnh Confidence: Trung bình</h3>
-<p>Confidence Trung bình → loại chiến thuật Tier 3 khỏi vị trí chính. WAIT (Tier 0) và DERISK (Tier 0) không bị ảnh hưởng — thực tế càng củng cố kết luận.</p>
-<h3>Bước 3.3 — Sự kiện</h3>
-<p>Không có thông tin sự kiện macro cụ thể 1–3 phiên tới (macro/sentiment thiếu toàn bộ). Áp dụng thận trọng mặc định: không mở vị thế mới trước khi xác nhận.</p>
+<p><strong>Kết quả ghi đè:</strong> Chiến thuật chính = <strong>WAIT</strong>; chiến thuật phụ có thể dùng = <strong>DERISK vào nhịp tăng</strong> (chỉ áp dụng nếu đang giữ vị thế hoặc có margin).</p>
+<h3>Bước 3.2 — Điều chỉnh Confidence MEDIUM</h3>
+<p>Confidence MEDIUM → loại chiến thuật Tier 3 khỏi vị trí chính. Không ảnh hưởng thêm vì ma trận đã bị ghi đè về Risk Budget 0–1 (thấp hơn mọi Tier 3).</p>
+<h3>Bước 3.3 — Kiểm tra sự kiện nhị phân 1–3 phiên tới</h3>
+<p>Không có sự kiện nhị phân được ghi nhận (đáo hạn phái sinh, Fed, CPI). Không cần điều chỉnh thêm.</p>
 <h3>Bước 3.4 — Sentiment</h3>
-<p>Thiếu dữ liệu sentiment. Tuy nhiên khối ngoại bán ròng −1,629 tỷ/phiên &gt;&gt; ngưỡng cảnh báo 1,000 tỷ là tín hiệu xấu đang diễn ra → không có cơ sở nâng mức hung hăng.</p>
+<p>Không có hưng phấn cực đoan. Breadth yếu (tỷ lệ tăng/giảm 0.727), không có panic. Không điều chỉnh thêm.</p>
 <h3>Bước 3.5 — Tin tức</h3>
-<p>Đà tăng +1.83% phụ thuộc vào một mã đơn lẻ (VIC ~19.6% tổng điểm tăng) trong khi 50% mã HOSE đóng cửa đỏ → tin tốt bề mặt không đủ điều kiện nâng vượt ma trận.</p>
+<ul>
+<li>Tin hỗ trợ (MSCI nâng hạng): trung hạn, <strong>chưa chuyển hóa thành dòng vốn vào</strong> — không được dùng để nâng mức hung hăng.</li>
+<li>Tin cảnh báo (AI funding warning, rủi ro Hormuz): cổng thông tin tiêu cực — củng cố hướng thận trọng.</li>
+</ul>
 <h3>Bước 4 — Kiểm tra quy tắc cứng</h3>
 <table>
 <thead>
@@ -474,70 +487,60 @@ REPORT_DATE       : 2026-06-22
 </thead>
 <tbody>
 <tr>
-<td><code>BULL_TRAP_RISK</code> active → chiến thuật chính = WAIT/DERISK</td>
+<td>BULL_TRAP_RISK → cấm tuyệt đối mọi chiến thuật mua mới kể cả phụ</td>
+<td>Áp dụng</td>
+<td>✅ Đã loại T_PLUS, SIDEWAY_SWING, EVENT_DRIVEN khỏi danh sách</td>
+</tr>
+<tr>
+<td>Mỗi chiến thuật phải có điều kiện kích hoạt &amp; vô hiệu đo được</td>
+<td>Kiểm tra bên dưới</td>
 <td>✅</td>
-<td>Pass</td>
 </tr>
 <tr>
-<td>Risk-off sub-state → cấm tuyệt đối mua đuổi kể cả chiến thuật phụ</td>
-<td>✅ Không có mua đuổi nào</td>
-<td>Pass</td>
-</tr>
-<tr>
-<td>Neutral/Sideway → không ngôn ngữ trend-following</td>
+<td>Tỷ trọng ≤ 30–50%</td>
+<td>Exposure band giữ nguyên</td>
 <td>✅</td>
-<td>Pass</td>
 </tr>
 <tr>
-<td>Mỗi chiến thuật phải có kích hoạt + vô hiệu đo được</td>
-<td>→ xem Bước 5</td>
-<td>Pass</td>
-</tr>
-<tr>
-<td>Tỷ trọng ≤ 30–50%; KHÔNG MARGIN</td>
+<td>Margin RESTRICTED</td>
+<td>Không mở margin mới</td>
 <td>✅</td>
-<td>Pass</td>
 </tr>
 <tr>
 <td>Không cam kết lợi nhuận</td>
+<td>Rà soát ngôn ngữ</td>
 <td>✅</td>
-<td>Pass</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2>3. Chiến thuật được chọn</h2>
-<h3>▶ CHIẾN THUẬT CHÍNH: <code>WAIT</code> — Không giao dịch / Chờ xác nhận</h3>
-<p><strong>Risk Tier:</strong> 0 | <strong>Nắm giữ:</strong> n/a</p>
-<p><strong>Lý do chọn:</strong>
-Sub-state <code>BULL_TRAP_RISK</code> được kích hoạt đầy đủ (Breadth ≤ −1 + Liquidity ≤ 0) trong bối cảnh index +1.83% nhưng 50% mã HOSE đỏ và khối ngoại bán ròng kỷ lục phiên −1,629 tỷ. Confidence Trung bình với macro/sentiment thiếu hoàn toàn. Composite −0.35 chỉ cách Risk-off 0.15 điểm. Ba yếu tố cộng gộp: đây là phiên hồi kỹ thuật được dẫn dắt bởi vốn hóa đơn lẻ (VIC), chưa đủ tín hiệu xác nhận xu hướng.</p>
-<p><strong>Điều kiện kích hoạt — đã kích hoạt từ đầu phiên:</strong>
-- Sub-state <code>BULL_TRAP_RISK</code> active: breadth 0.73 (&lt; 0.8) + liquidity proxy 78.8% TB20 (&lt; 80%)
-- Khối ngoại bán ròng <strong>−1,629 tỷ/phiên</strong> (vượt ngưỡng cảnh báo 1,000 tỷ)
-- VN-Index <strong>chưa đóng cửa ≥ 1,890</strong> (kháng cự đỉnh 20 phiên)</p>
-<p><strong>Điều kiện vô hiệu — thoát WAIT khi ≥2 phiên xác nhận ĐỦ CẢ 4:</strong>
-- VN-Index đóng cửa <strong>≥ 1,890</strong> (vượt đỉnh 20 phiên 1,889.87)
-- Thanh khoản khớp lệnh thực <strong>≥ 100% TB20 phiên</strong>
-- Breadth tỷ lệ tăng/giảm <strong>≥ 1.2</strong> với lan tỏa ≥ 3 ngành
-- Khối ngoại bán ròng <strong>≤ −500 tỷ/phiên</strong> (cải thiện rõ)</p>
+<h2>III. Quyết định chiến thuật</h2>
+<h3>🎯 Chiến thuật chính: <code>WAIT</code> — Không giao dịch / Chờ xác nhận</h3>
+<p><strong>Lý do:</strong>
+- BULL_TRAP_RISK_ACTIVE ghi đè hoàn toàn ma trận NEUTRAL_SIDEWAY.
+- Phiên tăng +1.83% do <strong>một mã duy nhất (VIC)</strong> kéo ~+6.5 điểm — không phản ánh sức khỏe thị trường rộng.
+- Breadth (0.727) + Liquidity (78.8% TB20) không xác nhận lực mua. Khối ngoại bán ròng liên tục 5 phiên, lũy kế −7.236 tỷ.
+- Confidence MEDIUM + tín hiệu trái chiều rõ rệt → đứng ngoài là vị thế hợp lý và có trách nhiệm.</p>
+<p><strong>Điều kiện kích hoạt WAIT:</strong>
+- ✅ BULL_TRAP_RISK còn active (hiện tại: đang active)
+- ✅ VN-Index chưa đóng cửa ≥ <strong>1.870</strong> hoặc chưa đủ điều kiện xác nhận Uptrend
+- ✅ GTGD khớp lệnh HOSE &lt; <strong>13.500 tỷ</strong> và/hoặc tỷ lệ tăng/giảm &lt; <strong>1.5</strong></p>
+<p><strong>Điều kiện vô hiệu hóa WAIT</strong> (→ chuyển sang xem xét chiến thuật khác):
+- VN-Index đóng cửa ≥ <strong>1.870</strong> + GTGD khớp lệnh ≥ <strong>13.500 tỷ</strong> + tỷ lệ tăng/giảm ≥ <strong>1.5</strong> + khối ngoại ròng phiên tốt hơn <strong>−200 tỷ</strong> — duy trì <strong>≥ 1 phiên xác nhận</strong> liên tiếp → khi đó Strategy Selector phiên sau mới đánh giá lại.</p>
 <hr />
-<h3>▶ CHIẾN THUẬT PHỤ: <code>DERISK</code> — Giảm tỷ trọng / Xử lý vị thế hiện tại</h3>
-<p><strong>Risk Tier:</strong> 0 | <strong>Thực hiện:</strong> 1–3 phiên tới | <strong>Chỉ áp dụng nếu đang giữ vị thế</strong></p>
-<p><strong>Lý do chọn:</strong>
-Đây là chiến thuật phụ <em>phòng thủ</em>, không phải mua mới. Với <code>BULL_TRAP_RISK</code> active và composite −0.35 sát Risk-off, nhịp hồi kỹ thuật hiện tại (nếu còn) là cơ hội giảm tỷ trọng về đúng Exposure Band 30–50%.</p>
-<p><strong>Điều kiện kích hoạt:</strong>
-- Đang nắm giữ cổ phiếu vượt Exposure Band 50%
-- <strong>HOẶC</strong> đang có margin → xử lý margin ngay lập tức bất kể điều kiện khác
-- VN-Index đang trong vùng hồi 1,857–1,870 → tranh thủ nhịp hồi để thoát bớt</p>
-<p><strong>Điều kiện vô hiệu:</strong>
-- VN-Index đóng cửa phá MA50 <strong>≤ 1,847</strong> → không DERISK nữa mà chuyển ngay sang <code>CASH</code> (giai đoạn đã trở thành Risk-off)
-- Composite hạ xuống <strong>&lt; −0.50</strong> → thoát DERISK, vào <code>CASH</code> toàn bộ</p>
-<p><strong>Lưu ý thực thi:</strong>
-Không bán tất cả một lúc. Thực hiện từng phần 1–3 phiên. Ưu tiên xử lý các mã đang âm và mã thuộc nhóm bị khối ngoại bán ròng liên tục.</p>
+<h3>🔄 Chiến thuật phụ: <code>DERISK</code> — Giảm tỷ trọng / Hạ margin</h3>
+<p><em>(Chỉ áp dụng cho tài khoản đang giữ vị thế hoặc đang sử dụng margin)</em></p>
+<p><strong>Điều kiện kích hoạt DERISK:</strong>
+- Đang nắm giữ vị thế cổ phiếu với tỷ trọng <strong>&gt; 50%</strong> NAV, và/hoặc đang có dư nợ margin, <strong>VÀ</strong>
+- VN-Index hồi kỹ thuật ≥ <strong>+0.5%</strong> trong phiên — dùng nhịp hồi để thoát bớt ở giá tốt hơn</p>
+<p><strong>Điều kiện vô hiệu hóa DERISK:</strong>
+- Tỷ trọng đã xuống dưới <strong>30% NAV</strong> và không còn dư nợ margin → dừng DERISK, chuyển sang WAIT thuần túy
+- VN-Index phá vỡ và đóng dưới <strong>MA20 = 1.827</strong> kết hợp tỷ lệ tăng/giảm &lt; 0.5 → chuyển sang CASH khẩn cấp</p>
+<p><strong>Thực hiện trong:</strong> 1–3 phiên giao dịch tiếp theo; ưu tiên giảm margin trước, sau đó giảm tỷ trọng các mã đang bị khối ngoại xả (ngân hàng mid-cap, hàng không, tech).</p>
 <hr />
-<h2>4. Chiến thuật bị cấm trong bối cảnh hôm nay</h2>
+<h2>IV. Chiến thuật KHÔNG nên dùng</h2>
 <blockquote>
-<p><em>Broker sử dụng mục này để từ chối khuyến nghị giao dịch không phù hợp từ phía khách hàng.</em></p>
+<p>Mục này dành cho broker dùng để chặn khách. Các chiến thuật dưới đây <strong>BỊ CẤM</strong> trong bối cảnh hiện tại.</p>
 </blockquote>
 <table>
 <thead>
@@ -548,573 +551,562 @@ Không bán tất cả một lúc. Thực hiện từng phần 1–3 phiên. Ưu
 </thead>
 <tbody>
 <tr>
-<td><strong>BREAKOUT</strong></td>
-<td><code>BULL_TRAP_RISK</code> cấm tất cả mua mới. Thêm vào đó: thanh khoản dưới TB20, breadth âm — không có volume/breadth xác nhận, mua breakout là bẫy giá điển hình.</td>
+<td><strong>TREND_FOLLOW</strong></td>
+<td>Bị cấm theo ma trận NEUTRAL; BULL_TRAP_RISK cấm tuyệt đối</td>
 </tr>
 <tr>
-<td><strong>TREND_FOLLOW</strong></td>
-<td>Bị cấm kép: (1) Regime NEUTRAL/SIDEWAY cấm tư duy trend-following; (2) <code>BULL_TRAP_RISK</code> cấm mua mới. Composite −0.35 không phải uptrend.</td>
+<td><strong>BREAKOUT</strong></td>
+<td>Bị cấm theo ma trận NEUTRAL; volume không xác nhận (78.8% TB20); BULL_TRAP_RISK cấm tuyệt đối</td>
 </tr>
 <tr>
 <td><strong>PULLBACK_BUY</strong></td>
-<td><code>BULL_TRAP_RISK</code> cấm tất cả chiến thuật mua mới. "Pullback trong uptrend" giả định uptrend đã xác nhận — chưa có.</td>
+<td>Chỉ hợp lệ trong RISK_ON / UPTREND_CAUTIOUS; hiện tại composite −0.35, breadth âm</td>
 </tr>
 <tr>
 <td><strong>SIDEWAY_SWING</strong></td>
-<td><code>BULL_TRAP_RISK</code> ghi đè ma trận NEUTRAL — SIDEWAY_SWING là mua mới, bị cấm. Chỉ được dùng khi BULL_TRAP_RISK không active.</td>
+<td>Mặc dù thuộc ma trận SIDEWAY, <strong>bị vô hiệu hóa bởi BULL_TRAP_RISK_ACTIVE</strong> — cấm tuyệt đối mọi chiến thuật mua mới</td>
 </tr>
 <tr>
-<td><strong>T_PLUS</strong></td>
-<td><code>BULL_TRAP_RISK</code> cấm mua mới. T_PLUS là mua trong phiên — bị loại.</td>
+<td><strong>T_PLUS (mua mới)</strong></td>
+<td>Bị BULL_TRAP_RISK cấm tuyệt đối; không mở vị thế mới kể cả lướt sóng ngắn</td>
 </tr>
 <tr>
 <td><strong>MEAN_REVERSION</strong></td>
-<td>Chỉ được dùng ở <code>TECH_BOUNCE</code> regime cho trader chuyên nghiệp với lệnh nhỏ. Regime hiện tại là NEUTRAL/SIDEWAY với <code>BULL_TRAP_RISK</code> → không đủ điều kiện.</td>
+<td>Tier 3; Confidence MEDIUM loại khỏi vị trí chính; không có tín hiệu cạn cung đo được</td>
 </tr>
 <tr>
-<td><strong>SECTOR_ROTATION</strong></td>
-<td><code>BULL_TRAP_RISK</code> cấm mua mới. Thêm vào đó: thiếu dữ liệu ngành, không xác định được nhóm dẫn dắt đủ tin cậy để xoay.</td>
+<td><strong>Mua đuổi phiên hồi VIC</strong></td>
+<td>Không được mua đuổi tại đỉnh mã kéo index đơn lẻ — nguy cơ BULL_TRAP điển hình</td>
 </tr>
 <tr>
-<td><strong>EVENT_DRIVEN</strong></td>
-<td>Không có dữ liệu sự kiện (macro/sentiment thiếu toàn bộ) → không đủ điều kiện kích hoạt đo được.</td>
+<td><strong>Bình quân giá bằng margin</strong></td>
+<td>Margin RESTRICTED — tuyệt đối cấm</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2>5. Tóm tắt hành động theo trạng thái tài khoản</h2>
+<h2>V. Định hướng quản lý vị thế</h2>
+<p><strong>Tài khoản đang có vị thế cổ phiếu:</strong>
+- Tỷ trọng mục tiêu: <strong>30–40% NAV</strong> (dưới trần exposure band, đệm thêm vì BULL_TRAP_RISK)
+- Ưu tiên giữ lại: nhóm dầu khí (câu chuyện Brent/Hormuz ngắn-trung hạn độc lập), hạ tầng đô thị (kỳ vọng TPHCM)
+- Ưu tiên giảm/thoát: ngân hàng mid-cap và hàng không (đang bị ngoại xả), tech (AI funding warning)
+- <strong>Không mở margin mới</strong> trong mọi hoàn cảnh cho đến khi BULL_TRAP_RISK được giải tỏa</p>
+<p><strong>Tài khoản tiền mặt / không có vị thế:</strong>
+- Giữ nguyên tiền mặt, không triển khai vốn mới
+- Theo dõi điều kiện xác nhận Uptrend (Mục II, Bước 4 báo cáo Regime) — hành động chỉ sau khi có tín hiệu đủ điều kiện</p>
+<hr />
+<h2>VI. Kịch bản điều chỉnh chiến thuật (phiên tới)</h2>
 <table>
 <thead>
 <tr>
-<th>Trạng thái tài khoản</th>
-<th>Hành động</th>
+<th>Kịch bản phiên 23/06</th>
+<th>Điều chỉnh</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Đang giữ margin</strong></td>
-<td>Xử lý <strong>ngay lập tức</strong> (DERISK ưu tiên 1). Không chờ.</td>
+<td>VN-Index ≥ 1.870 + GTGD ≥ 13.500 tỷ + tỷ lệ T/G ≥ 1.5 + ngoại &gt; −200 tỷ</td>
+<td>Giải tỏa BULL_TRAP_RISK → xem xét nâng SIDEWAY_SWING hoặc PULLBACK_BUY nhỏ (cần xác nhận thêm 1 phiên)</td>
 </tr>
 <tr>
-<td><strong>Giữ cổ phiếu &gt; 50% NAV</strong></td>
-<td>Giảm tỷ trọng về 30–50% trong 1–3 phiên tới (DERISK).</td>
+<td>Index hồi nhẹ, breadth vẫn &lt;0.8, GTGD &lt;12.000 tỷ</td>
+<td>Duy trì WAIT + DERISK</td>
 </tr>
 <tr>
-<td><strong>Giữ cổ phiếu 30–50% NAV</strong></td>
-<td>Giữ nguyên, không mua thêm. Theo dõi sát điều kiện vô hiệu.</td>
-</tr>
-<tr>
-<td><strong>Tiền mặt ≥ 50% NAV</strong></td>
-<td>WAIT — đứng ngoài, không hành động.</td>
-</tr>
-<tr>
-<td><strong>Toàn tiền mặt</strong></td>
-<td>WAIT — giữ nguyên. Không bắt đáy, không mua thử.</td>
+<td>VN-Index thủng MA20 (1.827), tỷ lệ T/G &lt;0.5</td>
+<td>Chuyển sang CASH — thoát toàn bộ tỷ trọng còn lại</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2>6. Kịch bản theo dõi phiên kế tiếp</h2>
-<table>
-<thead>
-<tr>
-<th>Kịch bản</th>
-<th>Tín hiệu quan sát</th>
-<th>Phản ứng</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Tích cực (xác nhận hồi phục)</strong></td>
-<td>Index vượt 1,890 + breadth ≥ 1.2 + thanh khoản ≥ 100% TB20</td>
-<td>Bắt đầu đánh giá lại — chờ xác nhận phiên 2 trước khi thoát WAIT</td>
-</tr>
-<tr>
-<td><strong>Trung tính (tiếp tục sideway)</strong></td>
-<td>Index dao động 1,840–1,890, breadth lẫn lộn</td>
-<td>Duy trì WAIT, thực hiện DERISK nếu còn tỷ trọng &gt; 50%</td>
-</tr>
-<tr>
-<td><strong>Tiêu cực (trap xác nhận)</strong></td>
-<td>Index phá MA50 ≤ 1,847 <strong>HOẶC</strong> khối ngoại bán ròng ≥ 1,000 tỷ phiên 3 liên tiếp</td>
-<td>Chuyển sang <code>CASH</code> ngay — DERISK khẩn cấp toàn bộ vị thế còn lại</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2>7. HANDOFF — Stock Picker &amp; Execution Desk (Agent 03/04)</h2>
-<pre><code>STRATEGY_MAIN     : WAIT
-STRATEGY_AUX      : DERISK (chỉ áp dụng nếu đang giữ vị thế)
-REGIME_CODE       : NEUTRAL_SIDEWAY
-COMPOSITE         : -0.35
-ACTIVE_FLAGS      : BULL_TRAP_RISK | HOI_KY_THUAT | PHAN_HOA_MANH
-EXPOSURE_BAND     : 30–50% (KHÔNG được vượt)
-MARGIN_STATUS     : KHÔNG MARGIN (cấm tuyệt đối)
-RISK_BUDGET       : 0–1
-FORBIDDEN         : BREAKOUT | TREND_FOLLOW | PULLBACK_BUY | SIDEWAY_SWING | T_PLUS | MEAN_REVERSION | SECTOR_ROTATION | EVENT_DRIVEN
-DEACTIVATE_WAIT_IF: Index ≥1,890 AND Breadth ≥1.2 AND Liq ≥100%TB20 AND Flow ≤-500tỷ (cần ≥2 phiên xác nhận)
-ESCALATE_CASH_IF  : Index ≤1,847 OR Composite &lt;-0.50
-PROXIMITY_WATCH   : Cách Risk-off 0.15 điểm — theo dõi sát
-DATA_GAPS         : matched_value_hose | ceiling_floor_count | macro_sentiment
-REPORT_DATE       : 2026-06-22
+<h2>VII. Handoff → Stock Screener Agent / Position Sizing Agent</h2>
+<pre><code>STRATEGY_PRIMARY   : WAIT
+STRATEGY_SECONDARY : DERISK (chỉ tài khoản đang có vị thế / margin)
+REGIME_CODE        : NEUTRAL_SIDEWAY
+ALERT              : BULL_TRAP_RISK_ACTIVE
+EXPOSURE_TARGET    : 30–40% NAV
+MARGIN_STATUS      : RESTRICTED — tuyệt đối không mở margin mới
+HOLDING_PERIOD     : DERISK thực hiện 1–3 phiên
+CONFIDENCE         : MEDIUM
+SECTOR_NOTE        : Dầu khí + Hạ tầng đô thị: giữ lại có chọn lọc
+                     Ngân hàng mid-cap + Hàng không + Tech: ưu tiên giảm
+TRIGGER_UPGRADE    : VN-Index ≥ 1870 + GTGD ≥ 13500 tỷ + T/G ≥ 1.5 + Ngoại &gt; -200 tỷ ≥ 1 phiên
+TRIGGER_DOWNGRADE  : VN-Index đóng &lt; MA20 = 1827 + T/G &lt; 0.5 → CASH
+DATE               : 2026-06-22
+NEXT_REVIEW        : 2026-06-23 sau phiên
 </code></pre>
 <hr />
-<p><em>Báo cáo phục vụ duy nhất mục đích định hướng chiến thuật. Không khuyến nghị mua/bán cổ phiếu cụ thể. Không cam kết hướng thị trường. Đứng ngoài thị trường là một vị thế hợp lệ và có trách nhiệm.</em></p></div></section>
-<section class="sec"><div class="dau"><span class="so-sec">§ 03</span><h2>Dòng tiền ngành — Tiền đang ở đâu, cấm đuổi nhóm nào?</h2></div><div class="ghichu-sec">Ma trận RS × Flow · Strong / Improving / Weak / Avoid Chasing · Sector Rotation Agent</div><div class="report-md"><p>Tôi đã thu thập đủ dữ liệu từ nhiều nguồn. Bây giờ tổng hợp và xuất báo cáo theo quy trình bắt buộc.</p>
+<p><em>Báo cáo này không khuyến nghị cổ phiếu cụ thể, không đưa lệnh giao dịch, và không cam kết bất kỳ mức lợi nhuận nào. Mọi quyết định đầu tư cuối cùng thuộc về khách hàng và advisor phụ trách tài khoản.</em></p></div></section>
+<section class="sec"><div class="dau"><span class="so-sec">§ 03</span><h2>Dòng tiền ngành — Tiền đang ở đâu, cấm đuổi nhóm nào?</h2></div><div class="ghichu-sec">Ma trận RS × Flow · Strong / Improving / Weak / Avoid Chasing · Sector Rotation Agent</div><div class="report-md"><p>Đã có đủ dữ liệu chính. Tổng hợp và viết báo cáo:</p>
 <hr />
-<h1>📊 SECTOR ROTATION MAP — LPBS Sector Flow Desk</h1>
-<p><strong>Ngày:</strong> 2026-06-22 | <strong>Tham chiếu:</strong> VN-Index C 1,857.91 (+1.83%) | <strong>Phiên dữ liệu:</strong> qua 5 phiên gần nhất (16–22/06) và bối cảnh 20 phiên tháng 5–6/2026</p>
+<h1>SECTOR ROTATION REPORT — 22/06/2026</h1>
+<p><strong>Desk:</strong> Sector Flow Desk — LPBS
+<strong>Phiên tham chiếu:</strong> HOSE 22/06/2026
+<strong>Nhận handoff từ:</strong> Strategy Selector 22/06/2026
+<strong>Thời gian đọc mục tiêu:</strong> &lt; 3 phút</p>
 <hr />
-<h2>0. HANDOFF ĐÃ ĐỌC — Strategy Selector</h2>
+<h2>I. Đọc Handoff — Strategy Selector</h2>
 <table>
 <thead>
 <tr>
-<th>Trường</th>
-<th>Giá trị nhận được</th>
+<th>Tham số</th>
+<th>Giá trị nhận</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Strategy chính</strong></td>
-<td><code>WAIT</code> — Không giao dịch / Chờ xác nhận</td>
+<td>Strategy Primary</td>
+<td><strong><code>WAIT</code></strong></td>
 </tr>
 <tr>
-<td><strong>Strategy phụ</strong></td>
-<td><code>DERISK</code> — Giảm tỷ trọng / Xử lý vị thế hiện tại</td>
+<td>Strategy Secondary</td>
+<td><strong><code>DERISK</code></strong> (chỉ tài khoản đang có vị thế / margin)</td>
 </tr>
 <tr>
-<td><strong>Chỉ dẫn Sector Rotation Agent</strong></td>
-<td>WAIT: xuất <strong>map quan sát</strong> (không khuyến nghị mua). DERISK: <strong>đảo mục đích map</strong> — xếp hạng nhóm nên GIẢM TỶ TRỌNG TRƯỚC</td>
+<td>Regime</td>
+<td><code>NEUTRAL_SIDEWAY</code></td>
 </tr>
 <tr>
-<td><strong>Exposure Ceiling</strong></td>
-<td>30–50% NAV (cứng)</td>
+<td>Alert đang kích hoạt</td>
+<td>⚠️ <code>BULL_TRAP_RISK_ACTIVE</code></td>
 </tr>
 <tr>
-<td><strong>Margin</strong></td>
-<td>KHÔNG MARGIN — cấm tuyệt đối</td>
+<td>Exposure Target</td>
+<td>30–40% NAV</td>
 </tr>
 <tr>
-<td><strong>SECTOR_ROTATION</strong></td>
-<td><strong>BỊ CẤM</strong> trong danh sách Forbidden của Strategy Selector</td>
+<td>Margin</td>
+<td><code>RESTRICTED</code> — tuyệt đối không mở mới</td>
 </tr>
 <tr>
-<td><strong>Data Gaps từ Agent 02</strong></td>
-<td><code>matched_value_hose</code>, <code>ceiling_floor_count</code>, <code>macro_sentiment</code></td>
+<td>Sector Note từ Selector</td>
+<td><strong>Giữ quan sát:</strong> Dầu khí, Hạ tầng đô thị | <strong>Ưu tiên giảm:</strong> Ngân hàng mid-cap, Hàng không, Tech</td>
 </tr>
 </tbody>
 </table>
+<h3>Chế độ vận hành báo cáo này</h3>
 <blockquote>
-<p>⚠️ <strong>Lưu ý quan trọng:</strong> <code>SECTOR_ROTATION</code> bị cấm trong chiến thuật mua mới. Báo cáo này <strong>không phục vụ mục đích xoay vòng mua vào</strong>. Mục đích duy nhất: xác định tiền đang ở đâu, dịch chuyển như thế nào, và <strong>ngành nào cần GIẢM TỶ TRỌNG trước</strong> (DERISK priority map).</p>
+<p><strong><code>WAIT</code></strong> → Chỉ xuất <strong>map quan sát</strong>. Không khuyến nghị hành động mua mới.
+<strong><code>DERISK</code></strong> → Đảo mục đích map: <strong>xếp hạng ngành nên GIẢM TỶ TRỌNG TRƯỚC</strong>.
+Hai chế độ chồng nhau → báo cáo này vừa là bản đồ quan sát, vừa là danh sách thứ tự giảm.</p>
 </blockquote>
 <hr />
-<h2>1. THU THẬP DỮ LIỆU — Nguồn &amp; Phương pháp</h2>
+<h2>II. Cảnh báo Data Gaps &amp; Fallback</h2>
 <blockquote>
-<p><strong>Lưu ý phương pháp:</strong> Dữ liệu ngành không được cung cấp sẵn. Tôi đã thực hiện 6 lần web search để thu thập thông tin từ nhiều nguồn (Vietstock, CafeF, VnEconomy, Nguoiquansat, Stockbiz, Pinetree, SHS). Dữ liệu có <strong>mức độ tin cậy hạn chế</strong> — là tổng hợp định tính từ bài phân tích, không phải raw tick data. <strong>Toàn bộ phần thiếu dữ liệu định lượng đều được ghi nhận và áp fallback quy tắc cứng.</strong></p>
+<p>⛔ <strong>Dữ liệu trục Flow (GTGD ngành so TB20; % mã tăng nội ngành) KHÔNG có đủ theo ngành.</strong> Áp dụng quy tắc cứng fallback: <strong>Không ngành nào được xếp STRONG.</strong> Tối đa Improving, kèm ghi chú "tín hiệu chưa xác nhận".</p>
 </blockquote>
-<h3>Bối cảnh tháng 6/2026 (20 phiên)</h3>
-<ul>
-<li>VN-Index đã <strong>giảm 4 tuần liên tiếp</strong> từ đầu tháng, đáy tạm tại ~1,791 (tuần 8–12/06), tương đương mất ~50–60 điểm so với đỉnh tháng 5</li>
-<li>Tuần 16/06: Index phục hồi lên 1,807 (+8 điểm phiên 16/06), dòng tiền lan tỏa tạm thời sang chứng khoán, BĐS, bán lẻ</li>
-<li>Phiên 22/06: VN-Index đột ngột bứt lên +1.83% → <strong>1,857.91</strong>, được dẫn dắt chủ yếu bởi VIC (chiếm ~19.6% tổng điểm tăng theo xác nhận Strategy Selector)</li>
-<li><strong>50% mã HOSE đóng cửa đỏ</strong> ngay cả phiên index +1.83% → phân hóa rất mạnh, xác nhận <code>PHAN_HOA_MANH</code></li>
-<li>Khối ngoại: Bán ròng <strong>−7,191.5 tỷ/tuần</strong> (tuần 16–22/06) — mức cao nhất nhiều tuần; riêng VIC bị bán ròng <strong>−4,820 tỷ</strong> (chủ yếu thỏa thuận)</li>
-<li>Thanh khoản TB20 HOSE: ~12,435 tỷ/phiên (theo ghi nhận tuần 8–12/06); phiên 22/06 ước ~78.8% TB20 (từ Strategy Report)</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Dữ liệu thiếu</th>
+<th>Tình trạng</th>
+<th>Ảnh hưởng lên map</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GTGD từng ngành so TB20 (chuỗi đủ 20P)</td>
+<td>❌ Không có</td>
+<td>Không xác nhận Flow+ / Flow− theo ngưỡng 115% / 85%</td>
+</tr>
+<tr>
+<td>Breadth nội ngành (% mã tăng từng nhóm)</td>
+<td>❌ Chỉ có tổng thị trường</td>
+<td>Không xác nhận &gt;60% mã tăng trong ngành</td>
+</tr>
+<tr>
+<td>RS 20-phiên chính xác theo ngành</td>
+<td>⚠️ Ước tính gián tiếp từ báo chí</td>
+<td>RS 20P mang tính định tính</td>
+</tr>
+<tr>
+<td>RS 5-phiên phân rã từng ngành</td>
+<td>⚠️ Có tuần 16–20/6 (−2.57% Index) nhưng thiếu chi tiết ngành</td>
+<td>Một số ngành chỉ ước tính</td>
+</tr>
+<tr>
+<td>Dữ liệu Điện, Bán lẻ</td>
+<td>❌ Không có số liệu phiên 22/6</td>
+<td>Hai ngành này <strong>không xếp loại</strong></td>
+</tr>
+<tr>
+<td>Hàng không</td>
+<td>❌ Không có dữ liệu phiên 22/6</td>
+<td>Xếp Weak theo thận trọng + SECTOR_NOTE</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2>2. CHẤM ĐIỂM TỪNG NGÀNH — RS &amp; Flow</h2>
-<blockquote>
-<p>⚠️ <strong>Data Gap toàn diện về Flow ngành:</strong> Không có dữ liệu GTGD theo ngành so TB20 ngành, không có % mã tăng từng ngành chính xác. Áp dụng quy tắc cứng: <strong>thiếu dữ liệu Flow → tối đa xếp Improving, không được xếp Strong.</strong></p>
-</blockquote>
+<h2>III. Bảng Chấm Điểm Ngành (RS × Flow)</h2>
+<p><strong>Nền tham chiếu VN-Index 22/06/2026:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Chỉ số</th>
+<th>Giá trị</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VN-Index đóng cửa</td>
+<td>1,857.91 điểm (+33.38 / <strong>+1.83%</strong>)</td>
+</tr>
+<tr>
+<td>Thanh khoản HOSE 22/6</td>
+<td>Ước tính ~9,000–10,000 tỷ <em>(báo sáng "giảm mạnh"; &lt; ngưỡng 13,500 tỷ vô hiệu WAIT)</em></td>
+</tr>
+<tr>
+<td>Breadth tổng sàn (buổi sáng)</td>
+<td><strong>194 mã giảm / 81 mã tăng</strong> (~0.42) — rất yếu</td>
+</tr>
+<tr>
+<td>Khối ngoại lũy kế 5P trước 22/6</td>
+<td>Bán ròng <strong>−7,236 tỷ</strong> (cao nhất nhiều tuần)</td>
+</tr>
+<tr>
+<td>VN-Index tuần 16–20/6</td>
+<td><strong>−2.57%</strong> (xuống 1,791.65; phiên đầu tuần −48 điểm)</td>
+</tr>
+</tbody>
+</table>
 <table>
 <thead>
 <tr>
 <th>#</th>
 <th>Ngành</th>
-<th>RS-5ph</th>
-<th>RS-20ph</th>
-<th>RS tổng</th>
-<th>Flow</th>
-<th>Ghi chú định lượng</th>
+<th>RS 5P (ước tính)</th>
+<th>RS 22/6 (1 phiên)</th>
+<th>Flow (có được)</th>
+<th>Xếp loại</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td><strong>Bất động sản</strong></td>
-<td>++ (VIC +3–5% kéo index)</td>
-<td>~ (cả tháng index giảm 4 tuần, BĐS đi ngang/âm trước phục hồi tuần này)</td>
-<td>RS~</td>
-<td>Flow⚠️</td>
-<td>1–2 trụ kéo (VIC, VHM); ngoại bán ròng VIC −4,820 tỷ/tuần; breadth ngành không xác nhận</td>
+<td>Bất động sản (VIC-led)</td>
+<td>RS~ → RS+ (chỉ 22/6 bật)</td>
+<td><strong>+5.58%</strong> vs index +1.83% = <strong>+3.75pp</strong></td>
+<td>Flow−: ngoại xả VIC −4,820 tỷ block; breadth tổng sàn yếu 0.42</td>
+<td>⚠️ <strong>AVOID CHASING</strong></td>
 </tr>
 <tr>
 <td>2</td>
-<td><strong>Ngân hàng</strong></td>
-<td>~ (phân hóa VN30, 1 số phiên hỗ trợ)</td>
-<td>~ (nhóm lớn còn áp lực)</td>
-<td>RS~</td>
-<td>Thiếu</td>
-<td>Được kỳ vọng nhưng thiếu dữ liệu Flow định lượng</td>
+<td>Ngân hàng</td>
+<td>RS− (tuần 16–20 giảm cùng TT; 22/6 +0.13%)</td>
+<td><strong>+0.13%</strong> vs +1.83% = <strong>−1.70pp</strong></td>
+<td>Flow−: ngoại xả ACB, VPB, TCB, CTG, LPB liên tục</td>
+<td>🔴 <strong>WEAK</strong></td>
 </tr>
 <tr>
 <td>3</td>
-<td><strong>Chứng khoán</strong></td>
-<td>+ (16/06: dòng tiền lan tỏa vào)</td>
-<td>~ (suy yếu theo thị trường chung)</td>
-<td>RS~</td>
-<td>Thiếu</td>
-<td>SHS xếp #1 ngắn hạn tháng 6; kỳ vọng FTSE nâng hạng</td>
+<td>Công nghệ / IT</td>
+<td>RS− (tuần 16–20 và 22/6 đều yếu)</td>
+<td><strong>−1.47%</strong> vs +1.83% = <strong>−3.30pp</strong> (kém nhất)</td>
+<td>Flow−: FPT, CMG, ELC giảm giá</td>
+<td>🔴 <strong>WEAK</strong></td>
 </tr>
 <tr>
 <td>4</td>
-<td><strong>Thép</strong></td>
-<td>+ (22/06 hỗ trợ thị trường)</td>
-<td>~</td>
-<td>RS~</td>
-<td>Thiếu</td>
-<td>HPG mục tiêu 15 triệu tấn (+40%); đầu tư công + bảo hộ HRC</td>
+<td>Dầu khí</td>
+<td>RS~ (điều chỉnh tuần 16–20 do Hormuz; 22/6 hồi)</td>
+<td><strong>+1.7%</strong> vs +1.83% = <strong>−0.13pp</strong></td>
+<td>Flow~: 360 tỷ phiên 22/6 — <strong>1 phiên, chưa xác nhận</strong></td>
+<td>🟡 <strong>IMPROVING</strong> <em>(chưa xác nhận)</em></td>
 </tr>
 <tr>
 <td>5</td>
-<td><strong>CNTT</strong></td>
-<td>−− (giảm mạnh nhất tuần 8–12/06: −1.47%)</td>
-<td>− (không có catalyst ngắn hạn)</td>
-<td>RS−</td>
-<td>Thiếu</td>
-<td>Dẫn đầu mức giảm; không có tín hiệu phục hồi rõ</td>
+<td>Hạ tầng đô thị / Đầu tư công</td>
+<td>RS~: Không có số liệu riêng</td>
+<td>N/A</td>
+<td>Flow: ❌ Không có dữ liệu</td>
+<td>🟡 <strong>IMPROVING</strong> <em>(catalyst mới, chưa đo được)</em></td>
 </tr>
 <tr>
 <td>6</td>
-<td><strong>Bán lẻ</strong></td>
-<td>+ (16/06 có dòng tiền)</td>
-<td>~</td>
-<td>RS~</td>
-<td>Thiếu</td>
-<td>Mùa kết quả Q2; phục hồi thu nhập hộ gia đình</td>
+<td>Chứng khoán</td>
+<td>RS− (tuần 16–20 giảm; 22/6 nhỉnh)</td>
+<td><strong>+0.31%</strong> vs +1.83% = <strong>−1.52pp</strong></td>
+<td>Flow~: thanh khoản ngành thấp</td>
+<td>🔴 <strong>WEAK</strong></td>
 </tr>
 <tr>
 <td>7</td>
-<td><strong>Dầu khí</strong></td>
-<td>? (thiếu dữ liệu 5 phiên)</td>
-<td>?</td>
-<td>Không đủ dữ liệu</td>
-<td>Thiếu</td>
-<td>Kỳ vọng dài hạn giá năng lượng cao; thiếu dữ liệu ngắn hạn</td>
+<td>Thép</td>
+<td>RS~: Điều chỉnh cùng TT</td>
+<td>~0%</td>
+<td>Flow−: 127 tỷ vào thép 22/6 — rất hạn chế</td>
+<td>🔴 <strong>WEAK</strong></td>
 </tr>
 <tr>
 <td>8</td>
-<td><strong>Điện</strong></td>
-<td>?</td>
-<td>?</td>
-<td>Không đủ dữ liệu</td>
-<td>Thiếu</td>
-<td>Nhu cầu điện mùa hè cao điểm; thiếu dữ liệu ngắn hạn</td>
+<td>Hàng không</td>
+<td>RS: ❌ Không đủ dữ liệu</td>
+<td>❌</td>
+<td>Flow: ❌</td>
+<td>🔴 <strong>WEAK</strong> <em>(thận trọng + SECTOR_NOTE)</em></td>
 </tr>
 <tr>
 <td>9</td>
-<td><strong>Cảng – Kho vận / BĐS KCN</strong></td>
-<td>?</td>
-<td>?</td>
-<td>Không đủ dữ liệu</td>
-<td>Thiếu</td>
-<td>Xuất hiện trong khuyến nghị An Bình; thiếu dữ liệu ngắn hạn</td>
+<td>Điện (Utilities)</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>⚪ <strong>Không xếp loại</strong></td>
+</tr>
+<tr>
+<td>10</td>
+<td>Bán lẻ</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>⚪ <strong>Không xếp loại</strong></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Kiểm tra tăng nóng (bắt buộc — đủ 1 điều kiện là gắn Avoid Chasing):</strong></p>
+<hr />
+<h2>IV. SECTOR MAP 4 NHÓM</h2>
+<p><em>(Chế độ WAIT + DERISK: Không có nhóm Strong — fallback áp dụng. Nhóm Weak xếp thứ tự giảm trước.)</em></p>
+<hr />
+<h3>🟢 STRONG — Không có nhóm nào đủ điều kiện</h3>
+<blockquote>
+<p>Thiếu dữ liệu Flow → Quy tắc cứng số 2: <strong>Không xếp Strong.</strong> Mọi ứng viên tích cực tối đa là Improving.</p>
+</blockquote>
+<hr />
+<h3>⚠️ AVOID CHASING — Không mua đuổi | Cân nhắc thoát bớt nếu đang giữ ở đỉnh</h3>
+<h4>Bất động sản (VIC / VHM / VRE — dẫn chứng dòng tiền, không phải khuyến nghị)</h4>
+<p><strong>Lý do định lượng — đủ tiêu chí "Tăng nóng":</strong></p>
 <table>
 <thead>
 <tr>
-<th>Điều kiện</th>
-<th>Ngành BĐS</th>
+<th>Tiêu chí Avoid Chasing</th>
+<th>Kiểm tra</th>
 <th>Kết quả</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Ngành tăng &gt;7–10% / 5 phiên</td>
-<td>VIC tăng đột biến, kéo index +1.83% trong 1 phiên</td>
-<td>⚠️ Nghi vấn</td>
+<td>Tăng dồn vào 1–2 trụ</td>
+<td>VIC kéo ~+6.5 điểm Index (trong tổng +33.38), VHM và VRE phụ theo</td>
+<td>✅ Đủ điều kiện</td>
 </tr>
 <tr>
-<td>Mã đầu ngành trần 2+ phiên</td>
-<td>Không xác nhận đủ dữ liệu</td>
-<td>—</td>
+<td>Ngành tăng &gt;7% / 5 phiên</td>
+<td>Phiên 22/6: +5.58% chỉ 1 phiên; các phiên trước cùng Index giảm</td>
+<td>✅ 1 phiên siêu tăng bất thường</td>
 </tr>
 <tr>
-<td>Mức tăng dồn vào 1–2 trụ</td>
-<td>✅ VIC ~19.6% tổng điểm tăng phiên + VHM</td>
-<td><strong>GẮN Avoid Chasing</strong></td>
+<td>Breadth thị trường tổng (proxy)</td>
+<td>194 mã giảm / 81 mã tăng buổi sáng = 0.42</td>
+<td>✅ Cực yếu — tăng rỗng ruột</td>
 </tr>
 <tr>
-<td>Khối ngoại bán ròng tập trung</td>
-<td>✅ VIC −4,820 tỷ/tuần (ngoại thoát qua thỏa thuận)</td>
-<td>Xác nhận thêm</td>
+<td>Ngoại đang xả tập trung</td>
+<td>VIC bị block deal bán ròng ~4,820 tỷ tuần trước</td>
+<td>✅ Ngoại thoát ở giá cao</td>
+</tr>
+<tr>
+<td>BULL_TRAP_RISK còn active</td>
+<td>✅ (theo handoff)</td>
+<td>✅ Củng cố thêm</td>
 </tr>
 </tbody>
 </table>
-<p>→ <strong>Bất động sản: Avoid Chasing</strong> (RS+/~ nhưng tăng rỗng ruột — 1–2 trụ kéo + ngoại thoát mạnh)</p>
-<hr />
-<h2>3. SECTOR MAP 4 NHÓM</h2>
 <blockquote>
-<p><strong>Lưu ý định hướng:</strong> Do strategy là DERISK, map được <strong>đảo chiều</strong> — xếp hạng từ "cần giảm tỷ trọng sớm nhất" đến "ổn định hơn".</p>
-</blockquote>
-<pre><code>╔══════════════════════════════════════════════════════════════════════════════╗
-║          SECTOR MAP — DERISK PRIORITY (Xếp theo ưu tiên giảm tỷ trọng)     ║
-╠═══════════════════╦═══════════════════════════════════════════════════════════╣
-║  ĐỎ — GIẢM NGAY  ║  Bất động sản (BĐS Vingroup-led)                        ║
-║  AVOID CHASING   ║  RS~+ / Flow⚠️: 1 trụ kéo (VIC) + ngoại bán −4,820 tỷ ║
-║                  ║  Tăng rỗng ruột. Rủi ro trap cao nhất khi breadth âm.   ║
-╠═══════════════════╬═══════════════════════════════════════════════════════════╣
-║  CAM — WEAK      ║  CNTT                                                    ║
-║  Giảm ưu tiên 2  ║  RS−−: giảm mạnh nhất tuần (−1.47%), không có catalyst  ║
-║                  ║  Flow: thiếu dữ liệu. Xu hướng yếu rõ ràng nhất.        ║
-╠═══════════════════╬═══════════════════════════════════════════════════════════╣
-║  VÀNG —          ║  Ngân hàng | Chứng khoán | Thép | Bán lẻ                ║
-║  IMPROVING       ║  RS~: không vượt và không thua index rõ ràng             ║
-║  (Giữ/Quan sát)  ║  Flow: THIẾU DỮ LIỆU — tối đa Improving, không Strong  ║
-║                  ║  Tín hiệu chưa xác nhận ≥ 5 phiên liên tục              ║
-╠═══════════════════╬═══════════════════════════════════════════════════════════╣
-║  XÁM —           ║  Dầu khí | Điện | Cảng-KCN                              ║
-║  QUAN SÁT        ║  Thiếu dữ liệu ngắn hạn cả RS lẫn Flow                 ║
-║  (Map tối thiểu) ║  Chỉ có catalyst dài hạn; không đủ cơ sở xếp loại      ║
-╚═══════════════════╩═══════════════════════════════════════════════════════════╝
-</code></pre>
-<blockquote>
-<p><strong>Xác nhận quy tắc cứng:</strong> "Không có nhóm nào đủ điều kiện vào Strong" — do thiếu dữ liệu Flow ngành trên toàn bộ phổ. Điều này nhất quán với bối cảnh NEUTRAL_SIDEWAY + BULL_TRAP_RISK.</p>
+<p><strong>Kết luận:</strong> Tăng giá không có dòng tiền rộng ≠ ngành mạnh. Đây là điển hình BULL_TRAP đơn ngành. <strong>Tuyệt đối không mua đuổi.</strong> Nếu đang giữ vị thế trong nhóm này với tỷ trọng cao, phiên hồi là cơ hội thoát bớt trong khuôn khổ DERISK.</p>
 </blockquote>
 <hr />
-<h2>4. EVIDENCE CÓ SỐ LIỆU</h2>
-<h3>4A. Bất động sản — AVOID CHASING (Ưu tiên DERISK #1)</h3>
+<h3>🟡 IMPROVING — Quan sát, không hành động trong WAIT mode</h3>
+<h4>Dầu khí</h4>
+<ul>
+<li><strong>RS:</strong> RS~ — Phiên 22/6 hồi +1.7% (PVD +4.7%, BSR +2.7%, PVT +2%), gần ngang index. Tuần 16–20 điều chỉnh cùng thị trường theo áp lực địa chính trị Hormuz.</li>
+<li><strong>Flow:</strong> Flow~ — 360 tỷ vào nhóm dầu khí phiên 22/6 <em>(chỉ 1 phiên — quy tắc cứng số 1: không kết luận xu hướng).</em></li>
+<li><strong>Data gap:</strong> Thiếu GTGD ngành so TB20, thiếu breadth nội ngành.</li>
+<li><strong>Catalyst:</strong> Câu chuyện E&amp;P đa năm, chính sách thúc đẩy dự án lớn, MSCI nâng hạng trung hạn.</li>
+<li><strong>Rủi ro:</strong> Giá dầu giảm ngắn hạn phiên 22/6 ("dầu lao dốc"); nếu Brent phá $70 → trigger xuống Weak.</li>
+<li><strong>Kết luận WAIT:</strong> Giữ quan sát. Không hành động. Nếu DERISK, đây là nhóm cuối cùng giảm (sau khi đã xử lý các nhóm Weak).</li>
+</ul>
+<h4>Hạ tầng đô thị / Đầu tư công</h4>
+<ul>
+<li><strong>RS:</strong> RS~ — Không có số liệu phân rã riêng ngành.</li>
+<li><strong>Flow:</strong> ❌ Không có dữ liệu.</li>
+<li><strong>Catalyst mới:</strong> Hà Nội khởi công đồng loạt 5 tuyến đường sắt đô thị (&gt;300km, tổng vốn sơ bộ &gt;1.3 triệu tỷ VND). Catalyst event-driven rõ ràng, timeline gần.</li>
+<li><strong>Data gap:</strong> Thiếu cả RS lẫn Flow chính xác → Tối đa Improving theo fallback.</li>
+<li><strong>Tín hiệu chưa xác nhận</strong> — không hành động trong WAIT mode.</li>
+</ul>
+<hr />
+<h3>🔴 WEAK — Thứ tự ưu tiên GIẢM TỶ TRỌNG (DERISK)</h3>
 <table>
 <thead>
 <tr>
-<th>Chỉ tiêu</th>
-<th>Số liệu</th>
-<th>Nguồn</th>
+<th>Thứ tự</th>
+<th>Ngành</th>
+<th>RS</th>
+<th>Flow</th>
+<th>Lý do</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Đóng góp VIC vào điểm tăng phiên 22/06</td>
-<td>~19.6% tổng điểm tăng (+1.83%)</td>
-<td>Strategy Selector Report</td>
+<td><strong>① Cao nhất</strong></td>
+<td><strong>Ngân hàng mid-cap</strong></td>
+<td>RS−: +0.13% vs +1.83% (−1.70pp). Thua index nhiều tuần liên tiếp</td>
+<td>Flow−: Ngoại xả ACB, VPB, TCB, CTG, LPB, SSB. Tháng 5/2026 cũng bán ròng liên tục</td>
+<td>RS yếu + ngoại xả có hệ thống + SECTOR_NOTE</td>
 </tr>
 <tr>
-<td>Khối ngoại bán ròng VIC tuần 16–22/06</td>
-<td><strong>−4,820 tỷ</strong> (thỏa thuận)</td>
-<td>Vietnamfinance, VnInvesting</td>
+<td><strong>② Cao</strong></td>
+<td><strong>Công nghệ / IT</strong></td>
+<td>RS−: −1.47% vs +1.83% (−3.30pp — kém nhất toàn thị trường phiên 22/6)</td>
+<td>Flow−: FPT, CMG, ELC giảm giá. Ngoại mua ròng FPT ~1,501 tỷ nhưng giá vẫn giảm → cung lớn hơn</td>
+<td>RS kém nhất + AI funding warning từ handoff + SECTOR_NOTE</td>
 </tr>
 <tr>
-<td>Khối ngoại bán ròng toàn thị trường tuần</td>
-<td>−7,191.5 tỷ (cao nhất nhiều tuần)</td>
-<td>Nguoiquansat</td>
+<td><strong>③ Vừa</strong></td>
+<td><strong>Hàng không</strong></td>
+<td>❌ Không đủ dữ liệu RS</td>
+<td>❌ Không có dữ liệu Flow</td>
+<td>Không đủ dữ liệu xác nhận → xếp Weak theo thận trọng. SECTOR_NOTE "ưu tiên giảm"</td>
 </tr>
 <tr>
-<td>Breadth thị trường phiên 22/06</td>
-<td>50% mã HOSE đóng cửa đỏ</td>
-<td>Strategy Selector</td>
+<td><strong>④ Thứ yếu</strong></td>
+<td><strong>Chứng khoán</strong></td>
+<td>RS−: +0.31% vs +1.83% (−1.52pp)</td>
+<td>Flow~: Thanh khoản thấp, không có GTGD so TB20</td>
+<td>RS kém index, không có catalyst rõ</td>
 </tr>
 <tr>
-<td>Breadth proxy toàn ngành</td>
-<td>Chỉ VIC + VHM kéo; KDH, VPI tích cực nhưng thiếu số</td>
-<td>Vietnam.vn</td>
-</tr>
-<tr>
-<td>Thỏa thuận lớn</td>
-<td>Ngoại thoát hàng qua block deal VIC — không phải mua thị trường</td>
-<td>Vietnambiz</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Luận điểm AVOID CHASING:</strong> Đây là kiểu tăng "xanh vỏ đỏ lòng" điển hình — VN-Index xanh do 1 mã lớn thỏa thuận nội bộ, trong khi ngoại chủ động thoát qua cùng phiên đó. Mua theo ngành BĐS trong bối cảnh này là rủi ro bull trap cao nhất.</p>
-<p><em>Bằng chứng mã (không phải khuyến nghị): VIC, VHM — 2 mã này chiếm phần lớn điểm số ngành BĐS; các mã còn lại như KDH, DXG, NVL chưa xác nhận cùng chiều.</em></p>
-<hr />
-<h3>4B. CNTT — WEAK</h3>
-<table>
-<thead>
-<tr>
-<th>Chỉ tiêu</th>
-<th>Số liệu</th>
-<th>Nguồn</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Hiệu suất ngành CNTT tuần 8–12/06</td>
-<td><strong>−1.47%</strong> — giảm mạnh nhất trong các nhóm</td>
-<td>Xaluannews (tuần 8–12/06)</td>
-</tr>
-<tr>
-<td>RS so index</td>
-<td>RS− rõ ràng (index tuần đó −2.57%, CNTT −1.47% tính riêng nhóm)</td>
-<td>Xaluannews</td>
-</tr>
-<tr>
-<td>Flow</td>
-<td>Thiếu dữ liệu định lượng</td>
-<td>Data gap</td>
+<td><strong>⑤ Thứ yếu</strong></td>
+<td><strong>Thép</strong></td>
+<td>RS~: Điều chỉnh cùng thị trường</td>
+<td>Flow−: 127 tỷ — rất hạn chế phiên 22/6</td>
+<td>Flow hạn chế, không có catalyst ngắn hạn</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h3>4C. Ngân hàng / Chứng khoán / Thép / Bán lẻ — IMPROVING (tín hiệu chưa xác nhận)</h3>
+<h3>⚪ KHÔNG XẾP LOẠI — Thiếu dữ liệu</h3>
 <table>
 <thead>
 <tr>
 <th>Ngành</th>
-<th>Tín hiệu</th>
-<th>Hạn chế</th>
+<th>Lý do</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Ngân hàng</strong></td>
-<td>Hỗ trợ thị trường một số phiên; kỳ vọng tín dụng + FTSE</td>
-<td>Nhóm bank lớn VN30 còn phân hóa; thiếu Flow data</td>
-</tr>
-<tr>
-<td><strong>Chứng khoán</strong></td>
-<td>16/06: dòng tiền lan tỏa vào; SHS xếp #1 ngắn hạn tháng 6</td>
-<td>Mới 1 phiên xác nhận; thanh khoản tổng thị trường thấp</td>
-</tr>
-<tr>
-<td><strong>Thép</strong></td>
-<td>22/06 hỗ trợ thị trường; HPG target +40% tiêu thụ; bảo hộ HRC</td>
-<td>Chưa đủ 5 phiên dữ liệu; thiếu Flow ngành</td>
+<td><strong>Điện (Utilities)</strong></td>
+<td>Không có RS và Flow phiên 22/6. Triển vọng tích cực trung hạn (được đề cập) nhưng không đủ để xếp loại theo quy tắc</td>
 </tr>
 <tr>
 <td><strong>Bán lẻ</strong></td>
-<td>16/06 dòng tiền vào; mùa Q2 kết quả KD</td>
-<td>Thiếu Flow ngành; breadth tổng thị trường yếu</td>
+<td>Không có RS và Flow phiên 22/6. Tương tự Điện</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p><strong>Quy tắc cứng áp dụng:</strong> Ngành chứng khoán chỉ có 1 phiên dữ liệu tốt (16/06) → <strong>KHÔNG được vào Strong</strong>. Tín hiệu chưa xác nhận ghi rõ.</p>
-</blockquote>
 <hr />
-<h2>5. PHÂN TÍCH RỦI RO</h2>
+<h2>V. Risks</h2>
 <table>
 <thead>
 <tr>
 <th>Rủi ro</th>
-<th>Mức độ</th>
-<th>Chi tiết</th>
+<th>Mức</th>
+<th>Tác động</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Bull Trap BĐS</strong></td>
-<td>🔴 CAO</td>
-<td>VIC tăng mạnh + ngoại bán ròng block deal = "pump and dump" thể chế. Nếu trap xác nhận, BĐS điều chỉnh nhanh và sâu</td>
+<td>BULL_TRAP 22/6 — VIC kéo đơn lẻ</td>
+<td>🔴 Cao</td>
+<td>BĐS giữ Avoid Chasing dù RS+ phiên đó; xác nhận BULL_TRAP_RISK</td>
 </tr>
 <tr>
-<td><strong>Dữ liệu thiếu làm sai lệch map</strong></td>
-<td>🟡 TRUNG BÌNH</td>
-<td>Toàn bộ Flow ngành thiếu định lượng. Các nhóm "Improving" có thể thực ra đang Weak — không đủ cơ sở phân biệt</td>
+<td>Khối ngoại chưa đảo chiều (bán ròng 5P liên tục)</td>
+<td>🔴 Cao</td>
+<td>Ngân hàng + BĐS tiếp tục áp lực; map không thể nâng lên Strong</td>
 </tr>
 <tr>
-<td><strong>Thanh khoản tiếp tục suy giảm</strong></td>
-<td>🟡 TRUNG BÌNH</td>
-<td>TB20 HOSE ~12,435 tỷ/phiên là mức thấp; 22/06 chỉ 78.8% TB20. Nếu tiếp tục giảm, ngay cả Improving cũng trở thành Weak</td>
+<td>Giá dầu ngắn hạn giảm ("lao dốc" 22/6)</td>
+<td>🟡 Trung bình</td>
+<td>Dầu khí có thể từ Improving xuống Weak nếu dầu xác nhận giảm</td>
 </tr>
 <tr>
-<td><strong>Khối ngoại bán toàn diện</strong></td>
-<td>🔴 CAO</td>
-<td>−7,191 tỷ/tuần không tập trung vào 1 ngành. Áp lực có thể lan sang ngân hàng, chứng khoán tuần tới</td>
+<td>Thiếu dữ liệu Flow ngành</td>
+<td>🔴 Cao với báo cáo</td>
+<td>Tất cả xếp hạng có biên sai số cao hơn bình thường; cần bổ sung phiên tới</td>
 </tr>
 <tr>
-<td><strong>Composite sát Risk-off</strong></td>
-<td>🔴 CAO</td>
-<td>Cách 0.15 điểm — nếu VN-Index phá MA50 (1,847), toàn bộ map đổi chiều sang rút tiền khẩn cấp</td>
+<td>Catalyst hạ tầng chưa chuyển hóa thành Flow</td>
+<td>🟡 Trung bình</td>
+<td>Hạ tầng vẫn Improving, không thể leo Strong</td>
 </tr>
 <tr>
-<td><strong>Thiếu dữ liệu macro/sentiment</strong></td>
-<td>🟡 TRUNG BÌNH</td>
-<td>Không có catalyst sự kiện 1–3 phiên tới. Map ngành không phản ánh được shock từ bên ngoài</td>
+<td>AI funding warning (toàn cầu)</td>
+<td>🟡 Trung bình</td>
+<td>Công nghệ IT tiếp tục áp lực RS</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2>6. HANDOFF TO STOCK WATCHLIST &amp; EXECUTION DESK</h2>
-<pre><code>══════════════════════════════════════════════════════════════
-SECTOR ROTATION REPORT — HANDOFF
-Ngày: 2026-06-22 | Strategy: WAIT + DERISK | Mục đích: Quan sát + Giảm tỷ trọng
-══════════════════════════════════════════════════════════════
+<h2>VI. Handoff To Stock Watchlist Agent</h2>
+<pre><code>SECTOR_MAP_DATE       : 2026-06-22
+STRATEGY_MODE         : WAIT (bản đồ quan sát) + DERISK (xếp hạng giảm)
+MAP_REGIME            : NEUTRAL_SIDEWAY + BULL_TRAP_RISK_ACTIVE
 
-DERISK_PRIORITY_ORDER (giảm tỷ trọng theo thứ tự):
-  #1 → BẤT ĐỘNG SẢN (Vingroup-led): Avoid Chasing — tăng rỗng ruột
-          VIC, VHM: bằng chứng dòng tiền, KHÔNG phải khuyến nghị
-          Lý do định lượng: 1 trụ kéo 19.6% điểm + ngoại bán −4,820 tỷ/tuần
-          Rủi ro trap: CAO — ưu tiên thoát trong nhịp hồi hiện tại
-  #2 → CNTT: Weak — RS− rõ ràng, không có catalyst phục hồi ngắn hạn
-  #3 → Các ngành không xác định (Dầu khí, Điện, Cảng) — thiếu dữ liệu
+STRONG_SECTORS        : KHÔNG CÓ
+                        (Fallback: thiếu Flow data toàn bộ ngành → không xếp Strong)
 
-NGÀNH GIỮ/QUAN SÁT (không mua thêm, không DERISK gấp):
-  → Ngân hàng, Chứng khoán, Thép, Bán lẻ
-  Lý do: RS~ + Improving nhưng thiếu Flow xác nhận
-  Điều kiện nâng lên theo dõi tích cực: ≥5 phiên RS+ + GTGD ngành &gt;115% TB20
+AVOID_CHASING         : Bất động sản (VIC/VHM/VRE — dẫn chứng, không phải khuyến nghị)
+                        Lý do: +5.58% phiên 22/6 tập trung 1–2 trụ; breadth 0.42;
+                        ngoại block deal xả VIC −4,820 tỷ; BULL_TRAP_RISK active
 
-NGÀNH BỊ LOẠI TRỪ KHỎI MUA MỚI (100%):
-  → TẤT CẢ — do WAIT/DERISK + BULL_TRAP_RISK active
-  → Đặc biệt: BĐS (Avoid Chasing + DERISK #1)
+DERISK_ORDER          :
+  ① Ngân hàng mid-cap  — Giảm TRƯỚC NHẤT
+     (ACB, VPB, TCB, LPB — dẫn chứng ngoại xả, không phải khuyến nghị)
+  ② Công nghệ / IT     — Giảm THỨ HAI
+     (RS kém nhất −3.30pp; AI funding risk)
+  ③ Hàng không         — Giảm THỨ BA (không đủ data, thận trọng + SECTOR_NOTE)
+  ④ Chứng khoán        — Giảm tiếp theo (RS−, flow thấp)
+  ⑤ Thép               — Giảm sau cùng trong nhóm Weak
 
-LƯU Ý THANH KHOẢN:
-  → GTGD toàn thị trường 78.8% TB20 — KHÔNG đủ xác nhận dòng tiền vào bất kỳ ngành nào
-  → Nếu thanh khoản tiếp tục &lt;85% TB20 tuần tới → toàn bộ Improving downgrade thành Weak
-  → Nhịp hồi 1,857–1,870 là cửa sổ DERISK, không phải cửa sổ mua vào
+HOLD_OBSERVE          :
+  - Dầu khí: Improving (chưa xác nhận). Giữ nếu đang có.
+    Trigger giảm xuống Weak: Brent phá &lt;$70/barrel ổn định
+  - Hạ tầng đô thị: Improving (catalyst đường sắt đô thị). Chưa đo Flow.
 
-DATA GAPS — ảnh hưởng trực tiếp đến độ tin cậy:
-  [CRITICAL] GTGD theo ngành vs TB20 ngành: thiếu hoàn toàn
-              → Không thể xác nhận Flow+/Flow− cho bất kỳ ngành nào
-              → Tất cả xếp loại tối đa ở Improving
-  [CRITICAL] % mã tăng trong từng ngành: thiếu hoàn toàn
-              → Không thể xác nhận breadth nội ngành
-  [HIGH]     Khối ngoại/tự doanh theo từng ngành (ngoài VIC): thiếu
-              → Chỉ xác nhận được BĐS bị ngoại bán; các ngành khác không rõ
-  [MEDIUM]   matched_value_hose: thiếu (kế thừa từ Agent 02)
-  [MEDIUM]   ceiling_floor_count theo ngành: thiếu
-  [INFO]     Dữ liệu RS 20 phiên chính xác: chỉ có định tính từ bài báo,
-              không có số % hiệu suất tuyệt đối từng ngành
+NO_DATA               : Điện, Bán lẻ — Watchlist Agent bỏ qua phiên này
 
-ESCALATION TRIGGERS (gửi lại Sector Desk nếu):
-  → VN-Index phá MA50 ≤ 1,847: Chuyển toàn bộ sang CASH — KHÔNG còn Improving
-  → Thanh khoản ≥ 115% TB20 + breadth ≥ 1.2 trong 2 phiên liên tiếp:
-     Xem xét lại map — có thể có ngành vào Strong
-  → Khối ngoại tiếp tục bán ≥ 1,000 tỷ/phiên tuần 23–27/06:
-     Downgrade toàn bộ Improving → Weak
+LIQUIDITY_NOTE        : HOSE 22/6 ước tính ~9,000–10,000 tỷ
+                        (dưới ngưỡng 13,500 tỷ vô hiệu WAIT → duy trì WAIT)
 
-REPORT_DATE: 2026-06-22
-REPORT_CONFIDENCE: THẤP (do thiếu dữ liệu Flow ngành)
-NEXT_UPDATE: Sau phiên 23/06/2026 khi có dữ liệu GTGD ngành
-══════════════════════════════════════════════════════════════
+EXPOSURE_CEILING      : 30–40% NAV
+MARGIN_STATUS         : RESTRICTED — tuyệt đối không mở margin mới
+NEXT_REVIEW           : 2026-06-23 sau phiên
+
+DATA_GAPS_TO_FILL     :
+  - GTGD từng ngành so TB20 (Fiinpro / Vietstock Finance / SSI iBoard)
+  - % mã tăng nội ngành (Fiinpro sector heatmap)
+  - RS chính xác 5P và 20P theo ngành (Fireant sector RS table)
+  - Khối ngoại phân rã theo ngành (HOSE sector statistics)
+  - Giá Brent real-time (trigger dầu khí)
 </code></pre>
 <hr />
-<h2>7. TÓM TẮT THỰC HÀNH (Đọc ≤ 60 giây)</h2>
-<p><strong>Tiền đang ở đâu?</strong> Tập trung cực kỳ hẹp tại VIC/VHM (BĐS Vingroup) — chiếm gần 20% điểm tăng phiên trong khi 50% thị trường đỏ.</p>
-<p><strong>Đang dịch chuyển đi đâu?</strong> Không có tín hiệu rõ. Tuần 16/06 thấy dòng tiền thăm dò chứng khoán + bán lẻ nhưng chưa xác nhận (1 phiên, thanh khoản thấp). Ngoại đang rút khỏi thị trường diện rộng.</p>
-<p><strong>Không được mua đuổi nhóm nào?</strong> → <strong>Bất động sản</strong> — đây là bẫy giá điển hình: VN-Index xanh do 1 mã block deal, ngoại đang thoát hàng qua cùng phiên đó với −4,820 tỷ. Mua theo là bước vào phía bên kia của lệnh bán thể chế.</p>
-<p><strong>Ưu tiên DERISK:</strong> BĐS (#1) → CNTT (#2) → các ngành thiếu dữ liệu (#3). Tranh thủ nhịp hồi 1,857–1,870 để thoát, không chờ xác nhận thêm.</p>
+<p><em>Báo cáo này không khuyến nghị cổ phiếu cụ thể, không đưa lệnh giao dịch, và không cam kết bất kỳ mức lợi nhuận nào. Mọi mã cổ phiếu được đề cập (VIC, VHM, VRE, PVD, BSR, ACB, VPB, FPT...) chỉ nhằm minh họa dòng tiền — không phải khuyến nghị. Mọi quyết định đầu tư cuối cùng thuộc về khách hàng và advisor phụ trách tài khoản.</em></p>
 <hr />
-<p><em>Báo cáo này phục vụ duy nhất mục đích quan sát dòng tiền ngành và hỗ trợ quyết định giảm tỷ trọng (DERISK). Không có khuyến nghị mua cổ phiếu nào. Không cam kết hướng thị trường. Độ tin cậy: THẤP do thiếu dữ liệu Flow ngành — đã ghi nhận đầy đủ trong Data Gaps.</em></p>
-<hr />
-<p><strong>Nguồn tham khảo:</strong>
-- <a href="https://vn.investing.com/news/stock-market-news/2206-doc-gi-truoc-gio-giao-dich-chung-khoan-2647036">22/06: Đọc gì trước giờ giao dịch chứng khoán? — Vietstock/Investing.com</a>
-- <a href="https://nguoiquansat.vn/vn-index-lao-doc-4-tuan-lien-tiep-2-kich-ban-cho-nua-cuoi-thang-6-2026-297593.html">VN-Index lao dốc 4 tuần liên tiếp — Nguoiquansat</a>
-- <a href="https://www.vietnam.vn/en/vn-index-xanh-vo-do-long-ho-vin-ganh-chi-so-dong-tien-hut-hoi">VN-Index xanh vỏ đỏ lòng: Hồ Vin gánh chỉ số, dòng tiền hụt hơi — Vietnam.vn</a>
-- <a href="https://vietnamfinance.vn/vn-index-gap-kho-vi-tru-khoi-ngoai-ban-rong-hon-1600-ty-d146467.html">VN-Index gặp khó vì trụ, khối ngoại bán ròng hơn 1,600 tỷ — Vietnamfinance</a>
-- <a href="https://stockbiz.vn/tin-tuc/5-nhom-nganh-noi-bat-trong-thang-6/40341848">5 nhóm ngành nổi bật trong tháng 6 — Stockbiz</a>
-- <a href="https://cafef.vn/chuyen-gia-goi-y-3-nhom-nganh-dong-tien-tim-toi-trong-mua-ket-qua-kinh-doanh-quy-2-188260621222008245.chn">Chuyên gia gợi ý 3 nhóm ngành dòng tiền tìm tới mùa Q2 — CafeF</a>
-- <a href="https://nguoiquansat.vn/thi-truong-kha-nang-phan-hoa-manh-nua-cuoi-2026-nha-dau-tu-nen-chon-nhom-co-phieu-nao-299037.html">Thị trường khả năng phân hóa mạnh nửa cuối 2026 — Nguoiquansat</a>
-- <a href="https://pinetree.vn/post/20260616/ban-tin-thi-truong-16-06-2026/">Bản tin thị trường 16/06/2026 — Pinetree Securities</a>
-- <a href="https://vietnambiz.vn/khoi-ngoai-ban-rong-gan-3600-ty-dong-mot-co-phieu-bat-dong-san-2026321234457302.htm">Khối ngoại bán ròng gần 3,600 tỷ một cổ phiếu BĐS — Vietnambiz</a>
-- <a href="https://theinvestor.vn/banking-retail-oil-sectors-to-lead-vietnams-stock-market-recovery-brokerage-d19354.html">Banking, retail, oil sectors to lead Vietnam's stock market recovery — The Investor</a></p></div></section></div></main>
+<p><strong>Sources:</strong>
+- <a href="https://thoibaotaichinhvietnam.vn/chung-khoan-ngay-226-co-phieu-ho-vin-nang-do-vn-index-bat-tang-manh-dau-tuan-199477.html">Chứng khoán ngày 22/6: Cổ phiếu "họ Vin" nâng đỡ, VN-Index bật tăng mạnh đầu tuần — Thời báo Tài chính Việt Nam</a>
+- <a href="https://www.aseansc.com.vn/ban-tin-thi-truong-chung-khoan-ngay-22-06-2026-vn-index-tang-manh-nho-nhom-vingroup/">Bản tin thị trường chứng khoán ngày 22.06.2026 — ASEAN Securities</a>
+- <a href="https://nguoiquansat.vn/vn-index-xanh-vo-do-long-bo-ba-vic-vhm-vre-keo-thi-truong-299250.html">VN-Index 'xanh vỏ, đỏ lòng', bộ ba VIC - VHM - VRE kéo thị trường — Người Quan Sát</a>
+- <a href="https://cafef.vn/khoi-ngoai-thang-tay-ban-rong-hon-3000-ty-dong-co-phieu-nao-bi-xa-manh-nhat-188260617160016652.chn">Khối ngoại thẳng tay bán ròng hơn 3.000 tỷ đồng — CafeF</a>
+- <a href="https://www.tinnhanhchungkhoan.vn/giao-dich-chung-khoan-sang-226-thanh-khoan-giam-manh-vn-index-van-vuot-moc-1850-diem-post392772.html">Giao dịch chứng khoán sáng 22/6: Thanh khoản giảm mạnh — Tin nhanh Chứng khoán</a>
+- <a href="https://www.vietnam.vn/chung-khoan-tuan-qua-dong-tien-yeu-thi-truong-chua-the-but-pha">Chứng khoán tuần qua: Dòng tiền yếu, thị trường chưa thể bứt phá — Vietnam.vn</a>
+- <a href="https://vietstock.vn/2026/06/co-phieu-ngan-hang-thang-52026-khoi-ngoai-noi-dai-chuoi-ban-rong-757-1449053.htm">Cổ phiếu ngân hàng tháng 5/2026: Khối ngoại nối dài chuỗi bán ròng — Vietstock</a>
+- <a href="https://markettimes.vn/phien-16-6-khoi-ngoai-dao-chieu-ban-rong-gan-400-ty-dong-xa-manh-loat-co-phieu-bluechips-121871.html">Phiên 16/6: Khối ngoại đảo chiều bán ròng gần 400 tỷ đồng — Markettimes</a>
+- <a href="https://theinvestor.vn/banking-retail-oil-sectors-to-lead-vietnams-stock-market-recovery-brokerage-d19354.html">Banking, retail, oil sectors to lead Vietnam's stock market recovery — The Investor</a>
+- <a href="https://vietnambiz.vn/ho-vin-day-song-khi-cac-du-an-duong-sat-do-thi-dong-loat-khoi-cong-202662216216555.htm">'Họ Vin' dậy sóng khi các dự án đường sắt đô thị đồng loạt khởi công — VietnamBiz</a></p></div></section></div></main>
 
 <div class="quote"><div class="khung"><div class="hop"><div class="dau-nhay">"</div><div><div class="dg-tieude">Cảnh báo cho broker hôm nay</div><p>Chưa trích xuất được cảnh báo — đọc trực tiếp mục Cảnh báo trong báo cáo chiến thuật.</p><div class="ai">— Strategy Selector Agent · 22.06.2026 · điều khách dễ hiểu sai nhất hôm nay</div></div></div></div></div>
 
-<div class="luutru"><div class="khung"><div class="hop"><div class="tieu">📁 Báo cáo các ngày trước</div><div class="links"><a href="archive/2026-06-19.html">2026-06-19</a> · <a href="archive/2026-06-18.html">2026-06-18</a> · <a href="archive/2026-06-17.html">2026-06-17</a> · <a href="archive/2026-06-16.html">2026-06-16</a> · <a href="archive/2026-06-12.html">2026-06-12</a> · <a href="archive/2026-06-11.html">2026-06-11</a></div></div></div></div>
+<div class="luutru"><div class="khung"><div class="hop"><div class="tieu">📁 Báo cáo các ngày trước</div><div class="links"><a href="archive/2026-06-22.html">2026-06-22</a> · <a href="archive/2026-06-19.html">2026-06-19</a> · <a href="archive/2026-06-18.html">2026-06-18</a> · <a href="archive/2026-06-17.html">2026-06-17</a> · <a href="archive/2026-06-16.html">2026-06-16</a> · <a href="archive/2026-06-12.html">2026-06-12</a> · <a href="archive/2026-06-11.html">2026-06-11</a></div></div></div></div>
 
 <footer class="chantrang"><div class="khung">
   <div class="hang"><span class="brand-ft">Mini Investment Desk Agent System</span><span class="mota-ft">Pipeline 5 agent: Regime → Strategy → Sector → Watchlist → Risk · 01–03 chạy tự động mỗi sáng, 04–05 chạy theo yêu cầu trưởng phòng</span></div>
