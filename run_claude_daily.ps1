@@ -16,6 +16,7 @@ catch {
 
 $env:PYTHONUTF8 = "1"
 $env:PYTHONIOENCODING = "utf-8"
+$env:PYTHONUNBUFFERED = "1"   # output flush theo dong -> log hien tien do realtime
 
 $ProjectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 Set-Location -LiteralPath $ProjectRoot
@@ -44,8 +45,8 @@ try {
     Write-TaskLog "Python: $Python"
 
     # 1) Chay pipeline: fetch -> agent 01/02/03 (qua claude CLI) -> render HTML
-    Write-TaskLog "Dang chay: python -m pipeline.run_pipeline --cli"
-    & $Python -m pipeline.run_pipeline --cli 2>&1 | ForEach-Object {
+    Write-TaskLog "Dang chay: python -u -m pipeline.run_pipeline --cli"
+    & $Python -u -m pipeline.run_pipeline --cli 2>&1 | ForEach-Object {
         $t = ($_ | Out-String).TrimEnd()
         if ($t) { Write-TaskLog $t }
     }
