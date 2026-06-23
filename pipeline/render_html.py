@@ -69,7 +69,19 @@ PAGE_TMPL = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Báo cáo chiến lược @@DATE_DOT@@ — Mini Investment Desk</title>
+<title>@@OG_TITLE@@</title>
+<meta name="description" content="@@OG_DESC@@">
+<!-- Open Graph: thuoc tinh xem truoc khi chia se len Zalo/Facebook/chat -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Mini Investment Desk · LPBS">
+<meta property="og:title" content="@@OG_TITLE@@">
+<meta property="og:description" content="@@OG_DESC@@">
+<meta property="og:url" content="https://bumiha90.github.io/mini-investment-desk/">
+<meta property="og:locale" content="vi_VN">
+<meta property="article:published_time" content="@@OG_DATE_ISO@@">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="@@OG_TITLE@@">
+<meta name="twitter:description" content="@@OG_DESC@@">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
@@ -459,8 +471,22 @@ def render(reports: dict[str, str], report_date: str, snapshot: dict | None = No
     else:
         broker_block = ""
 
+    # Open Graph: tieu de + mo ta cho the xem truoc khi share (Zalo/FB/chat)
+    og_title = f"Báo cáo desk {date_dot} · {headline}"
+    og_bits = [f"Phiên {date_dot}", regime_label]
+    if strategy and strategy != "?":
+        og_bits.append(f"Chiến thuật: {STRATEGY_HEADLINES.get(strategy, strategy.replace('_',' '))}")
+    if exposure:
+        og_bits.append(f"Tỷ trọng {exposure}")
+    og_desc = " · ".join(og_bits)
+    og_desc = re.sub(r'["\n<>]', " ", og_desc)[:200]
+    og_title = re.sub(r'["\n<>]', " ", og_title)[:90]
+
     html = (
         PAGE_TMPL
+        .replace("@@OG_TITLE@@", og_title)
+        .replace("@@OG_DESC@@", og_desc)
+        .replace("@@OG_DATE_ISO@@", report_date)
         .replace("@@DATE_DOT@@", date_dot)
         .replace("@@WEEKDAY@@", weekday)
         .replace("@@HEADLINE@@", headline)
