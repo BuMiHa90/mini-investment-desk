@@ -1,3 +1,8 @@
+# Bao cao desk hang ngay — CHAY THANG PIPELINE (khong qua Claude agent dieu phoi).
+# Pipeline tu goi Claude CLI cho tung agent qua pipeline/run_agents_cli.py.
+# Task Scheduler "Mini Investment Desk Claude Daily" tro toi file nay (8h/15:45/20:30 T2-T6).
+# Log: %LOCALAPPDATA%\MiniInvestmentDesk\claude_daily_task.log
+
 $ErrorActionPreference = "Stop"
 
 try {
@@ -9,6 +14,9 @@ catch {
     # Keep running even if the host does not expose console encoding controls.
 }
 
+$env:PYTHONUTF8 = "1"
+$env:PYTHONIOENCODING = "utf-8"
+
 $ProjectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 Set-Location -LiteralPath $ProjectRoot
 
@@ -18,39 +26,53 @@ $LogFile = Join-Path $LogDir "claude_daily_task.log"
 
 function Write-TaskLog {
     param([Parameter(Mandatory = $true)][string]$Message)
-
     $Line = "[{0:yyyy-MM-dd HH:mm:ss}] {1}" -f (Get-Date), $Message
     Write-Host $Line
     Add-Content -LiteralPath $LogFile -Value $Line -Encoding utf8
 }
 
-$Claude = "C:\Users\ADMIN\.local\bin\claude.exe"
-if (-not (Test-Path -LiteralPath $Claude)) {
-    $Claude = "claude"
-}
+# --- Runtime paths (tuyet doi, theo CLAUDE.md) ---
+$Python = "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\python.exe"
+if (-not (Test-Path -LiteralPath $Python)) { $Python = "python" }
 
-$Prompt = @'
-Read CLAUDE.md first and follow all instructions there to run the daily Mini Investment Desk automation from this repository root.
-'@
+# bao dam claude.exe va git nam trong PATH cho tien trinh con
+$env:PATH = "$env:USERPROFILE\.local\bin;C:\Program Files\Git\cmd;$env:PATH"
 
 try {
-    Write-TaskLog "Starting scheduled Claude daily runner."
+    Write-TaskLog "=== Bat dau pipeline truc tiep (khong qua Claude agent) ==="
     Write-TaskLog "Project root: $ProjectRoot"
-    Write-TaskLog "Claude executable: $Claude"
-    Write-TaskLog "Model: claude-sonnet-4-6"
-    Write-TaskLog "Log file: $LogFile"
-    Write-TaskLog "Launching Claude. Long-running pipeline steps can be quiet while Claude or nested agents work."
+    Write-TaskLog "Python: $Python"
 
-    & $Claude -p $Prompt --model "claude-sonnet-4-6" --dangerously-skip-permissions 2>&1 |
-        ForEach-Object {
-            $Text = ($_ | Out-String).TrimEnd()
-            if ($Text) {
-                Write-TaskLog $Text
-            }
-        }
-    $ExitCode = $LASTEXITCODE
-    Write-TaskLog "Claude exited with code $ExitCode."
-    exit $ExitCode
+    # 1) Chay pipeline: fetch -> agent 01/02/03 (qua claude CLI) -> render HTML
+    Write-TaskLog "Dang chay: python -m pipeline.run_pipeline --cli"
+    & $Python -m pipeline.run_pipeline --cli 2>&1 | ForEach-Object {
+        $t = ($_ | Out-String).TrimEnd()
+        if ($t) { Write-TaskLog $t }
+    }
+    if ($LASTEXITCODE -ne 0) {
+        Write-TaskLog "PIPELINE THAT BAI (exit $LASTEXITCODE) — khong commit."
+        exit 1
+    }
+
+    # 2) Commit chi 2 thu muc bao cao (khong dung thay doi khac)
+    & git add docs data 2>&1 | ForEach-Object { Write-TaskLog $_ }
+    & git diff --cached --quiet
+    if ($LASTEXITCODE -eq 0) {
+        Write-TaskLog "Khong co thay doi bao cao moi — bo qua commit."
+        exit 0
+    }
+    $stamp = Get-Date -Format "yyyy-MM-dd HH:mm"
+    & git commit -m "Daily desk report $stamp" 2>&1 | ForEach-Object { Write-TaskLog $_ }
+
+    # 3) Day len main (du dang o nhanh nao) de GitHub Pages cap nhat
+    & git push origin HEAD:main 2>&1 | ForEach-Object { Write-TaskLog $_ }
+    if ($LASTEXITCODE -ne 0) {
+        Write-TaskLog "Push main that bai — thu push nhanh hien tai."
+        & git push 2>&1 | ForEach-Object { Write-TaskLog $_ }
+    }
+
+    Write-TaskLog "=== HOAN TAT ==="
+    exit 0
 }
 catch {
     Write-TaskLog "ERROR: $($_.Exception.Message)"
