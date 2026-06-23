@@ -16,7 +16,15 @@ if errorlevel 1 (
   exit /b 1
 )
 
+rem Chi commit dung 2 thu muc bao cao, KHONG dung cac thay doi khac (graphify...)
 git add docs data >> data\local_run.log 2>&1
 git commit -m "Daily desk report (local run)" >> data\local_run.log 2>&1
-git push >> data\local_run.log 2>&1
+
+rem Day commit vua tao len nhanh main (du dang dung o nhanh nao) de GitHub Pages
+rem cap nhat. Neu khong fast-forward duoc thi ghi log, khong pha gi.
+git push origin HEAD:main >> data\local_run.log 2>&1
+if errorlevel 1 (
+  echo PUSH MAIN FAILED - thu push nhanh hien tai >> data\local_run.log
+  git push >> data\local_run.log 2>&1
+)
 echo DONE %date% %time% >> data\local_run.log
