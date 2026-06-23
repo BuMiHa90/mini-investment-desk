@@ -34,6 +34,27 @@ AGENT_DIRS = {
     "03": "03_Sector_Rotation_Agent",
 }
 
+# Yeu cau agent 02 ket thuc bao cao bang 1 khoi metadata co dinh (HTML comment)
+# de trang HTML doc chac chan, khong phu thuoc cach trinh bay than bao cao.
+# Day la nguon dang tin cay nhat cho hero/badge cua dashboard.
+DESK_META_INSTRUCTION = (
+    "QUAN TRONG — sau khi viet xong toan bo bao cao markdown, hay them O CUOI "
+    "DUNG MOT khoi metadata duoi day (giu nguyen dinh dang HTML comment, dien "
+    "gia tri that, KHONG bo trong dong nao). Trang dashboard doc khoi nay de hien "
+    "tieu de va the tom tat — viet ngan gon, tieng Viet co dau:\n\n"
+    "<!--DESK_META\n"
+    "regime: <ma regime tu Handoff, vd NEUTRAL/RISK_OFF/TECH_BOUNCE>\n"
+    "strategy: <ma chien thuat chinh, vd WAIT/DERISK/PULLBACK_BUY>\n"
+    "secondary: <ma chien thuat phu hoac NONE>\n"
+    "margin: <forbidden hoac restricted hoac allowed>\n"
+    "exposure: <ty trong tham khao, vd 30-50%>\n"
+    "confidence: <Thap hoac Trung binh hoac Cao>\n"
+    "headline: <3-7 tu mo ta chien thuat hom nay cho tieu de lon, vd 'Dung ngoai - cho xac nhan'>\n"
+    "lead: <1-2 cau goi y vi sao chon chien thuat nay, dung lam doan dan dau bao cao>\n"
+    "broker_note: <2-3 cau canh bao cho broker: dieu khach de hieu sai nhat hom nay>\n"
+    "-->"
+)
+
 
 def load_system_prompt(agent_key: str) -> str:
     text = (ROOT / AGENT_DIRS[agent_key] / "PROMPT.md").read_text(encoding="utf-8")
@@ -89,6 +110,7 @@ def run_pipeline_agents(market_data_md: str, report_date: str) -> dict[str, str]
     msg02 = (
         f"Day la MARKET REGIME REPORT ngay {report_date} tu Market Regime Agent. "
         "Hay chon chien thuat theo dung quy trinh.\n\n" + reports["01"]
+        + "\n\n" + DESK_META_INSTRUCTION
     )
     reports["02"] = call_agent(load_system_prompt("02"), msg02, web_search=False)
 

@@ -19,7 +19,7 @@ import os
 import subprocess
 from pathlib import Path
 
-from .run_agents import AGENT_DIRS, load_system_prompt  # tai su dung
+from .run_agents import AGENT_DIRS, DESK_META_INSTRUCTION, load_system_prompt  # tai su dung
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -78,6 +78,8 @@ def run_pipeline_agents(market_data_md: str, report_date: str) -> dict[str, str]
         f"Day la MARKET REGIME REPORT ngay {report_date} tu Market Regime Agent. "
         "Hay chon chien thuat theo dung quy trinh. Chi tra ve bao cao markdown.\n\n"
         + reports["01"]
+        + "\n\n"
+        + DESK_META_INSTRUCTION
     )
     print("      agent 02 (strategy)...")
     reports["02"] = call_agent(load_system_prompt("02"), msg02, web_search=False)

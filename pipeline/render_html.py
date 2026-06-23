@@ -165,7 +165,7 @@ a{color:#1E6FD9;text-decoration:none}a:hover{text-decoration:underline}
 
 <main class="noidung"><div class="khung">@@SECTIONS@@</div></main>
 
-<div class="quote"><div class="khung"><div class="hop"><div class="dau-nhay">"</div><div><div class="dg-tieude">Cảnh báo cho broker hôm nay</div><p>@@BROKER_QUOTE@@</p><div class="ai">— Strategy Selector Agent · @@DATE_DOT@@ · điều khách dễ hiểu sai nhất hôm nay</div></div></div></div></div>
+@@BROKER_BLOCK@@
 
 <div class="luutru"><div class="khung"><div class="hop"><div class="tieu">📁 Báo cáo các ngày trước</div><div class="links">@@ARCHIVE_LINKS@@</div></div></div></div>
 
@@ -185,14 +185,33 @@ def _extract(pattern: str, text: str) -> str | None:
 
 
 def _extract_section(heading_regex: str, text: str) -> str | None:
-    """Lay noi dung 1 muc '## heading' (den heading tiep theo)."""
-    m = re.search(rf"##\s*{heading_regex}\s*\n(.*?)(?=\n##\s|\Z)", text, re.S)
+    """Lay noi dung 1 muc '## heading' (den heading cung cap hoac cao hon).
+
+    Cho phep tien to danh so truoc ten muc (vd '## VII. TÓM TẮT...', '## 2. ...',
+    emoji) — agent thuong danh so La Ma / so / emoji nen phai bo qua.
+    """
+    # tien to: so La Ma, so Arab, dau cham, emoji, khoang trang — truoc heading text
+    prefix = r"(?:[IVXLCDM0-9]+[.)]\s*|[^\w\s#]+\s*)*"
+    m = re.search(
+        rf"^#{{2,4}}\s*{prefix}{heading_regex}[^\n]*\n(.*?)(?=^#{{1,4}}\s|\Z)",
+        text,
+        re.S | re.M,
+    )
     if not m:
         return None
     body = m.group(1).strip()
-    bullets = [re.sub(r"^[-*]\s*", "", ln).strip() for ln in body.splitlines() if ln.strip()]
-    joined = " · ".join(b.rstrip(".") for b in bullets if b)
-    return " ".join(joined.split())
+    # bo dong bang markdown (| ... |) va dong gach ngang
+    lines = []
+    for ln in body.splitlines():
+        s = ln.strip()
+        if not s or set(s) <= set("-|: "):
+            continue
+        s = re.sub(r"^[-*>]\s*", "", s)  # bullet
+        s = s.replace("**", "").replace("*", "").replace("`", "")  # bo markdown
+        s = re.sub(r"^#+\s*", "", s)  # sot dau heading
+        lines.append(s.rstrip("."))
+    joined = " · ".join(lines)
+    return " ".join(joined.split()) or None
 
 
 def _field(label: str, text: str, value_re: str = r"[^\n|\]]+") -> str | None:
@@ -217,7 +236,43 @@ def _code(label: str, text: str) -> str | None:
     return v.upper().replace(" ", "_").replace("-", "_").rstrip("_")
 
 
+def _desk_meta(text: str) -> dict:
+    """Doc khoi <!--DESK_META ... --> (key: value moi dong) neu agent co xuat.
+    Day la nguon dang tin cay nhat — khong phu thuoc cach trinh bay than bao cao."""
+    m = re.search(r"<!--\s*DESK_META\s*(.*?)-->", text, re.S | re.I)
+    if not m:
+        return {}
+    out: dict[str, str] = {}
+    for line in m.group(1).splitlines():
+        if ":" in line:
+            k, _, v = line.partition(":")
+            v = v.strip().strip("[]").strip()
+            if v and v.lower() not in ("none", "n/a", "-"):
+                out[k.strip().lower()] = v
+    return out
+
+
+_MARGIN_VN = [
+    (r"forbidden|cấm|không sử dụng|không dùng|không margin|no margin", "forbidden"),
+    (r"restricted|hạn chế|thận trọng", "restricted"),
+    (r"allowed|được phép|cho phép", "allowed"),
+]
+
+
+def _norm_margin(raw: str | None) -> str | None:
+    if not raw:
+        return None
+    low = raw.lower()
+    for pat, val in _MARGIN_VN:
+        if re.search(pat, low):
+            return val
+    return None
+
+
 def _md(text: str) -> str:
+    # an khoi DESK_META khoi noi dung hien thi (no la HTML comment nen browser
+    # da an, nhung loai bo cho sach)
+    text = re.sub(r"<!--\s*DESK_META.*?-->", "", text, flags=re.S | re.I)
     return markdown.markdown(text, extensions=["tables", "fenced_code"])
 
 
@@ -241,39 +296,69 @@ def render(reports: dict[str, str], report_date: str, snapshot: dict | None = No
     ARCHIVE.mkdir(exist_ok=True)
 
     r01, r02 = reports.get("01", ""), reports.get("02", "")
+    meta = {**_desk_meta(r01), **_desk_meta(r02)}  # 02 ghi de 01 neu trung khoa
 
-    regime = _code(r"Regime code", r01) or _code(r"Regime code", r02) or "?"
-    sub_state = _code(r"Trạng thái phụ", r01)
-    confidence = (
-        _field(r"Mức độ tự tin", r01, r"Thấp|Trung bình|Cao")
-        or _field(r"Confidence", r01, r"Thấp|Trung bình|Cao|THẤP|TRUNG BÌNH|CAO")
-        or _field(r"Confidence", r02, r"Thấp|Trung bình|Cao|THẤP|TRUNG BÌNH|CAO")
+    def pick(key, *fallbacks):
+        if meta.get(key):
+            return meta[key]
+        for fb in fallbacks:
+            if fb:
+                return fb
+        return None
+
+    regime = (
+        pick("regime", _code(r"Regime code", r01), _code(r"Regime code", r02)) or "?"
+    ).upper().replace(" ", "_")
+    sub_state_raw = pick("sub_state", _code(r"Trạng thái phụ", r01))
+    sub_state = sub_state_raw.upper().replace(" ", "_") if sub_state_raw else None
+
+    confidence = pick(
+        "confidence",
+        _field(r"Mức độ tự tin", r01, r"Thấp|Trung bình|Cao|THẤP|TRUNG BÌNH|CAO"),
+        _field(r"Confidence", r02, r"Thấp|Trung bình|Cao|THẤP|TRUNG BÌNH|CAO"),
     )
     if confidence:
         confidence = confidence.capitalize() if confidence.isupper() else confidence
-    exposure = (
-        _field(r"Exposure (?:band|ceiling)", r02)
-        or _field(r"Exposure (?:band|ceiling)", r01)
-        or _field(r"Tỷ trọng tham khảo", r02)
+
+    exposure = pick(
+        "exposure",
+        _field(r"Exposure (?:band|ceiling)", r02),
+        _field(r"Exposure (?:band|ceiling)", r01),
+        _field(r"Exposure Band", r02),
+        _field(r"Tỷ trọng tham khảo", r02),
     )
-    margin = _field(r"Margin", r02, r"allowed|restricted|forbidden") or _field(
-        r"Margin", r01, r"allowed|restricted|forbidden"
+
+    margin = _norm_margin(
+        pick(
+            "margin",
+            _field(r"Margin(?:\s*Status)?", r02),
+            _field(r"Margin(?:\s*Status)?", r01),
+        )
     )
-    margin = margin.lower() if margin else None
-    # strategy: uu tien dong "Strategy code", roi "Chiến thuật chính được chọn",
-    # cuoi cung heading "### XXX —" dau tien trong muc chien thuat chinh
+
     strategy = (
-        _code(r"Strategy code", r02)
-        or _code(r"Chiến thuật chính được chọn", r02)
-        or _extract(r"###\s+([A-Z_]{3,})\b", r02)
+        pick(
+            "strategy",
+            _code(r"Strategy code", r02),
+            _code(r"Chiến thuật chính được chọn", r02),
+            _extract(r"CHIẾN THUẬT CHÍNH[:\s]*\**\s*([A-Z_]{3,})", r02),
+            _extract(r"###[^\n]*?\b([A-Z_]{3,})\b[^\n]*?—", r02),
+        )
         or "?"
+    ).upper().replace(" ", "_")
+    secondary_raw = pick(
+        "secondary",
+        _code(r"Secondary code", r02),
+        _extract(r"CHIẾN THUẬT PHỤ[:\s]*\**\s*([A-Z_]{3,})", r02),
     )
-    secondary = _code(r"Secondary code", r02)
-    if secondary in ("NONE", "KHÔNG", "KHONG"):
+    secondary = secondary_raw.upper().replace(" ", "_") if secondary_raw else None
+    if secondary in ("NONE", "KHÔNG", "KHONG", "?"):
         secondary = None
 
-    regime_label, regime_color = REGIME_LABELS.get(regime, (regime, "#5B6B80"))
-    headline = STRATEGY_HEADLINES.get(strategy, "Báo cáo chiến lược đầu ngày")
+    regime_label, regime_color = REGIME_LABELS.get(regime, (regime.replace("_", " ").title(), "#5B6B80"))
+    headline = meta.get("headline") or STRATEGY_HEADLINES.get(strategy)
+    if not headline:
+        headline = f"{regime_label} — đọc kỹ trước phiên"
 
     # hero
     if snapshot:
@@ -284,8 +369,23 @@ def render(reports: dict[str, str], report_date: str, snapshot: dict | None = No
         vni_line = "VN-Index"
     regime_line = regime_label + (f" · cảnh báo {REGIME_LABELS.get(sub_state, (sub_state, ''))[0].lower()}" if sub_state and sub_state != regime else "")
 
-    lead = _extract_section(r"Vì sao chọn chiến thuật này", r02) or _extract_section(r"Kết luận", r01) or ""
-    lead = (lead[:420] + "…") if len(lead) > 420 else lead
+    # lead (doan dan hero): meta -> heading rieng (KHONG dung mac broker de tranh
+    # trung noi dung khung canh bao) -> tu sinh tu regime+strategy
+    lead = pick(
+        "lead",
+        _extract_section(r"Vì sao chọn", r02),
+        _extract_section(r"Kết luận", r01),
+        _extract_section(r"Nhận định", r01),
+    )
+    if not lead:
+        strat_txt = STRATEGY_HEADLINES.get(strategy, strategy.replace("_", " ").lower())
+        ex_txt = f", tỷ trọng tham khảo {exposure}" if exposure else ""
+        mg_txt = " · không dùng margin" if margin == "forbidden" else ""
+        lead = (
+            f"Trạng thái thị trường: {regime_label}. Chiến thuật ưu tiên hôm nay: "
+            f"{strat_txt}{ex_txt}{mg_txt}. Chi tiết căn cứ xem các mục bên dưới."
+        )
+    lead = (lead[:460] + "…") if len(lead) > 460 else lead
 
     # metric cards
     cards = []
@@ -327,11 +427,15 @@ def render(reports: dict[str, str], report_date: str, snapshot: dict | None = No
             f'<div class="report-md">{_md(reports[key])}</div></section>'
         )
 
-    broker_quote = (
-        _extract_section(r"Cảnh báo cho broker", r02)
-        or _extract_section(r"Cảnh báo cho broker", r01)
-        or "Chưa trích xuất được cảnh báo — đọc trực tiếp mục Cảnh báo trong báo cáo chiến thuật."
+    broker_quote = pick(
+        "broker_note",
+        _extract_section(r"Cảnh báo cho broker", r02),
+        _extract_section(r"CẢNH BÁO CHO BROKER[^\n#]*", r02),
+        _extract_section(r"TÓM TẮT CHO BROKER[^\n#]*", r02),
+        _extract_section(r"Cảnh báo cho broker", r01),
     )
+    if broker_quote and len(broker_quote) > 600:
+        broker_quote = broker_quote[:600] + "…"
 
     # archive links
     archived = sorted(ARCHIVE.glob("*.html"), reverse=True)
@@ -343,6 +447,18 @@ def render(reports: dict[str, str], report_date: str, snapshot: dict | None = No
 
     weekday = WEEKDAYS[_dt.date(int(d[0]), int(d[1]), int(d[2])).weekday()]
 
+    if broker_quote and len(broker_quote.strip()) >= 20:
+        broker_block = (
+            '<div class="quote"><div class="khung"><div class="hop">'
+            '<div class="dau-nhay">"</div><div>'
+            '<div class="dg-tieude">Cảnh báo cho broker hôm nay</div>'
+            f"<p>{broker_quote}</p>"
+            f'<div class="ai">— Strategy Selector Agent · {date_dot} · điều khách dễ hiểu sai nhất hôm nay</div>'
+            "</div></div></div></div>"
+        )
+    else:
+        broker_block = ""
+
     html = (
         PAGE_TMPL
         .replace("@@DATE_DOT@@", date_dot)
@@ -353,7 +469,7 @@ def render(reports: dict[str, str], report_date: str, snapshot: dict | None = No
         .replace("@@LEAD@@", lead)
         .replace("@@METRIC_CARDS@@", "".join(cards))
         .replace("@@SECTIONS@@", "\n".join(secs))
-        .replace("@@BROKER_QUOTE@@", broker_quote)
+        .replace("@@BROKER_BLOCK@@", broker_block)
         .replace("@@ARCHIVE_LINKS@@", links)
     )
 

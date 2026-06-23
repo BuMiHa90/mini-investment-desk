@@ -1,0 +1,293 @@
+{
+  "data_date": "2026-06-23",
+  "vnindex": {
+    "open": 1871.92,
+    "high": 1886.6,
+    "low": 1863.4,
+    "close": 1869.04,
+    "change_pct": 0.6,
+    "perf_5d_pct": 3.38,
+    "perf_20d_pct": -0.8
+  },
+  "vn30": {
+    "close": 1995.12,
+    "change_pct": 0.76
+  },
+  "moving_averages": {
+    "ma20": 1826.75,
+    "ma50": 1850.47,
+    "ma200": 1755.46,
+    "above_ma20": true,
+    "above_ma50": true,
+    "above_ma200": true
+  },
+  "liquidity": {
+    "volume_today": 945417301.0,
+    "volume_avg20": 647965132,
+    "volume_vs_avg20_pct": 145.9,
+    "note": "Khoi luong TONG (chua tach thoa thuan) - chi la proxy, can doi chieu GTGD khop lenh tu nguon khac"
+  },
+  "swing_structure": {
+    "high_20d": 1889.87,
+    "high_20d_date": "2026-05-27",
+    "low_20d": 1775.72,
+    "low_20d_date": "2026-06-15",
+    "high_60d": 1933.11,
+    "low_60d": 1637.58
+  },
+  "missing_fields": [],
+  "breadth": {
+    "up": 99,
+    "down": 210,
+    "nochange": 61,
+    "pct_up": 26,
+    "pct_down": 56,
+    "as_of_time": "14:45",
+    "source": "cafef.vn ajaxdorongthitruong (HOSE)"
+  },
+  "foreign_flows": {
+    "net_today_vnd": -178055670000.0,
+    "net_5d_vnd": -7237371020000,
+    "unit": "VND",
+    "source": "msh-appdata.cafef.vn OverviewOrgnizaztion (VNINDEX)"
+  },
+  "index_contribution": [
+    {
+      "code": "VIC",
+      "change_pct": 4.19,
+      "influence_index": 25.9273
+    },
+    {
+      "code": "VHM",
+      "change_pct": 0.39,
+      "influence_index": 4.473
+    },
+    {
+      "code": "ACB",
+      "change_pct": 1.59,
+      "influence_index": 3.6998
+    },
+    {
+      "code": "VJC",
+      "change_pct": -1.43,
+      "influence_index": 1.4843
+    },
+    {
+      "code": "HVN",
+      "change_pct": -1.31,
+      "influence_index": 1.2894
+    },
+    {
+      "code": "SSB",
+      "change_pct": 1.34,
+      "influence_index": 0.9888
+    },
+    {
+      "code": "MSB",
+      "change_pct": -0.32,
+      "influence_index": 0.8328
+    },
+    {
+      "code": "OCB",
+      "change_pct": 0.0,
+      "influence_index": 0.7114
+    },
+    {
+      "code": "TCX",
+      "change_pct": 0.58,
+      "influence_index": 0.692
+    },
+    {
+      "code": "POW",
+      "change_pct": -1.38,
+      "influence_index": 0.5032
+    },
+    {
+      "code": "BSR",
+      "change_pct": -4.92,
+      "influence_index": -4.4508
+    },
+    {
+      "code": "VCB",
+      "change_pct": 0.0,
+      "influence_index": -3.7778
+    },
+    {
+      "code": "GAS",
+      "change_pct": -3.43,
+      "influence_index": -2.5576
+    },
+    {
+      "code": "GEE",
+      "change_pct": -1.53,
+      "influence_index": -2.2501
+    },
+    {
+      "code": "MSN",
+      "change_pct": 0.0,
+      "influence_index": -1.3744
+    },
+    {
+      "code": "GVR",
+      "change_pct": -2.75,
+      "influence_index": -1.2894
+    },
+    {
+      "code": "CTG",
+      "change_pct": 0.44,
+      "influence_index": -1.2661
+    },
+    {
+      "code": "FPT",
+      "change_pct": 0.28,
+      "influence_index": -1.0727
+    },
+    {
+      "code": "BVH",
+      "change_pct": -1.67,
+      "influence_index": -1.0473
+    },
+    {
+      "code": "PLX",
+      "change_pct": -2.46,
+      "influence_index": -1.0029
+    }
+  ],
+  "f1_basis": {
+    "vn30_close": 1995.12,
+    "f1_close": 1991.4,
+    "basis": -3.72,
+    "basis_pct": -0.19,
+    "source": "api.vietstock.vn/tvnew/history (VN30, VN30F1M)"
+  },
+  "ceiling_floor": {
+    "ceiling": 4,
+    "floor": 2,
+    "up": 95,
+    "down": 208,
+    "nochange": 61,
+    "total_volume": 945417301,
+    "total_value_bil": 30989.01676075,
+    "source": "cafef.vn PriceHistory.ashx (HOSE centerid=1)"
+  },
+  "extra_fetched_at": "2026-06-23T15:45:46",
+  "global_overnight": [
+    {
+      "ten": "S&P 500",
+      "gia_tri": "7.472,79",
+      "thay_doi": "+0,56%",
+      "huong": "tang",
+      "y_nghia": "Điểm số Mỹ tăng nhẹ giúp nền tâm lý EM bớt xấu, nhưng tác động với VN phụ thuộc việc khối ngoại có tiếp tục hạ nhiệt bán ròng hay không"
+    },
+    {
+      "ten": "Brent",
+      "gia_tri": "78,17 USD",
+      "thay_doi": "-1,00%",
+      "huong": "giam",
+      "y_nghia": "Brent giảm dù có headline Hormuz làm giảm áp lực chi phí cho vận tải và tiêu dùng, đồng thời hạ bớt xung lực ngắn hạn của GAS, PVD, PVS, BSR"
+    },
+    {
+      "ten": "Nikkei 225",
+      "gia_tri": "72.353,96",
+      "thay_doi": "+3,51%",
+      "huong": "tang",
+      "y_nghia": "Nikkei tăng mạnh hỗ trợ khẩu vị rủi ro châu Á, nhưng VN vẫn cần xác nhận bằng thanh khoản và độ rộng nội địa"
+    },
+    {
+      "ten": "Vàng",
+      "gia_tri": "4.206,90 USD",
+      "thay_doi": "-2,86%",
+      "huong": "giam",
+      "y_nghia": "Vàng giảm cho thấy dòng tiền trú ẩn hạ nhiệt, có thể giảm sức hút từ kênh vàng so với cổ phiếu trong ngắn hạn"
+    },
+    {
+      "ten": "Bitcoin",
+      "gia_tri": "63.940,86 USD",
+      "thay_doi": "+0,63%",
+      "huong": "tang",
+      "y_nghia": "BTC tăng nhẹ là tín hiệu khẩu vị rủi ro retail ổn định hơn, tác động chủ yếu tới tâm lý nhóm chứng khoán và tài sản số"
+    },
+    {
+      "ten": "WSJ Markets",
+      "gia_tri": "Nasdaq và dầu biến động theo tiến triển Mỹ-Iran",
+      "thay_doi": "tin trong 24h",
+      "huong": "trung_tinh",
+      "y_nghia": "Nếu đàm phán Mỹ-Iran tiếp tục hạ nhiệt giá dầu, nhóm hàng không, logistics và tiêu dùng VN bớt áp lực chi phí hơn nhóm dầu khí"
+    }
+  ],
+  "fx_rates": {
+    "usdvnd": {
+      "value": "26.286,06; 24h +4,94 (+0,02%); 30 ngày -65,97 (-0,25%)",
+      "note": "USD/VND gần như đi ngang trong 24h, nên tỷ giá chưa tạo thêm tín hiệu mới cho nhóm nhập khẩu, xuất khẩu và nợ USD"
+    },
+    "overnight_rate": {
+      "value": "4,50%; +47 bp so với trước (19/06/2026)",
+      "note": "ON +47 bp lên 4,50% cho thấy chi phí vốn ngắn hạn trên liên ngân hàng tăng, cần theo dõi tác động tới ngân hàng và dòng tiền chứng khoán trong vài phiên tới"
+    }
+  },
+  "domestic_policy": [
+    {
+      "chi_tieu": "NHNN Thông tư 25/2026",
+      "gia_tri": "nới tỷ lệ vốn ngắn hạn cho vay trung, dài hạn lên 40% từ 01/07/2026",
+      "tone": "tot",
+      "y_nghia": "Ngân hàng và bất động sản có thêm dư địa cấu trúc vốn trung hạn, nhưng tác động thực tế phụ thuộc tăng trưởng tín dụng và chất lượng tài sản"
+    },
+    {
+      "chi_tieu": "USD/VND (XE)",
+      "gia_tri": "26.286,06; 24h +4,94 (+0,02%); 30 ngày -65,97 (-0,25%)",
+      "tone": "trung_tinh",
+      "y_nghia": "USD/VND gần như đi ngang trong 24h, nên tỷ giá chưa tạo thêm tín hiệu mới cho nhóm nhập khẩu, xuất khẩu và nợ USD"
+    },
+    {
+      "chi_tieu": "Lãi suất liên ngân hàng ON",
+      "gia_tri": "4,50%; +47 bp so với trước (19/06/2026)",
+      "tone": "canh_bao",
+      "y_nghia": "ON +47 bp lên 4,50% cho thấy chi phí vốn ngắn hạn trên liên ngân hàng tăng, cần theo dõi tác động tới ngân hàng và dòng tiền chứng khoán trong vài phiên tới"
+    },
+    {
+      "chi_tieu": "Tỷ giá SBV/NHTM/tự do",
+      "gia_tri": "TT 25.183 (+2); NHTM 26.442 (+2); tự do 26.780 (+240)",
+      "tone": "canh_bao",
+      "y_nghia": "Tỷ giá tự do biến động +240 trong ngày là tín hiệu cần soi cùng USD/VND và bán ròng ngoại để đánh giá áp lực tỷ giá ngắn hạn"
+    },
+    {
+      "chi_tieu": "Lãi suất OMO",
+      "gia_tri": "4,50%; không đổi (22/06/2026)",
+      "tone": "trung_tinh",
+      "y_nghia": "OMO ở 4,50% cho thấy mặt bằng điều hành ngắn hạn chưa đổi, nên áp lực thanh khoản cần đọc thêm qua ON và hoạt động bơm/hút của SBV"
+    },
+    {
+      "chi_tieu": "Tín dụng & cung tiền",
+      "gia_tri": "Tín dụng 18,25% YoY; M2 5,86% YoY; huy động 10,76% YoY (T04/2026)",
+      "tone": "trung_tinh",
+      "y_nghia": "Tín dụng tăng nhanh hơn M2/huy động là nền hỗ trợ tăng trưởng nhưng cũng làm thị trường nhạy hơn với biến động lãi suất và thanh khoản tiền đồng"
+    },
+    {
+      "chi_tieu": "Quy hoạch tăng trưởng",
+      "gia_tri": "Vietstock 22/06: hoàn thành đúng hạn các quy hoạch phục vụ mục tiêu tăng trưởng hai con số",
+      "tone": "trung_tinh",
+      "y_nghia": "Tin quy hoạch hỗ trợ tâm lý hạ tầng, xây dựng và vật liệu trung hạn, nhưng chưa tạo dòng tiền tức thời trong phiên"
+    }
+  ],
+  "sentiment_note": "Phe bull có điểm tựa ở việc VN-Index vượt 1.850, VIC và VHM được kéo mạnh, khối ngoại bán ròng hạ nhiệt và ngoại biên Mỹ-Nhật không xấu. Phe bear có lập luận rõ ràng hơn ở thanh khoản HOSE giảm về vùng thấp, độ rộng chưa thuyết phục, tự doanh bán ròng và FPT tiếp tục bị khối ngoại rút vốn. Biến số 24h tới là dòng tiền nội có mở rộng sang ngân hàng, chứng khoán, dầu khí và midcap hay vẫn chỉ xoay quanh một vài trụ vốn hóa lớn. Nếu Brent tiếp tục giảm dù headline Hormuz, áp lực chi phí ngoại biên hạ bớt, nhưng dòng tiền trong nước vẫn là điều kiện quyết định để nhịp tăng có thêm độ tin cậy.",
+  "news_meta": {
+    "date": "2026-06-23",
+    "phien": "2026-06-22",
+    "source_file": "2026-06-23.json"
+  },
+  "agreements": {
+    "agreements_vol": 250709094,
+    "agreements_val": 11937312464890,
+    "agreements_transactions": 365,
+    "agreements_symbols": 60,
+    "source": "api-finance-t19.24hmoney.vn agreements-trading-history (code=10 VNINDEX)"
+  },
+  "matched_trading": {
+    "matched_vol": 694708207,
+    "matched_val_bil": 19051.7,
+    "agreements_vol": 250709094,
+    "agreements_val_bil": 11937.31,
+    "total_vol": 945417301,
+    "total_val_bil": 30989.01676075
+  }
+}
