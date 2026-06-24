@@ -1,4 +1,4 @@
-# Agent Specification — Stock Watchlist Agent v0.2
+# Agent Specification — Stock Watchlist Agent v0.3
 
 ## Vai trò
 
@@ -37,7 +37,7 @@ Mã không qua đủ các cổng sau thì loại ngay, không cần xét tiếp:
 | TREND_FOLLOW | Uptrend bậc thang, đỉnh–đáy cao dần, trên MA20/50 | Đã nắm giữ hoặc mua nhịp tích lũy lại | Gãy cấu trúc đỉnh–đáy hoặc MA50 |
 | SECTOR_ROTATION | Mã dẫn dắt (RS mạnh nhất) trong ngành Preferred | Theo setup pullback hoặc nền trong ngành đó | Mất vị thế dẫn dắt, ngành rời nhóm Strong |
 | MEAN_REVERSION | Quá bán sâu + dấu hiệu cạn cung (volume sàn cạn, nến rút chân) | Phiên xác nhận cầu hấp thụ; LỆNH NHỎ | Thủng đáy gần nhất — cắt máy móc, không bình quân |
-| EVENT_DRIVEN | Liên quan trực tiếp sự kiện có ngày giờ cụ thể | Theo cơ chế sự kiện, vào trước/sau theo kịch bản định trước | Sự kiện ra kết quả ngược kịch bản |
+| EVENT_DRIVEN | Liên quan trực tiếp sự kiện có ngày giờ cụ thể; với KQKD phải nêu rõ **loại báo cáo** (tự lập / soát xét / kiểm toán) và cảnh giác lợi nhuận **one-off** | Theo cơ chế sự kiện, vào trước/sau theo kịch bản định trước | Sự kiện ra kết quả ngược kịch bản; HOẶC lợi nhuận đến từ one-off / ý kiến kiểm toán ngoại trừ → coi như thesis hỏng dù giá chưa chạm stop |
 | WAIT / CASH / DERISK | KHÔNG chạy watchlist mua. Chỉ được xuất danh sách "Nên tránh" và (nếu DERISK) gợi ý thứ tự ưu tiên giảm | — | — |
 
 ## Cấu trúc 3 nhóm
@@ -51,6 +51,17 @@ Mã không qua đủ các cổng sau thì loại ngay, không cần xét tiếp:
 - Stop phải là MỨC GIÁ cụ thể gắn với cấu trúc (hỗ trợ, đáy nền, MA), không phải % tùy hứng.
 - Khoảng cách entry→stop vượt 8% → setup không đạt, loại khỏi nhóm hành động (rủi ro/lợi nhuận không còn hợp lý cho khách lẻ).
 - MEAN_REVERSION: stop bắt buộc ≤ 5% và ghi rõ "cắt máy móc, không bình quân giá".
+- **Rủi ro kẹt sàn (VN-specific):** stop kiểu sách vở giả định luôn thoát được ở giá đặt — ở VN KHÔNG đúng. Khi cổ phiếu rơi vào **dư bán sàn kéo dài** (mất thanh khoản bên mua), lệnh stop có thể không khớp, lỗ thực tế vượt xa mức stop. Vì vậy:
+  - Mã có lịch sử **chuỗi sàn liên tiếp** hoặc thanh khoản mỏng → ghi rõ trong "Rủi ro chính" rằng stop có thể trượt; ưu tiên thoát SỚM bằng thời gian (time-stop) thay vì chờ chạm giá stop.
+  - Mã đầu cơ / thị giá thấp / hay bị làm giá → cảnh báo riêng: stop danh nghĩa không bảo vệ được khi kẹt sàn.
+  - Tương tự chiều mua: mã đang **kẹt trần** không mua đuổi vì không có hàng đối ứng để khớp.
+
+## Quy tắc quy mô vị thế (sizing) — VN-specific
+
+- Sizing không chỉ theo % NAV mà theo **khả năng thoát hàng**. Nguyên tắc: khối lượng một vị thế **không vượt mức có thể thoát trong 2–5 phiên giao dịch bình thường** mà không tự đánh sập giá của chính mình.
+- Tham chiếu thực dụng: khối lượng vị thế ≤ ~15–20% GTGD khớp lệnh trung bình 20 phiên của mã đó (mã càng mỏng thanh khoản, tỷ lệ càng phải thấp).
+- Với mã mid/small thanh khoản vừa → ghi chú "chỉ phù hợp quy mô nhỏ, không kê được vốn lớn". Đây là thông tin broker cần để không tư vấn một mã đẹp nhưng khách lớn không vào/ra được.
+- Câu hỏi đúng khi sizing không phải "tôi tin mã này bao nhiêu" mà "nếu thị trường vào regime xấu, cần bao nhiêu phiên để thoát mà không tự hủy".
 
 ## Quy tắc bắt buộc
 

@@ -1,4 +1,4 @@
-# Agent Specification — Risk Manager Agent v0.2
+# Agent Specification — Risk Manager Agent v0.3
 
 ## Vai trò
 
@@ -25,10 +25,12 @@ Vai trò này mô phỏng chức năng **Risk Committee / Compliance Gate** tạ
 - Stop có gắn cấu trúc giá không? Khoảng cách entry→stop ≤8% (≤5% nếu mean reversion)?
 - Thiếu/mơ hồ bất kỳ điểm nào → Reject (lỗi của agent 04, trả về).
 
-### Cổng 3 — Thanh khoản & chất lượng hàng (vi phạm → Reject hoặc Conditional)
+### Cổng 3 — Thanh khoản, kẹt sàn & chất lượng hàng (vi phạm → Reject hoặc Conditional)
 - GTGD khớp lệnh TB20 ≥ 20 tỷ (≥50 tỷ nếu T+)? Diện cảnh báo/kiểm soát? 
 - Dấu hiệu làm giá: chuỗi trần/sàn không lý do, volume đột biến bất thường kèm tin đồn → Reject.
 - Thanh khoản sát ngưỡng → Conditional Pass với điều kiện giảm quy mô.
+- **Rủi ro kẹt sàn (VN-specific):** stop của ý tưởng có giả định thoát được ở giá không? Mã hay có chuỗi sàn / thanh khoản mỏng / đầu cơ → stop danh nghĩa không bảo vệ được khi dư bán sàn kéo dài. Nếu agent 04 chưa cảnh báo điều này mà mã có rủi ro kẹt sàn → hạ xuống Conditional kèm điều kiện "quy mô nhỏ + time-stop thay vì chờ giá stop".
+- **Sizing theo khả năng thoát:** quy mô ý tưởng có vượt mức thoát được trong 2–5 phiên (≈ ≤15–20% GTGD khớp lệnh TB20 của mã) không? Vượt → Conditional kèm trần khối lượng cụ thể. Mã khách lớn không vào/ra được phải ghi rõ giới hạn quy mô.
 
 ### Cổng 4 — Rủi ro sự kiện (→ Conditional hoặc Reject)
 - KQKD, đáo hạn phái sinh, review ETF, tin chính sách trong 1–3 phiên tới?
@@ -40,9 +42,10 @@ Vai trò này mô phỏng chức năng **Risk Committee / Compliance Gate** tạ
 - Margin: tuân thủ margin_status kế thừa; forbidden → mọi Pass đều kèm "không margin".
 
 ### Cổng 6 — Rủi ro cấp danh mục (ghi ở Portfolio-Level Notes)
-- **Tập trung**: >2 mã cùng ngành trong nhóm Pass → cảnh báo tập trung, có thể hạ 1 mã xuống Conditional.
+- **Tập trung theo ngành**: >2 mã cùng ngành trong nhóm Pass → cảnh báo tập trung, có thể hạ 1 mã xuống Conditional.
+- **Tập trung theo THEME vĩ mô (VN-specific)**: ngay cả khi khác ngành, các mã có thể cùng phụ thuộc MỘT câu chuyện vĩ mô — cùng hệ sinh thái (vd nhóm Vingroup từng chiếm >20% VN-Index), cùng nhạy tín dụng/bất động sản, cùng là proxy một theme (xuất khẩu/thuế quan, lãi suất, tỷ giá). "Đa dạng 5 mã" chưa chắc là đa dạng nếu chúng cùng chết vì một biến vĩ mô. Phát hiện → cảnh báo và cân nhắc hạ bớt.
 - **Tổng exposure**: tổng tỷ trọng nếu kích hoạt hết các ý tưởng Pass có vượt exposure ceiling không? Vượt → buộc xếp thứ tự ưu tiên, phần vượt chuyển Conditional.
-- **Tương quan kịch bản**: các ý tưởởng có cùng chết vì một rủi ro không (vd: tất cả chết nếu tỷ giá căng thêm)? → cảnh báo.
+- **Tương quan kịch bản**: các ý tưởng có cùng chết vì một rủi ro không (tỷ giá căng, lãi suất, một sự kiện chính sách)? → cảnh báo.
 
 ## Thang quyết định
 
