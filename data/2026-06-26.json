@@ -1,0 +1,301 @@
+{
+  "data_date": "2026-06-26",
+  "vnindex": {
+    "open": 1857.24,
+    "high": 1873.91,
+    "low": 1854.94,
+    "close": 1871.91,
+    "change_pct": 0.47,
+    "perf_5d_pct": 2.6,
+    "perf_20d_pct": 0.45
+  },
+  "vn30": {
+    "close": 2008.57,
+    "change_pct": 0.2
+  },
+  "moving_averages": {
+    "ma20": 1827.32,
+    "ma50": 1857.04,
+    "ma200": 1758.3,
+    "above_ma20": true,
+    "above_ma50": true,
+    "above_ma200": true
+  },
+  "liquidity": {
+    "volume_today": 533612987.0,
+    "volume_avg20": 639096689,
+    "volume_vs_avg20_pct": 83.5,
+    "note": "Khoi luong TONG (chua tach thoa thuan) - chi la proxy, can doi chieu GTGD khop lenh tu nguon khac"
+  },
+  "swing_structure": {
+    "high_20d": 1894.75,
+    "high_20d_date": "2026-06-24",
+    "low_20d": 1775.72,
+    "low_20d_date": "2026-06-15",
+    "high_60d": 1933.11,
+    "low_60d": 1665.36
+  },
+  "missing_fields": [],
+  "breadth": {
+    "up": 128,
+    "down": 198,
+    "nochange": 42,
+    "pct_up": 34,
+    "pct_down": 53,
+    "as_of_time": "14:45",
+    "source": "cafef.vn ajaxdorongthitruong (HOSE)"
+  },
+  "foreign_flows": {
+    "net_today_vnd": -1080544860000.0,
+    "net_5d_vnd": -1994912440000,
+    "unit": "VND",
+    "source": "msh-appdata.cafef.vn OverviewOrgnizaztion (VNINDEX)"
+  },
+  "index_contribution": [
+    {
+      "code": "VIC",
+      "change_pct": 1.33,
+      "influence_index": 20.6592
+    },
+    {
+      "code": "VHM",
+      "change_pct": 3.51,
+      "influence_index": 5.566
+    },
+    {
+      "code": "ACB",
+      "change_pct": 0.89,
+      "influence_index": 3.1911
+    },
+    {
+      "code": "STB",
+      "change_pct": 2.08,
+      "influence_index": 1.7143
+    },
+    {
+      "code": "TCB",
+      "change_pct": 0.0,
+      "influence_index": 1.5261
+    },
+    {
+      "code": "SSB",
+      "change_pct": 5.92,
+      "influence_index": 1.4102
+    },
+    {
+      "code": "HVN",
+      "change_pct": -0.86,
+      "influence_index": 1.4088
+    },
+    {
+      "code": "VJC",
+      "change_pct": 0.07,
+      "influence_index": 1.2751
+    },
+    {
+      "code": "MSB",
+      "change_pct": 0.95,
+      "influence_index": 1.069
+    },
+    {
+      "code": "TCX",
+      "change_pct": 0.0,
+      "influence_index": 1.0458
+    },
+    {
+      "code": "VCB",
+      "change_pct": 0.99,
+      "influence_index": -3.9397
+    },
+    {
+      "code": "BSR",
+      "change_pct": -1.42,
+      "influence_index": -3.8059
+    },
+    {
+      "code": "GEE",
+      "change_pct": 0.22,
+      "influence_index": -2.5491
+    },
+    {
+      "code": "VPL",
+      "change_pct": 1.02,
+      "influence_index": -2.4697
+    },
+    {
+      "code": "GAS",
+      "change_pct": -0.65,
+      "influence_index": -2.0869
+    },
+    {
+      "code": "CTG",
+      "change_pct": 0.3,
+      "influence_index": -1.9229
+    },
+    {
+      "code": "BID",
+      "change_pct": -0.48,
+      "influence_index": -1.8371
+    },
+    {
+      "code": "MSN",
+      "change_pct": -0.14,
+      "influence_index": -1.7995
+    },
+    {
+      "code": "GVR",
+      "change_pct": -3.02,
+      "influence_index": -1.6695
+    },
+    {
+      "code": "VRE",
+      "change_pct": 1.35,
+      "influence_index": -1.1245
+    }
+  ],
+  "f1_basis": {
+    "vn30_close": 2008.57,
+    "f1_close": 2012.0,
+    "basis": 3.43,
+    "basis_pct": 0.17,
+    "source": "api.vietstock.vn/tvnew/history (VN30, VN30F1M)"
+  },
+  "ceiling_floor": {
+    "ceiling": 3,
+    "floor": 2,
+    "up": 125,
+    "down": 196,
+    "nochange": 42,
+    "total_volume": 533612987,
+    "total_value_bil": 16109.64339703,
+    "source": "cafef.vn PriceHistory.ashx (HOSE centerid=1)"
+  },
+  "extra_fetched_at": "2026-06-26T15:45:17",
+  "global_overnight": [
+    {
+      "ten": "S&P 500",
+      "gia_tri": "7.357,49",
+      "thay_doi": "−0,01%",
+      "huong": "trung_tinh",
+      "y_nghia": "Mỹ gần như đi ngang (Dow +0,14%, Nasdaq −0,46%) — không tạo cú hích cho EM, nền tâm lý phụ thuộc việc khối ngoại có ngừng bán ròng hay không"
+    },
+    {
+      "ten": "Nasdaq Composite",
+      "gia_tri": "−0,46%",
+      "thay_doi": "Apple −6%, Micron tăng",
+      "huong": "giam",
+      "y_nghia": "Apple lao dốc 6% kéo công nghệ, dù Micron đỡ nhóm chip — phân hóa công nghệ toàn cầu khiến FPT, CMG dễ rung lắc theo dòng tiền ngoại"
+    },
+    {
+      "ten": "Nikkei 225 (sáng 26/06)",
+      "gia_tri": "70.451,71",
+      "thay_doi": "−2,65%",
+      "huong": "giam",
+      "y_nghia": "Châu Á quay đầu giảm mạnh sáng nay — gió ngoại biên đảo sang tiêu cực, tăng rủi ro áp lực bán đầu phiên cho VN"
+    },
+    {
+      "ten": "Dầu Brent",
+      "gia_tri": "75,16 USD",
+      "thay_doi": "−0,45% · về mức trước xung đột",
+      "huong": "giam",
+      "y_nghia": "Dầu xóa gần hết phần bù chiến tranh, WTI về quanh 70 USD — bất lợi cho xung lực giá GAS, PVD, PVS, BSR; ngược lại giảm áp lực chi phí cho HVN, vận tải, nhựa, phân bón"
+    },
+    {
+      "ten": "Vàng thế giới",
+      "gia_tri": "Đáy ~7 tháng",
+      "thay_doi": "SPDR tiếp tục bán",
+      "huong": "giam",
+      "y_nghia": "Vàng về đáy 7 tháng do USD mạnh và kỳ vọng Fed — giảm sức hút kênh trú ẩn so với cổ phiếu, nhưng SJC trong nước có thể vẫn neo chênh cao"
+    },
+    {
+      "ten": "Bitcoin",
+      "gia_tri": "Đáy ~20 tháng",
+      "thay_doi": "theo sóng bán công nghệ",
+      "huong": "giam",
+      "y_nghia": "BTC xuống đáy 20 tháng là tín hiệu khẩu vị rủi ro retail toàn cầu suy yếu rõ — bất lợi cho tâm lý nhóm đầu cơ và tài sản số"
+    },
+    {
+      "ten": "Lợi suất UST 10Y",
+      "gia_tri": "Giảm",
+      "thay_doi": "dữ liệu yếu + tin Iran",
+      "huong": "giam",
+      "y_nghia": "Lợi suất hạ khi thị trường cho rằng Fed không cần diều hâu như định giá — nếu duy trì, nhẹ gánh tỷ giá và định giá cho EM/VN"
+    },
+    {
+      "ten": "PCE Mỹ (tháng 5)",
+      "gia_tri": "Cao nhất từ 10/2023",
+      "thay_doi": "thước đo Fed ưa dùng",
+      "huong": "canh_bao",
+      "y_nghia": "Lạm phát lõi vẫn nóng giữ rủi ro Fed giữ lãi suất cao lâu hơn — biến số nền với dòng vốn ngoại vào thị trường mới nổi"
+    }
+  ],
+  "fx_rates": {
+    "usdvnd": {
+      "value": "26.312 · tham chiếu",
+      "note": "Tỷ giá đi ngang quanh vùng cao (số tham chiếu phiên trước, cần cập nhật) — áp lực tỷ giá vẫn là biến số khi khối ngoại bán ròng kéo dài"
+    },
+    "overnight_rate": {
+      "value": "6,20% · tham chiếu 22/06",
+      "note": "ON ở mức cao theo dữ liệu gần nhất — chi phí vốn ngắn hạn căng là điểm cần theo dõi với ngân hàng và đòn bẩy chứng khoán"
+    }
+  },
+  "domestic_policy": [
+    {
+      "chi_tieu": "Chính sách tín dụng",
+      "gia_tri": "Miễn room 18 dự án",
+      "tone": "tot",
+      "y_nghia": "Chính phủ nới tín dụng có chọn lọc (CV 5386/NHNN-TD) song song siết kinh tế ngầm — hỗ trợ ngân hàng, xây dựng, nhưng có kiểm soát"
+    },
+    {
+      "chi_tieu": "Thuế nhiên liệu (đề xuất)",
+      "gia_tri": "Gia hạn giảm đến 30/09",
+      "tone": "tot",
+      "y_nghia": "Bộ Tài chính đề xuất kéo dài giảm thuế nhiên liệu — hỗ trợ chi phí vận tải, tiêu dùng và kiềm chế lạm phát nửa cuối năm"
+    },
+    {
+      "chi_tieu": "Mã định danh số dự án",
+      "gia_tri": "Bắt buộc từ 01/07",
+      "tone": "trung_tinh",
+      "y_nghia": "Quy định mới yêu cầu mã định danh số cho mọi dự án đầu tư, xây dựng — tăng minh bạch, tác động vận hành trung hạn với BĐS và xây lắp"
+    },
+    {
+      "chi_tieu": "USD/VND (XE)",
+      "gia_tri": "26.312 · tham chiếu",
+      "tone": "trung_tinh",
+      "y_nghia": "Tỷ giá đi ngang quanh vùng cao (số tham chiếu phiên trước, cần cập nhật) — áp lực tỷ giá vẫn là biến số khi khối ngoại bán ròng kéo dài"
+    },
+    {
+      "chi_tieu": "Lãi suất LNH ON",
+      "gia_tri": "6,20% · tham chiếu 22/06",
+      "tone": "canh_bao",
+      "y_nghia": "ON ở mức cao theo dữ liệu gần nhất — chi phí vốn ngắn hạn căng là điểm cần theo dõi với ngân hàng và đòn bẩy chứng khoán"
+    },
+    {
+      "chi_tieu": "PCE Mỹ tháng 5",
+      "gia_tri": "Cao nhất từ 10/2023",
+      "tone": "canh_bao",
+      "y_nghia": "Lạm phát lõi Mỹ nóng giữ kịch bản Fed thận trọng — nền áp lực với tỷ giá và dòng vốn vào VN dù lợi suất tạm hạ"
+    }
+  ],
+  "sentiment_note": "Phe bear nắm thế chủ động sáng nay: khối ngoại bán ròng hơn 1.100 tỷ và kéo dài chuỗi rút vốn, dầu khí mất câu chuyện giá khi Brent về mức trước xung đột, trong khi ngoại biên đảo xấu với Nikkei −2,65%, Apple −6% và Bitcoin đáy 20 tháng. Phe bull còn vài điểm tựa: tự doanh mua ròng 135 tỷ, chính sách nới tín dụng 18 dự án và đề xuất gia hạn giảm thuế nhiên liệu hỗ trợ vĩ mô, cộng lợi suất UST hạ giúp nhẹ gánh tỷ giá. Biến số 24h tới là mức độ lan của áp lực bán châu Á vào phiên VN và việc khối ngoại có dừng xả nhóm Vingroup hay không; giữ được vùng 1.855 với thanh khoản không hoảng loạn thì nhịp chỉnh còn lành mạnh, ngược lại trạng thái 'xanh vỏ đỏ lòng' kéo dài dễ khiến chỉ số mất thêm điểm tựa.",
+  "news_meta": {
+    "date": "2026-06-26",
+    "phien": "2026-06-25",
+    "source_file": "2026-06-26.json"
+  },
+  "agreements": {
+    "agreements_vol": 125284756,
+    "agreements_val": 3864869993830,
+    "agreements_transactions": 229,
+    "agreements_symbols": 53,
+    "source": "api-finance-t19.24hmoney.vn agreements-trading-history (code=10 VNINDEX)"
+  },
+  "matched_trading": {
+    "matched_vol": 408328231,
+    "matched_val_bil": 12244.77,
+    "agreements_vol": 125284756,
+    "agreements_val_bil": 3864.87,
+    "total_vol": 533612987,
+    "total_val_bil": 16109.64339703
+  }
+}
