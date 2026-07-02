@@ -4,17 +4,21 @@ This repository is run automatically by Windows Task Scheduler through Claude CL
 
 This scheduled job has no Anthropic API key and must not switch to Codex or the Anthropic API path. Use the CLI-backed pipeline path in this file.
 
-## Non-Negotiable Runtime Paths
+## Runtime Path Discovery
 
-Use these exact executables:
+Use `F:\systeminfohelper.json` as the source of truth for runtime executables:
 
-- PowerShell 7: `C:\Users\ADMIN\AppData\Local\Microsoft\WindowsApps\pwsh.exe`
-- Global Python: `C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\python.exe`
+- PowerShell 7: read from `.pwsh.path`
+- Global Python: read from `.python.path`
 - Project root: `F:\Hai BUi\Mini_Investment_Desk_Agent_System_v1`
 
-Before running the pipeline, verify both runtime paths exist and report the versions. Do not continue if either path is missing.
+Before running the pipeline, load `F:\systeminfohelper.json`, verify both runtime paths exist, and report the versions from the JSON and from the executables. Do not continue if either path is missing after the fallback refresh below.
 
-Never run commands through Windows PowerShell 5.1. Never run Python as `python`, `py`, or any other discovered interpreter. All shell commands for the daily workflow must be launched via the PowerShell 7 path above, and all Python calls inside that workflow must use the global Python path above.
+If `F:\systeminfohelper.json` is missing, cannot be parsed, or contains a PowerShell/Python path that does not exist, run `F:\update-systeminfohelper.cmd` once via `cmd.exe`, reload `F:\systeminfohelper.json`, and validate again. This refresh is only for correcting stale system path metadata; do not invent alternate runtime paths manually.
+
+If launching `$Pwsh` itself fails because the JSON path is stale, run `cmd.exe /d /c F:\update-systeminfohelper.cmd`, reload `F:\systeminfohelper.json`, set `$Pwsh` to the refreshed `.pwsh.path`, and rerun the same command.
+
+Never run commands through Windows PowerShell 5.1. Never run Python as `python`, `py`, or any other discovered interpreter. All shell commands for the daily workflow must be launched via the PowerShell 7 path from `F:\systeminfohelper.json`, and all Python calls inside that workflow must use the global Python path from `F:\systeminfohelper.json`.
 
 Reason: using Windows PowerShell 5.1 can cause UTF-8/Unicode issues in Vietnamese report text; using an inferred Python can hit sandbox/path restrictions or missing dependencies.
 
@@ -22,15 +26,31 @@ Reason: using Windows PowerShell 5.1 can cause UTF-8/Unicode issues in Vietnames
 
 1. Start in the project root.
 2. Check the working tree. Do not overwrite unrelated user changes. Only the expected daily report outputs under `docs/` and `data/` should be committed automatically.
-3. Run the runtime preflight with the exact paths:
+3. Run the runtime preflight from `F:\systeminfohelper.json`:
 
 ```powershell
-& "C:\Users\ADMIN\AppData\Local\Microsoft\WindowsApps\pwsh.exe" -NoLogo -NoProfile -ExecutionPolicy Bypass -WorkingDirectory "F:\Hai BUi\Mini_Investment_Desk_Agent_System_v1" -Command @'
+& $Pwsh -NoLogo -NoProfile -ExecutionPolicy Bypass -WorkingDirectory "F:\Hai BUi\Mini_Investment_Desk_Agent_System_v1" -Command @'
 $ErrorActionPreference = "Stop"
-$Pwsh = "C:\Users\ADMIN\AppData\Local\Microsoft\WindowsApps\pwsh.exe"
-$Python = "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\python.exe"
-if (-not (Test-Path -LiteralPath $Pwsh)) { throw "PowerShell 7 path missing: $Pwsh" }
-if (-not (Test-Path -LiteralPath $Python)) { throw "Global Python path missing: $Python" }
+$InfoPath = "F:\systeminfohelper.json"
+$Updater = "F:\update-systeminfohelper.cmd"
+function Get-RuntimeInfo {
+    if (-not (Test-Path -LiteralPath $InfoPath)) { throw "systeminfohelper.json missing" }
+    Get-Content -Raw -LiteralPath $InfoPath | ConvertFrom-Json
+}
+try {
+    $Info = Get-RuntimeInfo
+    if (-not (Test-Path -LiteralPath $Info.pwsh.path)) { throw "PowerShell 7 path missing: $($Info.pwsh.path)" }
+    if (-not (Test-Path -LiteralPath $Info.python.path)) { throw "Global Python path missing: $($Info.python.path)" }
+} catch {
+    & cmd.exe /d /c $Updater
+    $Info = Get-RuntimeInfo
+    if (-not (Test-Path -LiteralPath $Info.pwsh.path)) { throw "PowerShell 7 path missing after refresh: $($Info.pwsh.path)" }
+    if (-not (Test-Path -LiteralPath $Info.python.path)) { throw "Global Python path missing after refresh: $($Info.python.path)" }
+}
+$Pwsh = $Info.pwsh.path
+$Python = $Info.python.path
+Write-Host "JSON PowerShell 7: $Pwsh ($($Info.pwsh.version))"
+Write-Host "JSON Python: $Python ($($Info.python.version))"
 & $Pwsh --version
 & $Python --version
 '@
@@ -39,11 +59,18 @@ if (-not (Test-Path -LiteralPath $Python)) { throw "Global Python path missing: 
 4. Run the daily pipeline through PowerShell 7 and global Python only:
 
 ```powershell
-& "C:\Users\ADMIN\AppData\Local\Microsoft\WindowsApps\pwsh.exe" -NoLogo -NoProfile -ExecutionPolicy Bypass -WorkingDirectory "F:\Hai BUi\Mini_Investment_Desk_Agent_System_v1" -Command @'
+& $Pwsh -NoLogo -NoProfile -ExecutionPolicy Bypass -WorkingDirectory "F:\Hai BUi\Mini_Investment_Desk_Agent_System_v1" -Command @'
 $ErrorActionPreference = "Stop"
 $env:PYTHONUTF8 = "1"
 $env:PYTHONIOENCODING = "utf-8"
-$Python = "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\python.exe"
+$Info = Get-Content -Raw -LiteralPath "F:\systeminfohelper.json" | ConvertFrom-Json
+$Python = $Info.python.path
+if (-not (Test-Path -LiteralPath $Python)) {
+    & cmd.exe /d /c "F:\update-systeminfohelper.cmd"
+    $Info = Get-Content -Raw -LiteralPath "F:\systeminfohelper.json" | ConvertFrom-Json
+    $Python = $Info.python.path
+}
+if (-not (Test-Path -LiteralPath $Python)) { throw "Global Python path missing after refresh: $Python" }
 & $Python -m pipeline.run_pipeline --cli
 '@
 ```
@@ -58,7 +85,7 @@ $Python = "C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\python.exe"
 6. Commit and push only expected daily report changes:
 
 ```powershell
-& "C:\Users\ADMIN\AppData\Local\Microsoft\WindowsApps\pwsh.exe" -NoLogo -NoProfile -ExecutionPolicy Bypass -WorkingDirectory "F:\Hai BUi\Mini_Investment_Desk_Agent_System_v1" -Command @'
+& $Pwsh -NoLogo -NoProfile -ExecutionPolicy Bypass -WorkingDirectory "F:\Hai BUi\Mini_Investment_Desk_Agent_System_v1" -Command @'
 $ErrorActionPreference = "Stop"
 git status --short
 git add docs data

@@ -1,16 +1,16 @@
-# Graph Report - Mini_Investment_Desk_Agent_System_v1  (2026-06-22)
+# Graph Report - Mini_Investment_Desk_Agent_System_v1  (2026-07-02)
 
 ## Corpus Check
-- 92 files · ~123,984 words
+- 120 files · ~231,165 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 755 nodes · 712 edges · 73 communities (71 shown, 2 thin omitted)
+- 1131 nodes · 1071 edges · 94 communities (92 shown, 2 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e22fefa2`
+- Built from commit: `73246702`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -87,18 +87,39 @@
 - [[_COMMUNITY_Community 70|Community 70]]
 - [[_COMMUNITY_Community 71|Community 71]]
 - [[_COMMUNITY_Community 72|Community 72]]
+- [[_COMMUNITY_Community 73|Community 73]]
+- [[_COMMUNITY_Community 74|Community 74]]
+- [[_COMMUNITY_Community 75|Community 75]]
+- [[_COMMUNITY_Community 76|Community 76]]
+- [[_COMMUNITY_Community 77|Community 77]]
+- [[_COMMUNITY_Community 78|Community 78]]
+- [[_COMMUNITY_Community 79|Community 79]]
+- [[_COMMUNITY_Community 80|Community 80]]
+- [[_COMMUNITY_Community 81|Community 81]]
+- [[_COMMUNITY_Community 82|Community 82]]
+- [[_COMMUNITY_Community 83|Community 83]]
+- [[_COMMUNITY_Community 84|Community 84]]
+- [[_COMMUNITY_Community 85|Community 85]]
+- [[_COMMUNITY_Community 86|Community 86]]
+- [[_COMMUNITY_Community 87|Community 87]]
+- [[_COMMUNITY_Community 88|Community 88]]
+- [[_COMMUNITY_Community 89|Community 89]]
+- [[_COMMUNITY_Community 90|Community 90]]
+- [[_COMMUNITY_Community 91|Community 91]]
+- [[_COMMUNITY_Community 92|Community 92]]
+- [[_COMMUNITY_Community 93|Community 93]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `STRATEGY SELECTION REPORT — 16/06/2026` - 15 edges
 2. `STRATEGY SELECTION REPORT — [dd/mm/yyyy]` - 15 edges
 3. `SECTOR ROTATION MAP — 2026-06-19` - 12 edges
-4. `fetch_extra_fields()` - 10 edges
-5. `BÁO CÁO TRẠNG THÁI THỊ TRƯỜNG — RISK REGIME DESK` - 10 edges
-6. `BÁO CÁO MARKET REGIME — 2026-06-19` - 10 edges
-7. `BÁO CÁO TRẠNG THÁI THỊ TRƯỜNG` - 10 edges
-8. `BÁO CÁO TRẠNG THÁI THỊ TRƯỜNG — LPBS Risk Regime Desk` - 10 edges
-9. `MARKET REGIME REPORT — 16/06/2026` - 10 edges
-10. `Input Schema — Market Regime Agent v0.2` - 10 edges
+4. `render()` - 11 edges
+5. `BÁO CÁO CHẾ ĐỘ THỊ TRƯỜNG — VNSTOCK LPBS` - 10 edges
+6. `BÁO CÁO TRẠNG THÁI THỊ TRƯỜNG — 2026-06-26` - 10 edges
+7. `Báo cáo Trạng thái Thị trường — 2026-06-24` - 10 edges
+8. `SECTOR ROTATION REPORT — 2026-06-24` - 10 edges
+9. `Agent Specification — Stock Watchlist Agent v0.3` - 10 edges
+10. `BÁO CÁO MARKET REGIME — 2026-06-23` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `run_pipeline_agents()` --calls--> `load_system_prompt()`  [EXTRACTED]
@@ -107,7 +128,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (73 total, 2 thin omitted)
+## Communities (94 total, 2 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.17
@@ -138,8 +159,8 @@ Cohesion: 0.29
 Nodes (6): 0. Ghi chú bắt buộc về chế độ báo cáo, 1. Sector Map (bản đồ quan sát — không phải khuyến nghị hành động), 2. Evidence (số liệu trích dẫn — chỉ để minh chứng dòng tiền, KHÔNG phải khuyến nghị mua bán), 3. Risks, 4. Handoff To Stock Watchlist Agent, SECTOR ROTATION REPORT — 16/06/2026
 
 ### Community 7 - "Community 7"
-Cohesion: 0.21
-Nodes (9): call_agent(), call_agent(), Goi agent 01 -> 02 -> 03 qua Claude Code CLI (headless, dung goi thue bao thay, run_pipeline_agents(), load_system_prompt(), Goi lan luot agent 01 -> 02 -> 03 qua Claude API.  - System prompt cua moi age, Tra ve dict {'01': report_md, '02': ..., '03': ...}., run_pipeline_agents() (+1 more)
+Cohesion: 0.18
+Nodes (12): call_agent(), call_agent(), _is_session_limit(), Goi agent 01 -> 02 -> 03 qua Claude Code CLI (headless, dung goi thue bao thay, Tu thong bao 'resets 8:40pm (Asia/Saigon)' suy ra so giay can cho.     Tra None, run_pipeline_agents(), _seconds_until_reset(), load_system_prompt() (+4 more)
 
 ### Community 8 - "Community 8"
 Cohesion: 0.12
@@ -151,7 +172,7 @@ Nodes (16): Chiến thuật chính hôm nay, Chiến thuật KHÔNG nên dùng (
 
 ### Community 10 - "Community 10"
 Cohesion: 0.14
-Nodes (13): 6 cổng kiểm tra (chạy theo thứ tự cho TỪNG mã), Agent Specification — Risk Manager Agent v0.2, Cổng 1 — Nhất quán pipeline (vi phạm → Reject ngay), Cổng 2 — Chất lượng kịch bản (vi phạm → Reject), Cổng 3 — Thanh khoản & chất lượng hàng (vi phạm → Reject hoặc Conditional), Cổng 4 — Rủi ro sự kiện (→ Conditional hoặc Reject), Cổng 5 — Suitability theo khách (→ điều chỉnh phạm vi Pass), Cổng 6 — Rủi ro cấp danh mục (ghi ở Portfolio-Level Notes) (+5 more)
+Nodes (13): 6 cổng kiểm tra (chạy theo thứ tự cho TỪNG mã), Agent Specification — Risk Manager Agent v0.3, Cổng 1 — Nhất quán pipeline (vi phạm → Reject ngay), Cổng 2 — Chất lượng kịch bản (vi phạm → Reject), Cổng 3 — Thanh khoản, kẹt sàn & chất lượng hàng (vi phạm → Reject hoặc Conditional), Cổng 4 — Rủi ro sự kiện (→ Conditional hoặc Reject), Cổng 5 — Suitability theo khách (→ điều chỉnh phạm vi Pass), Cổng 6 — Rủi ro cấp danh mục (ghi ở Portfolio-Level Notes) (+5 more)
 
 ### Community 11 - "Community 11"
 Cohesion: 0.17
@@ -178,8 +199,8 @@ Cohesion: 0.18
 Nodes (10): Checklists, Example: Rename `validateUser` to `authenticateUser`, Extract Module, Refactoring with GitNexus, Rename Symbol, Risk Rules, Split Function/Service, Tools (+2 more)
 
 ### Community 17 - "Community 17"
-Cohesion: 0.20
-Nodes (9): Agent Specification — Stock Watchlist Agent v0.2, Cấu trúc 3 nhóm, Cổng vào bắt buộc (gate) — xét TRƯỚC mọi setup, Không được làm, Quy tắc bắt buộc, Quy tắc stop-loss tham khảo, Tiêu chí output tốt, Tiêu chí setup theo strategy code (+1 more)
+Cohesion: 0.18
+Nodes (10): Agent Specification — Stock Watchlist Agent v0.3, Cấu trúc 3 nhóm, Cổng vào bắt buộc (gate) — xét TRƯỚC mọi setup, Không được làm, Quy tắc bắt buộc, Quy tắc quy mô vị thế (sizing) — VN-specific, Quy tắc stop-loss tham khảo, Tiêu chí output tốt (+2 more)
 
 ### Community 18 - "Community 18"
 Cohesion: 0.20
@@ -194,8 +215,8 @@ Cohesion: 0.20
 Nodes (9): After Indexing, analyze — Build or refresh the index, clean — Delete the index, Commands, GitNexus CLI Commands, list — Show all indexed repos, status — Check index freshness, Troubleshooting (+1 more)
 
 ### Community 21 - "Community 21"
-Cohesion: 0.26
-Nodes (12): Path, _code(), _extract(), _extract_section(), _field(), _fmt_vn(), _mcard(), _md() (+4 more)
+Cohesion: 0.21
+Nodes (15): Path, _code(), _desk_meta(), _extract(), _extract_section(), _field(), _fmt_vn(), _mcard() (+7 more)
 
 ### Community 22 - "Community 22"
 Cohesion: 0.22
@@ -287,7 +308,7 @@ Nodes (5): 04 Stock Watchlist Agent, Cách chạy, Cấu trúc thư mục, Mô h
 
 ### Community 44 - "Community 44"
 Cohesion: 0.33
-Nodes (5): Main Prompt — Risk Manager Agent v0.2, Output, Quy trình bắt buộc: chạy 6 cổng theo thứ tự cho TỪNG mã, Quy tắc cứng (không ngoại lệ), Thang quyết định
+Nodes (5): Main Prompt — Risk Manager Agent v0.3, Output, Quy trình bắt buộc: chạy 6 cổng theo thứ tự cho TỪNG mã, Quy tắc cứng (không ngoại lệ), Thang quyết định
 
 ### Community 45 - "Community 45"
 Cohesion: 0.33
@@ -318,16 +339,16 @@ Cohesion: 0.50
 Nodes (3): Main Prompt — Sector Rotation Agent v0.2, Quy trình bắt buộc (làm theo đúng thứ tự), Quy tắc cứng (không ngoại lệ)
 
 ### Community 52 - "Community 52"
-Cohesion: 0.50
-Nodes (3): Changelog, v0.1, v0.2
+Cohesion: 0.40
+Nodes (4): Changelog, v0.1, v0.2, v0.3
 
 ### Community 53 - "Community 53"
 Cohesion: 0.50
-Nodes (3): Main Prompt — Stock Watchlist Agent v0.2, Quy trình bắt buộc (làm theo đúng thứ tự), Quy tắc cứng (không ngoại lệ)
+Nodes (3): Main Prompt — Stock Watchlist Agent v0.3, Quy trình bắt buộc (làm theo đúng thứ tự), Quy tắc cứng (không ngoại lệ)
 
 ### Community 54 - "Community 54"
-Cohesion: 0.50
-Nodes (3): Changelog, v0.1, v0.2
+Cohesion: 0.40
+Nodes (4): Changelog, v0.1, v0.2, v0.3
 
 ### Community 55 - "Community 55"
 Cohesion: 0.50
@@ -374,31 +395,115 @@ Cohesion: 0.15
 Nodes (12): 1. HANDOFF ĐẦU VÀO — XÁC NHẬN TIẾP NHẬN, 2. QUY TRÌNH LỰA CHỌN, 3. CHIẾN THUẬT ĐÃ CHỌN, 4. CHIẾN THUẬT KHÔNG NÊN DÙNG — DANH SÁCH BỊ CẤM, 5. LƯU Ý THỰC HÀNH CHO BROKER, 6. HANDOFF → AGENT 03 (STOCK SELECTOR) / AGENT 04 (RISK MANAGER), Bước 2 — Tra ma trận Regime → Chiến thuật, Bước 3 — Áp bộ điều chỉnh (theo thứ tự) (+4 more)
 
 ### Community 69 - "Community 69"
-Cohesion: 0.11
-Nodes (17): 1. Handoff nhận được từ Market Regime Agent, 2. Quy trình chọn chiến thuật (vết làm việc), 3. Chiến thuật được chọn, 4. Chiến thuật bị cấm trong bối cảnh hôm nay, 5. Tóm tắt hành động theo trạng thái tài khoản, 6. Kịch bản theo dõi phiên kế tiếp, 7. HANDOFF — Stock Picker & Execution Desk (Agent 03/04), Bước 2 — Tra ma trận ban đầu theo Regime Code (+9 more)
+Cohesion: 0.10
+Nodes (19): BULL\_TRAP\_WARNING — điều kiện hủy cảnh báo, Bước 2 — Tra ma trận NEUTRAL, Bước 3 — Áp điều chỉnh (theo thứ tự), Bước 4 — Kiểm tra quy tắc cứng, 🔵 CHIẾN THUẬT CHÍNH: **WAIT** — Không giao dịch / Chờ xác nhận, 🟡 CHIẾN THUẬT PHỤ: **DERISK** — Giảm tỷ trọng / Hạ margin, DERISK — điều kiện kích hoạt, I. HANDOFF ĐẦU VÀO — TỪ MARKET REGIME AGENT (+11 more)
 
 ### Community 70 - "Community 70"
-Cohesion: 0.12
-Nodes (15): 1. Kiểm kê dữ liệu, 2. Scorecard, 3. Xác định Regime, 4. Trạng thái phụ, 5. Quy tắc "Hạ nhanh, Nâng chậm", 6. Confidence, 7. Chiều phản biện — Rủi ro của chính kết luận này, 8. Điều kiện chuyển trạng thái (ngưỡng đo được) (+7 more)
+Cohesion: 0.09
+Nodes (21): Breadth (−1 | Trọng số 20%), BÁO CÁO TRẠNG THÁI THỊ TRƯỜNG — LPBS Risk Regime Desk, Bảng tổng hợp Composite, 🔴 CẢNH BÁO BULL TRAP — BẮT BUỘC NÊU, Flows (−1 | Trọng số 15%), Hồi kỹ thuật (không phải khởi đầu xu hướng), I. KIỂM KÊ DỮ LIỆU ĐẦU VÀO, II. CHẤM ĐIỂM SCORECARD (+13 more)
 
 ### Community 71 - "Community 71"
-Cohesion: 0.14
-Nodes (13): 0. HANDOFF ĐÃ ĐỌC — Strategy Selector, 1. THU THẬP DỮ LIỆU — Nguồn & Phương pháp, 2. CHẤM ĐIỂM TỪNG NGÀNH — RS & Flow, 3. SECTOR MAP 4 NHÓM, 4. EVIDENCE CÓ SỐ LIỆU, 4A. Bất động sản — AVOID CHASING (Ưu tiên DERISK #1), 4B. CNTT — WEAK, 4C. Ngân hàng / Chứng khoán / Thép / Bán lẻ — IMPROVING (tín hiệu chưa xác nhận) (+5 more)
+Cohesion: 0.08
+Nodes (23): 0. TIỀN ĐỀ BẮT BUỘC — ĐỌC TRƯỚC KHI XEM MAP, 🚫 AVOID CHASING — Không mua đuổi (kể cả trong ngữ cảnh DERISK: giảm ngay trên nhịp tăng), Bảng chấm điểm chi tiết, Bất động sản — Bằng chứng tập trung rủi ro, Chứng khoán — Bằng chứng tín hiệu trái chiều, Công nghệ — Bằng chứng áp lực bán, ⚠️ Data Gaps — Ảnh hưởng đến độ tin cậy, I. NGUỒN DỮ LIỆU & DATA GAPS (+15 more)
 
 ### Community 72 - "Community 72"
 Cohesion: 0.50
 Nodes (3): global_overnight, fx_rates, domestic_policy, sentiment_note, Số mã tăng trần, giảm sàn của sàn HOSE, Tổng khối lượng và giá trị giao dịch thỏa thuận VNINDEX
 
+### Community 73 - "Community 73"
+Cohesion: 0.10
+Nodes (19): 1. Ngân hàng (Banking), 2. Thép (Steel), 3. Chứng khoán (Securities), 4. Đầu tư công / Xây dựng / Vật liệu xây dựng, 5. BĐS — Hệ sinh thái Vingroup, 6. Dầu khí (Oil & Gas), 7. Bán lẻ (Retail), 8. CNTT (IT) (+11 more)
+
+### Community 74 - "Community 74"
+Cohesion: 0.10
+Nodes (19): Bước 2 — Ma trận NEUTRAL, Bước 3 — Điều chỉnh theo thứ tự, Bước 4 — Kiểm tra quy tắc cứng, I. HANDOFF NHẬN ĐƯỢC, II. QUY TRÌNH CHỌN CHIẾN THUẬT, III. CHIẾN THUẬT CHÍNH — WAIT, IV. CHIẾN THUẬT PHỤ — SECTOR\_ROTATION *(có điều kiện)*, Lý do chọn (+11 more)
+
+### Community 75 - "Community 75"
+Cohesion: 0.13
+Nodes (14): BÁO CÁO MARKET REGIME — 2026-06-23, Chiều phản biện — rủi ro của kết luận Neutral, ⚠️ CẢNH BÁO QUASI BULL TRAP (chưa kích hoạt chính thức), I. KIỂM KÊ DỮ LIỆU, II. SCORECARD, III. XÁC ĐỊNH REGIME, IV. TRẠNG THÁI PHỤ, IX. HANDOFF — STRATEGY SELECTOR (+6 more)
+
+### Community 76 - "Community 76"
+Cohesion: 0.12
+Nodes (16): 2.1 — VN-Index 5 phiên (18–24/6/2026), 2.2 — RS & Flow proxy từng ngành (10 nhóm chính), 🔴 AVOID CHASING — Không mua đuổi, 🟡 IMPROVING — Có tín hiệu nhưng chưa xác nhận đủ (tối đa do fallback), ⚡ PHẦN I — ĐỌC HANDOFF & XÁC ĐỊNH MỤC ĐÍCH, 📊 PHẦN II — DỮ LIỆU THU THẬP (Tự tìm kiếm), 🗺️ PHẦN III — SECTOR MAP 4 NHÓM, ⚠️ PHẦN IV — KIỂM TRA TĂNG NÓNG (+8 more)
+
+### Community 77 - "Community 77"
+Cohesion: 0.10
+Nodes (20): 1. Kiểm kê dữ liệu, 2.1 Trend (trọng số 25%), 2.2 Breadth (trọng số 20%), 2.3 Liquidity (trọng số 20%), 2.4 Flows (trọng số 15%), 2.5 Volatility / Phái sinh (trọng số 10%), 2.6 Macro / Sentiment (trọng số 10%), 2.7 Tổng hợp Scorecard (+12 more)
+
+### Community 78 - "Community 78"
+Cohesion: 0.10
+Nodes (19): 1. Handoff đầu vào, 2. Quy trình chọn chiến thuật, 3. Chiến thuật chính — WAIT, 4. Chiến thuật phụ — DERISK (áp dụng có điều kiện), 5. Chiến thuật không nên dùng hôm nay, 6. Kịch bản cần theo dõi phiên 2026-06-25, Bước 1 — Regime gốc: NEUTRAL, Bước 2 — Ghi đè sub-state: BULL\_TRAP\_RISK = TRUE (+11 more)
+
+### Community 79 - "Community 79"
+Cohesion: 0.09
+Nodes (22): 0 · ĐỌC HANDOFF — XÁC NHẬN MÔI TRƯỜNG, ⑩ Xây dựng, ① Ngân hàng / Tài chính, ② Chứng khoán, ③ Tiêu dùng / Bán lẻ, ④ Thép / Vật liệu, ⑤ Điện / Tiện ích, ⑥ Công nghệ / CNTT (+14 more)
+
+### Community 80 - "Community 80"
+Cohesion: 0.12
+Nodes (15): 1 · Kiểm kê dữ liệu, 2 · Scorecard, 3 · Xác định Regime, 4 · Phân tích từng trụ, 5 · Trạng thái phụ, 6 · Chiều phản biện, 7 · Điều kiện chuyển trạng thái (đo được), 8 · Handoff — Strategy Selector (+7 more)
+
+### Community 81 - "Community 81"
+Cohesion: 0.13
+Nodes (14): 1 · HANDOFF ĐỌC ĐƯỢC, 2 · VẾT LÝ LUẬN, 3 · CHIẾN THUẬT ĐÃ CHỌN, 4 · CHIẾN THUẬT KHÔNG NÊN DÙNG, 5 · KỊCH BẢN VÀ PHẢN ỨNG, 6 · HANDOFF → STOCK SELECTOR (Agent 03) & RISK MANAGER (Agent 04), Bước 2 — Tra ma trận, Bước 3 — Bộ điều chỉnh (theo thứ tự) (+6 more)
+
+### Community 82 - "Community 82"
+Cohesion: 0.10
+Nodes (20): 🔴 AVOID CHASING — Không mua đuổi, Bán lẻ, BƯỚC 1 — ĐỌC HANDOFF TỪ STRATEGY SELECTOR, BƯỚC 2 — DỮ LIỆU THU THẬP & DATA GAPS, BƯỚC 3 — CHẤM RS & FLOW TỪNG NGÀNH, BƯỚC 4 — SECTOR MAP 4 NHÓM, BƯỚC 5 — KIỂM TRA QUY TẮC CỨNG, BƯỚC 6 — RỦI RO & HANDOFF (+12 more)
+
+### Community 83 - "Community 83"
+Cohesion: 0.12
+Nodes (16): Bước 2 — Tra ma trận ban đầu, Bước 3 — Áp bộ điều chỉnh theo thứ tự, Bước 4 — Kiểm tra quy tắc cứng, 🔵 Chiến thuật Chính — `WAIT` (Risk Tier 0), 🟡 Chiến thuật Phụ — `DERISK` (Risk Tier 0), `DERISK` — Điều kiện kích hoạt & vô hiệu, I. TÓM TẮT HANDOFF ĐẦU VÀO, II. QUY TRÌNH CHỌN CHIẾN THUẬT (+8 more)
+
+### Community 84 - "Community 84"
+Cohesion: 0.14
+Nodes (13): 1. KIỂM KÊ DỮ LIỆU, 2. SCORECARD, 3. XÁC ĐỊNH REGIME, 4. TRẠNG THÁI PHỤ, 5. QUY TẮC "HẠ NHANH, NÂNG CHẬM", 6. CONFIDENCE: TRUNG BÌNH, 7. ĐIỀU KIỆN CHUYỂN TRẠNG THÁI, BÁO CÁO TRẠNG THÁI THỊ TRƯỜNG — 2026-06-26 (+5 more)
+
+### Community 85 - "Community 85"
+Cohesion: 0.13
+Nodes (14): 1. HANDOFF ĐẦU VÀO, 2. NGUỒN DỮ LIỆU & GIỚI HẠN, 3. BẢNG CHẤM ĐIỂM RS & FLOW, 4. SECTOR MAP — 4 NHÓM, 5. BẰNG CHỨNG SỐ LIỆU TỔNG HỢP, 6. RISKS (Map này), 7. HANDOFF TO STOCK WATCHLIST (Agent 03/04), 🟡 AVOID CHASING *(Không mua đuổi — lý do định lượng)* (+6 more)
+
+### Community 86 - "Community 86"
+Cohesion: 0.14
+Nodes (13): 1. HANDOFF ĐẦU VÀO — TÓM TẮT, 2. QUY TRÌNH CHỌN — BA BƯỚC, 3. CHIẾN THUẬT ĐÃ CHỌN, 4. CHIẾN THUẬT KHÔNG NÊN DÙNG, 5. THÔNG SỐ QUẢN LÝ VỊ THẾ, 6. TÍN HIỆU THEO DÕI PHIÊN 30/06/2026, 7. HANDOFF CHO STOCK SCREENER / PORTFOLIO AGENT (03/04), Bước 2 · Ma trận NEUTRAL (+5 more)
+
+### Community 87 - "Community 87"
+Cohesion: 0.15
+Nodes (12): 1. KIỂM KÊ DỮ LIỆU, 2. SCORECARD, 3. XÁC ĐỊNH REGIME, 4. TRẠNG THÁI PHỤ, 5. QUY TẮC "HẠ NHANH, NÂNG CHẬM", 6. CONFIDENCE, 7. HANDOFF — STRATEGY SELECTOR, ❌ Bull Trap Risk — Không kích hoạt (+4 more)
+
+### Community 88 - "Community 88"
+Cohesion: 0.13
+Nodes (14): 🔴 AVOID CHASING — Tăng nóng / Tăng rỗng ruột (Không mua đuổi), Bước 1 — Kiểm tra Handoff từ Strategy Selector, Bước 2–3 — Chấm điểm RS & Flow từng ngành, Bước 3 — Sector Map 4 nhóm, Bước 4 — Kiểm tra quy tắc lọc theo Strategy Code, Bước 5 — Kiểm tra quy tắc cứng, 🔲 DATA GAPS — Không đủ dữ liệu để phân loại, ✉️ Handoff — Stock Watchlist Agent (Agent 04) (+6 more)
+
+### Community 89 - "Community 89"
+Cohesion: 0.15
+Nodes (12): 1 · Handoff nhận được — Tóm tắt kiểm tra, 2 · Quy trình chọn chiến thuật, 3 · Chiến thuật được chọn, 4 · Chiến thuật bị cấm trong bối cảnh hôm nay, 5 · Lưu ý quản lý rủi ro, Bước 2 — Tra ma trận (ba dòng áp dụng), Bước 3 — Áp bộ điều chỉnh, Bước 4 — Kiểm tra quy tắc cứng (+4 more)
+
+### Community 90 - "Community 90"
+Cohesion: 0.14
+Nodes (13): 1 · Kiểm kê dữ liệu, 2 · Scorecard, 3 · Xác định Regime, 4 · Trạng thái phụ, 5 · Quy tắc "hạ nhanh, nâng chậm", 6 · Confidence, 7 · Rủi ro của chính kết luận này, ⚠️ BULL TRAP RISK — CẢNH BÁO BẮT BUỘC (+5 more)
+
+### Community 91 - "Community 91"
+Cohesion: 0.11
+Nodes (18): ⛔ AVOID CHASING *(Nhóm không được mua đuổi)*, BÁO CÁO LUÂN CHUYỂN NGÀNH — SECTOR ROTATION AGENT, Bất động sản, Cơ sở tính RS, I. HANDOFF NHẬN TỪ STRATEGY SELECTOR, II. NGUỒN DỮ LIỆU & GHI NHẬN, III. DỮ LIỆU NỀN — PHIÊN 01/07/2026, 🔵 IMPROVING *(quan sát — xếp theo mức độ ưu tiên khi SIDEWAY_SWING kích hoạt)* (+10 more)
+
+### Community 92 - "Community 92"
+Cohesion: 0.15
+Nodes (12): BÁO CÁO CHẾ ĐỘ THỊ TRƯỜNG — VNSTOCK LPBS, I. KIỂM KÊ DỮ LIỆU, II. SCORECARD CHẤM ĐIỂM, III. XÁC ĐỊNH REGIME, IV. TRẠNG THÁI PHỤ, IX. ĐIỀU KIỆN CHUYỂN TRẠNG THÁI, ▶ NEUTRAL / SIDEWAY / PHÂN HÓA, **⚡ TRUNG BÌNH** (+4 more)
+
+### Community 93 - "Community 93"
+Cohesion: 0.14
+Nodes (13): BÁO CÁO CHIẾN THUẬT GIAO DỊCH — STRATEGY SELECTION DESK LPBS, Bước 1 — Tra ma trận: NEUTRAL_SIDEWAY, Bước 2 — Áp bộ điều chỉnh (theo thứ tự), Bước 3 — Kiểm tra quy tắc cứng, Chiến thuật chính: WAIT, Chiến thuật phụ: SIDEWAY_SWING (khi đã kích hoạt), I. HANDOFF NHẬN TỪ MARKET REGIME AGENT, II. QUY TRÌNH CHỌN CHIẾN THUẬT (+5 more)
+
 ## Knowledge Gaps
-- **513 isolated node(s):** `analyze — Build or refresh the index`, `status — Check index freshness`, `clean — Delete the index`, `wiki — Generate documentation from the graph`, `list — Show all indexed repos` (+508 more)
+- **784 isolated node(s):** `I. KIỂM KÊ DỮ LIỆU`, `II. SCORECARD CHẤM ĐIỂM`, `▶ NEUTRAL / SIDEWAY / PHÂN HÓA`, `IV. TRẠNG THÁI PHỤ`, `V. QUY TẮC "HẠ NHANH, NÂNG CHẬM"` (+779 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **What connects `analyze — Build or refresh the index`, `status — Check index freshness`, `clean — Delete the index` to the rest of the system?**
-  _530 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `I. KIỂM KÊ DỮ LIỆU`, `II. SCORECARD CHẤM ĐIỂM`, `▶ NEUTRAL / SIDEWAY / PHÂN HÓA` to the rest of the system?**
+  _803 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.125 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
