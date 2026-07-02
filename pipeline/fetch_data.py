@@ -100,39 +100,61 @@ def fetch_foreign_net(report_date: str) -> dict | None:
     try:
         d = datetime.strptime(report_date, "%Y-%m-%d").strftime("%Y%m%d")
         target_date = datetime.strptime(report_date, "%Y-%m-%d").date()
-        r = requests.get(
-            f"https://msh-appdata.cafef.vn/rest-api/api/v1/OverviewOrgnizaztion/0/{d}/15",
-            params={"symbol": "VNINDEX"},
-            headers={"User-Agent": _UA},
-            timeout=_HTTP_TIMEOUT,
-        )
-        r.raise_for_status()
-        rows = r.json() or []
-        if not rows:
-            return None
-        row_index = None
-        for idx, row in enumerate(rows):
-            row_date_raw = row.get("date")
-            if not row_date_raw:
-                continue
-            row_date = datetime.fromisoformat(row_date_raw).date()
-            if row_date == target_date:
-                row_index = idx
-                break
-        if row_index is None:
-            first_date = rows[0].get("date")
-            print(
-                "      [extra] fetch_foreign_net chua co dung ngay "
-                f"{report_date} (rows[0].date={first_date})"
+
+        def _fetch_market(symbol: str) -> dict | None:
+            r = requests.get(
+                f"https://msh-appdata.cafef.vn/rest-api/api/v1/OverviewOrgnizaztion/0/{d}/15",
+                params={"symbol": symbol},
+                headers={"User-Agent": _UA},
+                timeout=_HTTP_TIMEOUT,
             )
+            r.raise_for_status()
+            rows = r.json() or []
+            if not rows:
+                return None
+            row_index = None
+            for idx, row in enumerate(rows):
+                row_date_raw = row.get("date")
+                if not row_date_raw:
+                    continue
+                row_date = datetime.fromisoformat(row_date_raw).date()
+                if row_date == target_date:
+                    row_index = idx
+                    break
+            if row_index is None:
+                first_date = rows[0].get("date")
+                print(
+                    "      [extra] fetch_foreign_net chua co dung ngay "
+                    f"{report_date} cho {symbol} (rows[0].date={first_date})"
+                )
+                return None
+            return {
+                "symbol": symbol,
+                "net_today_vnd": float(rows[row_index]["netVal"]),
+                "net_5d_vnd": round(
+                    sum(float(x["netVal"]) for x in rows[row_index : row_index + 5])
+                ),
+                "date": rows[row_index].get("date"),
+                "source": f"msh-appdata.cafef.vn OverviewOrgnizaztion ({symbol})",
+            }
+
+        markets = {
+            "HOSE": _fetch_market("VNINDEX"),
+            "HNX": _fetch_market("HNX-INDEX"),
+            "UPCOM": _fetch_market("UPCOM-INDEX"),
+        }
+        if any(v is None for v in markets.values()):
+            missing = ", ".join(k for k, v in markets.items() if v is None)
+            print(f"      [extra] fetch_foreign_net thieu du lieu: {missing}")
             return None
-        net_today = float(rows[row_index]["netVal"])
-        net_5d = round(sum(float(x["netVal"]) for x in rows[row_index : row_index + 5]))
+        net_today = sum(float(x["net_today_vnd"]) for x in markets.values())
+        net_5d = round(sum(float(x["net_5d_vnd"]) for x in markets.values()))
         return {
             "net_today_vnd": net_today,
             "net_5d_vnd": net_5d,
             "unit": "VND",
-            "source": "msh-appdata.cafef.vn OverviewOrgnizaztion (VNINDEX)",
+            "markets": markets,
+            "source": "msh-appdata.cafef.vn OverviewOrgnizaztion (VNINDEX, HNX-INDEX, UPCOM-INDEX)",
         }
     except Exception as exc:  # noqa: BLE001
         print(f"      [extra] fetch_foreign_net loi: {exc}")
@@ -404,6 +426,10 @@ def fetch_extra_fields(report_date: str, force_refresh: bool = False) -> dict:
     if not force_refresh and cache_path.exists():
         try:
             cached = json.loads(cache_path.read_text(encoding="utf-8"))
+            foreign_net = cached.get("foreign_net") or {}
+            markets = foreign_net.get("markets") or {}
+            if set(markets) != {"HOSE", "HNX", "UPCOM"}:
+                raise ValueError("foreign_net cache schema cu hoac thieu san")
             print(f"      [extra] dung lai cache {cache_path.name} (khong fetch lai)")
             return cached
         except Exception:
@@ -617,9 +643,15 @@ def snapshot_to_markdown(s: dict) -> str:
 
     if flows:
         lines.append(
-            f"- Khoi ngoai rong phien: {flows['net_today_vnd']:,.0f} {flows['unit']} | "
+            f"- Khoi ngoai rong TOAN THI TRUONG: {flows['net_today_vnd']:,.0f} {flows['unit']} | "
             f"luy ke 5 phien: {flows['net_5d_vnd']:,.0f} {flows['unit']}. Nguon: {flows['source']}."
         )
+        markets = flows.get("markets") or {}
+        for market, data in markets.items():
+            lines.append(
+                f"  - {market} ({data['symbol']}): {data['net_today_vnd']:,.0f} {flows['unit']} | "
+                f"5 phien: {data['net_5d_vnd']:,.0f} {flows['unit']} | ngay du lieu: {data['date']}."
+            )
     else:
         lines.append("- Khoi ngoai rong: KHONG lay duoc lan nay (xem missing_fields).")
 
