@@ -99,6 +99,7 @@ def fetch_foreign_net(report_date: str) -> dict | None:
     """Khoi ngoai rong phien va luy ke 5 phien (VND). Nguon: CafeF msh-appdata."""
     try:
         d = datetime.strptime(report_date, "%Y-%m-%d").strftime("%Y%m%d")
+        target_date = datetime.strptime(report_date, "%Y-%m-%d").date()
         r = requests.get(
             f"https://msh-appdata.cafef.vn/rest-api/api/v1/OverviewOrgnizaztion/0/{d}/15",
             params={"symbol": "VNINDEX"},
@@ -109,8 +110,24 @@ def fetch_foreign_net(report_date: str) -> dict | None:
         rows = r.json() or []
         if not rows:
             return None
-        net_today = float(rows[0]["netVal"])
-        net_5d = round(sum(float(x["netVal"]) for x in rows[:5]))
+        row_index = None
+        for idx, row in enumerate(rows):
+            row_date_raw = row.get("date")
+            if not row_date_raw:
+                continue
+            row_date = datetime.fromisoformat(row_date_raw).date()
+            if row_date == target_date:
+                row_index = idx
+                break
+        if row_index is None:
+            first_date = rows[0].get("date")
+            print(
+                "      [extra] fetch_foreign_net chua co dung ngay "
+                f"{report_date} (rows[0].date={first_date})"
+            )
+            return None
+        net_today = float(rows[row_index]["netVal"])
+        net_5d = round(sum(float(x["netVal"]) for x in rows[row_index : row_index + 5]))
         return {
             "net_today_vnd": net_today,
             "net_5d_vnd": net_5d,
